@@ -1,0 +1,142 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'VCXODialog.ui'
+#
+# Created by: PyQt4 UI code generator 4.8.3
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt4 import QtCore, QtGui
+
+try:
+    _fromUtf8 = QtCore.QString.fromUtf8
+except AttributeError:
+    _fromUtf8 = lambda s: s
+
+class Ui_VCXODialog(object):
+    def setupUi(self, VCXODialog):
+        VCXODialog.setObjectName(_fromUtf8("VCXODialog"))
+        VCXODialog.resize(246, 262)
+        self.gridLayout = QtGui.QGridLayout(VCXODialog)
+        self.gridLayout.setObjectName(_fromUtf8("gridLayout"))
+        self.label = QtGui.QLabel(VCXODialog)
+        self.label.setObjectName(_fromUtf8("label"))
+        self.gridLayout.addWidget(self.label, 1, 0, 1, 1)
+        self.label_2 = QtGui.QLabel(VCXODialog)
+        self.label_2.setObjectName(_fromUtf8("label_2"))
+        self.gridLayout.addWidget(self.label_2, 2, 0, 1, 1)
+        self.label_3 = QtGui.QLabel(VCXODialog)
+        self.label_3.setObjectName(_fromUtf8("label_3"))
+        self.gridLayout.addWidget(self.label_3, 3, 0, 1, 1)
+        self.label_4 = QtGui.QLabel(VCXODialog)
+        self.label_4.setObjectName(_fromUtf8("label_4"))
+        self.gridLayout.addWidget(self.label_4, 4, 0, 1, 1)
+        self.label_5 = QtGui.QLabel(VCXODialog)
+        self.label_5.setObjectName(_fromUtf8("label_5"))
+        self.gridLayout.addWidget(self.label_5, 5, 0, 1, 1)
+        self.label_6 = QtGui.QLabel(VCXODialog)
+        self.label_6.setObjectName(_fromUtf8("label_6"))
+        self.gridLayout.addWidget(self.label_6, 6, 0, 1, 1)
+        self.label_7 = QtGui.QLabel(VCXODialog)
+        self.label_7.setObjectName(_fromUtf8("label_7"))
+        self.gridLayout.addWidget(self.label_7, 7, 0, 1, 1)
+        self.pushButton = QtGui.QPushButton(VCXODialog)
+        self.pushButton.setObjectName(_fromUtf8("pushButton"))
+        self.gridLayout.addWidget(self.pushButton, 10, 2, 1, 1)
+        self.label_8 = QtGui.QLabel(VCXODialog)
+        self.label_8.setObjectName(_fromUtf8("label_8"))
+        self.gridLayout.addWidget(self.label_8, 8, 0, 1, 1)
+        self.taurusLabel = TaurusLabel(VCXODialog)
+        self.taurusLabel.setObjectName(_fromUtf8("taurusLabel"))
+        self.gridLayout.addWidget(self.taurusLabel, 1, 2, 1, 1)
+        self.taurusValueLineEdit = TaurusValueLineEdit(VCXODialog)
+        self.taurusValueLineEdit.setObjectName(_fromUtf8("taurusValueLineEdit"))
+        self.gridLayout.addWidget(self.taurusValueLineEdit, 1, 1, 1, 1)
+        self.taurusValueLineEdit_3 = TaurusValueLineEdit(VCXODialog)
+        self.taurusValueLineEdit_3.setObjectName(_fromUtf8("taurusValueLineEdit_3"))
+        self.gridLayout.addWidget(self.taurusValueLineEdit_3, 2, 1, 1, 1)
+        self.taurusValueLineEdit_4 = TaurusValueLineEdit(VCXODialog)
+        self.taurusValueLineEdit_4.setObjectName(_fromUtf8("taurusValueLineEdit_4"))
+        self.gridLayout.addWidget(self.taurusValueLineEdit_4, 3, 1, 1, 1)
+        self.taurusLabel_3 = TaurusLabel(VCXODialog)
+        self.taurusLabel_3.setObjectName(_fromUtf8("taurusLabel_3"))
+        self.gridLayout.addWidget(self.taurusLabel_3, 2, 2, 1, 1)
+        self.taurusLabel_4 = TaurusLabel(VCXODialog)
+        self.taurusLabel_4.setObjectName(_fromUtf8("taurusLabel_4"))
+        self.gridLayout.addWidget(self.taurusLabel_4, 3, 2, 1, 1)
+        self.taurusLabel_5 = TaurusLabel(VCXODialog)
+        self.taurusLabel_5.setObjectName(_fromUtf8("taurusLabel_5"))
+        self.gridLayout.addWidget(self.taurusLabel_5, 4, 2, 1, 1)
+        self.taurusLabel_6 = TaurusLabel(VCXODialog)
+        self.taurusLabel_6.setObjectName(_fromUtf8("taurusLabel_6"))
+        self.gridLayout.addWidget(self.taurusLabel_6, 5, 2, 1, 1)
+        self.taurusLabel_7 = TaurusLabel(VCXODialog)
+        self.taurusLabel_7.setObjectName(_fromUtf8("taurusLabel_7"))
+        self.gridLayout.addWidget(self.taurusLabel_7, 6, 2, 1, 1)
+        self.taurusLabel_8 = TaurusLabel(VCXODialog)
+        self.taurusLabel_8.setObjectName(_fromUtf8("taurusLabel_8"))
+        self.gridLayout.addWidget(self.taurusLabel_8, 7, 2, 1, 1)
+        self.taurusLabel_9 = TaurusLabel(VCXODialog)
+        self.taurusLabel_9.setObjectName(_fromUtf8("taurusLabel_9"))
+        self.gridLayout.addWidget(self.taurusLabel_9, 8, 2, 1, 1)
+        self.label_9 = QtGui.QLabel(VCXODialog)
+        self.label_9.setObjectName(_fromUtf8("label_9"))
+        self.gridLayout.addWidget(self.label_9, 0, 2, 1, 1)
+        self.label_10 = QtGui.QLabel(VCXODialog)
+        self.label_10.setObjectName(_fromUtf8("label_10"))
+        self.gridLayout.addWidget(self.label_10, 0, 1, 1, 1)
+        self.taurusValueComboBox = TaurusValueComboBox(VCXODialog)
+        self.taurusValueComboBox.setObjectName(_fromUtf8("taurusValueComboBox"))
+        self.gridLayout.addWidget(self.taurusValueComboBox, 4, 1, 1, 1)
+        self.taurusValueComboBox_2 = TaurusValueComboBox(VCXODialog)
+        self.taurusValueComboBox_2.setObjectName(_fromUtf8("taurusValueComboBox_2"))
+        self.gridLayout.addWidget(self.taurusValueComboBox_2, 5, 1, 1, 1)
+        self.taurusValueComboBox_3 = TaurusValueComboBox(VCXODialog)
+        self.taurusValueComboBox_3.setObjectName(_fromUtf8("taurusValueComboBox_3"))
+        self.gridLayout.addWidget(self.taurusValueComboBox_3, 6, 1, 1, 1)
+        self.taurusValueComboBox_4 = TaurusValueComboBox(VCXODialog)
+        self.taurusValueComboBox_4.setObjectName(_fromUtf8("taurusValueComboBox_4"))
+        self.gridLayout.addWidget(self.taurusValueComboBox_4, 7, 1, 1, 1)
+        self.taurusValueComboBox_5 = TaurusValueComboBox(VCXODialog)
+        self.taurusValueComboBox_5.setObjectName(_fromUtf8("taurusValueComboBox_5"))
+        self.gridLayout.addWidget(self.taurusValueComboBox_5, 8, 1, 1, 1)
+        self.taurusValueComboBox_6 = TaurusValueComboBox(VCXODialog)
+        self.taurusValueComboBox_6.setObjectName(_fromUtf8("taurusValueComboBox_6"))
+        self.gridLayout.addWidget(self.taurusValueComboBox_6, 9, 1, 1, 1)
+        self.label_11 = QtGui.QLabel(VCXODialog)
+        self.label_11.setObjectName(_fromUtf8("label_11"))
+        self.gridLayout.addWidget(self.label_11, 9, 0, 1, 1)
+        self.taurusLabel_2 = TaurusLabel(VCXODialog)
+        self.taurusLabel_2.setObjectName(_fromUtf8("taurusLabel_2"))
+        self.gridLayout.addWidget(self.taurusLabel_2, 9, 2, 1, 1)
+
+        self.retranslateUi(VCXODialog)
+        QtCore.QMetaObject.connectSlotsByName(VCXODialog)
+
+    def retranslateUi(self, VCXODialog):
+        VCXODialog.setWindowTitle(QtGui.QApplication.translate("VCXODialog", "VCXO Program", None, QtGui.QApplication.UnicodeUTF8))
+        self.label.setText(QtGui.QApplication.translate("VCXODialog", "M divider", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_2.setText(QtGui.QApplication.translate("VCXODialog", "N divider", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_3.setText(QtGui.QApplication.translate("VCXODialog", "Mux Sel", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_4.setText(QtGui.QApplication.translate("VCXODialog", "Mux 0 divider", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_5.setText(QtGui.QApplication.translate("VCXODialog", "Mux 1 divider", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_6.setText(QtGui.QApplication.translate("VCXODialog", "Mux 2 divider", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_7.setText(QtGui.QApplication.translate("VCXODialog", "Mux 3 divider", None, QtGui.QApplication.UnicodeUTF8))
+        self.pushButton.setText(QtGui.QApplication.translate("VCXODialog", "Send word", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_8.setText(QtGui.QApplication.translate("VCXODialog", "Mux 4 divider", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_9.setText(QtGui.QApplication.translate("VCXODialog", "Read", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_10.setText(QtGui.QApplication.translate("VCXODialog", "Write", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_11.setText(QtGui.QApplication.translate("VCXODialog", "CP Direction", None, QtGui.QApplication.UnicodeUTF8))
+
+from taurus.qt.qtgui.display import TaurusLabel
+from taurus.qt.qtgui.input import TaurusValueComboBox, TaurusValueLineEdit
+
+if __name__ == "__main__":
+    import sys
+    app = QtGui.QApplication(sys.argv)
+    VCXODialog = QtGui.QDialog()
+    ui = Ui_VCXODialog()
+    ui.setupUi(VCXODialog)
+    VCXODialog.show()
+    sys.exit(app.exec_())
+
