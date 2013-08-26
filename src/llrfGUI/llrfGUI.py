@@ -376,7 +376,7 @@ class llrfGUI(QtGui.QMainWindow):
     @alert_problems
     def tuningResetA(self):
         self.dp['TuningResetA'] = True
-        self.dp['TuningResetB'] = False
+        self.dp['TuningResetA'] = False
         
     @alert_problems
     def tuningResetB(self):
