@@ -89,7 +89,7 @@ class llrfGUI(QtGui.QMainWindow):
         self.createStateLeds()
         
         ## Create custom widgets //////////////////////////////////////////////
-        self.createCustomWidgets()
+        #self.createCustomWidgets()
         
         ## Initialize lists ///////////////////////////////////////////////////
         self.connectedAttributeWidgets = []  ##For saving and restore attribute
@@ -1083,7 +1083,7 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.taurusLed_watPumpLowFlow, self.devicePLC + "/A_TIM_CAV_OFF_FLOW"),
                 
                 #PyAlarm widget////////////////////////////////////////////////
-                (self.alarmWidget, self.deviceAlarm),
+                #(self.alarmWidget, self.deviceAlarm),
                 
                 #FDL //////////////////////////////////////////////////////////
                 (self.ui.taurusLed_3, self.device + "/FDLTriggerState"),
