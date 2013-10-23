@@ -155,3 +155,17 @@ CPIR = [
         ['10',6],
         ['Inmediatly apply',7],
     ]
+
+CFDL = [
+        ['All signals', 1],
+        ['RvTet1', 2],
+        ['RvTet2', 3],
+        ['FwCircIn', 4],
+        ['RvCircIr', 5],
+        ['FwLoad', 6],
+        ['FwHybLoad', 7],
+        ['RvCav', 8],
+        ['MO_landau', 9],
+    ]
+              
+              

@@ -260,6 +260,12 @@ class llrfGUI(QtGui.QMainWindow):
         self.ui.comboBox_tuningEn_3.addValueNames(CB)
         self.ui.comboBox_tuningPosEn_3.addValueNames(CB)
         
+        #FDL //////////////////////////////////////////////////////////////////
+        self.ui.taurusValueComboBox_chSrA.addValueNames(CFDL)
+        self.ui.taurusValueComboBox_chSrDA.addValueNames(CFDL)
+        self.ui.taurusValueComboBox_chSrB.addValueNames(CFDL)
+        self.ui.taurusValueComboBox_chSrDB.addValueNames(CFDL)
+        
         
     @alert_problems
     def connectSignals(self):
@@ -296,7 +302,54 @@ class llrfGUI(QtGui.QMainWindow):
         QtCore.QObject.connect(self.ui.pushButton_enableHF, QtCore.SIGNAL("clicked()"), self.enableHF)
         QtCore.QObject.connect(self.ui.pushButton_disableHF, QtCore.SIGNAL("clicked()"), self.disableHF)
         QtCore.QObject.connect(self.ui.pushButton_resetAlarm, QtCore.SIGNAL("clicked()"), self.resetAlarm)
+        
+        # FDL buttons
+        QtCore.QObject.connect(self.ui.pushButton_FDLStartLoops, QtCore.SIGNAL("clicked()"), self.fdlStart)
+        QtCore.QObject.connect(self.ui.pushButton_FDLStopLoops, QtCore.SIGNAL("clicked()"), self.fdlStop)
+
+        QtCore.QObject.connect(self.ui.pushButton_FDLStartDiag, QtCore.SIGNAL("clicked()"), self.fdlStartDiag)
+        QtCore.QObject.connect(self.ui.pushButton_FDLStopDiag, QtCore.SIGNAL("clicked()"), self.fdlStopDiag)
+        
+        QtCore.QObject.connect(self.ui.pushButton_FDLSWTrgLoops, QtCore.SIGNAL("clicked()"), self.fdlSWTriggerLoops)
+        QtCore.QObject.connect(self.ui.pushButton_FDLSWTrgDiag, QtCore.SIGNAL("clicked()"), self.fdlSWTriggerDiag)
+        
+        QtCore.QObject.connect(self.ui.pushButton_FDLLoopsPath, QtCore.SIGNAL("clicked()"), self.setFDLLoopsPath)
+        QtCore.QObject.connect(self.ui.pushButton_FDLDiagPath, QtCore.SIGNAL("clicked()"), self.setFDLDiagPath)
+        
+    @alert_problems
+    def setFDLLoopsPath(self):
+        path = QtGui.QFileDialog.getExistingDirectory(self, self.tr("Path to save FDL Data"))
+        self.dp['FDLDataFilePath'] = path
+        
+    @alert_problems
+    def setFDLDiagPath(self):
+        path = QtGui.QFileDialog.getExistingDirectory(self, self.tr("Path to save FDL Data"))
+        self.dpDiag['FDLDataFilePath'] = path
+        
+    @alert_problems
+    def fdlSWTriggerLoops(self):
+        self.dp.FDLSWTrigger()
+        
+    @alert_problems
+    def fdlSWTriggerDiag(self):
+        self.dpDiag.FDLSWTrigger()
     
+    @alert_problems
+    def fdlStart(self):
+        self.dp['FDLStart'] = 1
+
+    @alert_problems
+    def fdlStop(self):
+        self.dp['FDLStart'] = 0
+
+    @alert_problems
+    def fdlStartDiag(self):
+        self.dpDiag['FDLStart'] = 1
+
+    @alert_problems
+    def fdlStopDiag(self):
+        self.dpDiag['FDLStart'] = 0
+
     @alert_problems
     def startPump(self):
         #self.dpPLC['TANGO_COM'] = PLC_CMD_START_PUMP
@@ -1032,6 +1085,18 @@ class llrfGUI(QtGui.QMainWindow):
                 #PyAlarm widget////////////////////////////////////////////////
                 (self.alarmWidget, self.deviceAlarm),
                 
+                #FDL //////////////////////////////////////////////////////////
+                (self.ui.taurusLed_3, self.device + "/FDLTriggerState"),
+                (self.ui.taurusLed_4, self.deviceDiag + "/FDLTriggerState"),
+                (self.ui.taurusLabel_bufferSize, self.device + "/FDLDataBufferSize"),
+                (self.ui.taurusLabel_buffersizeD, self.deviceDiag + "/FDLDataBufferSize"),
+                (self.ui.taurusLabel_trgDelay, self.device + "/FDLTriggerDelay"),
+                (self.ui.taurusLabel_trgDelayD, self.deviceDiag + "FDLTriggerDelay"),
+                (self.ui.taurusLabel_chSrA, self.device + "/FDLChannelSourceA"),
+                (self.ui.taurusLabel_chSrDA, self.deviceDiag + "/FDLChannelSourceA"),
+                (self.ui.taurusLabel_chSrB, self.device + "/FDLChannelSourceB"),
+                (self.ui.taurusLabel_chSrDB, self.deviceDiag + "/FDLChannelSourceB")
+                
             ]
         
         ## Writtable attributes ///////////////////////////////////////////////
@@ -1132,6 +1197,12 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.lineEdit_ampRampEndB, self.device + "/AmpRampEndB"),
                 (self.ui.lineEdit_phaseRampInitB, self.device + "/PhaseRampInitB"),
                 (self.ui.lineEdit_phaseRampEndB, self.device + "/PhaseRampEndB"),
+                
+                #FDL //////////////////////////////////////////////////////////
+                (self.ui.taurusValueLineEdit_bufferSize, self.device + "/FDLDataBufferSize"),
+                (self.ui.taurusValueLineEdit_bufferSizeD, self.deviceDiag + "/FDLDataBufferSize"),
+                (self.ui.taurusValueLineEdit_trgDelay, self.device + "/FDLTriggerDelay"),
+                (self.ui.taurusValueLineEdit_trgDelayD, self.deviceDiag + "FDLTriggerDelay")
             ]
             
         self._comboList = [
@@ -1236,6 +1307,11 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.comboBox_movePlg_3, self.deviceDiag + "/MoveLandauPLG"),
                 (self.ui.comboBox_tuningEn_3, self.deviceDiag + "/LandauTuningEnable"),
                 (self.ui.comboBox_tuningPosEn_3, self.deviceDiag + "/LandauPositiveEn"),
+                
+                (self.ui.taurusValueComboBox_chSrA, self.device + "/FDLChannelSourceA"),
+                (self.ui.taurusValueComboBox_chSrDA, self.deviceDiag + "/FDLChannelSourceA"),
+                (self.ui.taurusValueComboBox_chSrB, self.device + "/FDLChannelSourceB"),
+                (self.ui.taurusValueComboBox_chSrDB, self.deviceDiag + "/FDLChannelSourceB")
                 
             ]
     
