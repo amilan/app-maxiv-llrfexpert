@@ -262,9 +262,9 @@ class llrfGUI(QtGui.QMainWindow):
         
         #FDL //////////////////////////////////////////////////////////////////
         self.ui.taurusValueComboBox_chSrA.addValueNames(CFDL)
-        self.ui.taurusValueComboBox_chSrDA.addValueNames(CFDL)
+        self.ui.taurusValueComboBox_chSrDA.addValueNames(CFDLDIAG)
         self.ui.taurusValueComboBox_chSrB.addValueNames(CFDL)
-        self.ui.taurusValueComboBox_chSrDB.addValueNames(CFDL)
+        self.ui.taurusValueComboBox_chSrDB.addValueNames(CFDLDIAG)
         
         
     @alert_problems
