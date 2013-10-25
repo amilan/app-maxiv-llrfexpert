@@ -1095,7 +1095,24 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.taurusLabel_chSrA, self.device + "/FDLChannelSourceA"),
                 (self.ui.taurusLabel_chSrDA, self.deviceDiag + "/FDLChannelSourceA"),
                 (self.ui.taurusLabel_chSrB, self.device + "/FDLChannelSourceB"),
-                (self.ui.taurusLabel_chSrDB, self.deviceDiag + "/FDLChannelSourceB")
+                (self.ui.taurusLabel_chSrDB, self.deviceDiag + "/FDLChannelSourceB"),
+                
+                #//////////////////////////////////////////////////////////////
+                (self.ui.tauValueLabel_gainola, self.device + "/GainOLA"),
+                (self.ui.tauValueLabel_gainolb, self.device + "/GainOLB"),
+                (self.ui.tauValueLabel_phaseShift_11, self.device + "/PhaseShiftFwTet1ASin"),
+                (self.ui.tauValueLabel_phaseShift_9, self.device + "/PhaseShiftFwTet1Acos"),
+                (self.ui.tauValueLabel_phaseShift_10, self.device + "/PhaseShiftFwTet1BSin"),
+                (self.ui.tauValueLabel_phaseShift_8, self.device + "/PhaseShiftFwTet1BCos"),
+                
+                (self.ui.tauValueLabel_FwTet1Loop, self.device + "/IFwTet1ALoop"),
+                (self.ui.tauValueLabel_FwTet1Loop_2, self.device + "/QFwTet1ALoop"),
+                (self.ui.tauValueLabel_FwTet1Loop_3, self.device + "/AmpFwTet1ALoop"),
+                (self.ui.tauValueLabel_FwTet1Loop_4, self.device + "/PhFwTet1ALoop"),
+                (self.ui.tauValueLabel_FwTet1Loop_5, self.device + "/IFwTet1BLoop"),
+                (self.ui.tauValueLabel_FwTet1Loop_6, self.device + "/QFwTet1BLoop"),
+                (self.ui.tauValueLabel_FwTet1Loop_7, self.device + "/AmpFwTet1BLoop"),
+                (self.ui.tauValueLabel_FwTet1Loop_8, self.device + "/PhFwTet1BLoop"),
                 
             ]
         
@@ -1202,7 +1219,15 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.taurusValueLineEdit_bufferSize, self.device + "/FDLDataBufferSize"),
                 (self.ui.taurusValueLineEdit_bufferSizeD, self.deviceDiag + "/FDLDataBufferSize"),
                 (self.ui.taurusValueLineEdit_trgDelay, self.device + "/FDLTriggerDelay"),
-                (self.ui.taurusValueLineEdit_trgDelayD, self.deviceDiag + "FDLTriggerDelay")
+                (self.ui.taurusValueLineEdit_trgDelayD, self.deviceDiag + "FDLTriggerDelay"),
+                
+                #//////////////////////////////////////////////////////////////
+                (self.ui.lineEdit_gainola, self.device + "/GainOLA"),
+                (self.ui.lineEdit_gainolb, self.device + "/GainOLB"),
+                (self.ui.lineEdit_phaseShift_10, self.device + "/PhaseShiftFwTet1ASin"),
+                (self.ui.lineEdit_phaseShift_9, self.device + "/PhaseShiftFwTet1BSin"),
+                (self.ui.lineEdit_phaseShift_8, self.device + "/PhaseShiftFwTet1ACos"),
+                (self.ui.lineEdit_phaseShift_7, self.device + "/PhaseShiftFwTet1BCos"),
             ]
             
         self._comboList = [
