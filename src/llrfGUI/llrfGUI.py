@@ -1100,10 +1100,8 @@ class llrfGUI(QtGui.QMainWindow):
                 #//////////////////////////////////////////////////////////////
                 (self.ui.tauValueLabel_gainola, self.device + "/GainOLA"),
                 (self.ui.tauValueLabel_gainolb, self.device + "/GainOLB"),
-                (self.ui.tauValueLabel_phaseShift_11, self.device + "/PhaseShiftFwTet1ASin"),
-                (self.ui.tauValueLabel_phaseShift_9, self.device + "/PhaseShiftFwTet1Acos"),
-                (self.ui.tauValueLabel_phaseShift_10, self.device + "/PhaseShiftFwTet1BSin"),
-                (self.ui.tauValueLabel_phaseShift_8, self.device + "/PhaseShiftFwTet1BCos"),
+                (self.ui.tauValueLabel_phaseShift_11, self.device + "/PhaseShiftFwTet1A"),
+                (self.ui.tauValueLabel_phaseShift_10, self.device + "/PhaseShiftFwTet1B"),
                 
                 (self.ui.tauValueLabel_FwTet1Loop, self.device + "/IFwTet1ALoop"),
                 (self.ui.tauValueLabel_FwTet1Loop_2, self.device + "/QFwTet1ALoop"),
@@ -1224,10 +1222,8 @@ class llrfGUI(QtGui.QMainWindow):
                 #//////////////////////////////////////////////////////////////
                 (self.ui.lineEdit_gainola, self.device + "/GainOLA"),
                 (self.ui.lineEdit_gainolb, self.device + "/GainOLB"),
-                (self.ui.lineEdit_phaseShift_10, self.device + "/PhaseShiftFwTet1ASin"),
-                (self.ui.lineEdit_phaseShift_9, self.device + "/PhaseShiftFwTet1BSin"),
-                (self.ui.lineEdit_phaseShift_8, self.device + "/PhaseShiftFwTet1ACos"),
-                (self.ui.lineEdit_phaseShift_7, self.device + "/PhaseShiftFwTet1BCos"),
+                (self.ui.lineEdit_phaseShift_10, self.device + "/PhaseShiftFwTet1A"),
+                (self.ui.lineEdit_phaseShift_9, self.device + "/PhaseShiftFwTet1B"),
             ]
             
         self._comboList = [
