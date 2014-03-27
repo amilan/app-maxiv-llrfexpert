@@ -48,9 +48,9 @@
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>0</y>
+         <y>-57</y>
          <width>2198</width>
-         <height>1384</height>
+         <height>1371</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout_12">
@@ -8501,7 +8501,7 @@
                   <bool>false</bool>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_5">
-                  <item row="1" column="0">
+                  <item row="0" column="0">
                    <layout class="QGridLayout">
                     <property name="spacing">
                      <number>0</number>
@@ -8936,20 +8936,20 @@
                        <bool>true</bool>
                       </property>
                       <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                         <horstretch>0</horstretch>
                         <verstretch>0</verstretch>
                        </sizepolicy>
                       </property>
                       <property name="minimumSize">
                        <size>
-                        <width>100</width>
+                        <width>70</width>
                         <height>20</height>
                        </size>
                       </property>
                       <property name="maximumSize">
                        <size>
-                        <width>1000</width>
+                        <width>100</width>
                         <height>20</height>
                        </size>
                       </property>
@@ -9046,13 +9046,13 @@
                       </property>
                       <property name="minimumSize">
                        <size>
-                        <width>125</width>
+                        <width>100</width>
                         <height>20</height>
                        </size>
                       </property>
                       <property name="maximumSize">
                        <size>
-                        <width>65</width>
+                        <width>100</width>
                         <height>20</height>
                        </size>
                       </property>
@@ -9079,13 +9079,13 @@
                       </property>
                       <property name="minimumSize">
                        <size>
-                        <width>125</width>
+                        <width>100</width>
                         <height>20</height>
                        </size>
                       </property>
                       <property name="maximumSize">
                        <size>
-                        <width>65</width>
+                        <width>100</width>
                         <height>20</height>
                        </size>
                       </property>
@@ -9112,13 +9112,13 @@
                       </property>
                       <property name="minimumSize">
                        <size>
-                        <width>125</width>
+                        <width>100</width>
                         <height>20</height>
                        </size>
                       </property>
                       <property name="maximumSize">
                        <size>
-                        <width>65</width>
+                        <width>100</width>
                         <height>20</height>
                        </size>
                       </property>
@@ -9145,13 +9145,13 @@
                       </property>
                       <property name="minimumSize">
                        <size>
-                        <width>125</width>
+                        <width>100</width>
                         <height>20</height>
                        </size>
                       </property>
                       <property name="maximumSize">
                        <size>
-                        <width>65</width>
+                        <width>100</width>
                         <height>20</height>
                        </size>
                       </property>
@@ -9178,13 +9178,13 @@
                       </property>
                       <property name="minimumSize">
                        <size>
-                        <width>125</width>
+                        <width>100</width>
                         <height>20</height>
                        </size>
                       </property>
                       <property name="maximumSize">
                        <size>
-                        <width>65</width>
+                        <width>100</width>
                         <height>20</height>
                        </size>
                       </property>
@@ -9211,13 +9211,13 @@
                       </property>
                       <property name="minimumSize">
                        <size>
-                        <width>125</width>
+                        <width>100</width>
                         <height>20</height>
                        </size>
                       </property>
                       <property name="maximumSize">
                        <size>
-                        <width>65</width>
+                        <width>100</width>
                         <height>20</height>
                        </size>
                       </property>
@@ -9244,13 +9244,13 @@
                       </property>
                       <property name="minimumSize">
                        <size>
-                        <width>125</width>
+                        <width>100</width>
                         <height>20</height>
                        </size>
                       </property>
                       <property name="maximumSize">
                        <size>
-                        <width>65</width>
+                        <width>100</width>
                         <height>20</height>
                        </size>
                       </property>
@@ -9277,13 +9277,13 @@
                       </property>
                       <property name="minimumSize">
                        <size>
-                        <width>125</width>
+                        <width>100</width>
                         <height>20</height>
                        </size>
                       </property>
                       <property name="maximumSize">
                        <size>
-                        <width>65</width>
+                        <width>100</width>
                         <height>20</height>
                        </size>
                       </property>
@@ -9310,13 +9310,13 @@
                       </property>
                       <property name="minimumSize">
                        <size>
-                        <width>125</width>
+                        <width>100</width>
                         <height>20</height>
                        </size>
                       </property>
                       <property name="maximumSize">
                        <size>
-                        <width>65</width>
+                        <width>100</width>
                         <height>20</height>
                        </size>
                       </property>
@@ -9343,13 +9343,13 @@
                       </property>
                       <property name="minimumSize">
                        <size>
-                        <width>125</width>
+                        <width>100</width>
                         <height>20</height>
                        </size>
                       </property>
                       <property name="maximumSize">
                        <size>
-                        <width>65</width>
+                        <width>100</width>
                         <height>20</height>
                        </size>
                       </property>
@@ -9376,13 +9376,13 @@
                       </property>
                       <property name="minimumSize">
                        <size>
-                        <width>125</width>
+                        <width>100</width>
                         <height>20</height>
                        </size>
                       </property>
                       <property name="maximumSize">
                        <size>
-                        <width>65</width>
+                        <width>100</width>
                         <height>20</height>
                        </size>
                       </property>
@@ -9507,6 +9507,18 @@
                     </item>
                     <item row="2" column="1">
                      <widget class="TaurusLabel" name="tauValueLabel_IFwCavVolt">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9519,6 +9531,18 @@
                     </item>
                     <item row="3" column="1">
                      <widget class="TaurusLabel" name="tauValueLabel_IRvCavVolt">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9531,6 +9555,18 @@
                     </item>
                     <item row="4" column="1">
                      <widget class="TaurusLabel" name="tauValueLabel_IFwTet1">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9543,6 +9579,18 @@
                     </item>
                     <item row="5" column="1">
                      <widget class="TaurusLabel" name="tauValueLabel_IFwTet2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9555,6 +9603,18 @@
                     </item>
                     <item row="6" column="1">
                      <widget class="TaurusLabel" name="tauValueLabel_IRvTet1">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9567,6 +9627,18 @@
                     </item>
                     <item row="7" column="1">
                      <widget class="TaurusLabel" name="tauValueLabel_IRvTet2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9579,6 +9651,18 @@
                     </item>
                     <item row="8" column="1">
                      <widget class="TaurusLabel" name="tauValueLabel_IFwCirc">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9591,6 +9675,18 @@
                     </item>
                     <item row="9" column="1">
                      <widget class="TaurusLabel" name="tauValueLabel_IRvCirc">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9603,6 +9699,18 @@
                     </item>
                     <item row="10" column="1">
                      <widget class="TaurusLabel" name="tauValueLabel_IFwLoad">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9615,6 +9723,18 @@
                     </item>
                     <item row="11" column="1">
                      <widget class="TaurusLabel" name="tauValueLabel_IFwHybLoad">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9627,6 +9747,18 @@
                     </item>
                     <item row="12" column="1">
                      <widget class="TaurusLabel" name="tauValueLabel_IMO">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9639,6 +9771,18 @@
                     </item>
                     <item row="2" column="3">
                      <widget class="TaurusLabel" name="tauValueLabel_QFwCavVolt">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9651,6 +9795,18 @@
                     </item>
                     <item row="3" column="3">
                      <widget class="TaurusLabel" name="tauValueLabel_QRvCavVolt">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9663,6 +9819,18 @@
                     </item>
                     <item row="4" column="3">
                      <widget class="TaurusLabel" name="tauValueLabel_QFwTet1">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9675,6 +9843,18 @@
                     </item>
                     <item row="5" column="3">
                      <widget class="TaurusLabel" name="tauValueLabel_QFwTet2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9687,6 +9867,18 @@
                     </item>
                     <item row="6" column="3">
                      <widget class="TaurusLabel" name="tauValueLabel_QRvTet1">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9699,6 +9891,18 @@
                     </item>
                     <item row="7" column="3">
                      <widget class="TaurusLabel" name="tauValueLabel_QRvTet2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9711,6 +9915,18 @@
                     </item>
                     <item row="8" column="3">
                      <widget class="TaurusLabel" name="tauValueLabel_QFwCirc">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9723,6 +9939,18 @@
                     </item>
                     <item row="9" column="3">
                      <widget class="TaurusLabel" name="tauValueLabel_QRvCirc">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9735,6 +9963,18 @@
                     </item>
                     <item row="10" column="3">
                      <widget class="TaurusLabel" name="tauValueLabel_QFwLoad">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9747,6 +9987,18 @@
                     </item>
                     <item row="11" column="3">
                      <widget class="TaurusLabel" name="tauValueLabel_QFwHybLoad">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9759,6 +10011,18 @@
                     </item>
                     <item row="12" column="3">
                      <widget class="TaurusLabel" name="tauValueLabel_QMO">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9771,6 +10035,18 @@
                     </item>
                     <item row="2" column="5">
                      <widget class="TaurusLabel" name="tauValueLabel_ampFwCavVolt">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9783,6 +10059,18 @@
                     </item>
                     <item row="3" column="5">
                      <widget class="TaurusLabel" name="tauValueLabel_ampRvCavVolt">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9795,6 +10083,18 @@
                     </item>
                     <item row="4" column="5">
                      <widget class="TaurusLabel" name="tauValueLabel_ampFwTet1">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9807,6 +10107,18 @@
                     </item>
                     <item row="5" column="5">
                      <widget class="TaurusLabel" name="tauValueLabel_ampFwTet2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9819,6 +10131,18 @@
                     </item>
                     <item row="6" column="5">
                      <widget class="TaurusLabel" name="tauValueLabel_ampRvTet1">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9831,6 +10155,18 @@
                     </item>
                     <item row="7" column="5">
                      <widget class="TaurusLabel" name="tauValueLabel_ampRvTet2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9843,6 +10179,18 @@
                     </item>
                     <item row="8" column="5">
                      <widget class="TaurusLabel" name="tauValueLabel_ampFwCirc">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9855,6 +10203,18 @@
                     </item>
                     <item row="9" column="5">
                      <widget class="TaurusLabel" name="tauValueLabel_ampRvCirc">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9867,6 +10227,18 @@
                     </item>
                     <item row="10" column="5">
                      <widget class="TaurusLabel" name="tauValueLabel_ampFwLoad">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9879,6 +10251,18 @@
                     </item>
                     <item row="11" column="5">
                      <widget class="TaurusLabel" name="tauValueLabel_ampFwHybLoad">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9891,6 +10275,18 @@
                     </item>
                     <item row="12" column="5">
                      <widget class="TaurusLabel" name="tauValueLabel_ampMO">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9903,6 +10299,18 @@
                     </item>
                     <item row="2" column="7">
                      <widget class="TaurusLabel" name="tauValueLabel_phaseFwCavVolt">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9915,6 +10323,18 @@
                     </item>
                     <item row="3" column="7">
                      <widget class="TaurusLabel" name="tauValueLabel_phaseRvCavVolt">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9927,6 +10347,18 @@
                     </item>
                     <item row="4" column="7">
                      <widget class="TaurusLabel" name="tauValueLabel_phaseFwTet1">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9939,6 +10371,18 @@
                     </item>
                     <item row="5" column="7">
                      <widget class="TaurusLabel" name="tauValueLabel_phaseFwTet2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9951,6 +10395,18 @@
                     </item>
                     <item row="6" column="7">
                      <widget class="TaurusLabel" name="tauValueLabel_phaseRvTet1">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9963,6 +10419,18 @@
                     </item>
                     <item row="7" column="7">
                      <widget class="TaurusLabel" name="tauValueLabel_phaseRvTet2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9975,6 +10443,18 @@
                     </item>
                     <item row="8" column="7">
                      <widget class="TaurusLabel" name="tauValueLabel_phaseFwCirc">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9987,6 +10467,18 @@
                     </item>
                     <item row="9" column="7">
                      <widget class="TaurusLabel" name="tauValueLabel_phaseRvCirc">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -9999,6 +10491,18 @@
                     </item>
                     <item row="10" column="7">
                      <widget class="TaurusLabel" name="tauValueLabel_phaseFwLoad">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -10011,6 +10515,18 @@
                     </item>
                     <item row="11" column="7">
                      <widget class="TaurusLabel" name="tauValueLabel_phaseFwHybLoad">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -10023,6 +10539,18 @@
                     </item>
                     <item row="12" column="7">
                      <widget class="TaurusLabel" name="tauValueLabel_phaseMO">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -10035,6 +10563,18 @@
                     </item>
                     <item row="2" column="9">
                      <widget class="TaurusLabel" name="tauValueLabel_wFwCavVolt">
+                      <property name="minimumSize">
+                       <size>
+                        <width>70</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -10047,6 +10587,18 @@
                     </item>
                     <item row="3" column="9">
                      <widget class="TaurusLabel" name="tauValueLabel_wRvCavVolt">
+                      <property name="minimumSize">
+                       <size>
+                        <width>70</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -10059,6 +10611,18 @@
                     </item>
                     <item row="4" column="9">
                      <widget class="TaurusLabel" name="tauValueLabel_wFwTet1">
+                      <property name="minimumSize">
+                       <size>
+                        <width>70</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -10071,6 +10635,18 @@
                     </item>
                     <item row="5" column="9">
                      <widget class="TaurusLabel" name="tauValueLabel_wFwTet2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>70</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -10083,6 +10659,18 @@
                     </item>
                     <item row="6" column="9">
                      <widget class="TaurusLabel" name="tauValueLabel_wRvTet1">
+                      <property name="minimumSize">
+                       <size>
+                        <width>70</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -10095,6 +10683,18 @@
                     </item>
                     <item row="7" column="9">
                      <widget class="TaurusLabel" name="tauValueLabel_wRvTet2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>70</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -10107,6 +10707,18 @@
                     </item>
                     <item row="8" column="9">
                      <widget class="TaurusLabel" name="tauValueLabel_wFwCirc">
+                      <property name="minimumSize">
+                       <size>
+                        <width>70</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -10119,6 +10731,18 @@
                     </item>
                     <item row="9" column="9">
                      <widget class="TaurusLabel" name="tauValueLabel_wRvCirc">
+                      <property name="minimumSize">
+                       <size>
+                        <width>70</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -10131,6 +10755,18 @@
                     </item>
                     <item row="10" column="9">
                      <widget class="TaurusLabel" name="tauValueLabel_wFwLoad">
+                      <property name="minimumSize">
+                       <size>
+                        <width>70</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -10143,6 +10779,18 @@
                     </item>
                     <item row="11" column="9">
                      <widget class="TaurusLabel" name="tauValueLabel_wFwHybLoad">
+                      <property name="minimumSize">
+                       <size>
+                        <width>70</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -10155,6 +10803,18 @@
                     </item>
                     <item row="12" column="9">
                      <widget class="TaurusLabel" name="tauValueLabel_wMO">
+                      <property name="minimumSize">
+                       <size>
+                        <width>70</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -10169,13 +10829,13 @@
                      <widget class="QLabel" name="label_56">
                       <property name="minimumSize">
                        <size>
-                        <width>0</width>
+                        <width>70</width>
                         <height>20</height>
                        </size>
                       </property>
                       <property name="maximumSize">
                        <size>
-                        <width>16777215</width>
+                        <width>100</width>
                         <height>20</height>
                        </size>
                       </property>
@@ -10189,7 +10849,7 @@
                     </item>
                    </layout>
                   </item>
-                  <item row="1" column="1">
+                  <item row="0" column="1">
                    <layout class="QGridLayout" name="_4">
                     <property name="spacing">
                      <number>0</number>
@@ -10624,20 +11284,20 @@
                        <bool>true</bool>
                       </property>
                       <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                         <horstretch>0</horstretch>
                         <verstretch>0</verstretch>
                        </sizepolicy>
                       </property>
                       <property name="minimumSize">
                        <size>
-                        <width>100</width>
+                        <width>70</width>
                         <height>20</height>
                        </size>
                       </property>
                       <property name="maximumSize">
                        <size>
-                        <width>1000</width>
+                        <width>100</width>
                         <height>20</height>
                        </size>
                       </property>
@@ -10726,6 +11386,18 @@
                     </item>
                     <item row="2" column="0">
                      <widget class="TaurusLabel" name="tauValueLabel_IFwCavVolt_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -10738,6 +11410,18 @@
                     </item>
                     <item row="3" column="0">
                      <widget class="TaurusLabel" name="tauValueLabel_IRvCavVolt_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -10750,6 +11434,18 @@
                     </item>
                     <item row="4" column="0">
                      <widget class="TaurusLabel" name="tauValueLabel_IFwTet1_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -10762,6 +11458,18 @@
                     </item>
                     <item row="5" column="0">
                      <widget class="TaurusLabel" name="tauValueLabel_IFwTet2_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -10774,6 +11482,18 @@
                     </item>
                     <item row="6" column="0">
                      <widget class="TaurusLabel" name="tauValueLabel_IRvTet1_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -10786,6 +11506,18 @@
                     </item>
                     <item row="7" column="0">
                      <widget class="TaurusLabel" name="tauValueLabel_IRvTet2_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -10798,6 +11530,18 @@
                     </item>
                     <item row="8" column="0">
                      <widget class="TaurusLabel" name="tauValueLabel_IFwCirc_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -10810,6 +11554,18 @@
                     </item>
                     <item row="9" column="0">
                      <widget class="TaurusLabel" name="tauValueLabel_IRvCirc_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -10822,6 +11578,18 @@
                     </item>
                     <item row="10" column="0">
                      <widget class="TaurusLabel" name="tauValueLabel_IFwLoad_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -10834,6 +11602,18 @@
                     </item>
                     <item row="11" column="0">
                      <widget class="TaurusLabel" name="tauValueLabel_IFwHybLoad_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -10846,6 +11626,18 @@
                     </item>
                     <item row="12" column="0">
                      <widget class="TaurusLabel" name="tauValueLabel_IMO_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -10858,6 +11650,18 @@
                     </item>
                     <item row="2" column="2">
                      <widget class="TaurusLabel" name="tauValueLabel_QFwCavVolt_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -10870,6 +11674,18 @@
                     </item>
                     <item row="3" column="2">
                      <widget class="TaurusLabel" name="tauValueLabel_QRvCavVolt_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -10882,6 +11698,18 @@
                     </item>
                     <item row="4" column="2">
                      <widget class="TaurusLabel" name="tauValueLabel_QFwTet1_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -10894,6 +11722,18 @@
                     </item>
                     <item row="5" column="2">
                      <widget class="TaurusLabel" name="tauValueLabel_QFwTet2_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -10906,6 +11746,18 @@
                     </item>
                     <item row="6" column="2">
                      <widget class="TaurusLabel" name="tauValueLabel_QRvTet1_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -10918,6 +11770,18 @@
                     </item>
                     <item row="7" column="2">
                      <widget class="TaurusLabel" name="tauValueLabel_QRvTet2_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -10930,6 +11794,18 @@
                     </item>
                     <item row="8" column="2">
                      <widget class="TaurusLabel" name="tauValueLabel_QFwCirc_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -10942,6 +11818,18 @@
                     </item>
                     <item row="9" column="2">
                      <widget class="TaurusLabel" name="tauValueLabel_QRvCirc_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -10954,6 +11842,18 @@
                     </item>
                     <item row="10" column="2">
                      <widget class="TaurusLabel" name="tauValueLabel_QFwLoad_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -10966,6 +11866,18 @@
                     </item>
                     <item row="11" column="2">
                      <widget class="TaurusLabel" name="tauValueLabel_QFwHybLoad_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -10978,6 +11890,18 @@
                     </item>
                     <item row="12" column="2">
                      <widget class="TaurusLabel" name="tauValueLabel_QMO_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -10990,6 +11914,18 @@
                     </item>
                     <item row="2" column="4">
                      <widget class="TaurusLabel" name="tauValueLabel_ampFwCavVolt_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -11002,6 +11938,18 @@
                     </item>
                     <item row="3" column="4">
                      <widget class="TaurusLabel" name="tauValueLabel_ampRvCavVolt_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -11014,6 +11962,18 @@
                     </item>
                     <item row="4" column="4">
                      <widget class="TaurusLabel" name="tauValueLabel_ampFwTet1_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -11026,6 +11986,18 @@
                     </item>
                     <item row="5" column="4">
                      <widget class="TaurusLabel" name="tauValueLabel_ampFwTet2_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -11038,6 +12010,18 @@
                     </item>
                     <item row="6" column="4">
                      <widget class="TaurusLabel" name="tauValueLabel_ampRvTet1_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -11050,6 +12034,18 @@
                     </item>
                     <item row="7" column="4">
                      <widget class="TaurusLabel" name="tauValueLabel_ampRvTet2_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -11062,6 +12058,18 @@
                     </item>
                     <item row="8" column="4">
                      <widget class="TaurusLabel" name="tauValueLabel_ampFwCirc_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -11074,6 +12082,18 @@
                     </item>
                     <item row="9" column="4">
                      <widget class="TaurusLabel" name="tauValueLabel_ampRvCirc_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -11086,6 +12106,18 @@
                     </item>
                     <item row="10" column="4">
                      <widget class="TaurusLabel" name="tauValueLabel_ampFwLoad_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -11098,6 +12130,18 @@
                     </item>
                     <item row="11" column="4">
                      <widget class="TaurusLabel" name="tauValueLabel_ampFwHybLoad_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -11110,6 +12154,18 @@
                     </item>
                     <item row="12" column="4">
                      <widget class="TaurusLabel" name="tauValueLabel_ampMO_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -11122,6 +12178,18 @@
                     </item>
                     <item row="2" column="6">
                      <widget class="TaurusLabel" name="tauValueLabel_phaseFwCavVolt_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -11134,6 +12202,18 @@
                     </item>
                     <item row="3" column="6">
                      <widget class="TaurusLabel" name="tauValueLabel_phaseRvCavVolt_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -11146,6 +12226,18 @@
                     </item>
                     <item row="4" column="6">
                      <widget class="TaurusLabel" name="tauValueLabel_phaseFwTet1_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -11158,6 +12250,18 @@
                     </item>
                     <item row="5" column="6">
                      <widget class="TaurusLabel" name="tauValueLabel_phaseFwTet2_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -11170,6 +12274,18 @@
                     </item>
                     <item row="6" column="6">
                      <widget class="TaurusLabel" name="tauValueLabel_phaseRvTet1_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -11182,6 +12298,18 @@
                     </item>
                     <item row="7" column="6">
                      <widget class="TaurusLabel" name="tauValueLabel_phaseRvTet2_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -11194,6 +12322,18 @@
                     </item>
                     <item row="8" column="6">
                      <widget class="TaurusLabel" name="tauValueLabel_phaseFwCirc_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -11206,6 +12346,18 @@
                     </item>
                     <item row="9" column="6">
                      <widget class="TaurusLabel" name="tauValueLabel_phaseRvCirc_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -11218,6 +12370,18 @@
                     </item>
                     <item row="10" column="6">
                      <widget class="TaurusLabel" name="tauValueLabel_phaseFwLoad_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -11230,6 +12394,18 @@
                     </item>
                     <item row="11" column="6">
                      <widget class="TaurusLabel" name="tauValueLabel_phaseFwHybLoad_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -11242,6 +12418,18 @@
                     </item>
                     <item row="12" column="6">
                      <widget class="TaurusLabel" name="tauValueLabel_phaseMO_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -11254,6 +12442,18 @@
                     </item>
                     <item row="2" column="8">
                      <widget class="TaurusLabel" name="tauValueLabel_wFwCavVolt_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>70</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -11266,6 +12466,18 @@
                     </item>
                     <item row="3" column="8">
                      <widget class="TaurusLabel" name="tauValueLabel_wRvCavVolt_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>70</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -11278,6 +12490,18 @@
                     </item>
                     <item row="4" column="8">
                      <widget class="TaurusLabel" name="tauValueLabel_wFwTet1_3">
+                      <property name="minimumSize">
+                       <size>
+                        <width>70</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -11290,6 +12514,18 @@
                     </item>
                     <item row="5" column="8">
                      <widget class="TaurusLabel" name="tauValueLabel_wFwTet2_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>70</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -11302,6 +12538,18 @@
                     </item>
                     <item row="6" column="8">
                      <widget class="TaurusLabel" name="tauValueLabel_wRvTet1_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>70</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -11314,6 +12562,18 @@
                     </item>
                     <item row="7" column="8">
                      <widget class="TaurusLabel" name="tauValueLabel_wRvTet2_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>70</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -11326,6 +12586,18 @@
                     </item>
                     <item row="8" column="8">
                      <widget class="TaurusLabel" name="tauValueLabel_wFwCirc_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>70</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -11338,6 +12610,18 @@
                     </item>
                     <item row="9" column="8">
                      <widget class="TaurusLabel" name="tauValueLabel_wRvCirc_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>70</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -11350,6 +12634,18 @@
                     </item>
                     <item row="10" column="8">
                      <widget class="TaurusLabel" name="tauValueLabel_wFwLoad_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>70</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -11362,6 +12658,18 @@
                     </item>
                     <item row="11" column="8">
                      <widget class="TaurusLabel" name="tauValueLabel_wFwHybLoad_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>70</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -11374,6 +12682,18 @@
                     </item>
                     <item row="12" column="8">
                      <widget class="TaurusLabel" name="tauValueLabel_wMO_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>70</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <pointsize>7</pointsize>
@@ -11388,13 +12708,13 @@
                      <widget class="QLabel" name="label_196">
                       <property name="minimumSize">
                        <size>
-                        <width>0</width>
+                        <width>70</width>
                         <height>20</height>
                        </size>
                       </property>
                       <property name="maximumSize">
                        <size>
-                        <width>16777215</width>
+                        <width>100</width>
                         <height>20</height>
                        </size>
                       </property>
@@ -23181,7 +24501,7 @@
                  <property name="minimumSize">
                   <size>
                    <width>440</width>
-                   <height>350</height>
+                   <height>200</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -23197,6 +24517,9 @@
                   <bool>true</bool>
                  </property>
                  <layout class="QFormLayout" name="formLayout">
+                  <property name="fieldGrowthPolicy">
+                   <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+                  </property>
                   <item row="0" column="0">
                    <layout class="QGridLayout" name="_16">
                     <property name="spacing">
