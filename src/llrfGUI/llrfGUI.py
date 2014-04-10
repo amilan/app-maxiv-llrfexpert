@@ -122,7 +122,7 @@ class llrfGUI(QtGui.QMainWindow):
         if self.sector == 'LAB':
             self.device = MAIN_DEVICE_LAB
             self.deviceDiag = DIAG_DEVICE_LAB
-            self.devicePLC = PLC_DEVICE_LAB
+            #self.devicePLC = PLC_DEVICE_LAB
             self.deviceAlarm = ALARM_DEVICE_LAB
             self.alarmDevice = ALARM_DEVICE_LAB
             
@@ -183,11 +183,15 @@ class llrfGUI(QtGui.QMainWindow):
         self.ui.comboBox_tuningEn.addValueNames(CB)
         self.ui.comboBox_tuningPosEn.addValueNames(CB)
         self.ui.comboBox_tuningFreq.addValueNames(CC)
+        self.ui.comboBox_tuningTrgEnA.addValueNames(CFS)
+        self.ui.comboBox_tuningFFEnA.addValueNames(CB)
         
         ## Tuning Loop B //////////////////////////////////////////////////////
         self.ui.comboBox_tuningEn_2.addValueNames(CB)
         self.ui.comboBox_tuningPosEn_2.addValueNames(CB)
         self.ui.comboBox_tuningFreq_2.addValueNames(CC)
+        self.ui.comboBox_tuningTrgEnB.addValueNames(CFS)
+        self.ui.comboBox_tuningFFEnB.addValueNames(CB)
         
         ## Manual Tuning A ////////////////////////////////////////////////////
         self.ui.comboBox_moveUp.addValueNames(CB)
@@ -777,6 +781,10 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.tauValueLabel_marginUp, self.device + "/MarginUpA"),
                 (self.ui.tauValueLabel_marginLow, self.device + "/MarginLowA"),
                 (self.ui.tauValueLabel_forwardMin_2, self.device + "/FwMinA"),
+                (self.ui.tauValueLabel_tuningDelayA, self.device + "/TuningDelayA"),
+                (self.ui.tauValueLabel_tuningTrgEnA, self.device + "/TuningTriggerEnableA"),
+                (self.ui.tauValueLabel_tuningFFEnA, self.device + "/TuningFFA"),
+                (self.ui.tauValueLabel_tuningFFStepsA, self.device + "/TuningFFStepsA"),
                 
                 (self.ui.tauValueLabel_tuningEn_2, self.device + "/TuningEnableB"),
                 (self.ui.tauValueLabel_tuningPosEn_2, self.device + "/TuningPosEnB"),
@@ -784,6 +792,10 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.tauValueLabel_marginUp_2, self.device + "/MarginUpB"),
                 (self.ui.tauValueLabel_marginLow_2, self.device + "/MarginLowB"),
                 (self.ui.tauValueLabel_forwardMin_3, self.device + "/FwMinB"),
+                (self.ui.tauValueLabel_tuningDelayB, self.device + "/TuningDelayB"),
+                (self.ui.tauValueLabel_tuningTrgEnB, self.device + "/TuningTriggerEnableB"),
+                (self.ui.tauValueLabel_tuningFFEnB, self.device + "/TuningFFB"),
+                (self.ui.tauValueLabel_tuningFFStepsB, self.device + "/TuningFFStepsB"),
                 
                 (self.ui.tauValueLabel_tuningOffset, self.device + "/PhaseOffsetA"),
                 (self.ui.tauValueLabel_tuningOffset_2, self.device + "/PhaseOffsetB"),
@@ -1073,22 +1085,22 @@ class llrfGUI(QtGui.QMainWindow):
                 #(self.ui., self.deviceDiag + "DephaseMOLandauB")
                 
                 #PLC ///////////////////////////////////////////////
-                (self.ui.taurusLabel_airTemp, self.devicePLC + "/AIR_TEMP_HPC_1"),
-                (self.ui.taurusLabel_vacPressure, self.devicePLC + "/M2COND_VAC_C1_SCALE"),
-                (self.ui.taurusLabel_watTempReturn, self.devicePLC + "/TEMP_RET_PUMP"),
-                (self.ui.taurusLabel_watTempOConductor, self.devicePLC + "/TEMP_SLINGA_SC"),
-                (self.ui.taurusLabel_watTempLoop, self.devicePLC + "/TEMP_STUBB_SC"),
-                (self.ui.taurusLed_pumpOn, self.devicePLC + "/FLODE_OK"),
-                (self.ui.taurusLed_hfOn, self.devicePLC + "/HF_ENABLE_ON"),
-                (self.ui.taurusLed_airTemp, self.devicePLC + "/A_AIR_TEMP_HPC_1_50"),
-                (self.ui.taurusLed_fanError, self.devicePLC + "/A_FAN_ERROR"),
-                (self.ui.taurusLed_cavTemp, self.devicePLC + "/A_CAV_90G"),
-                (self.ui.taurusLed_vacPumpControlUnit, self.devicePLC + "/A_VAC_INT_FROM_RFCAB_1"),
-                (self.ui.taurusLed_watCircFlowBody, self.devicePLC + "/A_CIRK_WATER_FL1"),
-                (self.ui.taurusLed_watCircFlowLoad, self.devicePLC + "/A_CIRK_WATER_FL2"),
-                (self.ui.taurusLed_watHighReturnTemp, self.devicePLC + "/A_HIGH_TEMP_RETURN"),
-                (self.ui.taurusLed_watLowPressure, self.devicePLC + "/A_LOW_PRESSURE"),
-                (self.ui.taurusLed_watPumpLowFlow, self.devicePLC + "/A_TIM_CAV_OFF_FLOW"),
+                #(self.ui.taurusLabel_airTemp, self.devicePLC + "/AIR_TEMP_HPC_1"),
+                #(self.ui.taurusLabel_vacPressure, self.devicePLC + "/M2COND_VAC_C1_SCALE"),
+                #(self.ui.taurusLabel_watTempReturn, self.devicePLC + "/TEMP_RET_PUMP"),
+                #(self.ui.taurusLabel_watTempOConductor, self.devicePLC + "/TEMP_SLINGA_SC"),
+                #(self.ui.taurusLabel_watTempLoop, self.devicePLC + "/TEMP_STUBB_SC"),
+                #(self.ui.taurusLed_pumpOn, self.devicePLC + "/FLODE_OK"),
+                #(self.ui.taurusLed_hfOn, self.devicePLC + "/HF_ENABLE_ON"),
+                #(self.ui.taurusLed_airTemp, self.devicePLC + "/A_AIR_TEMP_HPC_1_50"),
+                #(self.ui.taurusLed_fanError, self.devicePLC + "/A_FAN_ERROR"),
+                #(self.ui.taurusLed_cavTemp, self.devicePLC + "/A_CAV_90G"),
+                #(self.ui.taurusLed_vacPumpControlUnit, self.devicePLC + "/A_VAC_INT_FROM_RFCAB_1"),
+                #(self.ui.taurusLed_watCircFlowBody, self.devicePLC + "/A_CIRK_WATER_FL1"),
+                #(self.ui.taurusLed_watCircFlowLoad, self.devicePLC + "/A_CIRK_WATER_FL2"),
+                #(self.ui.taurusLed_watHighReturnTemp, self.devicePLC + "/A_HIGH_TEMP_RETURN"),
+                #(self.ui.taurusLed_watLowPressure, self.devicePLC + "/A_LOW_PRESSURE"),
+                #(self.ui.taurusLed_watPumpLowFlow, self.devicePLC + "/A_TIM_CAV_OFF_FLOW"),
                 
                 #PyAlarm widget////////////////////////////////////////////////
                 #(self.alarmWidget, self.deviceAlarm),
@@ -1174,6 +1186,11 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.lineEdit_marginUp_2, self.device + "/MarginUpA"),
                 (self.ui.lineEdit_marginLow_2, self.device + "/MarginLowA"),
                 (self.ui.lineEdit_forwardMin, self.device + "/FwMinA"),
+                
+                (self.ui.lineEdit_tuningDelayA, self.device + "/TuningDelayA"),
+                (self.ui.lineEdit_tuningFFStepsA, self.device + "/TuningFFStepsA"),
+                (self.ui.lineEdit_tuningDelayB, self.device + "/TuningDelayB"),
+                (self.ui.lineEdit_tuningFFStepsB, self.device + "/TuningFFStepsB"),
                 
                 (self.ui.lineEdit_marginUp_3, self.device + "/MarginUpB"),
                 (self.ui.lineEdit_marginLow_3, self.device + "/MarginLowB"),
@@ -1277,6 +1294,10 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.comboBox_tuningPosEn_2, self.device + "/TuningPosEnB"),
                 (self.ui.comboBox_tuningFreq_2, self.device + "/PulsesFrequencyB"),
                 (self.ui.tauValueComboBox_clockSource, self.device + "/FPGAClockSource"),
+                (self.ui.comboBox_tuningTrgEnA, self.device + "/TuningTriggerEnableA"),
+                (self.ui.comboBox_tuningFFEnA, self.device + "/TuningFFA"),
+                (self.ui.comboBox_tuningTrgEnB, self.device + "/TuningTriggerEnableB"),
+                (self.ui.comboBox_tuningFFEnB, self.device + "/TuningFFB"),
                 
                 #Interlocks inputs disable comboboxes
                 (self.ui.tauValueComboBox_clockSource_3, self.deviceDiag + "/FPGAClockSource"),
