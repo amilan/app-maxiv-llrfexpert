@@ -185,6 +185,7 @@ class llrfGUI(QtGui.QMainWindow):
         self.ui.comboBox_tuningFreq.addValueNames(CC)
         self.ui.comboBox_tuningTrgEnA.addValueNames(CFS)
         self.ui.comboBox_tuningFFEnA.addValueNames(CB)
+        self.ui.comboBox_tuningFilterEnA.addValueNames(CB)
         
         ## Tuning Loop B //////////////////////////////////////////////////////
         self.ui.comboBox_tuningEn_2.addValueNames(CB)
@@ -192,6 +193,7 @@ class llrfGUI(QtGui.QMainWindow):
         self.ui.comboBox_tuningFreq_2.addValueNames(CC)
         self.ui.comboBox_tuningTrgEnB.addValueNames(CFS)
         self.ui.comboBox_tuningFFEnB.addValueNames(CB)
+        self.ui.comboBox_tuningFilterEnB.addValueNames(CB)
         
         ## Manual Tuning A ////////////////////////////////////////////////////
         self.ui.comboBox_moveUp.addValueNames(CB)
@@ -1187,8 +1189,10 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.lineEdit_marginLow_2, self.device + "/MarginLowA"),
                 (self.ui.lineEdit_forwardMin, self.device + "/FwMinA"),
                 
+                (self.ui.lineEdit_tuningFilterEnA, self.device + "/TuningFilterEnableA"),
                 (self.ui.lineEdit_tuningDelayA, self.device + "/TuningDelayA"),
                 (self.ui.lineEdit_tuningFFStepsA, self.device + "/TuningFFStepsA"),
+                (self.ui.lineEdit_tuningFilterEnB, self.device + "/TuningFilterEnableB"),
                 (self.ui.lineEdit_tuningDelayB, self.device + "/TuningDelayB"),
                 (self.ui.lineEdit_tuningFFStepsB, self.device + "/TuningFFStepsB"),
                 
@@ -1296,8 +1300,10 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.tauValueComboBox_clockSource, self.device + "/FPGAClockSource"),
                 (self.ui.comboBox_tuningTrgEnA, self.device + "/TuningTriggerEnableA"),
                 (self.ui.comboBox_tuningFFEnA, self.device + "/TuningFFA"),
+                (self.ui.comboBox_tuningFilterEnA, self.device + "/TuningFilterEnableA"),
                 (self.ui.comboBox_tuningTrgEnB, self.device + "/TuningTriggerEnableB"),
                 (self.ui.comboBox_tuningFFEnB, self.device + "/TuningFFB"),
+                (self.ui.comboBox_tuningFilterEnB, self.device + "/TuningFilterEnableB"),
                 
                 #Interlocks inputs disable comboboxes
                 (self.ui.tauValueComboBox_clockSource_3, self.deviceDiag + "/FPGAClockSource"),

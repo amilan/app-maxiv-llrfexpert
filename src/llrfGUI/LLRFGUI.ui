@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>2186</width>
-    <height>1541</height>
+    <height>1570</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -50,7 +50,7 @@
          <x>0</x>
          <y>0</y>
          <width>2198</width>
-         <height>1471</height>
+         <height>1480</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout_12">
@@ -16832,7 +16832,175 @@
                     <property name="spacing">
                      <number>0</number>
                     </property>
-                    <item row="14" column="1">
+                    <item row="10" column="0">
+                     <widget class="QLabel" name="label_259">
+                      <property name="minimumSize">
+                       <size>
+                        <width>135</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>135</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <pointsize>8</pointsize>
+                       </font>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="text">
+                       <string>Tuning Delay [0,3]s</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="14" column="0">
+                     <widget class="QLabel" name="label_175">
+                      <property name="minimumSize">
+                       <size>
+                        <width>135</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>135</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <pointsize>8</pointsize>
+                       </font>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="text">
+                       <string>Tuning On</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="3" column="0">
+                     <widget class="QLabel" name="label_15">
+                      <property name="minimumSize">
+                       <size>
+                        <width>135</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>135</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <pointsize>8</pointsize>
+                       </font>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="text">
+                       <string>Tuning Positive Enable</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="5" column="1">
+                     <widget class="TaurusValueLineEdit" name="lineEdit_tuningOffset">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>65</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>65</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <pointsize>8</pointsize>
+                       </font>
+                      </property>
+                      <property name="autoApply">
+                       <bool>false</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="4" column="2">
+                     <widget class="TaurusLabel" name="tauValueLabel_tuningFreq">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>65</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>65</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <pointsize>7</pointsize>
+                       </font>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="15" column="0">
+                     <widget class="QLabel" name="label_173">
+                      <property name="minimumSize">
+                       <size>
+                        <width>135</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>135</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <pointsize>8</pointsize>
+                       </font>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="text">
+                       <string>Plunger Moving Up</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="15" column="1">
                      <widget class="TaurusBoolLed" name="taurusBoolLed_32">
                       <property name="alignment">
                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -16875,7 +17043,7 @@
                       </property>
                      </widget>
                     </item>
-                    <item row="13" column="1">
+                    <item row="14" column="1">
                      <widget class="TaurusBoolLed" name="taurusBoolLed_31">
                       <property name="alignment">
                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -17148,33 +17316,6 @@
                       </property>
                       <property name="autoApply">
                        <bool>true</bool>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="3" column="0">
-                     <widget class="QLabel" name="label_15">
-                      <property name="minimumSize">
-                       <size>
-                        <width>135</width>
-                        <height>20</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>135</width>
-                        <height>20</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <pointsize>8</pointsize>
-                       </font>
-                      </property>
-                      <property name="frameShape">
-                       <enum>QFrame::StyledPanel</enum>
-                      </property>
-                      <property name="text">
-                       <string>Tuning Positive Enable</string>
                       </property>
                      </widget>
                     </item>
@@ -17505,36 +17646,6 @@
                       </property>
                      </widget>
                     </item>
-                    <item row="4" column="2">
-                     <widget class="TaurusLabel" name="tauValueLabel_tuningFreq">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="minimumSize">
-                       <size>
-                        <width>65</width>
-                        <height>20</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>65</width>
-                        <height>20</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <pointsize>7</pointsize>
-                       </font>
-                      </property>
-                      <property name="frameShape">
-                       <enum>QFrame::StyledPanel</enum>
-                      </property>
-                     </widget>
-                    </item>
                     <item row="6" column="2">
                      <widget class="TaurusLabel" name="tauValueLabel_marginUp">
                       <property name="sizePolicy">
@@ -17622,36 +17733,6 @@
                       </property>
                      </widget>
                     </item>
-                    <item row="5" column="1">
-                     <widget class="TaurusValueLineEdit" name="lineEdit_tuningOffset">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="minimumSize">
-                       <size>
-                        <width>65</width>
-                        <height>20</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>65</width>
-                        <height>20</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <pointsize>8</pointsize>
-                       </font>
-                      </property>
-                      <property name="autoApply">
-                       <bool>false</bool>
-                      </property>
-                     </widget>
-                    </item>
                     <item row="5" column="2">
                      <widget class="TaurusLabel" name="tauValueLabel_tuningOffset">
                       <property name="minimumSize">
@@ -17673,60 +17754,6 @@
                       </property>
                       <property name="frameShape">
                        <enum>QFrame::StyledPanel</enum>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="14" column="0">
-                     <widget class="QLabel" name="label_173">
-                      <property name="minimumSize">
-                       <size>
-                        <width>135</width>
-                        <height>20</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>135</width>
-                        <height>20</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <pointsize>8</pointsize>
-                       </font>
-                      </property>
-                      <property name="frameShape">
-                       <enum>QFrame::StyledPanel</enum>
-                      </property>
-                      <property name="text">
-                       <string>Plunger Moving Up</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="13" column="0">
-                     <widget class="QLabel" name="label_175">
-                      <property name="minimumSize">
-                       <size>
-                        <width>135</width>
-                        <height>20</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>135</width>
-                        <height>20</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <pointsize>8</pointsize>
-                       </font>
-                      </property>
-                      <property name="frameShape">
-                       <enum>QFrame::StyledPanel</enum>
-                      </property>
-                      <property name="text">
-                       <string>Tuning On</string>
                       </property>
                      </widget>
                     </item>
@@ -17752,7 +17779,7 @@
                       </property>
                      </widget>
                     </item>
-                    <item row="9" column="1">
+                    <item row="10" column="1">
                      <widget class="TaurusValueLineEdit" name="lineEdit_tuningDelayA">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -17785,7 +17812,7 @@
                       </property>
                      </widget>
                     </item>
-                    <item row="10" column="2">
+                    <item row="11" column="2">
                      <widget class="TaurusLabel" name="tauValueLabel_tuningTrgEnA">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -17818,34 +17845,7 @@
                       </property>
                      </widget>
                     </item>
-                    <item row="9" column="0">
-                     <widget class="QLabel" name="label_259">
-                      <property name="minimumSize">
-                       <size>
-                        <width>135</width>
-                        <height>20</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>135</width>
-                        <height>20</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <pointsize>8</pointsize>
-                       </font>
-                      </property>
-                      <property name="frameShape">
-                       <enum>QFrame::StyledPanel</enum>
-                      </property>
-                      <property name="text">
-                       <string>Tuning Delay [0,3]s</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="10" column="1">
+                    <item row="11" column="1">
                      <widget class="TaurusValueComboBox" name="comboBox_tuningTrgEnA">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -17875,7 +17875,7 @@
                       </property>
                      </widget>
                     </item>
-                    <item row="10" column="0">
+                    <item row="11" column="0">
                      <widget class="QLabel" name="label_260">
                       <property name="minimumSize">
                        <size>
@@ -17902,7 +17902,7 @@
                       </property>
                      </widget>
                     </item>
-                    <item row="11" column="2">
+                    <item row="12" column="2">
                      <widget class="TaurusLabel" name="tauValueLabel_tuningFFEnA">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -17932,7 +17932,7 @@
                       </property>
                      </widget>
                     </item>
-                    <item row="11" column="0">
+                    <item row="12" column="0">
                      <widget class="QLabel" name="label_261">
                       <property name="minimumSize">
                        <size>
@@ -17959,7 +17959,7 @@
                       </property>
                      </widget>
                     </item>
-                    <item row="11" column="1">
+                    <item row="12" column="1">
                      <widget class="TaurusValueComboBox" name="comboBox_tuningFFEnA">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -17989,7 +17989,7 @@
                       </property>
                      </widget>
                     </item>
-                    <item row="9" column="2">
+                    <item row="10" column="2">
                      <widget class="TaurusLabel" name="tauValueLabel_tuningDelayA">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -18019,7 +18019,7 @@
                       </property>
                      </widget>
                     </item>
-                    <item row="12" column="0">
+                    <item row="13" column="0">
                      <widget class="QLabel" name="label_262">
                       <property name="minimumSize">
                        <size>
@@ -18046,7 +18046,7 @@
                       </property>
                      </widget>
                     </item>
-                    <item row="12" column="1">
+                    <item row="13" column="1">
                      <widget class="TaurusValueLineEdit" name="lineEdit_tuningFFStepsA">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -18079,8 +18079,95 @@
                       </property>
                      </widget>
                     </item>
-                    <item row="12" column="2">
+                    <item row="13" column="2">
                      <widget class="TaurusLabel" name="tauValueLabel_tuningFFStepsA">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>65</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>65</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <pointsize>7</pointsize>
+                       </font>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="9" column="0">
+                     <widget class="QLabel" name="label_263">
+                      <property name="minimumSize">
+                       <size>
+                        <width>135</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>135</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <pointsize>8</pointsize>
+                       </font>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="text">
+                       <string>TunigFilter Enable</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="9" column="1">
+                     <widget class="TaurusValueComboBox" name="comboBox_tuningFilterEnA">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>65</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>65</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <pointsize>8</pointsize>
+                       </font>
+                      </property>
+                      <property name="autoApply">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="9" column="2">
+                     <widget class="TaurusLabel" name="tauValueLabel_tuningFilterEnA">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                         <horstretch>0</horstretch>
@@ -18745,7 +18832,7 @@
                       </property>
                      </widget>
                     </item>
-                    <item row="14" column="0">
+                    <item row="15" column="0">
                      <widget class="TaurusBoolLed" name="taurusBoolLed_33">
                       <property name="alignment">
                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -18758,7 +18845,7 @@
                       </property>
                      </widget>
                     </item>
-                    <item row="13" column="0">
+                    <item row="14" column="0">
                      <widget class="TaurusBoolLed" name="taurusBoolLed_34">
                       <property name="alignment">
                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -18771,7 +18858,7 @@
                       </property>
                      </widget>
                     </item>
-                    <item row="9" column="0">
+                    <item row="10" column="0">
                      <widget class="TaurusValueLineEdit" name="lineEdit_tuningDelayB">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -18826,7 +18913,7 @@
                       </property>
                      </widget>
                     </item>
-                    <item row="9" column="1">
+                    <item row="10" column="1">
                      <widget class="TaurusLabel" name="tauValueLabel_tuningDelayB">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -18856,8 +18943,8 @@
                       </property>
                      </widget>
                     </item>
-                    <item row="11" column="1">
-                     <widget class="TaurusLabel" name="tauValueLabel_tuningFFEnA_2">
+                    <item row="12" column="1">
+                     <widget class="TaurusLabel" name="tauValueLabel_tuningFFEnB">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                         <horstretch>0</horstretch>
@@ -18886,7 +18973,7 @@
                       </property>
                      </widget>
                     </item>
-                    <item row="10" column="0">
+                    <item row="11" column="0">
                      <widget class="TaurusValueComboBox" name="comboBox_tuningTrgEnB">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -18916,7 +19003,7 @@
                       </property>
                      </widget>
                     </item>
-                    <item row="11" column="0">
+                    <item row="12" column="0">
                      <widget class="TaurusValueComboBox" name="comboBox_tuningFFEnB">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -18946,7 +19033,7 @@
                       </property>
                      </widget>
                     </item>
-                    <item row="10" column="1">
+                    <item row="11" column="1">
                      <widget class="TaurusLabel" name="tauValueLabel_tuningTrgEnB">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -18976,7 +19063,7 @@
                       </property>
                      </widget>
                     </item>
-                    <item row="12" column="0">
+                    <item row="13" column="0">
                      <widget class="TaurusValueLineEdit" name="lineEdit_tuningFFStepsB">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -19009,8 +19096,68 @@
                       </property>
                      </widget>
                     </item>
-                    <item row="12" column="1">
+                    <item row="13" column="1">
                      <widget class="TaurusLabel" name="tauValueLabel_tuningFFStepsB">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>65</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>65</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <pointsize>7</pointsize>
+                       </font>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="9" column="0">
+                     <widget class="TaurusValueComboBox" name="comboBox_tuningFilterEnB">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>65</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>65</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <pointsize>8</pointsize>
+                       </font>
+                      </property>
+                      <property name="autoApply">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="9" column="1">
+                     <widget class="TaurusLabel" name="tauValueLabel_tuningFilterEnB">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                         <horstretch>0</horstretch>
@@ -19062,10 +19209,13 @@
                  <property name="orientation">
                   <enum>Qt::Vertical</enum>
                  </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Fixed</enum>
+                 </property>
                  <property name="sizeHint" stdset="0">
                   <size>
                    <width>20</width>
-                   <height>40</height>
+                   <height>10</height>
                   </size>
                  </property>
                 </spacer>
