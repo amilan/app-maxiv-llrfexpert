@@ -3,7 +3,7 @@
 from setuptools import setup
 
 setup(name = "taurusgui-llrfexpert",
-      version = "1.1.1",
+      version = "1.2.0",
       description = "Taurus GUI for Low Level RF expert users.",
       author = "Antonio Milan Otero",
       author_email = "antonio.milan_otero@maxlab.lu.se",

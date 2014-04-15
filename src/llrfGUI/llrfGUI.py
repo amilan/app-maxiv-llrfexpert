@@ -787,6 +787,7 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.tauValueLabel_tuningTrgEnA, self.device + "/TuningTriggerEnableA"),
                 (self.ui.tauValueLabel_tuningFFEnA, self.device + "/TuningFFA"),
                 (self.ui.tauValueLabel_tuningFFStepsA, self.device + "/TuningFFStepsA"),
+                (self.ui.tauValueLabel_tuningFilterEnA, self.device + "/TuningFilterEnableA"),
                 
                 (self.ui.tauValueLabel_tuningEn_2, self.device + "/TuningEnableB"),
                 (self.ui.tauValueLabel_tuningPosEn_2, self.device + "/TuningPosEnB"),
@@ -798,6 +799,7 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.tauValueLabel_tuningTrgEnB, self.device + "/TuningTriggerEnableB"),
                 (self.ui.tauValueLabel_tuningFFEnB, self.device + "/TuningFFB"),
                 (self.ui.tauValueLabel_tuningFFStepsB, self.device + "/TuningFFStepsB"),
+                (self.ui.tauValueLabel_tuningFilterEnB, self.device + "/TuningFilterEnableB"),
                 
                 (self.ui.tauValueLabel_tuningOffset, self.device + "/PhaseOffsetA"),
                 (self.ui.tauValueLabel_tuningOffset_2, self.device + "/PhaseOffsetB"),
@@ -1189,10 +1191,8 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.lineEdit_marginLow_2, self.device + "/MarginLowA"),
                 (self.ui.lineEdit_forwardMin, self.device + "/FwMinA"),
                 
-                (self.ui.lineEdit_tuningFilterEnA, self.device + "/TuningFilterEnableA"),
                 (self.ui.lineEdit_tuningDelayA, self.device + "/TuningDelayA"),
                 (self.ui.lineEdit_tuningFFStepsA, self.device + "/TuningFFStepsA"),
-                (self.ui.lineEdit_tuningFilterEnB, self.device + "/TuningFilterEnableB"),
                 (self.ui.lineEdit_tuningDelayB, self.device + "/TuningDelayB"),
                 (self.ui.lineEdit_tuningFFStepsB, self.device + "/TuningFFStepsB"),
                 
