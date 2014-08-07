@@ -32,6 +32,7 @@ from ui_llrf import Ui_LLRF
 from tih import *
 from taurus.qt.qtgui.display import TaurusStateLed
 
+time.sleep(1.0)
 
 #ScrollabeArea
 class ScrollableArea:
@@ -302,6 +303,12 @@ class llrfGUI(QtGui.QMainWindow):
         QtCore.QObject.connect(self.ui.pushButton_OVRLoops, QtCore.SIGNAL("clicked()"), self.openOVRLoops)
         QtCore.QObject.connect(self.ui.pushButton_OVRDiag, QtCore.SIGNAL("clicked()"), self.openOVRDiag)
         
+        # Interlocks input disable
+        QtCore.QObject.connect(self.ui.pushButton_3, QtCore.SIGNAL("clicked()"), self.enableAllInterlocksA)
+        QtCore.QObject.connect(self.ui.pushButton_4, QtCore.SIGNAL("clicked()"), self.disableAllInterlocksA)
+        QtCore.QObject.connect(self.ui.pushButton_5, QtCore.SIGNAL("clicked()"), self.enableAllInterlocksB)
+        QtCore.QObject.connect(self.ui.pushButton_6, QtCore.SIGNAL("clicked()"), self.disableAllInterlocksB)
+
         # PLC buttons
         QtCore.QObject.connect(self.ui.pushButton_startPump, QtCore.SIGNAL("clicked()"), self.startPump)
         QtCore.QObject.connect(self.ui.pushButton_stopPump, QtCore.SIGNAL("clicked()"), self.stopPump)
@@ -359,27 +366,37 @@ class llrfGUI(QtGui.QMainWindow):
     @alert_problems
     def startPump(self):
         #self.dpPLC['TANGO_COM'] = PLC_CMD_START_PUMP
-        self.devicePLC['TANGO_COM'] = PLC_CMD_START_PUMP
+        #self.devicePLC['TANGO_COM'] = PLC_CMD_START_PUMP
+        #@TODO: Remove this method for plc and the whole widget
+        pass
         
     @alert_problems
     def stopPump(self):
         #self.dpPLC['TANGO_COM'] = PLC_CMD_STOP_PUMP
-        self.devicePLC['TANGO_COM'] = PLC_CMD_STOP_PUMP
+        #self.devicePLC['TANGO_COM'] = PLC_CMD_STOP_PUMP
+        #@TODO: Remove this method for plc and the whole widget
+        pass
         
     @alert_problems
     def enableHF(self):
         #self.dpPLC['TANGO_COM'] = PLC_CMD_ENABLE_HF
-        self.devicePLC['TANGO_COM'] = PLC_CMD_ENABLE_HF
+        #self.devicePLC['TANGO_COM'] = PLC_CMD_ENABLE_HF
+        #@TODO: Remove this method for plc and the whole widget
+        pass
 
     @alert_problems
     def disableHF(self):
         #self.dpPLC['TANGO_COM'] = PLC_CMD_DISABLE_HF
-        self.devicePLC['TANGO_COM'] = PLC_CMD_DISABLE_HF
+        #self.devicePLC['TANGO_COM'] = PLC_CMD_DISABLE_HF
+        #@TODO: Remove this method for plc and the whole widget
+        pass
     
     @alert_problems
     def resetAlarm(self):
         #self.dpPLC['TANGO_COM'] = PLC_CMD_RESET_ALARM
-        self.devicePLC['TANGO_COM'] = PLC_CMD_RESET_ALARM
+        #self.devicePLC['TANGO_COM'] = PLC_CMD_RESET_ALARM
+        #@TODO: Remove this method for plc and the whole widget
+        pass
     
     @alert_problems
     def openVCXO(self):
@@ -483,6 +500,71 @@ class llrfGUI(QtGui.QMainWindow):
         """
         self.close()
         
+    @alert_problems
+    def enableAllInterlocksA():
+        attrs_to_enable = [ "/RvTet1DisA",
+                            "/RvTet2DisA",
+                            "/RvCircDisA",
+                            "/FwLoadDisA",
+                            "/FwHybLoadDisA",
+                            "/RvCavDisA",
+                            "/ManualITCKDisA",
+                            "/ArcsDisA",
+                            "/VacuumDisA",
+                            "/ExtITCKDisA"
+                            ]
+        for att in attrs_to_enable:
+            self.deviceDiag[att] = 'Enable'
+
+    @alert_problems
+    def disableAllInterlocksA():
+        attrs_to_disable = [ "/RvTet1DisA",
+                            "/RvTet2DisA",
+                            "/RvCircDisA",
+                            "/FwLoadDisA",
+                            "/FwHybLoadDisA",
+                            "/RvCavDisA",
+                            "/ManualITCKDisA",
+                            "/ArcsDisA",
+                            "/VacuumDisA",
+                            "/ExtITCKDisA"
+                            ]
+        for att in attrs_to_disable:
+            self.deviceDiag[att] = 'Disable'
+
+    @alert_problems
+    def enableAllInterlocksB():
+        attrs_to_enable = [ "/RvTet1DisB",
+                            "/RvTet2DisB",
+                            "/RvCircDisB",
+                            "/FwLoadDisB",
+                            "/FwHybLoadDisB",
+                            "/RvCavDisB",
+                            "/ManualITCKDisB",
+                            "/ArcsDisB",
+                            "/VacuumDisB",
+                            "/ExtITCKDisB"
+                            ]
+        for att in attrs_to_enable:
+            self.deviceDiag[att] = 'Enable'
+
+
+    @alert_problems
+    def disableAllInterlocksB():
+        attrs_to_disable = [ "/RvTet1DisB",
+                            "/RvTet2DisB",
+                            "/RvCircDisB",
+                            "/FwLoadDisB",
+                            "/FwHybLoadDisB",
+                            "/RvCavDisB",
+                            "/ManualITCKDisB",
+                            "/ArcsDisB",
+                            "/VacuumDisB",
+                            "/ExtITCKDisB"
+                            ]
+        for att in attrs_to_disable:
+            self.deviceDiag[att] = 'Disable'
+
     @alert_problems
     def closeEvent(self, event):
         """Method for saving settings and ask for close the app.
@@ -1317,6 +1399,9 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.comboBox_ArcsDisA, self.deviceDiag + "/ArcsDisA"),
                 (self.ui.comboBox_VacuumDisA, self.deviceDiag + "/VacuumDisA"),
                 (self.ui.comboBox_ExtDisA, self.deviceDiag + "/ExtITCKDisA"),
+                #@TODO: add this when they will be present in the device server
+                #(self.ui.comboBox_comboBox_ExtITCKDisB_2, self.deviceDiag + "/EndSwitchUpDisA"),
+                #(self.ui.comboBox_comboBox_ExtITCKDisB_3, self.deviceDiag + "/EndSwitchDownDisA"),
                 
                 (self.ui.comboBox_RvTet1DisB, self.deviceDiag + "/RvTet1DisB"),
                 (self.ui.comboBox_RvTet2DisB, self.deviceDiag + "/RvTet2DisB"),
@@ -1328,6 +1413,9 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.comboBox_ArcsDisB, self.deviceDiag + "/ArcsDisB"),
                 (self.ui.comboBox_VacuumDisB, self.deviceDiag + "/VacuumDisB"),
                 (self.ui.comboBox_ExtITCKDisB, self.deviceDiag + "/ExtITCKDisB"),
+                #@TODO: add this when they will be present in the device server
+                #(self.ui.comboBox_comboBox_ExtITCKDisB_2, self.deviceDiag + "/EndSwitchUpDisA"),
+                #(self.ui.comboBox_comboBox_ExtITCKDisB_3, self.deviceDiag + "/EndSwitchDownDisA"),
                 
                 #Interlocks output disable comboboxes
                 (self.ui.comboBox_DACsOffDisA, self.deviceDiag + "/DACsOffDisA"),

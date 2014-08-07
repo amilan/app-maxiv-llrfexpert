@@ -16996,7 +16996,7 @@
                        <enum>QFrame::StyledPanel</enum>
                       </property>
                       <property name="text">
-                       <string>Plunger Moving Up</string>
+                       <string>Moving In</string>
                       </property>
                      </widget>
                     </item>
@@ -17372,7 +17372,7 @@
                        <enum>QFrame::StyledPanel</enum>
                       </property>
                       <property name="text">
-                       <string>Tuning Frequency</string>
+                       <string>Frequency Pulses</string>
                       </property>
                      </widget>
                     </item>
@@ -19831,7 +19831,7 @@
                      <enum>QFrame::StyledPanel</enum>
                     </property>
                     <property name="text">
-                     <string>Moving Up</string>
+                     <string>Moving Out</string>
                     </property>
                    </widget>
                   </item>
@@ -23684,7 +23684,7 @@
               </size>
              </property>
              <property name="currentIndex">
-              <number>1</number>
+              <number>0</number>
              </property>
              <widget class="QWidget" name="tab_5">
               <attribute name="title">

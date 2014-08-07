@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'LLRFGUI.ui'
 #
-# Created: Fri Apr 11 10:51:09 2014
+# Created: Thu Aug  7 10:38:58 2014
 #      by: PyQt4 UI code generator 4.10.1
 #
 # WARNING! All changes made in this file will be lost!
@@ -13985,7 +13985,7 @@ class Ui_LLRF(object):
         self.Ramping.setCurrentIndex(0)
         self.tabWidget_2.setCurrentIndex(0)
         self.tabWidget.setCurrentIndex(0)
-        self.tabWidget_3.setCurrentIndex(1)
+        self.tabWidget_3.setCurrentIndex(0)
         self.tabWidget_4.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(LLRF)
 
@@ -14126,7 +14126,7 @@ class Ui_LLRF(object):
         self.label_259.setText(_translate("LLRF", "Tuning Delay [0,3]s", None))
         self.label_175.setText(_translate("LLRF", "Tuning On", None))
         self.label_15.setText(_translate("LLRF", "Tuning Positive Enable", None))
-        self.label_173.setText(_translate("LLRF", "Plunger Moving Up", None))
+        self.label_173.setText(_translate("LLRF", "Moving In", None))
         self.taurusBoolLed_32.setProperty("ledColor", _translate("LLRF", "GREEN", None))
         self.taurusBoolLed_32.setProperty("ledColorOff", _translate("LLRF", "GREENOFF", None))
         self.taurusBoolLed_31.setProperty("ledColor", _translate("LLRF", "GREEN", None))
@@ -14134,7 +14134,7 @@ class Ui_LLRF(object):
         self.label_42.setText(_translate("LLRF", "Write", None))
         self.label_43.setText(_translate("LLRF", "Read Back", None))
         self.label_14.setText(_translate("LLRF", "Tunig Enable", None))
-        self.label_16.setText(_translate("LLRF", "Tuning Frequency", None))
+        self.label_16.setText(_translate("LLRF", "Frequency Pulses", None))
         self.label_17.setText(_translate("LLRF", "Margin Up [1º, 5º]", None))
         self.label_18.setText(_translate("LLRF", "Margin Low [ 0º, 1º]", None))
         self.label_19.setText(_translate("LLRF", "Forward Min", None))
@@ -14163,7 +14163,7 @@ class Ui_LLRF(object):
         self.label_69.setText(_translate("LLRF", "RF Chain A", None))
         self.label_20.setText(_translate("LLRF", "Frequency Pulses", None))
         self.label_168.setText(_translate("LLRF", "End Plate Moving", None))
-        self.label_171.setText(_translate("LLRF", "Moving Up", None))
+        self.label_171.setText(_translate("LLRF", "Moving Out", None))
         self.taurusBoolLed_27.setProperty("ledColor", _translate("LLRF", "GREEN", None))
         self.taurusBoolLed_27.setProperty("ledColorOff", _translate("LLRF", "GREENOFF", None))
         self.taurusBoolLed_28.setProperty("ledColor", _translate("LLRF", "GREEN", None))
