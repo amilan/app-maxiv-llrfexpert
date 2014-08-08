@@ -501,7 +501,7 @@ class llrfGUI(QtGui.QMainWindow):
         self.close()
         
     @alert_problems
-    def enableAllInterlocksA():
+    def enableAllInterlocksA(self):
         attrs_to_enable = [ "/RvTet1DisA",
                             "/RvTet2DisA",
                             "/RvCircDisA",
@@ -511,13 +511,15 @@ class llrfGUI(QtGui.QMainWindow):
                             "/ManualITCKDisA",
                             "/ArcsDisA",
                             "/VacuumDisA",
-                            "/ExtITCKDisA"
+                            "/ExtITCKDisA",
+                            "/PlungerEndSwitchUpDisA",
+                            "/PlungerEndSwitchDownDisA"
                             ]
         for att in attrs_to_enable:
             self.deviceDiag[att] = 'Enable'
 
     @alert_problems
-    def disableAllInterlocksA():
+    def disableAllInterlocksA(self):
         attrs_to_disable = [ "/RvTet1DisA",
                             "/RvTet2DisA",
                             "/RvCircDisA",
@@ -527,13 +529,15 @@ class llrfGUI(QtGui.QMainWindow):
                             "/ManualITCKDisA",
                             "/ArcsDisA",
                             "/VacuumDisA",
-                            "/ExtITCKDisA"
+                            "/ExtITCKDisA",
+                            "/PlungerEndSwitchUpDisA",
+                            "/PlungerEndSwitchDownDisA"
                             ]
         for att in attrs_to_disable:
             self.deviceDiag[att] = 'Disable'
 
     @alert_problems
-    def enableAllInterlocksB():
+    def enableAllInterlocksB(self):
         attrs_to_enable = [ "/RvTet1DisB",
                             "/RvTet2DisB",
                             "/RvCircDisB",
@@ -543,14 +547,16 @@ class llrfGUI(QtGui.QMainWindow):
                             "/ManualITCKDisB",
                             "/ArcsDisB",
                             "/VacuumDisB",
-                            "/ExtITCKDisB"
+                            "/ExtITCKDisB",
+                            "/PlungerEndSwitchUpDisB",
+                            "/PlungerEndSwitchDownDisB"
                             ]
         for att in attrs_to_enable:
             self.deviceDiag[att] = 'Enable'
 
 
     @alert_problems
-    def disableAllInterlocksB():
+    def disableAllInterlocksB(self):
         attrs_to_disable = [ "/RvTet1DisB",
                             "/RvTet2DisB",
                             "/RvCircDisB",
@@ -561,6 +567,8 @@ class llrfGUI(QtGui.QMainWindow):
                             "/ArcsDisB",
                             "/VacuumDisB",
                             "/ExtITCKDisB"
+                            "/PlungerEndSwitchUpDisB",
+                            "/PlungerEndSwitchDownDisB"
                             ]
         for att in attrs_to_disable:
             self.deviceDiag[att] = 'Disable'
@@ -1066,6 +1074,8 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.taurusBoolLed_8, self.deviceDiag + "/ArcsDiagA"),
                 (self.ui.taurusBoolLed_9, self.deviceDiag + "/VacuumDiagA"),
                 (self.ui.taurusBoolLed_10, self.deviceDiag + "/ExternalITCKDiagA"),
+                (self.ui.taurusBoolLed_41, self.deviceDiag + "/PlungerEndSwitchUpDiagA"),
+                (self.ui.taurusBoolLed_43, self.deviceDiag + "/PlungerEndSwitchDownDiagA"),
                 
                 (self.ui.taurusBoolLed_11, self.deviceDiag + "/RvTet1DiagB"),
                 (self.ui.taurusBoolLed_12, self.deviceDiag + "/RvTet2DiagB"),
@@ -1077,6 +1087,8 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.taurusBoolLed_18, self.deviceDiag + "/ArcsDiagB"),
                 (self.ui.taurusBoolLed_19, self.deviceDiag + "/VacuumDiagB"),
                 (self.ui.taurusBoolLed_20, self.deviceDiag + "/ExternalITCKDiagB"),
+                (self.ui.taurusBoolLed_42, self.deviceDiag + "/PlungerEndSwitchUpDiagB"),
+                (self.ui.taurusBoolLed_44, self.deviceDiag + "/PlungerEndSwitchDownDiagB"),
                 (self.ui.tauValueLabel_itckTimestamp, self.deviceDiag + "/ITCKTimestampA"),
                 (self.ui.tauValueLabel_itckTimestamp_2, self.deviceDiag + "/ITCKTimestampB"),
                 
@@ -1399,9 +1411,8 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.comboBox_ArcsDisA, self.deviceDiag + "/ArcsDisA"),
                 (self.ui.comboBox_VacuumDisA, self.deviceDiag + "/VacuumDisA"),
                 (self.ui.comboBox_ExtDisA, self.deviceDiag + "/ExtITCKDisA"),
-                #@TODO: add this when they will be present in the device server
-                #(self.ui.comboBox_comboBox_ExtITCKDisB_2, self.deviceDiag + "/EndSwitchUpDisA"),
-                #(self.ui.comboBox_comboBox_ExtITCKDisB_3, self.deviceDiag + "/EndSwitchDownDisA"),
+                (self.ui.comboBox_comboBox_ExtITCKDisB_2, self.deviceDiag + "/PlungerEndSwitchUpDisA"),
+                (self.ui.comboBox_comboBox_ExtITCKDisB_3, self.deviceDiag + "/PlungerEndSwitchDownDisA"),
                 
                 (self.ui.comboBox_RvTet1DisB, self.deviceDiag + "/RvTet1DisB"),
                 (self.ui.comboBox_RvTet2DisB, self.deviceDiag + "/RvTet2DisB"),
@@ -1413,9 +1424,8 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.comboBox_ArcsDisB, self.deviceDiag + "/ArcsDisB"),
                 (self.ui.comboBox_VacuumDisB, self.deviceDiag + "/VacuumDisB"),
                 (self.ui.comboBox_ExtITCKDisB, self.deviceDiag + "/ExtITCKDisB"),
-                #@TODO: add this when they will be present in the device server
-                #(self.ui.comboBox_comboBox_ExtITCKDisB_2, self.deviceDiag + "/EndSwitchUpDisA"),
-                #(self.ui.comboBox_comboBox_ExtITCKDisB_3, self.deviceDiag + "/EndSwitchDownDisA"),
+                (self.ui.comboBox_comboBox_ExtITCKDisB_2, self.deviceDiag + "/PlungerEndSwitchUpDisA"),
+                (self.ui.comboBox_comboBox_ExtITCKDisB_3, self.deviceDiag + "/PlungerEndSwitchDownDisA"),
                 
                 #Interlocks output disable comboboxes
                 (self.ui.comboBox_DACsOffDisA, self.deviceDiag + "/DACsOffDisA"),

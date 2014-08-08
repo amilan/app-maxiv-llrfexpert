@@ -50,7 +50,7 @@
          <x>0</x>
          <y>0</y>
          <width>2198</width>
-         <height>1480</height>
+         <height>1482</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout_12">
@@ -382,7 +382,7 @@
                     <height>20</height>
                    </size>
                   </property>
-                  <property name="autoApply">
+                  <property name="autoApply" stdset="0">
                    <bool>false</bool>
                   </property>
                  </widget>
@@ -533,7 +533,7 @@
                     <height>20</height>
                    </size>
                   </property>
-                  <property name="autoApply">
+                  <property name="autoApply" stdset="0">
                    <bool>false</bool>
                   </property>
                  </widget>
@@ -991,7 +991,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -1087,7 +1087,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -1426,7 +1426,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -1492,7 +1492,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -1525,7 +1525,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -1658,7 +1658,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -1758,7 +1758,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -1858,7 +1858,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -1958,7 +1958,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -2024,7 +2024,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -2057,7 +2057,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -2090,7 +2090,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -2622,7 +2622,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -2655,7 +2655,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -2688,7 +2688,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -2814,7 +2814,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -2877,7 +2877,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -3036,7 +3036,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -3069,7 +3069,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -3259,7 +3259,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -3422,7 +3422,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -3573,7 +3573,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -3606,7 +3606,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -3732,7 +3732,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -3828,7 +3828,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -4104,7 +4104,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -4137,7 +4137,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -4170,7 +4170,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -4237,7 +4237,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -4304,7 +4304,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -4371,7 +4371,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -4438,7 +4438,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -4471,7 +4471,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -4504,7 +4504,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -4537,7 +4537,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -4934,7 +4934,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -4967,7 +4967,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -5000,7 +5000,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -5123,7 +5123,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -5216,7 +5216,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -5249,7 +5249,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -5282,7 +5282,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -5439,7 +5439,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -5506,7 +5506,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -5573,7 +5573,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -5670,7 +5670,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -5755,7 +5755,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -5788,7 +5788,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -5881,7 +5881,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -5944,7 +5944,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -6329,7 +6329,7 @@
                     <property name="frame">
                      <bool>true</bool>
                     </property>
-                    <property name="autoApply">
+                    <property name="autoApply" stdset="0">
                      <bool>false</bool>
                     </property>
                    </widget>
@@ -6395,7 +6395,7 @@
                     <property name="frame">
                      <bool>true</bool>
                     </property>
-                    <property name="autoApply">
+                    <property name="autoApply" stdset="0">
                      <bool>false</bool>
                     </property>
                    </widget>
@@ -7154,7 +7154,7 @@
                     <property name="frame">
                      <bool>true</bool>
                     </property>
-                    <property name="autoApply">
+                    <property name="autoApply" stdset="0">
                      <bool>false</bool>
                     </property>
                    </widget>
@@ -7187,7 +7187,7 @@
                     <property name="frame">
                      <bool>true</bool>
                     </property>
-                    <property name="autoApply">
+                    <property name="autoApply" stdset="0">
                      <bool>false</bool>
                     </property>
                    </widget>
@@ -7277,7 +7277,7 @@
                       <pointsize>8</pointsize>
                      </font>
                     </property>
-                    <property name="autoApply">
+                    <property name="autoApply" stdset="0">
                      <bool>true</bool>
                     </property>
                    </widget>
@@ -7350,7 +7350,7 @@
                     <property name="frame">
                      <bool>true</bool>
                     </property>
-                    <property name="autoApply">
+                    <property name="autoApply" stdset="0">
                      <bool>false</bool>
                     </property>
                    </widget>
@@ -7446,7 +7446,7 @@
                     <property name="frame">
                      <bool>true</bool>
                     </property>
-                    <property name="autoApply">
+                    <property name="autoApply" stdset="0">
                      <bool>false</bool>
                     </property>
                    </widget>
@@ -7758,7 +7758,7 @@
                     <property name="frame">
                      <bool>true</bool>
                     </property>
-                    <property name="autoApply">
+                    <property name="autoApply" stdset="0">
                      <bool>false</bool>
                     </property>
                    </widget>
@@ -7791,7 +7791,7 @@
                     <property name="frame">
                      <bool>true</bool>
                     </property>
-                    <property name="autoApply">
+                    <property name="autoApply" stdset="0">
                      <bool>false</bool>
                     </property>
                    </widget>
@@ -7824,7 +7824,7 @@
                     <property name="frame">
                      <bool>true</bool>
                     </property>
-                    <property name="autoApply">
+                    <property name="autoApply" stdset="0">
                      <bool>false</bool>
                     </property>
                    </widget>
@@ -8187,7 +8187,7 @@
                     <property name="frame">
                      <bool>true</bool>
                     </property>
-                    <property name="autoApply">
+                    <property name="autoApply" stdset="0">
                      <bool>false</bool>
                     </property>
                    </widget>
@@ -8277,7 +8277,7 @@
                       <pointsize>8</pointsize>
                      </font>
                     </property>
-                    <property name="autoApply">
+                    <property name="autoApply" stdset="0">
                      <bool>true</bool>
                     </property>
                    </widget>
@@ -8324,7 +8324,7 @@
                     <property name="frame">
                      <bool>true</bool>
                     </property>
-                    <property name="autoApply">
+                    <property name="autoApply" stdset="0">
                      <bool>false</bool>
                     </property>
                    </widget>
@@ -8387,7 +8387,7 @@
                     <property name="frame">
                      <bool>true</bool>
                     </property>
-                    <property name="autoApply">
+                    <property name="autoApply" stdset="0">
                      <bool>false</bool>
                     </property>
                    </widget>
@@ -16938,7 +16938,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -17314,7 +17314,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -17344,7 +17344,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -17401,7 +17401,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -17461,7 +17461,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -17521,7 +17521,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -17581,7 +17581,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -17807,7 +17807,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -17870,7 +17870,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -17984,7 +17984,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -18074,7 +18074,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -18161,7 +18161,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -18228,7 +18228,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -18361,7 +18361,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -18391,7 +18391,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -18424,7 +18424,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -18457,7 +18457,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -18490,7 +18490,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -18803,7 +18803,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -18886,7 +18886,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -18998,7 +18998,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -19028,7 +19028,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -19091,7 +19091,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -19151,7 +19151,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -19505,7 +19505,7 @@
                       <pointsize>8</pointsize>
                      </font>
                     </property>
-                    <property name="autoApply">
+                    <property name="autoApply" stdset="0">
                      <bool>false</bool>
                     </property>
                    </widget>
@@ -19562,7 +19562,7 @@
                       <pointsize>8</pointsize>
                      </font>
                     </property>
-                    <property name="autoApply">
+                    <property name="autoApply" stdset="0">
                      <bool>true</bool>
                     </property>
                    </widget>
@@ -19619,7 +19619,7 @@
                       <pointsize>8</pointsize>
                      </font>
                     </property>
-                    <property name="autoApply">
+                    <property name="autoApply" stdset="0">
                      <bool>true</bool>
                     </property>
                    </widget>
@@ -19764,7 +19764,7 @@
                       <pointsize>8</pointsize>
                      </font>
                     </property>
-                    <property name="autoApply">
+                    <property name="autoApply" stdset="0">
                      <bool>false</bool>
                     </property>
                    </widget>
@@ -19996,7 +19996,7 @@
                       <pointsize>8</pointsize>
                      </font>
                     </property>
-                    <property name="autoApply">
+                    <property name="autoApply" stdset="0">
                      <bool>false</bool>
                     </property>
                    </widget>
@@ -20026,7 +20026,7 @@
                       <pointsize>8</pointsize>
                      </font>
                     </property>
-                    <property name="autoApply">
+                    <property name="autoApply" stdset="0">
                      <bool>true</bool>
                     </property>
                    </widget>
@@ -20056,7 +20056,7 @@
                       <pointsize>8</pointsize>
                      </font>
                     </property>
-                    <property name="autoApply">
+                    <property name="autoApply" stdset="0">
                      <bool>true</bool>
                     </property>
                    </widget>
@@ -20277,7 +20277,7 @@
                       <pointsize>8</pointsize>
                      </font>
                     </property>
-                    <property name="autoApply">
+                    <property name="autoApply" stdset="0">
                      <bool>false</bool>
                     </property>
                    </widget>
@@ -20569,7 +20569,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -20626,7 +20626,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -20683,7 +20683,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -21151,7 +21151,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -21208,7 +21208,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -21268,7 +21268,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -21328,7 +21328,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -21388,7 +21388,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -21595,7 +21595,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -23991,7 +23991,7 @@
                       <pointsize>8</pointsize>
                      </font>
                     </property>
-                    <property name="autoApply">
+                    <property name="autoApply" stdset="0">
                      <bool>true</bool>
                     </property>
                    </widget>
@@ -24118,7 +24118,7 @@
                       <pointsize>8</pointsize>
                      </font>
                     </property>
-                    <property name="autoApply">
+                    <property name="autoApply" stdset="0">
                      <bool>false</bool>
                     </property>
                    </widget>
@@ -24305,7 +24305,7 @@
                       <pointsize>8</pointsize>
                      </font>
                     </property>
-                    <property name="autoApply">
+                    <property name="autoApply" stdset="0">
                      <bool>false</bool>
                     </property>
                    </widget>
@@ -24690,7 +24690,7 @@
                       <pointsize>8</pointsize>
                      </font>
                     </property>
-                    <property name="autoApply">
+                    <property name="autoApply" stdset="0">
                      <bool>true</bool>
                     </property>
                    </widget>
@@ -24916,7 +24916,7 @@
                       <pointsize>8</pointsize>
                      </font>
                     </property>
-                    <property name="autoApply">
+                    <property name="autoApply" stdset="0">
                      <bool>false</bool>
                     </property>
                    </widget>
@@ -25103,7 +25103,7 @@
                       <pointsize>8</pointsize>
                      </font>
                     </property>
-                    <property name="autoApply">
+                    <property name="autoApply" stdset="0">
                      <bool>false</bool>
                     </property>
                    </widget>
@@ -25651,7 +25651,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -25681,7 +25681,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -26006,7 +26006,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -26036,7 +26036,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -26140,7 +26140,7 @@
                    </widget>
                   </item>
                   <item row="1" column="1">
-                   <widget class="TaurusLed" name="taurusLed_3"/>
+                   <widget class="TaurusLed" name="taurusLed_3" native="true"/>
                   </item>
                   <item row="0" column="0" colspan="2">
                    <widget class="QPushButton" name="pushButton_FDLLoops_10">
@@ -26196,7 +26196,7 @@
                    </widget>
                   </item>
                   <item row="1" column="1">
-                   <widget class="TaurusLed" name="taurusLed_4"/>
+                   <widget class="TaurusLed" name="taurusLed_4" native="true"/>
                   </item>
                   <item row="0" column="0" colspan="2">
                    <widget class="QPushButton" name="pushButton_FDLDiags_2">
@@ -27115,7 +27115,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -27181,7 +27181,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -27247,7 +27247,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -27280,7 +27280,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -27592,7 +27592,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -27625,7 +27625,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -27781,7 +27781,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -27814,7 +27814,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -27847,7 +27847,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -27880,7 +27880,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -27913,7 +27913,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -28126,7 +28126,7 @@
                       <property name="frame">
                        <bool>true</bool>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>false</bool>
                       </property>
                      </widget>
@@ -28893,7 +28893,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -28923,7 +28923,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -28953,7 +28953,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -28983,7 +28983,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -29013,7 +29013,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -29043,7 +29043,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -29491,7 +29491,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -29521,7 +29521,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -29551,7 +29551,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -29581,7 +29581,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -29611,7 +29611,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -29641,7 +29641,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -30061,7 +30061,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -30597,7 +30597,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -30627,7 +30627,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -30657,7 +30657,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -30687,7 +30687,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -30717,7 +30717,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -30747,7 +30747,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -30777,7 +30777,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -30807,7 +30807,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -30837,7 +30837,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -30897,7 +30897,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -30927,7 +30927,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -31075,7 +31075,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -31941,7 +31941,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -31971,7 +31971,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -32001,7 +32001,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -32031,7 +32031,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -32061,7 +32061,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -32091,7 +32091,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -32121,7 +32121,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -32151,7 +32151,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -32181,7 +32181,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -32211,7 +32211,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -32337,7 +32337,7 @@
                         <pointsize>8</pointsize>
                        </font>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -32503,6 +32503,69 @@
                     <property name="spacing">
                      <number>0</number>
                     </property>
+                    <item row="13" column="0">
+                     <widget class="QLabel" name="label_146">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>130</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>130</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <pointsize>8</pointsize>
+                       </font>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="text">
+                       <string>Interlock timestamp (ms)</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="13" column="2">
+                     <widget class="TaurusLabel" name="tauValueLabel_itckTimestamp_2">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>93</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>93</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <pointsize>7</pointsize>
+                       </font>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                     </widget>
+                    </item>
                     <item row="1" column="0">
                      <widget class="QLabel" name="label_152">
                       <property name="sizePolicy">
@@ -32890,7 +32953,7 @@
                       </property>
                      </widget>
                     </item>
-                    <item row="11" column="1">
+                    <item row="13" column="1">
                      <widget class="TaurusLabel" name="tauValueLabel_itckTimestamp">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -32917,39 +32980,6 @@
                       </property>
                       <property name="frameShape">
                        <enum>QFrame::StyledPanel</enum>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="11" column="0">
-                     <widget class="QLabel" name="label_146">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="minimumSize">
-                       <size>
-                        <width>130</width>
-                        <height>20</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>130</width>
-                        <height>20</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <pointsize>8</pointsize>
-                       </font>
-                      </property>
-                      <property name="frameShape">
-                       <enum>QFrame::StyledPanel</enum>
-                      </property>
-                      <property name="text">
-                       <string>Interlock timestamp (ms)</string>
                       </property>
                      </widget>
                     </item>
@@ -33040,36 +33070,6 @@
                       </property>
                       <property name="ledColorOff" stdset="0">
                        <string>REDOFF</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="11" column="2">
-                     <widget class="TaurusLabel" name="tauValueLabel_itckTimestamp_2">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="minimumSize">
-                       <size>
-                        <width>93</width>
-                        <height>20</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>93</width>
-                        <height>20</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <pointsize>7</pointsize>
-                       </font>
-                      </property>
-                      <property name="frameShape">
-                       <enum>QFrame::StyledPanel</enum>
                       </property>
                      </widget>
                     </item>
@@ -33176,6 +33176,112 @@
                       </property>
                      </widget>
                     </item>
+                    <item row="11" column="0">
+                     <widget class="QLabel" name="label_264">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <pointsize>8</pointsize>
+                       </font>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="text">
+                       <string>End Switch Up</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="11" column="1">
+                     <widget class="TaurusBoolLed" name="taurusBoolLed_41">
+                      <property name="ledColor" stdset="0">
+                       <string>RED</string>
+                      </property>
+                      <property name="ledColorOff" stdset="0">
+                       <string>REDOFF</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="11" column="2">
+                     <widget class="TaurusBoolLed" name="taurusBoolLed_42">
+                      <property name="ledColor" stdset="0">
+                       <string>RED</string>
+                      </property>
+                      <property name="ledColorOff" stdset="0">
+                       <string>REDOFF</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="12" column="0">
+                     <widget class="QLabel" name="label_265">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <pointsize>8</pointsize>
+                       </font>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="text">
+                       <string>End Switch Down</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="12" column="1">
+                     <widget class="TaurusBoolLed" name="taurusBoolLed_43">
+                      <property name="ledColor" stdset="0">
+                       <string>RED</string>
+                      </property>
+                      <property name="ledColorOff" stdset="0">
+                       <string>REDOFF</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="12" column="2">
+                     <widget class="TaurusBoolLed" name="taurusBoolLed_44">
+                      <property name="ledColor" stdset="0">
+                       <string>RED</string>
+                      </property>
+                      <property name="ledColorOff" stdset="0">
+                       <string>REDOFF</string>
+                      </property>
+                     </widget>
+                    </item>
                    </layout>
                   </item>
                   <item row="3" column="0">
@@ -33221,16 +33327,16 @@
                       <property name="decimalDigits" stdset="0">
                        <number>0</number>
                       </property>
-                      <property name="value">
+                      <property name="value" stdset="0">
                        <double>1.000000000000000</double>
                       </property>
-                      <property name="minValue">
+                      <property name="minValue" stdset="0">
                        <double>1.000000000000000</double>
                       </property>
-                      <property name="maxValue">
+                      <property name="maxValue" stdset="0">
                        <double>8.000000000000000</double>
                       </property>
-                      <property name="autoApply">
+                      <property name="autoApply" stdset="0">
                        <bool>true</bool>
                       </property>
                      </widget>
@@ -33409,23 +33515,23 @@
                        </widget>
                       </item>
                       <item row="0" column="1">
-                       <widget class="TaurusLed" name="taurusLed_pumpOn">
+                       <widget class="TaurusLed" name="taurusLed_pumpOn" native="true">
                         <property name="sizePolicy">
                          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                           <horstretch>0</horstretch>
                           <verstretch>0</verstretch>
                          </sizepolicy>
                         </property>
-                        <property name="ledStatus">
+                        <property name="ledStatus" stdset="0">
                          <bool>true</bool>
                         </property>
-                        <property name="ledInverted">
+                        <property name="ledInverted" stdset="0">
                          <bool>true</bool>
                         </property>
-                        <property name="onColor">
+                        <property name="onColor" stdset="0">
                          <string>black</string>
                         </property>
-                        <property name="offColor">
+                        <property name="offColor" stdset="0">
                          <string>green</string>
                         </property>
                        </widget>
@@ -33443,7 +33549,7 @@
                        </widget>
                       </item>
                       <item row="1" column="1">
-                       <widget class="TaurusLed" name="taurusLed_hfOn">
+                       <widget class="TaurusLed" name="taurusLed_hfOn" native="true">
                         <property name="sizePolicy">
                          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                           <horstretch>0</horstretch>
@@ -33544,8 +33650,8 @@
                      </widget>
                     </item>
                     <item row="0" column="1">
-                     <widget class="TaurusLed" name="taurusLed_airTemp">
-                      <property name="onColor">
+                     <widget class="TaurusLed" name="taurusLed_airTemp" native="true">
+                      <property name="onColor" stdset="0">
                        <string>red</string>
                       </property>
                      </widget>
@@ -33563,8 +33669,8 @@
                      </widget>
                     </item>
                     <item row="1" column="1">
-                     <widget class="TaurusLed" name="taurusLed_fanError">
-                      <property name="onColor">
+                     <widget class="TaurusLed" name="taurusLed_fanError" native="true">
+                      <property name="onColor" stdset="0">
                        <string>red</string>
                       </property>
                      </widget>
@@ -33582,8 +33688,8 @@
                      </widget>
                     </item>
                     <item row="2" column="1">
-                     <widget class="TaurusLed" name="taurusLed_cavTemp">
-                      <property name="onColor">
+                     <widget class="TaurusLed" name="taurusLed_cavTemp" native="true">
+                      <property name="onColor" stdset="0">
                        <string>red</string>
                       </property>
                      </widget>
@@ -33601,8 +33707,8 @@
                      </widget>
                     </item>
                     <item row="3" column="1">
-                     <widget class="TaurusLed" name="taurusLed_vacPumpControlUnit">
-                      <property name="onColor">
+                     <widget class="TaurusLed" name="taurusLed_vacPumpControlUnit" native="true">
+                      <property name="onColor" stdset="0">
                        <string>red</string>
                       </property>
                      </widget>
@@ -33620,8 +33726,8 @@
                      </widget>
                     </item>
                     <item row="4" column="1">
-                     <widget class="TaurusLed" name="taurusLed_watCircFlowBody">
-                      <property name="onColor">
+                     <widget class="TaurusLed" name="taurusLed_watCircFlowBody" native="true">
+                      <property name="onColor" stdset="0">
                        <string>red</string>
                       </property>
                      </widget>
@@ -33639,8 +33745,8 @@
                      </widget>
                     </item>
                     <item row="5" column="1">
-                     <widget class="TaurusLed" name="taurusLed_watCircFlowLoad">
-                      <property name="onColor">
+                     <widget class="TaurusLed" name="taurusLed_watCircFlowLoad" native="true">
+                      <property name="onColor" stdset="0">
                        <string>red</string>
                       </property>
                      </widget>
@@ -33658,8 +33764,8 @@
                      </widget>
                     </item>
                     <item row="6" column="1">
-                     <widget class="TaurusLed" name="taurusLed_watHighReturnTemp">
-                      <property name="onColor">
+                     <widget class="TaurusLed" name="taurusLed_watHighReturnTemp" native="true">
+                      <property name="onColor" stdset="0">
                        <string>red</string>
                       </property>
                      </widget>
@@ -33677,8 +33783,8 @@
                      </widget>
                     </item>
                     <item row="7" column="1">
-                     <widget class="TaurusLed" name="taurusLed_watLowPressure">
-                      <property name="onColor">
+                     <widget class="TaurusLed" name="taurusLed_watLowPressure" native="true">
+                      <property name="onColor" stdset="0">
                        <string>red</string>
                       </property>
                      </widget>
@@ -33696,8 +33802,8 @@
                      </widget>
                     </item>
                     <item row="8" column="1">
-                     <widget class="TaurusLed" name="taurusLed_watPumpLowFlow">
-                      <property name="onColor">
+                     <widget class="TaurusLed" name="taurusLed_watPumpLowFlow" native="true">
+                      <property name="onColor" stdset="0">
                        <string>red</string>
                       </property>
                      </widget>
@@ -33781,7 +33887,7 @@
      <x>0</x>
      <y>0</y>
      <width>2186</width>
-     <height>22</height>
+     <height>20</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_File">
@@ -33834,6 +33940,7 @@
    <class>TaurusWheelEdit</class>
    <extends>QFrame</extends>
    <header>taurus.qt.qtgui.input</header>
+   <container>1</container>
   </customwidget>
   <customwidget>
    <class>TaurusLabel</class>
@@ -33851,23 +33958,13 @@
    <header>taurus.qt.qtgui.input</header>
   </customwidget>
   <customwidget>
-   <class>TaurusLed</class>
-   <extends>QLed</extends>
-   <header>taurus.qt.qtgui.display</header>
-  </customwidget>
-  <customwidget>
-   <class>QLed</class>
-   <extends>QPixmapWidget</extends>
-   <header>taurus.qt.qtgui.display</header>
-  </customwidget>
-  <customwidget>
-   <class>QPixmapWidget</class>
-   <extends>QWidget</extends>
-   <header>taurus.qt.qtgui.display</header>
-  </customwidget>
-  <customwidget>
    <class>TaurusBoolLed</class>
    <extends>QLabel</extends>
+   <header>taurus.qt.qtgui.display</header>
+  </customwidget>
+  <customwidget>
+   <class>TaurusLed</class>
+   <extends>QWidget</extends>
    <header>taurus.qt.qtgui.display</header>
   </customwidget>
  </customwidgets>
