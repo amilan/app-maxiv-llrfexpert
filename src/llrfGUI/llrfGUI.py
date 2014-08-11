@@ -221,6 +221,8 @@ class llrfGUI(QtGui.QMainWindow):
         self.ui.comboBox_ArcsDisA.addValueNames(CEN)
         self.ui.comboBox_VacuumDisA.addValueNames(CEN)
         self.ui.comboBox_ExtDisA.addValueNames(CEN)
+        self.ui.comboBox_ExtITCKDisB_2.addValueNames(CEN)
+        self.ui.comboBox_ExtITCKDisB_3.addValueNames(CEN)
         
         self.ui.comboBox_RvTet1DisB.addValueNames(CEN)
         self.ui.comboBox_RvTet2DisB.addValueNames(CEN)
@@ -232,6 +234,8 @@ class llrfGUI(QtGui.QMainWindow):
         self.ui.comboBox_ArcsDisB.addValueNames(CEN)
         self.ui.comboBox_VacuumDisB.addValueNames(CEN)
         self.ui.comboBox_ExtITCKDisB.addValueNames(CEN)
+        self.ui.comboBox_ExtDisA_2.addValueNames(CEN)
+        self.ui.comboBox_ExtDisA_3.addValueNames(CEN)
         
         #Interlocks output disable comboboxes//////////////////////////////////
         self.ui.comboBox_DACsOffDisA.addValueNames(CEN)
@@ -502,76 +506,76 @@ class llrfGUI(QtGui.QMainWindow):
         
     @alert_problems
     def enableAllInterlocksA(self):
-        attrs_to_enable = [ "/RvTet1DisA",
-                            "/RvTet2DisA",
-                            "/RvCircDisA",
-                            "/FwLoadDisA",
-                            "/FwHybLoadDisA",
-                            "/RvCavDisA",
-                            "/ManualITCKDisA",
-                            "/ArcsDisA",
-                            "/VacuumDisA",
-                            "/ExtITCKDisA",
-                            "/PlungerEndSwitchUpDisA",
-                            "/PlungerEndSwitchDownDisA"
+        attrs_to_enable = [ "RvTet1DisA",
+                            "RvTet2DisA",
+                            "RvCircDisA",
+                            "FwLoadDisA",
+                            "FwHybLoadDisA",
+                            "RvCavDisA",
+                            "ManualITCKDisA",
+                            "ArcsDisA",
+                            "VacuumDisA",
+                            "ExtITCKDisA",
+                            "PlungerEndSwitchUpDisA",
+                            "PlungerEndSwitchDownDisA"
                             ]
         for att in attrs_to_enable:
-            self.deviceDiag[att] = 'Enable'
+            self.dpDiag[att] = 'Enable'
 
     @alert_problems
     def disableAllInterlocksA(self):
-        attrs_to_disable = [ "/RvTet1DisA",
-                            "/RvTet2DisA",
-                            "/RvCircDisA",
-                            "/FwLoadDisA",
-                            "/FwHybLoadDisA",
-                            "/RvCavDisA",
-                            "/ManualITCKDisA",
-                            "/ArcsDisA",
-                            "/VacuumDisA",
-                            "/ExtITCKDisA",
-                            "/PlungerEndSwitchUpDisA",
-                            "/PlungerEndSwitchDownDisA"
+        attrs_to_disable = [ "RvTet1DisA",
+                             "RvTet2DisA",
+                             "RvCircDisA",
+                             "FwLoadDisA",
+                             "FwHybLoadDisA",
+                             "RvCavDisA",
+                             "ManualITCKDisA",
+                             "ArcsDisA",
+                             "VacuumDisA",
+                             "ExtITCKDisA",
+                             "PlungerEndSwitchUpDisA",
+                             "PlungerEndSwitchDownDisA"
                             ]
         for att in attrs_to_disable:
-            self.deviceDiag[att] = 'Disable'
+            self.dpDiag[att] = 'Disable'
 
     @alert_problems
     def enableAllInterlocksB(self):
-        attrs_to_enable = [ "/RvTet1DisB",
-                            "/RvTet2DisB",
-                            "/RvCircDisB",
-                            "/FwLoadDisB",
-                            "/FwHybLoadDisB",
-                            "/RvCavDisB",
-                            "/ManualITCKDisB",
-                            "/ArcsDisB",
-                            "/VacuumDisB",
-                            "/ExtITCKDisB",
-                            "/PlungerEndSwitchUpDisB",
-                            "/PlungerEndSwitchDownDisB"
+        attrs_to_enable = [ "RvTet1DisB",
+                            "RvTet2DisB",
+                            "RvCircDisB",
+                            "FwLoadDisB",
+                            "FwHybLoadDisB",
+                            "RvCavDisB",
+                            "ManualITCKDisB",
+                            "ArcsDisB",
+                            "VacuumDisB",
+                            "ExtITCKDisB",
+                            "PlungerEndSwitchUpDisB",
+                            "PlungerEndSwitchDownDisB"
                             ]
         for att in attrs_to_enable:
-            self.deviceDiag[att] = 'Enable'
+            self.dpDiag[att] = 'Enable'
 
 
     @alert_problems
     def disableAllInterlocksB(self):
-        attrs_to_disable = [ "/RvTet1DisB",
-                            "/RvTet2DisB",
-                            "/RvCircDisB",
-                            "/FwLoadDisB",
-                            "/FwHybLoadDisB",
-                            "/RvCavDisB",
-                            "/ManualITCKDisB",
-                            "/ArcsDisB",
-                            "/VacuumDisB",
-                            "/ExtITCKDisB"
-                            "/PlungerEndSwitchUpDisB",
-                            "/PlungerEndSwitchDownDisB"
+        attrs_to_disable = [ "RvTet1DisB",
+                             "RvTet2DisB",
+                             "RvCircDisB",
+                             "FwLoadDisB",
+                             "FwHybLoadDisB",
+                             "RvCavDisB",
+                             "ManualITCKDisB",
+                             "ArcsDisB",
+                             "VacuumDisB",
+                             "ExtITCKDisB",
+                             "PlungerEndSwitchUpDisB",
+                             "PlungerEndSwitchDownDisB"
                             ]
         for att in attrs_to_disable:
-            self.deviceDiag[att] = 'Disable'
+            self.dpDiag[att] = 'Disable'
 
     @alert_problems
     def closeEvent(self, event):
@@ -1036,6 +1040,8 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.tauValueLabel_ArcsDisA, self.deviceDiag + "/ArcsDisA"),
                 (self.ui.tauValueLabel_VacuumDisA, self.deviceDiag + "/VacuumDisA"),
                 (self.ui.tauValueLabel_ExtITCKDisA, self.deviceDiag + "/ExtITCKDisA"),
+                (self.ui.tauValueLabel_ExtITCKDisB_2, self.deviceDiag + "/PlungerEndSwitchUpDisA"),
+                (self.ui.tauValueLabel_ExtITCKDisB_3, self.deviceDiag + "/PlungerEndSwitchDownDisA"),
                 
                 (self.ui.tauValueLabel_RvTet1DisB, self.deviceDiag + "/RvTet1DisB"),
                 (self.ui.tauValueLabel_RvTet2DisB, self.deviceDiag + "/RvTet2DisB"),
@@ -1047,6 +1053,8 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.tauValueLabel_ArcsDisB, self.deviceDiag + "/ArcsDisB"),
                 (self.ui.tauValueLabel_VacuumDisB, self.deviceDiag + "/VacuumDisB"),
                 (self.ui.tauValueLabel_ExtITCKDisB, self.deviceDiag + "/ExtITCKDisB"),
+                (self.ui.tauValueLabel_ExtITCKDisA_2, self.deviceDiag + "/PlungerEndSwitchUpDisB"),
+                (self.ui.tauValueLabel_ExtITCKDisA_3, self.deviceDiag + "/PlungerEndSwitchDownDisB"),
                 
                 #Interlock outputs disable
                 (self.ui.tauValueLabel_DACsOffDisA, self.deviceDiag + "/DACsOffDisA"),
@@ -1209,7 +1217,7 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.taurusLabel_bufferSize, self.device + "/FDLDataBufferSize"),
                 (self.ui.taurusLabel_buffersizeD, self.deviceDiag + "/FDLDataBufferSize"),
                 (self.ui.taurusLabel_trgDelay, self.device + "/FDLTriggerDelay"),
-                (self.ui.taurusLabel_trgDelayD, self.deviceDiag + "FDLTriggerDelay"),
+                (self.ui.taurusLabel_trgDelayD, self.deviceDiag + "/FDLTriggerDelay"),
                 (self.ui.taurusLabel_chSrA, self.device + "/FDLChannelSourceA"),
                 (self.ui.taurusLabel_chSrDA, self.deviceDiag + "/FDLChannelSourceA"),
                 (self.ui.taurusLabel_chSrB, self.device + "/FDLChannelSourceB"),
@@ -1340,7 +1348,7 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.taurusValueLineEdit_bufferSize, self.device + "/FDLDataBufferSize"),
                 (self.ui.taurusValueLineEdit_bufferSizeD, self.deviceDiag + "/FDLDataBufferSize"),
                 (self.ui.taurusValueLineEdit_trgDelay, self.device + "/FDLTriggerDelay"),
-                (self.ui.taurusValueLineEdit_trgDelayD, self.deviceDiag + "FDLTriggerDelay"),
+                (self.ui.taurusValueLineEdit_trgDelayD, self.deviceDiag + "/FDLTriggerDelay"),
                 
                 #//////////////////////////////////////////////////////////////
                 (self.ui.lineEdit_gainola, self.device + "/GainOLA"),
@@ -1411,8 +1419,8 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.comboBox_ArcsDisA, self.deviceDiag + "/ArcsDisA"),
                 (self.ui.comboBox_VacuumDisA, self.deviceDiag + "/VacuumDisA"),
                 (self.ui.comboBox_ExtDisA, self.deviceDiag + "/ExtITCKDisA"),
-                (self.ui.comboBox_comboBox_ExtITCKDisB_2, self.deviceDiag + "/PlungerEndSwitchUpDisA"),
-                (self.ui.comboBox_comboBox_ExtITCKDisB_3, self.deviceDiag + "/PlungerEndSwitchDownDisA"),
+                (self.ui.comboBox_ExtITCKDisB_2, self.deviceDiag + "/PlungerEndSwitchUpDisA"),
+                (self.ui.comboBox_ExtITCKDisB_3, self.deviceDiag + "/PlungerEndSwitchDownDisA"),
                 
                 (self.ui.comboBox_RvTet1DisB, self.deviceDiag + "/RvTet1DisB"),
                 (self.ui.comboBox_RvTet2DisB, self.deviceDiag + "/RvTet2DisB"),
@@ -1424,8 +1432,8 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.comboBox_ArcsDisB, self.deviceDiag + "/ArcsDisB"),
                 (self.ui.comboBox_VacuumDisB, self.deviceDiag + "/VacuumDisB"),
                 (self.ui.comboBox_ExtITCKDisB, self.deviceDiag + "/ExtITCKDisB"),
-                (self.ui.comboBox_comboBox_ExtITCKDisB_2, self.deviceDiag + "/PlungerEndSwitchUpDisA"),
-                (self.ui.comboBox_comboBox_ExtITCKDisB_3, self.deviceDiag + "/PlungerEndSwitchDownDisA"),
+                (self.ui.comboBox_ExtDisA_2, self.deviceDiag + "/PlungerEndSwitchUpDisB"),
+                (self.ui.comboBox_ExtDisA_3, self.deviceDiag + "/PlungerEndSwitchDownDisB"),
                 
                 #Interlocks output disable comboboxes
                 (self.ui.comboBox_DACsOffDisA, self.deviceDiag + "/DACsOffDisA"),
