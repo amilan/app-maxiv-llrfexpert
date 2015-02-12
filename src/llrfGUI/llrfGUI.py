@@ -34,6 +34,7 @@ from taurus.qt.qtgui.display import TaurusStateLed
 
 time.sleep(1.0)
 
+
 #ScrollabeArea
 class ScrollableArea:
     def __init__(self, parent, frame):
@@ -45,8 +46,8 @@ class ScrollableArea:
         parent.ui.centralwidget.layout().setSpacing(0)
         parent.ui.centralwidget.layout().setMargin(0)
         parent.ui.centralwidget.layout().addWidget(self.sa)
-        
-        
+
+
 def alert_problems(meth):
     def _alert_problems(self, *args, **kws):
         try:
@@ -74,78 +75,78 @@ def alert_problems(meth):
             QtGui.QMessageBox.critical(self, 'LLRF', error_str)
     return _alert_problems
 
+
 class llrfGUI(QtGui.QMainWindow):
     def __init__(self, param=None, parent=None):
         QtGui.QMainWindow.__init__(self, parent)
-        
+
         ##Get Graphical information ///////////////////////////////////////////
         self.ui = Ui_LLRF()
         self.ui.setupUi(self)
-        
+
         ## Restore settings ///////////////////////////////////////////////////
         settings = QtCore.QSettings()
         self.restoreState(settings.value("MainWindow/State").toByteArray())
-        
+
         ## Create the leds for state //////////////////////////////////////////
         self.createStateLeds()
-        
+
         ## Create custom widgets //////////////////////////////////////////////
         #self.createCustomWidgets()
-        
+
         ## Initialize lists ///////////////////////////////////////////////////
         self.connectedAttributeWidgets = []  ##For saving and restore attribute
                                              ##values. Still not needed. 
-        
+
         ## Fill the values of the comboBoxes //////////////////////////////////
         self.fillComboBoxes()
-        
+
         ## Connect the signals ////////////////////////////////////////////////
         self.connectSignals()
-        
+
         ## Connect attributes /////////////////////////////////////////////////
         if param == None:
             self.sector = 'LAB'
         else:
             self.sector = param
         self.connectAllAtributes()
-        
+
         ## Make the GUI scrollable ////////////////////////////////////////////
         ##Not needed since it's in ui file
         ##self.ui.scroll = ScrollableArea(self, self.ui.frame)
-        
-        
+
     @alert_problems
     def connectAllAtributes(self):
         """Depending on the choose sector, it initialize the deviceproxys and 
            it connects all the attributes.
         """
-        
+
         if self.sector == 'LAB':
             self.device = MAIN_DEVICE_LAB
             self.deviceDiag = DIAG_DEVICE_LAB
             #self.devicePLC = PLC_DEVICE_LAB
             self.deviceAlarm = ALARM_DEVICE_LAB
             self.alarmDevice = ALARM_DEVICE_LAB
-            
+
         ## Set the title depending on the sector //////////////////////////////
         self.setWindowTitle('LLRF Expert GUI %s' %(self.sector))
-        
+
         ## Connect with all the devices involved //////////////////////////////
         self.connectWithDevices()
-        
+
         ## Create the lists with attributes to connect ////////////////////////
         self.createLists()
-        
+
         ## Connect all the attributes /////////////////////////////////////////
         for i,attr in enumerate(self._attrList):
             self.connectAttribute(attr[0], attr[1])
-            
+
         for i,attr in enumerate(self._attrDiagList):
             self.connectAttributeDiag(attr[0], attr[1])
-            
+
         for i,attr in enumerate(self._comboList):
             self.connectComboBoxAttributes(attr[0],attr[1])
-            
+
     @alert_problems
     def fillComboBoxes(self):
         """This method will add the values to the comboBoxes
@@ -160,7 +161,7 @@ class llrfGUI(QtGui.QMainWindow):
         self.ui.comboBox_GainTetA1En.addValueNames(CB)
         self.ui.comboBox_autoConditioningEnable.addValueNames(CB)
         self.ui.comboBox_loopInputA.addValueNames(CB)
-        
+
         ## Main Parameters B //////////////////////////////////////////////////
         self.ui.comboBox_voltInc_3.addValueNames(CV)
         self.ui.comboBox_quad_2.addValueNames(CQ)
@@ -171,7 +172,7 @@ class llrfGUI(QtGui.QMainWindow):
         self.ui.comboBox_GainTetB1En.addValueNames(CB)
         self.ui.comboBox_autoConditioningEnable_2.addValueNames(CB)
         self.ui.comboBox_loopInputB.addValueNames(CB)
-        
+
         ## Conditioning A /////////////////////////////////////////////////////
         self.ui.comboBox_pulseMode.addValueNames(CB)
         self.ui.comboBox_voltInc_2.addValueNames(CV)
@@ -179,7 +180,7 @@ class llrfGUI(QtGui.QMainWindow):
         ## Conditioning B /////////////////////////////////////////////////////
         self.ui.comboBox_pulseMode_3.addValueNames(CB)
         self.ui.comboBox_voltInc_6.addValueNames(CV)
-        
+
         ## Tuning Loop A //////////////////////////////////////////////////////
         self.ui.comboBox_tuningEn.addValueNames(CB)
         self.ui.comboBox_tuningPosEn.addValueNames(CB)
@@ -187,7 +188,7 @@ class llrfGUI(QtGui.QMainWindow):
         self.ui.comboBox_tuningTrgEnA.addValueNames(CFS)
         self.ui.comboBox_tuningFFEnA.addValueNames(CB)
         self.ui.comboBox_tuningFilterEnA.addValueNames(CB)
-        
+
         ## Tuning Loop B //////////////////////////////////////////////////////
         self.ui.comboBox_tuningEn_2.addValueNames(CB)
         self.ui.comboBox_tuningPosEn_2.addValueNames(CB)
@@ -195,21 +196,21 @@ class llrfGUI(QtGui.QMainWindow):
         self.ui.comboBox_tuningTrgEnB.addValueNames(CFS)
         self.ui.comboBox_tuningFFEnB.addValueNames(CB)
         self.ui.comboBox_tuningFilterEnB.addValueNames(CB)
-        
+
         ## Manual Tuning A ////////////////////////////////////////////////////
         self.ui.comboBox_moveUp.addValueNames(CB)
         self.ui.comboBox_movePlg.addValueNames(CB)
         self.ui.comboBox_freqPulses.addValueNames(CC)
-        
+
         ## Manual Tuning A ////////////////////////////////////////////////////
         self.ui.comboBox_moveUp_2.addValueNames(CB)
         self.ui.comboBox_movePlg_2.addValueNames(CB)
         self.ui.comboBox_freqPulses_2.addValueNames(CC)
-        
+
         ## FPGA Clock source //////////////////////////////////////////////////
         self.ui.tauValueComboBox_clockSource.addValueNames(CCS)
         self.ui.tauValueComboBox_clockSource_3.addValueNames(CCS)
-        
+
         ##Interlocks inputs disable comboboxes ///////////////////////////////
         self.ui.comboBox_RvTet1DisA.addValueNames(CEN)
         self.ui.comboBox_RvTet2DisA.addValueNames(CEN)
@@ -223,7 +224,7 @@ class llrfGUI(QtGui.QMainWindow):
         self.ui.comboBox_ExtDisA.addValueNames(CEN)
         self.ui.comboBox_ExtITCKDisB_2.addValueNames(CEN)
         self.ui.comboBox_ExtITCKDisB_3.addValueNames(CEN)
-        
+
         self.ui.comboBox_RvTet1DisB.addValueNames(CEN)
         self.ui.comboBox_RvTet2DisB.addValueNames(CEN)
         self.ui.comboBox_RvCircDisB.addValueNames(CEN)
@@ -236,7 +237,7 @@ class llrfGUI(QtGui.QMainWindow):
         self.ui.comboBox_ExtITCKDisB.addValueNames(CEN)
         self.ui.comboBox_ExtDisA_2.addValueNames(CEN)
         self.ui.comboBox_ExtDisA_3.addValueNames(CEN)
-        
+
         #Interlocks output disable comboboxes//////////////////////////////////
         self.ui.comboBox_DACsOffDisA.addValueNames(CEN)
         self.ui.comboBox_PINSwitchDisA.addValueNames(CEN)
@@ -244,55 +245,54 @@ class llrfGUI(QtGui.QMainWindow):
         self.ui.comboBox_triggerFDLDiagDisA.addValueNames(CEN)
         self.ui.comboBox_outputPLCDisA.addValueNames(CEN)
         self.ui.comboBox_outputUpLevelDisA.addValueNames(CEN)
-        
+
         self.ui.comboBox_DACsOffDisB.addValueNames(CEN)
         self.ui.comboBox_PINSwitchDisB.addValueNames(CEN)
         self.ui.comboBox_triggerFDLLoopsDisB.addValueNames(CEN)
         self.ui.comboBox_triggerFDLDiagDisB.addValueNames(CEN)
         self.ui.comboBox_outputPLCDisB.addValueNames(CEN)
         self.ui.comboBox_outputUpLevelDisB.addValueNames(CEN)
-        
+
         #Ramping comboboxes////////////////////////////////////////////////////
         self.ui.comboBox_rampingEnA.addValueNames(CB)
         self.ui.comboBox_rampingEnB.addValueNames(CB)
-        
+
         self.ui.comboBox_phaseIncRate.addValueNames(CPIR)
         self.ui.comboBox_phaseIncRate_2.addValueNames(CPIR)
-        
+
         #Automatic startup/////////////////////////////////////////////////////
         self.ui.comboBox_autoStartUpA.addValueNames(CB)
         self.ui.comboBox_CommandStartA.addValueNames(CCMDSTART)
         self.ui.comboBox_autoStartUpB.addValueNames(CB)
         self.ui.comboBox_CommandStartB.addValueNames(CCMDSTART)
-        
+
         #Landau ///////////////////////////////////////////////////////////////
         self.ui.comboBox_moveUp_3.addValueNames(CB)
         self.ui.comboBox_movePlg_3.addValueNames(CB)
         self.ui.comboBox_tuningEn_3.addValueNames(CB)
         self.ui.comboBox_tuningPosEn_3.addValueNames(CB)
-        
+
         #FDL //////////////////////////////////////////////////////////////////
         self.ui.taurusValueComboBox_chSrA.addValueNames(CFDL)
         self.ui.taurusValueComboBox_chSrDA.addValueNames(CFDLDIAG)
         self.ui.taurusValueComboBox_chSrB.addValueNames(CFDL)
         self.ui.taurusValueComboBox_chSrDB.addValueNames(CFDLDIAG)
-        
-        
+
     @alert_problems
     def connectSignals(self):
         QtCore.QObject.connect(self.ui.actionStart, QtCore.SIGNAL("triggered()"), self.startDev)
         QtCore.QObject.connect(self.ui.actionStop, QtCore.SIGNAL("triggered()"), self.stopDev)
         QtCore.QObject.connect(self.ui.actionQuit, QtCore.SIGNAL("triggered()"), self.actionQuit)
-        
+
         QtCore.QObject.connect(self.ui.pushButton_rTU, QtCore.SIGNAL("clicked()"), self.tuningResetA)
         QtCore.QObject.connect(self.ui.pushButton_rTU_2, QtCore.SIGNAL("clicked()"), self.tuningResetB)
         QtCore.QObject.connect(self.ui.pushButton_rTU_3, QtCore.SIGNAL("clicked()"), self.landauReset)
-        
+
         QtCore.QObject.connect(self.ui.pushButton_VCXO, QtCore.SIGNAL("clicked()"), self.openVCXO)
-        
+
         QtCore.QObject.connect(self.ui.pushButton_resetITCKA, QtCore.SIGNAL("clicked()"), self.resetITCKA)
         QtCore.QObject.connect(self.ui.pushButton_resetITCKB, QtCore.SIGNAL("clicked()"), self.resetITCKB)
-        
+
         QtCore.QObject.connect(self.ui.pushButton_SWITCKA, QtCore.SIGNAL("clicked()"), self.resetManualITCKA)
         QtCore.QObject.connect(self.ui.pushButton_SWITCKB, QtCore.SIGNAL("clicked()"), self.resetManualITCKB)
         
@@ -692,13 +692,13 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.lyrtechStatus1, self.device + "/state"),
                 (self.ui.lyrtechStatus2, self.deviceDiag + "/state"),
                 
-                (self.ui.tauValueLabel_cavVolt_2, self.device + "/AmpRefInA"),
-                (self.ui.tauValueLabel_cavPhase_2, self.device + "/PhaseRefInA"),
+                (self.ui.tauValueLabel_cavVolt_2, self.device + "/AmpRefIn"),
+                (self.ui.tauValueLabel_cavPhase_2, self.device + "/PhRefIn"),
                 
-                (self.ui.tauValueLabel_ampRefMinA, self.device + "/AmpRefMinA"),
-                (self.ui.tauValueLabel_phaseRefMinA, self.device + "/PhaseRefMinA"),
+                (self.ui.tauValueLabel_ampRefMinA, self.device + "/AmpRefMin"),
+                (self.ui.tauValueLabel_phaseRefMinA, self.device + "/PhRefMin"),
                 
-                (self.ui.tauValueLabel_voltInc, self.device + "/VoltageRateIncreaseA"),
+                (self.ui.tauValueLabel_voltInc, self.device + "/VoltageRateIncrease"),
                 (self.ui.tauValueLabel_PILimit_2, self.device + "/PILimitA"),
                 (self.ui.tauValueLabel_ki_2, self.device + "/KiA"),
                 (self.ui.tauValueLabel_kp_2, self.device + "/KpA"),
@@ -706,20 +706,20 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.tauValueLabel_lookRef, self.device + "/LookRefA"),
                 (self.ui.tauValueLabel_lookEn, self.device + "/LoopEnableA"),
                 (self.ui.tauValueLabel_phaseShiftEn, self.device + "/ADCsPhaseShiftEnableA"),
-                (self.ui.tauValueLabel_phaseShift_2, self.device + "/PhaseShiftCavA"),
-                (self.ui.tauValueLabel_phaseShift_4, self.device + "/PhaseShiftDACA1"),
-                (self.ui.tauValueLabel_phaseShift_6, self.device + "/PhaseShiftDACA2"),
+                (self.ui.tauValueLabel_phaseShift_2, self.device + "/PhaseShiftCav"),
+                #(self.ui.tauValueLabel_phaseShift_4, self.device + "/PhaseShiftDACA1"),
+                #(self.ui.tauValueLabel_phaseShift_6, self.device + "/PhaseShiftDACA2"),
                 (self.ui.tauValueLabel_DACsGainEn, self.device + "/DACsPhaseShiftEnableA"),
-                (self.ui.tauValueLabel_Tetrode1AEn, self.device + "/GainTetrodeEnableA"),
-                (self.ui.tauValueLabel_Tetrode1A, self.device + "/GainTetrodeA1"),
-                (self.ui.tauValueLabel_Tetrode2A, self.device + "/GainTetrodeA2"),
-                (self.ui.tauValueLabel_loopInputA, self.device + "/LoopInputA"),
+                #(self.ui.tauValueLabel_Tetrode1AEn, self.device + "/GainTetrodeEnableA"),
+                (self.ui.tauValueLabel_Tetrode1A, self.device + "/GainTetrode1"),
+                (self.ui.tauValueLabel_Tetrode2A, self.device + "/GainTetrode2"),
+                #(self.ui.tauValueLabel_loopInputA, self.device + "/LoopInputA"),
                 
-                (self.ui.tauValueLabel_cavVolt_3, self.device + "/AmpRefInB"),
-                (self.ui.tauValueLabel_cavPhase_3, self.device + "/PhaseRefInB"),
+                #(self.ui.tauValueLabel_cavVolt_3, self.device + "/AmpRefInB"),
+                #(self.ui.tauValueLabel_cavPhase_3, self.device + "/PhaseRefInB"),
                 
-                (self.ui.tauValueLabel_ampRefMinB, self.device + "/AmpRefMinB"),
-                (self.ui.tauValueLabel_phaseRefMinB, self.device + "/PhaseRefMinB"),
+                #(self.ui.tauValueLabel_ampRefMinB, self.device + "/AmpRefMinB"),
+                #(self.ui.tauValueLabel_phaseRefMinB, self.device + "/PhaseRefMinB"),
                 
                 (self.ui.tauValueLabel_voltInc_3, self.device + "/VoltageRateIncreaseB"),
                 (self.ui.tauValueLabel_PILimit_3, self.device + "/PILimitB"),
@@ -1171,7 +1171,7 @@ class llrfGUI(QtGui.QMainWindow):
                 ##Vesions /////////////////////////////////////////////////////
                 (self.ui.tauValueLabel_loopVersion, self.device + "/VersionDate"),
                 (self.ui.tauValueLabel_diagVersion, self.deviceDiag + "/VersionDate"),
-                
+
                 ##Landau //////////////////////////////////////////////////////
                 (self.ui.tauValueLabel_tuningEn_3, self.deviceDiag + "/LandauTuningEnable"),
                 (self.ui.tauValueLabel_moveUp_3, self.deviceDiag + "/MoveLandauUp"),
@@ -1245,239 +1245,239 @@ class llrfGUI(QtGui.QMainWindow):
                 #in the old version where this
                 #(self.ui.lineEdit_cavVolt, self.device + "/CavityVoltA"),
                 #(self.ui.lineEdit_cavPhase, self.device + "/CavityPhaseA"),
-                (self.ui.lineEdit_cavVolt, self.device + "/AmpRefInA"),
-                (self.ui.lineEdit_cavPhase, self.device + "/PhaseRefInA"),
-                
-                (self.ui.lineEdit_ampRefMinA, self.device + "/AmpRefMinA"),
-                (self.ui.lineEdit_phaseRefMinA, self.device + "/PhaseRefMinA"),
-                
+                (self.ui.lineEdit_cavVolt, self.device + "/AmpRefIn"),
+                (self.ui.lineEdit_cavPhase, self.device + "/PhaseRefIn"),
+
+                (self.ui.lineEdit_ampRefMinA, self.device + "/AmpRefMin"),
+                (self.ui.lineEdit_phaseRefMinA, self.device + "/PhaseRefMin"),
+
                 (self.ui.lineEdit_PILimit, self.device + "/PILimitA"),
                 (self.ui.lineEdit_ki, self.device + "/KiA"),
                 (self.ui.lineEdit_kp, self.device + "/KpA"),
-                
-                (self.ui.lineEdit_phaseShift, self.device + "/PhaseShiftCavA"),
-                (self.ui.lineEdit_phaseShift_3, self.device + "/PhaseShiftDACA1"),
-                (self.ui.lineEdit_phaseShift_5, self.device + "/PhaseShiftDACA2"),
-                
-                (self.ui.lineEdit_Tetrode1A, self.device + "/GainTetrodeA1"),
-                (self.ui.lineEdit_Tetrode2A, self.device + "/GainTetrodeA2"),
-                
-                (self.ui.lineEdit_cavVolt_2, self.device + "/AmpRefInB"),
-                (self.ui.lineEdit_cavPhase_2, self.device + "/PhaseRefInB"),
-                
-                (self.ui.lineEdit_ampRefMinB, self.device + "/AmpRefMinB"),
-                (self.ui.lineEdit_phaseRefMinB, self.device + "/PhaseRefMinB"),
-                
-                (self.ui.lineEdit_PILimit_2, self.device + "/PILimitB"),
-                (self.ui.lineEdit_ki_2, self.device + "/KiB"),
-                (self.ui.lineEdit_kp_2, self.device + "/KpB"),
-                
-                (self.ui.lineEdit_phaseShift_2, self.device + "/PhaseShiftCavB"),
-                (self.ui.lineEdit_phaseShift_4, self.device + "/PhaseShiftDACB1"),
-                (self.ui.lineEdit_phaseShift_6, self.device + "/PhaseShiftDACB2"),
-                
-                (self.ui.lineEdit_Tetrode1A, self.device + "/GainTetrodeB1"),
-                (self.ui.lineEdit_Tetrode2B, self.device + "/GainTetrodeB2"),
-                
+
+                (self.ui.lineEdit_phaseShift, self.device + "/PhaseShiftCav"),
+#                 (self.ui.lineEdit_phaseShift_3, self.device + "/PhaseShiftDACA1"),
+#                 (self.ui.lineEdit_phaseShift_5, self.device + "/PhaseShiftDACA2"),
+
+                (self.ui.lineEdit_Tetrode1A, self.device + "/GainTetrode1"),
+                (self.ui.lineEdit_Tetrode2A, self.device + "/GainTetrode2"),
+
+#                 (self.ui.lineEdit_cavVolt_2, self.device + "/AmpRefInB"),
+#                 (self.ui.lineEdit_cavPhase_2, self.device + "/PhaseRefInB"),
+
+#                 (self.ui.lineEdit_ampRefMinB, self.device + "/AmpRefMinB"),
+#                 (self.ui.lineEdit_phaseRefMinB, self.device + "/PhaseRefMinB"),
+#                 
+#                 (self.ui.lineEdit_PILimit_2, self.device + "/PILimitB"),
+#                 (self.ui.lineEdit_ki_2, self.device + "/KiB"),
+#                 (self.ui.lineEdit_kp_2, self.device + "/KpB"),
+#                 
+#                 (self.ui.lineEdit_phaseShift_2, self.device + "/PhaseShiftCavB"),
+#                 (self.ui.lineEdit_phaseShift_4, self.device + "/PhaseShiftDACB1"),
+#                 (self.ui.lineEdit_phaseShift_6, self.device + "/PhaseShiftDACB2"),
+#                 
+#                 (self.ui.lineEdit_Tetrode1A, self.device + "/GainTetrodeB1"),
+#                 (self.ui.lineEdit_Tetrode2B, self.device + "/GainTetrodeB2"),
+
                 (self.ui.lineEdit_dutyCycle, self.device + "/ConditioningDutyCicleA"),
-                (self.ui.lineEdit_cavVolt_3, self.device + "/CavityVoltA"),
-                
-                (self.ui.lineEdit_dutyCycle_3, self.device + "/ConditioningDutyCicleB"),
-                (self.ui.lineEdit_cavVolt_6, self.device + "/CavityVoltB"),
-                
+#                 (self.ui.lineEdit_cavVolt_3, self.device + "/CavityVoltA"),
+
+#                 (self.ui.lineEdit_dutyCycle_3, self.device + "/ConditioningDutyCicleB"),
+#                 (self.ui.lineEdit_cavVolt_6, self.device + "/CavityVoltB"),
+
                 (self.ui.lineEdit_numberPulses, self.device + "/NumStepsA"),
-                
-                (self.ui.lineEdit_numberPulses_2, self.device + "/NumStepsB"),
-                
+
+#                 (self.ui.lineEdit_numberPulses_2, self.device + "/NumStepsB"),
+
                 (self.ui.lineEdit_marginUp_2, self.device + "/MarginUpA"),
                 (self.ui.lineEdit_marginLow_2, self.device + "/MarginLowA"),
                 (self.ui.lineEdit_forwardMin, self.device + "/FwMinA"),
-                
-                (self.ui.lineEdit_tuningDelayA, self.device + "/TuningDelayA"),
-                (self.ui.lineEdit_tuningFFStepsA, self.device + "/TuningFFStepsA"),
-                (self.ui.lineEdit_tuningDelayB, self.device + "/TuningDelayB"),
-                (self.ui.lineEdit_tuningFFStepsB, self.device + "/TuningFFStepsB"),
-                
-                (self.ui.lineEdit_marginUp_3, self.device + "/MarginUpB"),
-                (self.ui.lineEdit_marginLow_3, self.device + "/MarginLowB"),
-                (self.ui.lineEdit_forwardMin_2, self.device + "/FwMinB"),
-                
-                (self.ui.lineEdit_filterStage, self.device + "/FilterStagesA"),
-                (self.ui.lineEdit_samplesAv, self.device + "/NumSamplesAverageA"),
-                
-                (self.ui.lineEdit_filterStage_2, self.device + "/FilterStagesB"),
-                (self.ui.lineEdit_samplesAv_2, self.device + "/NumSamplesAverageB"),
-                
+
+#                 (self.ui.lineEdit_tuningDelayA, self.device + "/TuningDelayA"),
+#                 (self.ui.lineEdit_tuningFFStepsA, self.device + "/TuningFFStepsA"),
+#                 (self.ui.lineEdit_tuningDelayB, self.device + "/TuningDelayB"),
+#                 (self.ui.lineEdit_tuningFFStepsB, self.device + "/TuningFFStepsB"),
+
+#                 (self.ui.lineEdit_marginUp_3, self.device + "/MarginUpB"),
+#                 (self.ui.lineEdit_marginLow_3, self.device + "/MarginLowB"),
+#                 (self.ui.lineEdit_forwardMin_2, self.device + "/FwMinB"),
+
+                (self.ui.lineEdit_filterStage, self.device + "/FilterStages"),
+#                 (self.ui.lineEdit_samplesAv, self.device + "/NumSamplesAverageA"),
+                (self.ui.lineEdit_samplesAv, self.device + "/SamplesToAverage"),
+
+#                 (self.ui.lineEdit_filterStage_2, self.device + "/FilterStagesB"),
+#                 (self.ui.lineEdit_samplesAv_2, self.device + "/NumSamplesAverageB"),
+
                 (self.ui.lineEdit_tuningOffset, self.device + "/PhaseOffsetA"),
-                (self.ui.lineEdit_tuningOffset_2, self.device + "/PhaseOffsetB"),
-                
+#                 (self.ui.lineEdit_tuningOffset_2, self.device + "/PhaseOffsetB"),
+
                 #Fast Interlocks
-                (self.ui.lineEdit_RvTet1A, self.deviceDiag + "/RvTet1A"),
-                (self.ui.lineEdit_RvTet2A, self.deviceDiag + "/RvTet2A"),
-                (self.ui.lineEdit_RvCircA, self.deviceDiag + "/RvCircA"),
-                (self.ui.lineEdit_FwLoadA, self.deviceDiag + "/FwLoadA"),
-                (self.ui.lineEdit_FwHybLoadA, self.deviceDiag + "/FwHybLoadA"),
-                (self.ui.lineEdit_RvCavA, self.deviceDiag + "/RvCavA"),
-                
-                (self.ui.lineEdit_RvTet1B, self.deviceDiag + "/RvTet1B"),
-                (self.ui.lineEdit_RvTet2B, self.deviceDiag + "/RvTet2B"),
-                (self.ui.lineEdit_RvCircB, self.deviceDiag + "/RvCircB"),
-                (self.ui.lineEdit_FwLoadB, self.deviceDiag + "/FwLoadB"),
-                (self.ui.lineEdit_FwHybLoadB, self.deviceDiag + "/FwHybLoadB"),
-                (self.ui.lineEdit_RvCavB, self.deviceDiag + "/RvCavB"),
-                
+#                 (self.ui.lineEdit_RvTet1A, self.deviceDiag + "/RvTet1A"),
+#                 (self.ui.lineEdit_RvTet2A, self.deviceDiag + "/RvTet2A"),
+#                 (self.ui.lineEdit_RvCircA, self.deviceDiag + "/RvCircA"),
+#                 (self.ui.lineEdit_FwLoadA, self.deviceDiag + "/FwLoadA"),
+#                 (self.ui.lineEdit_FwHybLoadA, self.deviceDiag + "/FwHybLoadA"),
+#                 (self.ui.lineEdit_RvCavA, self.deviceDiag + "/RvCavA"),
+#                 
+#                 (self.ui.lineEdit_RvTet1B, self.deviceDiag + "/RvTet1B"),
+#                 (self.ui.lineEdit_RvTet2B, self.deviceDiag + "/RvTet2B"),
+#                 (self.ui.lineEdit_RvCircB, self.deviceDiag + "/RvCircB"),
+#                 (self.ui.lineEdit_FwLoadB, self.deviceDiag + "/FwLoadB"),
+#                 (self.ui.lineEdit_FwHybLoadB, self.deviceDiag + "/FwHybLoadB"),
+#                 (self.ui.lineEdit_RvCavB, self.deviceDiag + "/RvCavB"),
+
                 #Interlock Inputs Diagnostics
-                (self.ui.taurusWheelEdit, self.deviceDiag + "/ITCKNumber"),
-                
+#                 (self.ui.taurusWheelEdit, self.deviceDiag + "/ITCKNumber"),
+
                 #Ramping inputs
-                (self.ui.lineEdit_timeRampUpA, self.device + "/TimeRampUpA"),
-                (self.ui.lineEdit_timeRampDownA, self.device + "/TimeRampDownA"),
-                (self.ui.lineEdit_ampRampInitA, self.device + "/AmpRampInitA"),
-                (self.ui.lineEdit_ampRampEndA, self.device + "/AmpRampEndA"),
-                (self.ui.lineEdit_phaseRampInitA, self.device + "/PhaseRampInitA"),
-                (self.ui.lineEdit_phaseRampEndA, self.device + "/PhaseRampEndA"),
-                
-                (self.ui.lineEdit_timeRampUpB, self.device + "/TimeRampUpB"),
-                (self.ui.lineEdit_timeRampDownB, self.device + "/TimeRampDownB"),
-                (self.ui.lineEdit_ampRampInitB, self.device + "/AmpRampInitB"),
-                (self.ui.lineEdit_ampRampEndB, self.device + "/AmpRampEndB"),
-                (self.ui.lineEdit_phaseRampInitB, self.device + "/PhaseRampInitB"),
-                (self.ui.lineEdit_phaseRampEndB, self.device + "/PhaseRampEndB"),
-                
+#                 (self.ui.lineEdit_timeRampUpA, self.device + "/TimeRampUpA"),
+#                 (self.ui.lineEdit_timeRampDownA, self.device + "/TimeRampDownA"),
+#                 (self.ui.lineEdit_ampRampInitA, self.device + "/AmpRampInitA"),
+#                 (self.ui.lineEdit_ampRampEndA, self.device + "/AmpRampEndA"),
+#                 (self.ui.lineEdit_phaseRampInitA, self.device + "/PhaseRampInitA"),
+#                 (self.ui.lineEdit_phaseRampEndA, self.device + "/PhaseRampEndA"),
+
+#                 (self.ui.lineEdit_timeRampUpB, self.device + "/TimeRampUpB"),
+#                 (self.ui.lineEdit_timeRampDownB, self.device + "/TimeRampDownB"),
+#                 (self.ui.lineEdit_ampRampInitB, self.device + "/AmpRampInitB"),
+#                 (self.ui.lineEdit_ampRampEndB, self.device + "/AmpRampEndB"),
+#                 (self.ui.lineEdit_phaseRampInitB, self.device + "/PhaseRampInitB"),
+#                 (self.ui.lineEdit_phaseRampEndB, self.device + "/PhaseRampEndB"),
+
                 #FDL //////////////////////////////////////////////////////////
-                (self.ui.taurusValueLineEdit_bufferSize, self.device + "/FDLDataBufferSize"),
-                (self.ui.taurusValueLineEdit_bufferSizeD, self.deviceDiag + "/FDLDataBufferSize"),
-                (self.ui.taurusValueLineEdit_trgDelay, self.device + "/FDLTriggerDelay"),
-                (self.ui.taurusValueLineEdit_trgDelayD, self.deviceDiag + "/FDLTriggerDelay"),
-                
+#                 (self.ui.taurusValueLineEdit_bufferSize, self.device + "/FDLDataBufferSize"),
+#                 (self.ui.taurusValueLineEdit_bufferSizeD, self.deviceDiag + "/FDLDataBufferSize"),
+#                 (self.ui.taurusValueLineEdit_trgDelay, self.device + "/FDLTriggerDelay"),
+#                 (self.ui.taurusValueLineEdit_trgDelayD, self.deviceDiag + "/FDLTriggerDelay"),
+
                 #//////////////////////////////////////////////////////////////
-                (self.ui.lineEdit_gainola, self.device + "/GainOLA"),
-                (self.ui.lineEdit_gainolb, self.device + "/GainOLB"),
-                (self.ui.lineEdit_phaseShift_10, self.device + "/PhaseShiftFwTet1A"),
-                (self.ui.lineEdit_phaseShift_9, self.device + "/PhaseShiftFwTet1B"),
+                (self.ui.lineEdit_gainola, self.device + "/GainOL"),
+#                 (self.ui.lineEdit_gainolb, self.device + "/GainOLB"),
+                (self.ui.lineEdit_phaseShift_10, self.device + "/PhaseShiftFwTet1"),
+#                 (self.ui.lineEdit_phaseShift_9, self.device + "/PhaseShiftFwTet1B"),
             ]
-            
+
         self._comboList = [
-                
-                (self.ui.comboBox_voltInc, self.device + "/VoltageRateIncreaseA"),
-                
+
+                (self.ui.comboBox_voltInc, self.device + "/VoltageRateIncrease"),
+
                 (self.ui.comboBox_quad, self.device + "/QuadrantSelectionA"),
                 (self.ui.comboBox_lookRef, self.device + "/LookRefA"),
                 (self.ui.comboBox_loopEn, self.device + "/LoopEnableA"),
                 (self.ui.comboBox_phaseShiftEn, self.device + "/ADCsPhaseShiftEnableA"),
                 (self.ui.comboBox_DACsGainEn, self.device + "/DACsPhaseShiftEnableA"),
-                (self.ui.comboBox_GainTetA1En, self.device + "/GainTetrodeEnableA"),
-                (self.ui.comboBox_loopInputA, self.device + "/LoopInputA"),
+#                 (self.ui.comboBox_GainTetA1En, self.device + "/GainTetrodeEnableA"),
+#                 (self.ui.comboBox_loopInputA, self.device + "/LoopInputA"),
                 
-                (self.ui.comboBox_voltInc_3, self.device + "/VoltageRateIncreaseB"),
-                (self.ui.comboBox_quad_2, self.device + "/QuadrantSelectionB"),
-                (self.ui.comboBox_lookRef_2, self.device + "/LookRefB"),
-                (self.ui.comboBox_loopEn_2, self.device + "/LoopEnableB"),
-                (self.ui.comboBox_phaseShiftEn_3, self.device + "/ADCsPhaseShiftEnableB"),
-                (self.ui.comboBox_GainTetB1En, self.device + "/GainTetrodeEnableB"),
-                (self.ui.comboBox_loopInputB, self.device + "/LoopInputB"),
+#                 (self.ui.comboBox_voltInc_3, self.device + "/VoltageRateIncreaseB"),
+#                 (self.ui.comboBox_quad_2, self.device + "/QuadrantSelectionB"),
+#                 (self.ui.comboBox_lookRef_2, self.device + "/LookRefB"),
+#                 (self.ui.comboBox_loopEn_2, self.device + "/LoopEnableB"),
+#                 (self.ui.comboBox_phaseShiftEn_3, self.device + "/ADCsPhaseShiftEnableB"),
+#                 (self.ui.comboBox_GainTetB1En, self.device + "/GainTetrodeEnableB"),
+#                 (self.ui.comboBox_loopInputB, self.device + "/LoopInputB"),
+#                 
+#                 (self.ui.comboBox_DACsGainEn_2, self.device + "/DACsPhaseShiftEnableB"),
+#                 (self.ui.comboBox_pulseMode, self.device + "/PulseModeEnableA"),
+                (self.ui.comboBox_voltInc_2, self.device + "/VoltageRateIncrease"),
                 
-                (self.ui.comboBox_DACsGainEn_2, self.device + "/DACsPhaseShiftEnableB"),
-                (self.ui.comboBox_pulseMode, self.device + "/PulseModeEnableA"),
-                (self.ui.comboBox_voltInc_2, self.device + "/VoltageRateIncreaseA"),
-                
-                (self.ui.comboBox_pulseMode_3, self.device + "/PulseModeEnableB"),
+#                 (self.ui.comboBox_pulseMode_3, self.device + "/PulseModeEnableB"),
                 
                 (self.ui.comboBox_autoConditioningEnable, self.device + "/AutoConditioningEnableA"),
-                (self.ui.comboBox_autoConditioningEnable_2, self.device + "/AutoConditioningEnableB"),
+#                 (self.ui.comboBox_autoConditioningEnable_2, self.device + "/AutoConditioningEnableB"),
                 
-                (self.ui.comboBox_voltInc_6, self.device + "/VoltageRateIncreaseB"),
+#                 (self.ui.comboBox_voltInc_6, self.device + "/VoltageRateIncreaseB"),
                 (self.ui.comboBox_moveUp, self.device + "/MoveUpA"),
                 (self.ui.comboBox_movePlg, self.device + "/MoveA"),
-                (self.ui.comboBox_freqPulses, self.device + "/PulsesFrequencyA"),
-                (self.ui.comboBox_moveUp_2, self.device + "/MoveUpB"),
-                (self.ui.comboBox_movePlg_2, self.device + "/MoveB"),
-                (self.ui.comboBox_freqPulses_2, self.device + "/PulsesFrequencyB"),
-                (self.ui.comboBox_tuningEn, self.device + "/TuningEnableA"),
-                (self.ui.comboBox_tuningPosEn, self.device + "/TuningPosEnA"),
-                (self.ui.comboBox_tuningFreq, self.device + "/PulsesFrequencyA"),
-                (self.ui.comboBox_tuningEn_2, self.device + "/TuningEnableB"),
-                (self.ui.comboBox_tuningPosEn_2, self.device + "/TuningPosEnB"),
-                (self.ui.comboBox_tuningFreq_2, self.device + "/PulsesFrequencyB"),
-                (self.ui.tauValueComboBox_clockSource, self.device + "/FPGAClockSource"),
-                (self.ui.comboBox_tuningTrgEnA, self.device + "/TuningTriggerEnableA"),
-                (self.ui.comboBox_tuningFFEnA, self.device + "/TuningFFA"),
-                (self.ui.comboBox_tuningFilterEnA, self.device + "/TuningFilterEnableA"),
-                (self.ui.comboBox_tuningTrgEnB, self.device + "/TuningTriggerEnableB"),
-                (self.ui.comboBox_tuningFFEnB, self.device + "/TuningFFB"),
-                (self.ui.comboBox_tuningFilterEnB, self.device + "/TuningFilterEnableB"),
+                (self.ui.comboBox_freqPulses, self.device + "/PulsesFrequency"),
+#                 (self.ui.comboBox_moveUp_2, self.device + "/MoveUpB"),
+#                 (self.ui.comboBox_movePlg_2, self.device + "/MoveB"),
+#                 (self.ui.comboBox_freqPulses_2, self.device + "/PulsesFrequencyB"),
+#                 (self.ui.comboBox_tuningEn, self.device + "/TuningEnableA"),
+#                 (self.ui.comboBox_tuningPosEn, self.device + "/TuningPosEnA"),
+                (self.ui.comboBox_tuningFreq, self.device + "/PulsesFrequency"),
+#                 (self.ui.comboBox_tuningEn_2, self.device + "/TuningEnableB"),
+#                 (self.ui.comboBox_tuningPosEn_2, self.device + "/TuningPosEnB"),
+#                 (self.ui.comboBox_tuningFreq_2, self.device + "/PulsesFrequencyB"),
+#                 (self.ui.tauValueComboBox_clockSource, self.device + "/FPGAClockSource"),
+#                 (self.ui.comboBox_tuningTrgEnA, self.device + "/TuningTriggerEnableA"),
+#                 (self.ui.comboBox_tuningFFEnA, self.device + "/TuningFFA"),
+#                 (self.ui.comboBox_tuningFilterEnA, self.device + "/TuningFilterEnableA"),
+#                 (self.ui.comboBox_tuningTrgEnB, self.device + "/TuningTriggerEnableB"),
+#                 (self.ui.comboBox_tuningFFEnB, self.device + "/TuningFFB"),
+#                 (self.ui.comboBox_tuningFilterEnB, self.device + "/TuningFilterEnableB"),
                 
-                #Interlocks inputs disable comboboxes
-                (self.ui.tauValueComboBox_clockSource_3, self.deviceDiag + "/FPGAClockSource"),
-                (self.ui.comboBox_RvTet1DisA, self.deviceDiag + "/RvTet1DisA"),
-                (self.ui.comboBox_RvTet2DisA, self.deviceDiag + "/RvTet2DisA"),
-                (self.ui.comboBox_RvCircDisA, self.deviceDiag + "/RvCircDisA"),
-                (self.ui.comboBox_FwLoadDisA, self.deviceDiag + "/FwLoadDisA"),
-                (self.ui.comboBox_FwHybLoadDisA, self.deviceDiag + "/FwHybLoadDisA"),
-                (self.ui.comboBox_RvCavDisA, self.deviceDiag + "/RvCavDisA"),
-                (self.ui.comboBox_ManualITCKDisA, self.deviceDiag + "/ManualITCKDisA"),
-                (self.ui.comboBox_ArcsDisA, self.deviceDiag + "/ArcsDisA"),
-                (self.ui.comboBox_VacuumDisA, self.deviceDiag + "/VacuumDisA"),
-                (self.ui.comboBox_ExtDisA, self.deviceDiag + "/ExtITCKDisA"),
-                (self.ui.comboBox_ExtITCKDisB_2, self.deviceDiag + "/PlungerEndSwitchUpDisA"),
-                (self.ui.comboBox_ExtITCKDisB_3, self.deviceDiag + "/PlungerEndSwitchDownDisA"),
-                
-                (self.ui.comboBox_RvTet1DisB, self.deviceDiag + "/RvTet1DisB"),
-                (self.ui.comboBox_RvTet2DisB, self.deviceDiag + "/RvTet2DisB"),
-                (self.ui.comboBox_RvCircDisB, self.deviceDiag + "/RvCircDisB"),
-                (self.ui.comboBox_FwLoadDisB, self.deviceDiag + "/FwLoadDisB"),
-                (self.ui.comboBox_FwHybLoadDisB, self.deviceDiag + "/FwHybLoadDisB"),
-                (self.ui.comboBox_RvCavDisB, self.deviceDiag + "/RvCavDisB"),
-                (self.ui.comboBox_ManualITCKDisB, self.deviceDiag + "/ManualITCKDisB"),
-                (self.ui.comboBox_ArcsDisB, self.deviceDiag + "/ArcsDisB"),
-                (self.ui.comboBox_VacuumDisB, self.deviceDiag + "/VacuumDisB"),
-                (self.ui.comboBox_ExtITCKDisB, self.deviceDiag + "/ExtITCKDisB"),
-                (self.ui.comboBox_ExtDisA_2, self.deviceDiag + "/PlungerEndSwitchUpDisB"),
-                (self.ui.comboBox_ExtDisA_3, self.deviceDiag + "/PlungerEndSwitchDownDisB"),
-                
-                #Interlocks output disable comboboxes
-                (self.ui.comboBox_DACsOffDisA, self.deviceDiag + "/DACsOffDisA"),
-                (self.ui.comboBox_PINSwitchDisA, self.deviceDiag + "/PinSwitchDisA"),
-                (self.ui.comboBox_triggerFDLLoopsDisA, self.deviceDiag + "/TriggerFDLDisA"),
-                (self.ui.comboBox_triggerFDLDiagDisA, self.deviceDiag + "/TriggerDiagFDLDisA"),
-                (self.ui.comboBox_outputPLCDisA, self.deviceDiag + "/OutputPLCDisA"),
-                (self.ui.comboBox_outputUpLevelDisA, self.deviceDiag + "/OutputUpperLevelDisA"),
-                
-                (self.ui.comboBox_DACsOffDisB, self.deviceDiag + "/DACsOffDisB"),
-                (self.ui.comboBox_PINSwitchDisB, self.deviceDiag + "/PinSwitchDisB"),
-                (self.ui.comboBox_triggerFDLLoopsDisB, self.deviceDiag + "/TriggerFDLDisB"),
-                (self.ui.comboBox_triggerFDLDiagDisB, self.deviceDiag + "/TriggerDiagFDLDisB"),
-                (self.ui.comboBox_outputPLCDisB, self.deviceDiag + "/OutputPLCDisB"),
-                (self.ui.comboBox_outputUpLevelDisB, self.deviceDiag + "/OutputUpperLevelDisB"),
+#                 #Interlocks inputs disable comboboxes
+#                 (self.ui.tauValueComboBox_clockSource_3, self.deviceDiag + "/FPGAClockSource"),
+#                 (self.ui.comboBox_RvTet1DisA, self.deviceDiag + "/RvTet1DisA"),
+#                 (self.ui.comboBox_RvTet2DisA, self.deviceDiag + "/RvTet2DisA"),
+#                 (self.ui.comboBox_RvCircDisA, self.deviceDiag + "/RvCircDisA"),
+#                 (self.ui.comboBox_FwLoadDisA, self.deviceDiag + "/FwLoadDisA"),
+#                 (self.ui.comboBox_FwHybLoadDisA, self.deviceDiag + "/FwHybLoadDisA"),
+#                 (self.ui.comboBox_RvCavDisA, self.deviceDiag + "/RvCavDisA"),
+#                 (self.ui.comboBox_ManualITCKDisA, self.deviceDiag + "/ManualITCKDisA"),
+#                 (self.ui.comboBox_ArcsDisA, self.deviceDiag + "/ArcsDisA"),
+#                 (self.ui.comboBox_VacuumDisA, self.deviceDiag + "/VacuumDisA"),
+#                 (self.ui.comboBox_ExtDisA, self.deviceDiag + "/ExtITCKDisA"),
+#                 (self.ui.comboBox_ExtITCKDisB_2, self.deviceDiag + "/PlungerEndSwitchUpDisA"),
+#                 (self.ui.comboBox_ExtITCKDisB_3, self.deviceDiag + "/PlungerEndSwitchDownDisA"),
+#                 
+#                 (self.ui.comboBox_RvTet1DisB, self.deviceDiag + "/RvTet1DisB"),
+#                 (self.ui.comboBox_RvTet2DisB, self.deviceDiag + "/RvTet2DisB"),
+#                 (self.ui.comboBox_RvCircDisB, self.deviceDiag + "/RvCircDisB"),
+#                 (self.ui.comboBox_FwLoadDisB, self.deviceDiag + "/FwLoadDisB"),
+#                 (self.ui.comboBox_FwHybLoadDisB, self.deviceDiag + "/FwHybLoadDisB"),
+#                 (self.ui.comboBox_RvCavDisB, self.deviceDiag + "/RvCavDisB"),
+#                 (self.ui.comboBox_ManualITCKDisB, self.deviceDiag + "/ManualITCKDisB"),
+#                 (self.ui.comboBox_ArcsDisB, self.deviceDiag + "/ArcsDisB"),
+#                 (self.ui.comboBox_VacuumDisB, self.deviceDiag + "/VacuumDisB"),
+#                 (self.ui.comboBox_ExtITCKDisB, self.deviceDiag + "/ExtITCKDisB"),
+#                 (self.ui.comboBox_ExtDisA_2, self.deviceDiag + "/PlungerEndSwitchUpDisB"),
+#                 (self.ui.comboBox_ExtDisA_3, self.deviceDiag + "/PlungerEndSwitchDownDisB"),
+#                 
+#                 #Interlocks output disable comboboxes
+#                 (self.ui.comboBox_DACsOffDisA, self.deviceDiag + "/DACsOffDisA"),
+#                 (self.ui.comboBox_PINSwitchDisA, self.deviceDiag + "/PinSwitchDisA"),
+#                 (self.ui.comboBox_triggerFDLLoopsDisA, self.deviceDiag + "/TriggerFDLDisA"),
+#                 (self.ui.comboBox_triggerFDLDiagDisA, self.deviceDiag + "/TriggerDiagFDLDisA"),
+#                 (self.ui.comboBox_outputPLCDisA, self.deviceDiag + "/OutputPLCDisA"),
+#                 (self.ui.comboBox_outputUpLevelDisA, self.deviceDiag + "/OutputUpperLevelDisA"),
+#                 
+#                 (self.ui.comboBox_DACsOffDisB, self.deviceDiag + "/DACsOffDisB"),
+#                 (self.ui.comboBox_PINSwitchDisB, self.deviceDiag + "/PinSwitchDisB"),
+#                 (self.ui.comboBox_triggerFDLLoopsDisB, self.deviceDiag + "/TriggerFDLDisB"),
+#                 (self.ui.comboBox_triggerFDLDiagDisB, self.deviceDiag + "/TriggerDiagFDLDisB"),
+#                 (self.ui.comboBox_outputPLCDisB, self.deviceDiag + "/OutputPLCDisB"),
+#                 (self.ui.comboBox_outputUpLevelDisB, self.deviceDiag + "/OutputUpperLevelDisB"),
                 
                 #Ramping comboboxes
-                (self.ui.comboBox_rampingEnA, self.device + "/RampingEnA"),
-                (self.ui.comboBox_rampingEnB, self.device + "/RampingEnB"),
+#                 (self.ui.comboBox_rampingEnA, self.device + "/RampingEnA"),
+#                 (self.ui.comboBox_rampingEnB, self.device + "/RampingEnB"),
                 
-                (self.ui.comboBox_phaseIncRate, self.device + "/PhaseIncreaseRateA"),
-                (self.ui.comboBox_phaseIncRate_2, self.device + "/PhaseIncreaseRateB"),
+                (self.ui.comboBox_phaseIncRate, self.device + "/PhaseIncreaseRate"),
+#                 (self.ui.comboBox_phaseIncRate_2, self.device + "/PhaseIncreaseRateB"),
                 
                 #Automatic startup/////////////////////////////////////////////
-                (self.ui.comboBox_autoStartUpA, self.device + "/AutoStartUpEnA"),
-                (self.ui.comboBox_CommandStartA, self.device + "/CommandStartA"),
+                (self.ui.comboBox_autoStartUpA, self.device + "/AutomaticStartUpEn"),
+                (self.ui.comboBox_CommandStartA, self.device + "/CommandStart"),
                 
-                (self.ui.comboBox_autoStartUpB, self.device + "/AutoStartUpEnB"),
-                (self.ui.comboBox_CommandStartB, self.device + "/CommandStartB"),
+#                 (self.ui.comboBox_autoStartUpB, self.device + "/AutoStartUpEnB"),
+#                 (self.ui.comboBox_CommandStartB, self.device + "/CommandStartB"),
                 
-                #Landau ///////////////////////////////////////////////////////
-                (self.ui.comboBox_moveUp_3, self.deviceDiag + "/MoveLandauUp"),
-                (self.ui.comboBox_movePlg_3, self.deviceDiag + "/MoveLandauPLG"),
-                (self.ui.comboBox_tuningEn_3, self.deviceDiag + "/LandauTuningEnable"),
-                (self.ui.comboBox_tuningPosEn_3, self.deviceDiag + "/LandauPositiveEn"),
-                
-                (self.ui.taurusValueComboBox_chSrA, self.device + "/FDLChannelSourceA"),
-                (self.ui.taurusValueComboBox_chSrDA, self.deviceDiag + "/FDLChannelSourceA"),
-                (self.ui.taurusValueComboBox_chSrB, self.device + "/FDLChannelSourceB"),
-                (self.ui.taurusValueComboBox_chSrDB, self.deviceDiag + "/FDLChannelSourceB")
+                #Landau ///////////////////////////////`////////////////////////
+#                 (self.ui.comboBox_moveUp_3, self.deviceDiag + "/MoveLandauUp"),
+#                 (self.ui.comboBox_movePlg_3, self.deviceDiag + "/MoveLandauPLG"),
+#                 (self.ui.comboBox_tuningEn_3, self.deviceDiag + "/LandauTuningEnable"),
+#                 (self.ui.comboBox_tuningPosEn_3, self.deviceDiag + "/LandauPositiveEn"),
+#                 
+#                 (self.ui.taurusValueComboBox_chSrA, self.device + "/FDLChannelSourceA"),
+#                 (self.ui.taurusValueComboBox_chSrDA, self.deviceDiag + "/FDLChannelSourceA"),
+#                 (self.ui.taurusValueComboBox_chSrB, self.device + "/FDLChannelSourceB"),
+#                 (self.ui.taurusValueComboBox_chSrDB, self.deviceDiag + "/FDLChannelSourceB")
                 
             ]
-    
-    
+
 def main():
     app = QtGui.QApplication(sys.argv)
     
