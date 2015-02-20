@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VCXODialog</class>
+ <widget class="QDialog" name="VCXODialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>246</width>
+    <height>262</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>VCXO Program</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>M divider</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>N divider</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Mux Sel</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="label_4">
+     <property name="text">
+      <string>Mux 0 divider</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="label_5">
+     <property name="text">
+      <string>Mux 1 divider</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="label_6">
+     <property name="text">
+      <string>Mux 2 divider</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0">
+    <widget class="QLabel" name="label_7">
+     <property name="text">
+      <string>Mux 3 divider</string>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="2">
+    <widget class="QPushButton" name="pushButton">
+     <property name="text">
+      <string>Send word</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="0">
+    <widget class="QLabel" name="label_8">
+     <property name="text">
+      <string>Mux 4 divider</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2">
+    <widget class="TaurusLabel" name="taurusLabel"/>
+   </item>
+   <item row="1" column="1">
+    <widget class="TaurusValueLineEdit" name="taurusValueLineEdit"/>
+   </item>
+   <item row="2" column="1">
+    <widget class="TaurusValueLineEdit" name="taurusValueLineEdit_3"/>
+   </item>
+   <item row="3" column="1">
+    <widget class="TaurusValueLineEdit" name="taurusValueLineEdit_4"/>
+   </item>
+   <item row="2" column="2">
+    <widget class="TaurusLabel" name="taurusLabel_3"/>
+   </item>
+   <item row="3" column="2">
+    <widget class="TaurusLabel" name="taurusLabel_4"/>
+   </item>
+   <item row="4" column="2">
+    <widget class="TaurusLabel" name="taurusLabel_5"/>
+   </item>
+   <item row="5" column="2">
+    <widget class="TaurusLabel" name="taurusLabel_6"/>
+   </item>
+   <item row="6" column="2">
+    <widget class="TaurusLabel" name="taurusLabel_7"/>
+   </item>
+   <item row="7" column="2">
+    <widget class="TaurusLabel" name="taurusLabel_8"/>
+   </item>
+   <item row="8" column="2">
+    <widget class="TaurusLabel" name="taurusLabel_9"/>
+   </item>
+   <item row="0" column="2">
+    <widget class="QLabel" name="label_9">
+     <property name="text">
+      <string>Read</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QLabel" name="label_10">
+     <property name="text">
+      <string>Write</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="TaurusValueComboBox" name="taurusValueComboBox"/>
+   </item>
+   <item row="5" column="1">
+    <widget class="TaurusValueComboBox" name="taurusValueComboBox_2"/>
+   </item>
+   <item row="6" column="1">
+    <widget class="TaurusValueComboBox" name="taurusValueComboBox_3"/>
+   </item>
+   <item row="7" column="1">
+    <widget class="TaurusValueComboBox" name="taurusValueComboBox_4"/>
+   </item>
+   <item row="8" column="1">
+    <widget class="TaurusValueComboBox" name="taurusValueComboBox_5"/>
+   </item>
+   <item row="9" column="1">
+    <widget class="TaurusValueComboBox" name="taurusValueComboBox_6"/>
+   </item>
+   <item row="9" column="0">
+    <widget class="QLabel" name="label_11">
+     <property name="text">
+      <string>CP Direction</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="2">
+    <widget class="TaurusLabel" name="taurusLabel_2"/>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>TaurusLabel</class>
+   <extends>QLabel</extends>
+   <header>taurus.qt.qtgui.display</header>
+  </customwidget>
+  <customwidget>
+   <class>TaurusValueLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>taurus.qt.qtgui.input</header>
+  </customwidget>
+  <customwidget>
+   <class>TaurusValueComboBox</class>
+   <extends>QComboBox</extends>
+   <header>taurus.qt.qtgui.input</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

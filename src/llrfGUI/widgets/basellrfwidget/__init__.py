@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 
 ###############################################################################
-##     IQ Loop Settings is a widget used for the LLRF Expert GUI.
+##     Base llrf Widget is a base class that will be used by all the LLRF
+##     widgets.
 ##
 ##     Copyright (C) 2013  Max IV Laboratory, Lund Sweden
 ##
@@ -19,5 +20,5 @@
 ##     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-from iqloopssettings import * 
+from basellrfwidget import * 
 
