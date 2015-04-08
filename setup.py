@@ -10,8 +10,8 @@ setup(name = "taurusgui-llrfexpert",
       license = "GPLv3",
       url = "http://www.maxlab.lu.se",
       package_dir = {'':'src'},
-      packages = ['llrfGUI'],
+      packages = ['llrfgui'],
       #install_requires = ['python-taurus'],
-      scripts = ['scripts/llrfGUI']
+      scripts = ['scripts/llrfgui']
      )
 
