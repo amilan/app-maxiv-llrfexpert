@@ -57,12 +57,14 @@ class AutoStartUp(BaseLLRFWidget):
         self._attributes = []
 
         self._attributes_readback = [
-            (self.ui.tauValueLabel_autoStartUpA, "AutoStartUpEnA"),
-            (self.ui.tauValueLabel_CommandStartA, "CommandStartA"),
+            (self.ui.tauValueLabel_autoStartUpA, "AutomaticStartUpEnable"),
+            (self.ui.tauValueLabel_CommandStartA, "CommandStart"),
+            (self.ui.tauValueLabel_autoStartUpA_2, "EpsItckDisable"),
+            (self.ui.tauValueLabel_autoStartUpA_3, "FimItckDisable")
         ]
 
         self._comboboxes = [
-            (self.ui.comboBox_autoStartUpA, "AutomaticStartUpEn"),
+            (self.ui.comboBox_autoStartUpA, "AutomaticStartUpEnable"),
             (self.ui.comboBox_CommandStartA, "CommandStart"),
             (self.ui.comboBox_EPSITCK, "EpsItckDisable"),
             (self.ui.comboBox_FIMITCK, "FimItckDisable"),

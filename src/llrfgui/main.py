@@ -47,8 +47,10 @@ LOGO = 'images/maxivlogo.png'
 CONSOLE = False
 
 # Models dictionary. Keys are the classnames and values are models
-loops_device = 'rf/nutaq/loops-1'
-diags_device = 'rf/nutaq/diags-1'
+#loops_device = 'rf/nutaq/loops-1'
+loops_device = 'ws/rf/pynutaq-1'
+#diags_device = 'rf/nutaq/diags-1'
+diags_device = 'ws/rf/pynutaq-2'
 models_dict = {
     'AutoStartUp': loops_device,
     'AutoTuning': loops_device,

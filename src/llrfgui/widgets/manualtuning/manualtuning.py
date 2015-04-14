@@ -66,7 +66,7 @@ class ManualTuning(BaseLLRFWidget):
         QtCore.QObject.connect(self.ui.pushButton_rTU,
                                QtCore.SIGNAL("clicked()"),
                                self.tuning_resetA)
-        QtCore.QObject.connect(self.ui.pushButton_rTU_2,
+        QtCore.QObject.connect(self.ui.pushButton_rTU_3,
                                QtCore.SIGNAL("clicked()"),
                                self.tuning_resetB)
 

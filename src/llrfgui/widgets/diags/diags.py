@@ -51,8 +51,8 @@ class Diags(BaseLLRFWidget):
         self._attributes_readback = [
             # I signals
             (self.ui.tauValueLabel_ICavVolt, "Diag_IcavLoops"),
-            (self.ui.tauValueLabel_IFwCavVolt, "Diag_IFwCavLoops"),
-            (self.ui.tauValueLabel_IRvcavVolt, "Diag_Irvcav"),
+            (self.ui.tauValueLabel_IFwCavVolt_5, "Diag_IFwCavLoops"),
+            (self.ui.tauValueLabel_IRvCavVolt_3, "Diag_Irvcav"),
             (self.ui.tauValueLabel_IFwTet1_3, "Diag_IFwTet1"),
             (self.ui.tauValueLabel_IFwTet2_3, "Diag_IFwTet2"),
             (self.ui.tauValueLabel_IRvTet1_3, "Diag_Irvtet1"),
