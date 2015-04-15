@@ -103,8 +103,8 @@ class IqLoopsSettings(BaseLLRFWidget):
                 (self.ui.lineEdit_phaseShift_13, "PhaseShiftFwCircin"),
                 (self.ui.lineEdit_phaseShift_15, "PhaseShiftFwCav"),
 
-#                 (self.ui.lineEdit_phaseShift_3, self._device_name + "/PhaseShiftFwTet1"),
-#                 (self.ui.lineEdit_phaseShift_5, self._device_name + "/PhaseShiftFwTet2"),
+                (self.ui.lineEdit_phaseShift_3, self._device_name + "PhaseShiftControlSignalTet1"),
+                (self.ui.lineEdit_phaseShift_5, self._device_name + "PhaseShiftControlSignalTet2"),
 
                 (self.ui.lineEdit_Tetrode1A, "GainTetrode1"),
                 (self.ui.lineEdit_Tetrode2A, "GainTetrode2"),
@@ -135,21 +135,21 @@ class IqLoopsSettings(BaseLLRFWidget):
                 (self.ui.tauValueLabel_gainola, "GainOLA"),
                 (self.ui.tauValueLabel_phaseShiftEn, "ADCsPhaseShiftEnableA"),
                 (self.ui.tauValueLabel_phaseShift_2, "PhaseShiftCav"),
-                (self.ui.tauValueLabel_phaseShift_11, "PhaseShiftFwTet1A"),
-                (self.ui.tauValueLabel_phaseShift_12, "PhaseShiftFwTet2A"),
-                (self.ui.tauValueLabel_phaseShift_14, "PhaseShiftFwCircA"),
-                (self.ui.tauValueLabel_phaseShift_16, "PhaseShiftFwCavA"),
+                (self.ui.tauValueLabel_phaseShift_11, "PhaseShiftFwTet1"),
+                (self.ui.tauValueLabel_phaseShift_12, "PhaseShiftFwTet2"),
+                (self.ui.tauValueLabel_phaseShift_14, "PhaseShiftFwCirc"),
+                (self.ui.tauValueLabel_phaseShift_16, "PhaseShiftFwCav"),
                 (self.ui.tauValueLabel_DACsGainEn, "DACsPhaseShiftEnableA"),
 
-                #(self.ui.tauValueLabel_phaseShift_4, self._device_name + "/PhaseShiftFwTet1"),
-                #(self.ui.tauValueLabel_phaseShift_6, self._device_name + "/PhaseShiftFwTet2"),
+                (self.ui.tauValueLabel_phaseShift_4, self._device_name + "PhaseShiftControlSignalTet1"),
+                (self.ui.tauValueLabel_phaseShift_6, self._device_name + "PhaseShiftControlSignalTet2"),
                 #(self.ui.tauValueLabel_Tetrode1AEn, self._device_name + "/GainTetrodeEnableA"),
 
                 (self.ui.tauValueLabel_Tetrode1A, "GainTetrode1"),
                 (self.ui.tauValueLabel_Tetrode2A, "GainTetrode2"),
 
-                (self.ui.tauValueLabel_filterStage, "FilterStagesA"),
-                (self.ui.tauValueLabel_samplesAv, "NumSamplesAverageA"),
+                (self.ui.tauValueLabel_filterStage, "FilterStages"),
+                (self.ui.tauValueLabel_samplesAv, "NumSamplesAverage"),
                 ]
 
         self._comboboxes = [

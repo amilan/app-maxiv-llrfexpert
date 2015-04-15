@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>575</width>
-    <height>620</height>
+    <width>631</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -144,7 +144,7 @@
          <pointsize>8</pointsize>
         </font>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -182,7 +182,7 @@
        </property>
       </widget>
      </item>
-     <item row="47" column="0">
+     <item row="46" column="0">
       <widget class="QLabel" name="label_49">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -212,39 +212,6 @@
        </property>
        <property name="text">
         <string>Gain Tetrode2 [0.01, 2]</string>
-       </property>
-      </widget>
-     </item>
-     <item row="45" column="0">
-      <widget class="QLabel" name="label_50">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>175</width>
-         <height>20</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>93</width>
-         <height>20</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>8</pointsize>
-        </font>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="text">
-        <string>Gain Tetrode Enable</string>
        </property>
       </widget>
      </item>
@@ -339,7 +306,7 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -465,7 +432,7 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -528,75 +495,8 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="45" column="1">
-      <widget class="TaurusValueComboBox" name="comboBox_GainTetA1En">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>93</width>
-         <height>20</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>93</width>
-         <height>20</height>
-        </size>
-       </property>
-       <property name="palette">
-        <palette>
-         <active>
-          <colorrole role="Button">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>255</red>
-             <green>255</green>
-             <blue>255</blue>
-            </color>
-           </brush>
-          </colorrole>
-         </active>
-         <inactive>
-          <colorrole role="Button">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>255</red>
-             <green>255</green>
-             <blue>255</blue>
-            </color>
-           </brush>
-          </colorrole>
-         </inactive>
-         <disabled>
-          <colorrole role="Button">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>255</red>
-             <green>255</green>
-             <blue>255</blue>
-            </color>
-           </brush>
-          </colorrole>
-         </disabled>
-        </palette>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>8</pointsize>
-        </font>
-       </property>
-       <property name="autoApply">
-        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -691,7 +591,7 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -791,7 +691,7 @@
          <pointsize>8</pointsize>
         </font>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>true</bool>
        </property>
       </widget>
@@ -924,7 +824,7 @@
          <pointsize>8</pointsize>
         </font>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>true</bool>
        </property>
       </widget>
@@ -1084,7 +984,7 @@
          <pointsize>8</pointsize>
         </font>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>true</bool>
        </property>
       </widget>
@@ -1147,7 +1047,7 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -1180,12 +1080,12 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
      </item>
-     <item row="47" column="2">
+     <item row="46" column="2">
       <widget class="TaurusLabel" name="tauValueLabel_Tetrode2A">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -1243,7 +1143,7 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -1378,6 +1278,36 @@
        </property>
        <property name="text">
         <string>Read Back</string>
+       </property>
+      </widget>
+     </item>
+     <item row="21" column="2">
+      <widget class="TaurusLabel" name="tauValueLabel_gainola">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>93</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>93</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>7</pointsize>
+        </font>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
        </property>
       </widget>
      </item>
@@ -1608,12 +1538,12 @@
          <pointsize>8</pointsize>
         </font>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
      </item>
-     <item row="46" column="2">
+     <item row="45" column="2">
       <widget class="TaurusLabel" name="tauValueLabel_Tetrode1A">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -1643,7 +1573,7 @@
        </property>
       </widget>
      </item>
-     <item row="47" column="1">
+     <item row="46" column="1">
       <widget class="TaurusValueLineEdit" name="lineEdit_Tetrode2A">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -1671,12 +1601,12 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
      </item>
-     <item row="46" column="0">
+     <item row="45" column="0">
       <widget class="QLabel" name="label_48">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -1737,12 +1667,12 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
      </item>
-     <item row="50" column="0">
+     <item row="49" column="0">
       <widget class="QLabel" name="label_22">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -2081,38 +2011,8 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="45" column="2">
-      <widget class="TaurusLabel" name="tauValueLabel_Tetrode1AEn">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>93</width>
-         <height>20</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>93</width>
-         <height>20</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>7</pointsize>
-        </font>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
        </property>
       </widget>
      </item>
@@ -2178,7 +2078,7 @@
          <pointsize>8</pointsize>
         </font>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>true</bool>
        </property>
       </widget>
@@ -2213,7 +2113,7 @@
        </property>
       </widget>
      </item>
-     <item row="46" column="1">
+     <item row="45" column="1">
       <widget class="TaurusValueLineEdit" name="lineEdit_Tetrode1A">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -2241,7 +2141,7 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -2307,7 +2207,7 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -2345,8 +2245,8 @@
        </property>
       </widget>
      </item>
-     <item row="3" column="1">
-      <widget class="TaurusValueLineEdit" name="lineEdit_PhaseLoopA">
+     <item row="24" column="2">
+      <widget class="TaurusLabel" name="tauValueLabel_phaseShift_11">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -2367,14 +2267,11 @@
        </property>
        <property name="font">
         <font>
-         <pointsize>8</pointsize>
+         <pointsize>7</pointsize>
         </font>
        </property>
-       <property name="frame">
-        <bool>true</bool>
-       </property>
-       <property name="autoApply">
-        <bool>false</bool>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
        </property>
       </widget>
      </item>
@@ -2406,13 +2303,13 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
      </item>
-     <item row="24" column="2">
-      <widget class="TaurusLabel" name="tauValueLabel_phaseShift_11">
+     <item row="3" column="1">
+      <widget class="TaurusValueLineEdit" name="lineEdit_PhaseLoopA">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -2433,11 +2330,14 @@
        </property>
        <property name="font">
         <font>
-         <pointsize>7</pointsize>
+         <pointsize>8</pointsize>
         </font>
        </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
+       <property name="frame">
+        <bool>true</bool>
+       </property>
+       <property name="autoApply" stdset="0">
+        <bool>false</bool>
        </property>
       </widget>
      </item>
@@ -2474,8 +2374,41 @@
        </property>
       </widget>
      </item>
-     <item row="21" column="2">
-      <widget class="TaurusLabel" name="tauValueLabel_gainola">
+     <item row="20" column="0">
+      <widget class="QLabel" name="label_27">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>175</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>93</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="text">
+        <string>Slow IQ Loops Input</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="2">
+      <widget class="TaurusLabel" name="tauValueLabel_phaseIncRate">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -2566,75 +2499,12 @@
          <pointsize>8</pointsize>
         </font>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>true</bool>
        </property>
       </widget>
      </item>
-     <item row="20" column="0">
-      <widget class="QLabel" name="label_27">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>175</width>
-         <height>20</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>93</width>
-         <height>20</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>8</pointsize>
-        </font>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="text">
-        <string>Slow IQ Loops Input</string>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="2">
-      <widget class="TaurusLabel" name="tauValueLabel_phaseIncRate">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>93</width>
-         <height>20</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>93</width>
-         <height>20</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>7</pointsize>
-        </font>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-      </widget>
-     </item>
-     <item row="49" column="2">
+     <item row="48" column="2">
       <widget class="TaurusLabel" name="tauValueLabel_filterStage">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -2664,7 +2534,7 @@
        </property>
       </widget>
      </item>
-     <item row="50" column="2">
+     <item row="49" column="2">
       <widget class="TaurusLabel" name="tauValueLabel_samplesAv">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -2694,7 +2564,7 @@
        </property>
       </widget>
      </item>
-     <item row="49" column="0">
+     <item row="48" column="0">
       <widget class="QLabel" name="label_10">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -2760,6 +2630,36 @@
        </property>
       </widget>
      </item>
+     <item row="4" column="2">
+      <widget class="TaurusLabel" name="tauValueLabel_voltInc">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>93</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>93</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>7</pointsize>
+        </font>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+      </widget>
+     </item>
      <item row="5" column="1">
       <widget class="TaurusValueComboBox" name="comboBox_phaseIncRate">
        <property name="sizePolicy">
@@ -2822,71 +2722,8 @@
          <pointsize>8</pointsize>
         </font>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="21" column="1">
-      <widget class="TaurusValueLineEdit" name="lineEdit_gainola">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>93</width>
-         <height>20</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>93</width>
-         <height>20</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>8</pointsize>
-        </font>
-       </property>
-       <property name="frame">
-        <bool>true</bool>
-       </property>
-       <property name="autoApply">
-        <bool>false</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="2">
-      <widget class="TaurusLabel" name="tauValueLabel_voltInc">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>93</width>
-         <height>20</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>93</width>
-         <height>20</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>7</pointsize>
-        </font>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
        </property>
       </widget>
      </item>
@@ -2923,8 +2760,8 @@
        </property>
       </widget>
      </item>
-     <item row="49" column="1">
-      <widget class="TaurusValueLineEdit" name="lineEdit_filterStage">
+     <item row="21" column="1">
+      <widget class="TaurusValueLineEdit" name="lineEdit_gainola">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -2951,7 +2788,7 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -2986,8 +2823,8 @@
        </property>
       </widget>
      </item>
-     <item row="25" column="1">
-      <widget class="TaurusValueLineEdit" name="lineEdit_phaseShift_11">
+     <item row="48" column="1">
+      <widget class="TaurusValueLineEdit" name="lineEdit_filterStage">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -3014,7 +2851,7 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -3052,8 +2889,8 @@
        </property>
       </widget>
      </item>
-     <item row="50" column="1">
-      <widget class="TaurusValueLineEdit" name="lineEdit_samplesAv">
+     <item row="25" column="1">
+      <widget class="TaurusValueLineEdit" name="lineEdit_phaseShift_11">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -3080,7 +2917,7 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -3145,6 +2982,39 @@
        </property>
       </widget>
      </item>
+     <item row="49" column="1">
+      <widget class="TaurusValueLineEdit" name="lineEdit_samplesAv">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>93</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>93</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="frame">
+        <bool>true</bool>
+       </property>
+       <property name="autoApply" stdset="0">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
      <item row="31" column="0">
       <widget class="QLabel" name="label_249">
        <property name="sizePolicy">
@@ -3178,39 +3048,6 @@
        </property>
       </widget>
      </item>
-     <item row="31" column="1">
-      <widget class="TaurusValueLineEdit" name="lineEdit_phaseShift_15">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>93</width>
-         <height>20</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>93</width>
-         <height>20</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>8</pointsize>
-        </font>
-       </property>
-       <property name="frame">
-        <bool>true</bool>
-       </property>
-       <property name="autoApply">
-        <bool>false</bool>
-       </property>
-      </widget>
-     </item>
      <item row="31" column="2">
       <widget class="TaurusLabel" name="tauValueLabel_phaseShift_16">
        <property name="sizePolicy">
@@ -3241,6 +3078,39 @@
        </property>
       </widget>
      </item>
+     <item row="31" column="1">
+      <widget class="TaurusValueLineEdit" name="lineEdit_phaseShift_15">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>93</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>93</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="frame">
+        <bool>true</bool>
+       </property>
+       <property name="autoApply" stdset="0">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
     </layout>
    </item>
    <item row="0" column="1">
@@ -3248,6 +3118,36 @@
      <property name="spacing">
       <number>0</number>
      </property>
+     <item row="29" column="1">
+      <widget class="TaurusLabel" name="tauValueLabel_phaseShift_5">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>93</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>93</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>7</pointsize>
+        </font>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+      </widget>
+     </item>
      <item row="21" column="1">
       <widget class="TaurusLabel" name="tauValueLabel_phaseShiftEn_3">
        <property name="sizePolicy">
@@ -3370,12 +3270,12 @@
          <pointsize>8</pointsize>
         </font>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>true</bool>
        </property>
       </widget>
      </item>
-     <item row="34" column="0">
+     <item row="33" column="0">
       <widget class="TaurusValueLineEdit" name="lineEdit_Tetrode1B">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -3403,12 +3303,12 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
      </item>
-     <item row="35" column="0">
+     <item row="34" column="0">
       <widget class="TaurusValueLineEdit" name="lineEdit_Tetrode2B">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -3436,7 +3336,7 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -3713,104 +3613,7 @@
          <pointsize>8</pointsize>
         </font>
        </property>
-       <property name="autoApply">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="33" column="1">
-      <widget class="TaurusLabel" name="tauValueLabel_Tetrode1BEn">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>93</width>
-         <height>20</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>93</width>
-         <height>20</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>7</pointsize>
-        </font>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-      </widget>
-     </item>
-     <item row="33" column="0">
-      <widget class="TaurusValueComboBox" name="comboBox_GainTetB1En">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>93</width>
-         <height>20</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>93</width>
-         <height>20</height>
-        </size>
-       </property>
-       <property name="palette">
-        <palette>
-         <active>
-          <colorrole role="Button">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>255</red>
-             <green>255</green>
-             <blue>255</blue>
-            </color>
-           </brush>
-          </colorrole>
-         </active>
-         <inactive>
-          <colorrole role="Button">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>255</red>
-             <green>255</green>
-             <blue>255</blue>
-            </color>
-           </brush>
-          </colorrole>
-         </inactive>
-         <disabled>
-          <colorrole role="Button">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>255</red>
-             <green>255</green>
-             <blue>255</blue>
-            </color>
-           </brush>
-          </colorrole>
-         </disabled>
-        </palette>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>8</pointsize>
-        </font>
-       </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>true</bool>
        </property>
       </widget>
@@ -4049,7 +3852,7 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -4082,7 +3885,7 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -4115,7 +3918,7 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -4182,7 +3985,7 @@
          <pointsize>8</pointsize>
         </font>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>true</bool>
        </property>
       </widget>
@@ -4215,7 +4018,7 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -4248,7 +4051,7 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -4345,7 +4148,7 @@
          <pointsize>8</pointsize>
         </font>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -4412,7 +4215,7 @@
          <pointsize>8</pointsize>
         </font>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -4479,7 +4282,7 @@
          <pointsize>8</pointsize>
         </font>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>true</bool>
        </property>
       </widget>
@@ -4564,7 +4367,7 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -4627,13 +4430,43 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
      </item>
      <item row="24" column="1">
       <widget class="TaurusLabel" name="tauValueLabel_phaseShift_10">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>93</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>93</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>7</pointsize>
+        </font>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="34" column="1">
+      <widget class="TaurusLabel" name="tauValueLabel_Tetrode2B">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -4690,43 +4523,13 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
      </item>
-     <item row="34" column="1">
+     <item row="33" column="1">
       <widget class="TaurusLabel" name="tauValueLabel_Tetrode1B">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>93</width>
-         <height>20</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>93</width>
-         <height>20</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>7</pointsize>
-        </font>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-      </widget>
-     </item>
-     <item row="35" column="1">
-      <widget class="TaurusLabel" name="tauValueLabel_Tetrode2B">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -4785,36 +4588,6 @@
        </property>
       </widget>
      </item>
-     <item row="29" column="1">
-      <widget class="TaurusLabel" name="tauValueLabel_phaseShift_5">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>93</width>
-         <height>20</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>93</width>
-         <height>20</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>7</pointsize>
-        </font>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-      </widget>
-     </item>
      <item row="29" column="0">
       <widget class="TaurusValueLineEdit" name="lineEdit_phaseShift_4">
        <property name="sizePolicy">
@@ -4843,8 +4616,38 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="36" column="1">
+      <widget class="TaurusLabel" name="tauValueLabel_filterStage_2">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>93</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>93</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>7</pointsize>
+        </font>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
        </property>
       </widget>
      </item>
@@ -4876,12 +4679,12 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
      </item>
-     <item row="38" column="1">
+     <item row="37" column="1">
       <widget class="TaurusLabel" name="tauValueLabel_samplesAv_2">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -4911,37 +4714,7 @@
        </property>
       </widget>
      </item>
-     <item row="37" column="1">
-      <widget class="TaurusLabel" name="tauValueLabel_filterStage_2">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>93</width>
-         <height>20</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>93</width>
-         <height>20</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>7</pointsize>
-        </font>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-      </widget>
-     </item>
-     <item row="38" column="0">
+     <item row="37" column="0">
       <widget class="TaurusValueLineEdit" name="lineEdit_samplesAv_2">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -4969,7 +4742,7 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -5002,7 +4775,7 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -5035,7 +4808,7 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -5128,7 +4901,7 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -5195,7 +4968,7 @@
          <pointsize>8</pointsize>
         </font>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -5352,12 +5125,12 @@
          <pointsize>8</pointsize>
         </font>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>true</bool>
        </property>
       </widget>
      </item>
-     <item row="37" column="0">
+     <item row="36" column="0">
       <widget class="TaurusValueLineEdit" name="lineEdit_filterStage_2">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -5385,7 +5158,7 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -5448,7 +5221,7 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -5511,7 +5284,7 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>

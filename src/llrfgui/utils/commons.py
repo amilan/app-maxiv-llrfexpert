@@ -83,14 +83,14 @@ CC = [
 ]
 
 CCMDSTART = [
-    ['Not RF', "Not RF"],
-    ['RF Detected', "RF Detected"],
-    ['Tuning Cavity', "Tuning Cavity"],
-    ['Closing Loops', "Closing Loops"],
-    ['Increasing Power', "Increasing Power"],
-    ['Ready DC Power', "Ready DC Power"],
-    ['Ready Ramping', "Ready Ramping"],
-    ['Loops Saturated', "Loops Saturated"],
+    ['Not RF [0]', 0],
+    ['RF Detected [1]', 1],
+    ['Tuning Cavity [2]', 2],
+    ['Closing Loops [3]', 3],
+    ['Increasing Power [4]', 4],
+    ['Ready DC Power [5]', 5],
+    ['Ready Ramping [6]', 6],
+    ['Loops Saturated [7]', 7],
 ]
 
 # CCMDSTART = [
