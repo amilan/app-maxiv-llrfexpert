@@ -72,7 +72,7 @@ class VCXODialog(QtGui.QDialog):
         self.ui.taurusValueComboBox_3.setModelName(self.device + "/Mux2Divider")
         self.ui.taurusValueComboBox_4.setModelName(self.device + "/Mux3Divider")
         self.ui.taurusValueComboBox_5.setModelName(self.device + "/Mux4Divider")
-        self.ui.taurusValueComboBox_6.setModelName(self.device + "/CPDirection")
+        self.ui.taurusValueComboBox_6.setModelName(self.device + "/Cpdir")
         
         self.ui.taurusLabel.setModel(self.device + "/MDivider")
         self.ui.taurusLabel_3.setModel(self.device + "/NDivider")
@@ -82,7 +82,7 @@ class VCXODialog(QtGui.QDialog):
         self.ui.taurusLabel_7.setModel(self.device + "/Mux2Divider")
         self.ui.taurusLabel_8.setModel(self.device + "/Mux3Divider")
         self.ui.taurusLabel_9.setModel(self.device + "/Mux4Divider")
-        self.ui.taurusLabel_2.setModel(self.device + "/CPDirection")
+        self.ui.taurusLabel_2.setModel(self.device + "/Cpdir")
         
     @alert_problems
     def sendWord(self):

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>321</width>
+    <width>380</width>
     <height>262</height>
    </rect>
   </property>
@@ -69,6 +69,153 @@
      <property name="spacing">
       <number>0</number>
      </property>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_166">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>175</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>93</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="text">
+        <string>DACs OFF</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_164">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>175</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>93</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="text">
+        <string>Output to PLC</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_165">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>175</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>93</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="text">
+        <string>Output to upper level</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="TaurusBoolLed" name="taurusBoolLed_48">
+       <property name="minimumSize">
+        <size>
+         <width>59</width>
+         <height>31</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>59</width>
+         <height>31</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="TaurusBoolLed" name="taurusBoolLed_21">
+       <property name="minimumSize">
+        <size>
+         <width>59</width>
+         <height>31</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>59</width>
+         <height>31</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="TaurusBoolLed" name="taurusBoolLed_45">
+       <property name="minimumSize">
+        <size>
+         <width>59</width>
+         <height>31</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>59</width>
+         <height>31</height>
+        </size>
+       </property>
+      </widget>
+     </item>
      <item row="2" column="0">
       <widget class="QLabel" name="label_162">
        <property name="sizePolicy">
@@ -102,135 +249,35 @@
        </property>
       </widget>
      </item>
-     <item row="3" column="0">
-      <widget class="QLabel" name="label_163">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
+     <item row="3" column="1">
+      <widget class="TaurusBoolLed" name="taurusBoolLed_47">
        <property name="minimumSize">
         <size>
-         <width>175</width>
-         <height>20</height>
+         <width>59</width>
+         <height>31</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
-         <width>93</width>
-         <height>20</height>
+         <width>59</width>
+         <height>31</height>
         </size>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>8</pointsize>
-        </font>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="text">
-        <string>Trigger to FDL Diag</string>
        </property>
       </widget>
      </item>
-     <item row="4" column="0">
-      <widget class="QLabel" name="label_164">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
+     <item row="1" column="1">
+      <widget class="TaurusBoolLed" name="taurusBoolLed_22">
        <property name="minimumSize">
         <size>
-         <width>175</width>
-         <height>20</height>
+         <width>59</width>
+         <height>31</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
-         <width>93</width>
-         <height>20</height>
+         <width>59</width>
+         <height>31</height>
         </size>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>8</pointsize>
-        </font>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="text">
-        <string>Output to PLC</string>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="0">
-      <widget class="QLabel" name="label_165">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>175</width>
-         <height>20</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>93</width>
-         <height>20</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>8</pointsize>
-        </font>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="text">
-        <string>Output to upper level</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="0">
-      <widget class="QLabel" name="label_166">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>175</width>
-         <height>20</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>93</width>
-         <height>20</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>8</pointsize>
-        </font>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="text">
-        <string>DACs OFF</string>
        </property>
       </widget>
      </item>
@@ -267,102 +314,6 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="1">
-      <widget class="TaurusBoolLed" name="taurusBoolLed_21">
-       <property name="minimumSize">
-        <size>
-         <width>59</width>
-         <height>31</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>59</width>
-         <height>31</height>
-        </size>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="TaurusBoolLed" name="taurusBoolLed_22">
-       <property name="minimumSize">
-        <size>
-         <width>59</width>
-         <height>31</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>59</width>
-         <height>31</height>
-        </size>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="1">
-      <widget class="TaurusBoolLed" name="taurusBoolLed_45">
-       <property name="minimumSize">
-        <size>
-         <width>59</width>
-         <height>31</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>59</width>
-         <height>31</height>
-        </size>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="1">
-      <widget class="TaurusBoolLed" name="taurusBoolLed_46">
-       <property name="minimumSize">
-        <size>
-         <width>59</width>
-         <height>31</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>59</width>
-         <height>31</height>
-        </size>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="1">
-      <widget class="TaurusBoolLed" name="taurusBoolLed_47">
-       <property name="minimumSize">
-        <size>
-         <width>59</width>
-         <height>31</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>59</width>
-         <height>31</height>
-        </size>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="1">
-      <widget class="TaurusBoolLed" name="taurusBoolLed_48">
-       <property name="minimumSize">
-        <size>
-         <width>59</width>
-         <height>31</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>59</width>
-         <height>31</height>
-        </size>
-       </property>
-      </widget>
-     </item>
     </layout>
    </item>
    <item row="1" column="1">
@@ -370,8 +321,8 @@
      <property name="spacing">
       <number>0</number>
      </property>
-     <item row="0" column="0">
-      <widget class="TaurusBoolLed" name="taurusBoolLed_49">
+     <item row="4" column="0">
+      <widget class="TaurusBoolLed" name="taurusBoolLed_54">
        <property name="minimumSize">
         <size>
          <width>59</width>
@@ -419,22 +370,6 @@
       </widget>
      </item>
      <item row="3" column="0">
-      <widget class="TaurusBoolLed" name="taurusBoolLed_52">
-       <property name="minimumSize">
-        <size>
-         <width>59</width>
-         <height>31</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>59</width>
-         <height>31</height>
-        </size>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="0">
       <widget class="TaurusBoolLed" name="taurusBoolLed_53">
        <property name="minimumSize">
         <size>
@@ -450,8 +385,8 @@
        </property>
       </widget>
      </item>
-     <item row="5" column="0">
-      <widget class="TaurusBoolLed" name="taurusBoolLed_54">
+     <item row="0" column="0">
+      <widget class="TaurusBoolLed" name="taurusBoolLed_49">
        <property name="minimumSize">
         <size>
          <width>59</width>

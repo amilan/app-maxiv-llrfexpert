@@ -67,7 +67,7 @@ class ItckOutDiag(BaseLLRFWidget):
 
     @alert_problems
     def resetITCKA(self):
-        self._device_proxy.resetITCKA()
+        self._device_proxy.reset_itck()
 
    # @alert_problems
    # def _set_comboboxes(self):
@@ -102,9 +102,8 @@ class ItckOutDiag(BaseLLRFWidget):
             (self.ui.taurusBoolLed_21, "Diag_DacsDisableCommand"),
             (self.ui.taurusBoolLed_22, "Diag_PinSwitch"),
             (self.ui.taurusBoolLed_45, "Diag_FdlTriggerToLoopsdiagboard"),
-            (self.ui.taurusBoolLed_46, "Diag_FdlTriggerForDiagnosticsPursposes"),
             (self.ui.taurusBoolLed_47, "Diag_OutputToPlc"),
-            #(self.ui.taurusBoolLed_48, "Diag_OutputUpperLevelDiagA"),
+            (self.ui.taurusBoolLed_48, "Diag_OutputToMps"),
         ]
 
         self._comboboxes = []

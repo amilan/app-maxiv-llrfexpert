@@ -190,3 +190,12 @@ CFDLDIAG = [
     ['RvCav', 8],
     ['MO_landau', 9],
 ]
+
+CSLOWIQINPUT = [
+    ['CavVolt [0]', 0],
+    ['FwCav [1]', 1],
+    ['FwTet1 [2]', 2],
+    ['FwTet2 [3]', 3],
+    ['FwCircIn [4]', 4]
+]
+# Enumeration: [0 --> CavVolt, 1 --> FwCav, 2 --> FwTet1, 3 --> FwTet2, 4 --> FwCircIn] - Modified on 20140823

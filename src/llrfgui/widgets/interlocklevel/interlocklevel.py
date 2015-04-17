@@ -65,31 +65,31 @@ class InterlockLevel(BaseLLRFWidget):
     def connect_signals(self):
         QtCore.QObject.connect(self.ui.pushButton_SWITCKA, 
                                QtCore.SIGNAL("clicked()"),
-                               self.resetManualITCKA)
+                               self.reset_manual_itck)
 
     @alert_problems
-    def resetManualITCKA(self):
-        self._device_proxy.resetManualITCKA()
+    def reset_manual_itck(self):
+        self._device_proxy.reset_manual_itck()
 
 
     @alert_problems
     def _create_attributes_lists(self):
         self._attributes = [
-            (self.ui.lineEdit_RvTet1A, "Diag_Rvtet1"),
-            (self.ui.lineEdit_RvTet2A, "Diag_Rvtet2"),
-            (self.ui.lineEdit_RvCircA, "Diag_Rvcirc"),
-            (self.ui.lineEdit_FwLoadA, "Diag_FwloadA"),
-            (self.ui.lineEdit_FwHybLoadA, "Diag_FwhybloadA"),
-            (self.ui.lineEdit_RvCavA, "Diag_RvcavA"),
+            (self.ui.lineEdit_RvTet1A, "Rvtet1"),
+            (self.ui.lineEdit_RvTet2A, "Rvtet2"),
+            (self.ui.lineEdit_RvCircA, "Rvcirc"),
+            (self.ui.lineEdit_FwLoadA, "Fwload"),
+            (self.ui.lineEdit_FwHybLoadA, "Fwhybload"),
+            (self.ui.lineEdit_RvCavA, "Rvcav"),
         ]
 
         self._attributes_readback = [
-            (self.ui.tauValueLabel_RvTet1A, "Diag_RvTet1"),
-            (self.ui.tauValueLabel_RvTet2A, "Diag_RvTet2"),
-            (self.ui.tauValueLabel_RvCircA, "Diag_RvCirc"),
-            (self.ui.tauValueLabel_FwLoadA, "Diag_Fwload"),
-            (self.ui.tauValueLabel_FwHybLoadA, "Diag_Fwhybload"),
-            (self.ui.tauValueLabel_RvCavA, "Diag_Rvcav"),
+            (self.ui.tauValueLabel_RvTet1A, "RvTet1"),
+            (self.ui.tauValueLabel_RvTet2A, "RvTet2"),
+            (self.ui.tauValueLabel_RvCircA, "RvCirc"),
+            (self.ui.tauValueLabel_FwLoadA, "Fwload"),
+            (self.ui.tauValueLabel_FwHybLoadA, "Fwhybload"),
+            (self.ui.tauValueLabel_RvCavA, "Rvcav"),
         ]
 
         self._comboboxes = []

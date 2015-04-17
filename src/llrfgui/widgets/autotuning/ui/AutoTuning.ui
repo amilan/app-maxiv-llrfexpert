@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>423</width>
-    <height>300</height>
+    <width>535</width>
+    <height>326</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -99,7 +99,7 @@
         <enum>QFrame::StyledPanel</enum>
        </property>
        <property name="text">
-        <string>Moving In</string>
+        <string>Freq Up</string>
        </property>
       </widget>
      </item>
@@ -417,7 +417,7 @@
          <pointsize>8</pointsize>
         </font>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>true</bool>
        </property>
       </widget>
@@ -447,7 +447,7 @@
          <pointsize>8</pointsize>
         </font>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>true</bool>
        </property>
       </widget>
@@ -531,7 +531,7 @@
          <pointsize>8</pointsize>
         </font>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -591,7 +591,7 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -624,7 +624,7 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -684,7 +684,7 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -916,7 +916,7 @@
          <pointsize>8</pointsize>
         </font>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -1000,7 +1000,7 @@
          <pointsize>8</pointsize>
         </font>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>true</bool>
        </property>
       </widget>
@@ -1060,7 +1060,7 @@
          <pointsize>8</pointsize>
         </font>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -1171,7 +1171,7 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -1238,7 +1238,7 @@
          <pointsize>8</pointsize>
         </font>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -1515,7 +1515,7 @@
          <pointsize>8</pointsize>
         </font>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -1648,7 +1648,7 @@
          <pointsize>8</pointsize>
         </font>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>true</bool>
        </property>
       </widget>
@@ -1678,7 +1678,7 @@
          <pointsize>8</pointsize>
         </font>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>true</bool>
        </property>
       </widget>
@@ -1708,7 +1708,7 @@
          <pointsize>8</pointsize>
         </font>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -1741,7 +1741,7 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -1774,7 +1774,7 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -1837,7 +1837,7 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>
@@ -1957,7 +1957,7 @@
          <pointsize>8</pointsize>
         </font>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>true</bool>
        </property>
       </widget>
@@ -2044,7 +2044,7 @@
        <property name="frame">
         <bool>true</bool>
        </property>
-       <property name="autoApply">
+       <property name="autoApply" stdset="0">
         <bool>false</bool>
        </property>
       </widget>

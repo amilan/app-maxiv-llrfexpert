@@ -64,7 +64,7 @@ class Landau(BaseLLRFWidget):
     def connect_with_devices(self):
         """This method creates the tango device proxys. """
 
-        self._device_proxy = PyTango.DeviceProxy(self._device_name)
+        self._device_proxy = PyTango.DeviceProxy(self._device_diag)
 
     @alert_problems
     def connect_signals(self):
@@ -74,8 +74,8 @@ class Landau(BaseLLRFWidget):
 
     @alert_problems
     def landau_reset(self):
-        self._device_proxy['LandauTuningReset'] = True
-        self._device_proxy['LandauTuningReset'] = False
+        self._device_proxy['Landautuningreset'] = True
+        self._device_proxy['Landautuningreset'] = False
 
     @alert_problems
     def _set_comboboxes(self):
@@ -110,7 +110,8 @@ class Landau(BaseLLRFWidget):
             (self.ui.lineEdit_tuningOffset_3, self._device_diag + "/Landauphaseoffset"),
             (self.ui.lineEdit_marginUp_4, self._device_diag + "/Landaumarginup"),
             (self.ui.lineEdit_marginLow_4, self._device_diag + "/Landaumarginlow"),
-            (self.ui.lineEdit_forwardMin_3, self._device_diag + "/MinimumLandauAmplitude"),
+            (self.ui.lineEdit_landauAmpSet, self._device_diag + "/Landauampsetting"),
+            (self.ui.lineEdit_forwardMin_4, self._device_diag + "/MinimumLandauAmplitude"),
         ]
 
         self._attributes_readback = [
@@ -120,13 +121,14 @@ class Landau(BaseLLRFWidget):
             (self.ui.tauValueLabel_moveUp_3, self._device_diag + "/Movelandauup"),
             (self.ui.tauValueLabel_movePlg1_3, self._device_diag + "/Movelandauplg"),
             (self.ui.taurusBoolLed_39, self._device_diag + "/Diag_PlungerMovingAutomaticTuning"),
-            (self.ui.taurusBoolLed_40, self._device_diag + "/Diag_PlungerMovingUpAutormaticTuning"),
+            (self.ui.taurusBoolLed_40, self._device_diag + "/Diag_PlungerMovingUpAutomaticTuning"),
 
             (self.ui.tauValueLabel_tuningOffset_3, self._device_diag + "/Landauphaseoffset"),
             (self.ui.tauValueLabel_marginUp_3, self._device_diag + "/Landaumarginup"),
             (self.ui.tauValueLabel_marginLow_3, self._device_diag + "/LandauMarginLow"),
-            (self.ui.tauValueLabel_forwardMin_4, self._device_diag + "/MinimumLandauAmplitude"),
-            (self.ui.tauValueLabel_tuningEn_3, self._device_diag + "/Landutuningenable"),
+            (self.ui.tauValueLabel_landauAmpSet, self._device_diag + "/Landauampsetting"),
+            (self.ui.tauValueLabel_forwardMin_5, self._device_diag + "/MinimumLandauAmplitude"),
+            (self.ui.tauValueLabel_tuningEn_3, self._device_diag + "/Landautuningenable"),
             (self.ui.tauValueLabel_tuningPosEn_3, self._device_diag + "/LandauPositiveEnable"),
         ]
 

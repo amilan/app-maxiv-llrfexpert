@@ -72,7 +72,7 @@ class AutoTuning(BaseLLRFWidget):
         ]
 
         self._attributes_readback = [
-            (self.ui.taurusBoolLed_31, "Diag_ManualTuningOn"),
+            (self.ui.taurusBoolLed_31, "_Diag_MovingPlungerAuto"),
             (self.ui.taurusBoolLed_32, "Diag_FreqUp"),
             (self.ui.tauValueLabel_tuningEn, "TuningEnableA"),
             (self.ui.tauValueLabel_tuningPosEn, "TuningPosEnA"),

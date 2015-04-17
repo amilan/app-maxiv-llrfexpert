@@ -56,7 +56,7 @@ models_dict = {
     'AutoTuning': loops_device,
     'Conditioning': loops_device,
     'Diagdc': loops_device,
-    'Diags':diags_device,
+    'Diags':[loops_device, diags_device],
     'Fdl':loops_device,
     'Fpgaclock': [loops_device, diags_device],
     'FpgaVersion': [loops_device, diags_device],
