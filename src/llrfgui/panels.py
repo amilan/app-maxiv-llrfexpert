@@ -60,7 +60,6 @@ def get_models_dict(loops_device, diags_device):
     }
     return models_dict
 
-# Create panels
 def create_panels():
     """Create panels and set application name."""
     for widget in models_dict:
