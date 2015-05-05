@@ -63,6 +63,9 @@ class Diagdc(BaseLLRFWidget):
                 (self.ui.tauValueLabel_IcrtlAc1, "Diag_Icontrol1"),
                 (self.ui.tauValueLabel_IcrtlAc2, "Diag_Icontrol2"),
                 (self.ui.tauValueLabel_IMOA, "Diag_Imo"),
+                (self.ui.tauValueLabel_IFastIQLoopRef, "Diag_IrefloopinputFastpiIq"),
+                (self.ui.tauValueLabel_IFastIQLoopIn, "Diag_IloopinputFastpiIq"),
+                (self.ui.tauValueLabel_IFastIQControlOut, "Diag_IcontrolFastpiIq"),
                 # Q attributes
                 (self.ui.tauValueLabel_QcavRef, "Diag_Qref"),
                 (self.ui.tauValueLabel_QcavVolt, "Diag_QcavLoops"),
@@ -77,6 +80,9 @@ class Diagdc(BaseLLRFWidget):
                 (self.ui.tauValueLabel_QctrlAc1, "Diag_Qcontrol1"),
                 (self.ui.tauValueLabel_QctrlAc2, "Diag_Qcontrol2"),
                 (self.ui.tauValueLabel_QMOA, "Diag_Qmo"),
+                (self.ui.tauValueLabel_QFastIQLoopRef, "Diag_QrefloopinputFastpiIq"),
+                (self.ui.tauValueLabel_QFastIQLoopIn, "Diag_QloopinputFastpiIq"),
+                (self.ui.tauValueLabel_QFastIQControlOut, "Diag_QcontrolFastpiIq"),
                 # Amp attributes
                 (self.ui.tauValueLabel_ampcavRef, "Diag_Ampref"),
                 (self.ui.tauValueLabel_ampCavVolt, "Diag_AmpcavLoops"),
@@ -91,6 +97,9 @@ class Diagdc(BaseLLRFWidget):
                 (self.ui.tauValueLabel_ampctrlAc1, "Diag_Ampcontrol1"),
                 (self.ui.tauValueLabel_ampctrlAc2, "Diag_Ampcontrol2"),
                 (self.ui.tauValueLabel_ampMOA, "Diag_Ampmo"),
+                (self.ui.tauValueLabel_ampFastIQLoopRef, "Diag_AmpRefloopinputfastpiIq"),
+                (self.ui.tauValueLabel_ampFastIQLoopIn, "Diag_AmpLoopinputfastpiiq"),
+                (self.ui.tauValueLabel_ampFastIQControlOut, "Diag_AmpControlfastpiiq"),
                 # # Phase attributes
                 (self.ui.tauValueLabel_phasecavRef, "Diag_Phref"),
                 (self.ui.tauValueLabel_phasecavVolt, "Diag_PhcavLoops"),
@@ -105,6 +114,9 @@ class Diagdc(BaseLLRFWidget):
                 (self.ui.tauValueLabel_phasectrlAc1, "Diag_Phcontrol1"),
                 (self.ui.tauValueLabel_phasectrlAc2, "Diag_Phcontrol2"),
                 (self.ui.tauValueLabel_phaseMOA, "Diag_Phmo"),
+                (self.ui.tauValueLabel_phaseFastIQLoopRef, "Diag_PhRefloopinputfastpiIq"),
+                (self.ui.tauValueLabel_phaseFastIQLoopIn, "Diag_PhLoopinputfastpiiq"),
+                (self.ui.tauValueLabel_phaseFastIQControlOut, "Diag_PhControlfastpiiq"),
         ]
 
         self._comboboxes = []
