@@ -57,6 +57,8 @@ def get_models_dict(loops_device, diags_device):
         'Start': [loops_device, diags_device],
         'TuningDiag': [loops_device, diags_device],
         'Vcxo': loops_device,
+        'PolarDiag': loops_device,
+        'FIM': diags_device,
     }
     return models_dict
 
