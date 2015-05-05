@@ -20,7 +20,7 @@
 ###############################################################################
 
 """
-Diagdc is a widget used for the LLRF Expert GUI.
+PolarDiag is a widget used for the LLRF Expert GUI.
 """
 
 __all__ = ['PolarDiag']
