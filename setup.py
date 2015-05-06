@@ -26,7 +26,7 @@ def main():
 
     name = "taurusgui-llrfexpert",
 
-    version = "1.3.0",
+    version = "1.4.0",
 
     description = "Taurus GUI for Low Level RF expert users.",
 
@@ -42,7 +42,9 @@ def main():
 
     packages = ['llrfgui'],
 
-    scripts = ['scripts/llrfgui']
+    scripts = ['scripts/ctllrfgui']
+
+    data_files = [('~/.config/MAXIV', 'config/llrfExpertGUI.ini')]
 
     setup(
         name=name,
@@ -54,7 +56,8 @@ def main():
         url=url,
         package_dir=package_dir,
         packages=packages,
-        scripts=scripts
+        scripts=scripts,
+        data_files=data_files
     )
 
 if __name__ == "__main__":
