@@ -59,7 +59,7 @@
              <number>0</number>
             </property>
             <item row="16" column="7">
-             <widget class="TaurusLabel" name="tauValueLabel_phaseMOA">
+             <widget class="TaurusLabel" name="tauValueLabel_phaseLoopErrorAccum">
               <property name="minimumSize">
                <size>
                 <width>40</width>
@@ -116,55 +116,7 @@
              </widget>
             </item>
             <item row="16" column="5">
-             <widget class="TaurusLabel" name="tauValueLabel_ampMOA">
-              <property name="minimumSize">
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>100</width>
-                <height>20</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <pointsize>7</pointsize>
-               </font>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::StyledPanel</enum>
-              </property>
-             </widget>
-            </item>
-            <item row="16" column="3">
-             <widget class="TaurusLabel" name="tauValueLabel_QMOA">
-              <property name="minimumSize">
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>100</width>
-                <height>20</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <pointsize>7</pointsize>
-               </font>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::StyledPanel</enum>
-              </property>
-             </widget>
-            </item>
-            <item row="16" column="1">
-             <widget class="TaurusLabel" name="tauValueLabel_IMOA">
+             <widget class="TaurusLabel" name="tauValueLabel_ampLoopErrorAccum">
               <property name="minimumSize">
                <size>
                 <width>40</width>
@@ -1671,36 +1623,6 @@
               </property>
              </widget>
             </item>
-            <item row="15" column="3">
-             <widget class="TaurusLabel" name="tauValueLabel_QerrorA">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>100</width>
-                <height>20</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <pointsize>7</pointsize>
-               </font>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::StyledPanel</enum>
-              </property>
-             </widget>
-            </item>
             <item row="18" column="3">
              <widget class="TaurusLabel" name="tauValueLabel_QctrlAc1">
               <property name="sizePolicy">
@@ -1732,7 +1654,7 @@
              </widget>
             </item>
             <item row="14" column="3">
-             <widget class="TaurusLabel" name="tauValueLabel_QerrorP">
+             <widget class="TaurusLabel" name="tauValueLabel_QPhLoopInput">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                 <horstretch>0</horstretch>
@@ -1888,7 +1810,7 @@
              </widget>
             </item>
             <item row="15" column="7">
-             <widget class="TaurusLabel" name="tauValueLabel_phaseerrorA">
+             <widget class="TaurusLabel" name="tauValueLabel_phaseLoopError">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                 <horstretch>0</horstretch>
@@ -1948,7 +1870,7 @@
              </widget>
             </item>
             <item row="14" column="7">
-             <widget class="TaurusLabel" name="tauValueLabel_phaseerrorP">
+             <widget class="TaurusLabel" name="tauValueLabel_phasePhLoopInput">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                 <horstretch>0</horstretch>
@@ -2069,36 +1991,6 @@
             </item>
             <item row="17" column="7">
              <widget class="TaurusLabel" name="tauValueLabel_phasectrlA">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>100</width>
-                <height>20</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <pointsize>7</pointsize>
-               </font>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::StyledPanel</enum>
-              </property>
-             </widget>
-            </item>
-            <item row="15" column="1">
-             <widget class="TaurusLabel" name="tauValueLabel_IerrorA">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                 <horstretch>0</horstretch>
@@ -2576,7 +2468,7 @@
              </widget>
             </item>
             <item row="14" column="5">
-             <widget class="TaurusLabel" name="tauValueLabel_amperrorP">
+             <widget class="TaurusLabel" name="tauValueLabel_ampPhLoopInput">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                 <horstretch>0</horstretch>
@@ -2606,7 +2498,7 @@
              </widget>
             </item>
             <item row="15" column="5">
-             <widget class="TaurusLabel" name="tauValueLabel_amperrorA">
+             <widget class="TaurusLabel" name="tauValueLabel_ampLoopError">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                 <horstretch>0</horstretch>
@@ -2636,7 +2528,7 @@
              </widget>
             </item>
             <item row="14" column="1">
-             <widget class="TaurusLabel" name="tauValueLabel_IerrorP">
+             <widget class="TaurusLabel" name="tauValueLabel_IPhLoopInput">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                 <horstretch>0</horstretch>
@@ -2937,6 +2829,30 @@
             </item>
             <item row="16" column="9">
              <widget class="TaurusLabel" name="tauValueLabel_wMO_3">
+              <property name="font">
+               <font>
+                <pointsize>7</pointsize>
+               </font>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="16" column="3">
+             <widget class="TaurusLabel" name="tauValueLabel_QMOA">
+              <property name="minimumSize">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>100</width>
+                <height>20</height>
+               </size>
+              </property>
               <property name="font">
                <font>
                 <pointsize>7</pointsize>
