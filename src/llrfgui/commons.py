@@ -19,7 +19,10 @@
 #     along with this program; if not, see <http://www.gnu.org/licenses/>.
 ###########################################################################
 
-"""Main module to run the Low Level Radio Frequency expert taurus GUI."""
+"""Common definitions for the main GUI.
+   The most important definition here is the :py:data:`sections_dict` which collects the
+   relationship between device servers and sections.
+"""
 
 __all__ = ['sections_dict']
 

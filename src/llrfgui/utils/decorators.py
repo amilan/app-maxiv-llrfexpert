@@ -33,9 +33,16 @@ import PyTango
 import traceback
 import sys
 
+from functools import wraps
+
 from PyQt4 import QtGui
 
 def alert_problems(meth):
+    '''
+        If an error happens during the execution of the method decorated by
+        this decorator it will show a QMessageBox with an error message.
+    '''
+    @wraps(meth)
     def _alert_problems(self, *args, **kws):
         try:
             return meth(self, *args, **kws)

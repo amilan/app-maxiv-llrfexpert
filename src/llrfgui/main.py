@@ -37,13 +37,21 @@ from taurus.qt.qtgui.application import TaurusApplication
 # Local imports
 
 def create_application():
-    """Create the application and return an (application, taurusgui) tuple."""
+    '''
+        Create the application and return an (application, taurusgui) tuple.
+        
+        :return: Tuple compose by a TaurusApplication and a TaurusGUI
+        :rtype: tuple
+    '''
     app = TaurusApplication()
     gui = TaurusGui(confname='panels.py')
     return app, gui
 
 def hide_toolbars(gui):
-    """Hide unnecessary toolbars."""
+    """Hide unnecessary toolbars.
+       
+       :param TaurusGui gui: TaurusGUI to hide toolbars
+    """
     gui.jorgsBar.hide()
     gui.statusBar().hide()
     gui.setLockView(False)
