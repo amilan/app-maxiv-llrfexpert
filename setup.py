@@ -20,27 +20,27 @@
 ###############################################################################
 
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
 def main():
 
-    name = "taurusgui-llrfexpert",
+    name = "taurusgui-llrfexpert"
 
-    version = "1.4.0",
+    version = "1.4.0"
 
-    description = "Taurus GUI for Low Level RF expert users.",
+    description = "Taurus GUI for Low Level RF expert users."
 
-    author = "Antonio Milan Otero",
+    author = "Antonio Milan Otero"
 
-    author_email = "antonio.milan_otero@maxlab.lu.se",
+    author_email = "antonio.milan_otero@maxlab.lu.se"
 
-    license = "GPLv3",
+    license = "GPLv3"
 
-    url = "http://www.maxlab.lu.se",
+    url = "http://www.maxlab.lu.se"
 
-    package_dir = {'': 'src'},
+    package_dir = {'': 'src'}
 
-    packages = ['llrfgui'],
+    packages = find_packages('src')
 
     scripts = ['scripts/ctllrfgui']
 
