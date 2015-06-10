@@ -50,6 +50,14 @@ def main():
 
     scripts = ['scripts/ctllrfgui']
 
+    provides = [
+        'llrfgui'
+    ]
+
+    requires = [
+        'taurus'
+    ]
+
     data_files = [('/usr/share/applications', ['maxiv-r3-llrfexpert.desktop']),
                   ('/home/controlroom/.config/MAXIV', ['config/llrfExpertGUI.ini']),
     ]

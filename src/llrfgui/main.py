@@ -36,6 +36,18 @@ from taurus.qt.qtgui.application import TaurusApplication
 
 # Local imports
 
+def configure_pythonpath():
+    """ This method extends the pythonpath with the path where the module
+        llrfgui is installed. This is extrange, but at this moment it's needed
+        in order to be able to import the module panels from the taurusgui.
+        Probably this method will be removed in the future if another (better)
+        way is found.
+    """
+    from distutils.sysconfig import get_python_lib
+    module_path = get_python_lib()
+    panels_path = module_path + '/llrfgui'
+    sys.path.extend([panels_path])
+
 def create_application():
     '''
         Create the application and return an (application, taurusgui) tuple.
@@ -44,7 +56,7 @@ def create_application():
         :rtype: tuple
     '''
     app = TaurusApplication()
-    gui = TaurusGui(confname='llrfgui.panels.py')
+    gui = TaurusGui(confname='panels')
     return app, gui
 
 def hide_toolbars(gui):
@@ -58,6 +70,7 @@ def hide_toolbars(gui):
 
 def run():
     """Run LLRF expert GUI"""
+    configure_pythonpath()
     app, gui = create_application()
     hide_toolbars(gui)
     gui.show()
