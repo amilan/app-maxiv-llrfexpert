@@ -26,7 +26,7 @@ def main():
 
     name = "taurusgui-llrfexpert"
 
-    version = "1.4.1"
+    version = "1.4.2"
 
     description = "Taurus GUI for Low Level RF expert users."
 
@@ -42,9 +42,17 @@ def main():
 
     packages = find_packages('src')
 
+    package_data = {
+        'llrfgui': ['images/maxivlogo.png',
+                    'widgets/*/ui/*',
+        ]
+    }
+
     scripts = ['scripts/ctllrfgui']
 
-    data_files = [('~/.config/MAXIV', ['config/llrfExpertGUI.ini'])]
+    data_files = [('/usr/share/applications', ['maxiv-r3-llrfexpert.desktop']),
+                  ('/home/controlroom/.config/MAXIV', ['config/llrfExpertGUI.ini']),
+    ]
 
     setup(
         name=name,
@@ -56,6 +64,7 @@ def main():
         url=url,
         package_dir=package_dir,
         packages=packages,
+        package_data=package_data,
         scripts=scripts,
         data_files=data_files
     )

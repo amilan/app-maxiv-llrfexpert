@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=MAX IV R3 LLRF expert
+Exec=ctllrfgui
+Type=Application
+Categories=MAXIV;Science;
+Comment=LLRF expert GUI
+Terminal=false
