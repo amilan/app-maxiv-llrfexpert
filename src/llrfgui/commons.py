@@ -34,13 +34,26 @@ __docformat__ = 'restructuredtext'
 
 # Solaris nutaq equipment
 
+# This will be substitude by an autodiscovery method ... soon ...
 sections_dict = {
-    'rflab_old': {
-        'loops': 'ws/rf/pynutaq-1',
-        'diags': 'ws/rf/pynutaq-2'
+    #'rflab_old': {
+    #    'loops': 'ws/rf/pynutaq-1',
+    #    'diags': 'ws/rf/pynutaq-2'
+    #},
+    #'rflab_new': {
+    #    'loops': 'ws/rf/pynutaq-3',
+    #    'diags': 'ws/rf/pynutaq-4'
+    #},
+    'R3-A100111CAB03': {
+        'loops': 'R3-A100111CAB03/RF/NUTAQ-01',
+        'diags': 'R3-A100111CAB03/RF/NUTAQDIAGS-01'
     },
-    'rflab_new': {
-        'loops': 'ws/rf/pynutaq-3',
-        'diags': 'ws/rf/pynutaq-4'
+    'R3-A101711CAB03': {
+        'loops': 'R3-A101711CAB03/RF/NUTAQ-01',
+        'diags': 'R3-A101711CAB03/RF/NUTAQDIAGS-01'
+    },
+    'R3-A101911CAB03': {
+        'loops': 'R3-A101911CAB03/RF/NUTAQ-01',
+        'diags': 'R3-A101911CAB03/RF/NUTAQDIAGS-01'
     },
 }
