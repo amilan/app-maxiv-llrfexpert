@@ -44,7 +44,7 @@ def create_application():
         :rtype: tuple
     '''
     app = TaurusApplication()
-    gui = TaurusGui(confname='panels.py')
+    gui = TaurusGui(confname='llrfgui.panels.py')
     return app, gui
 
 def hide_toolbars(gui):
