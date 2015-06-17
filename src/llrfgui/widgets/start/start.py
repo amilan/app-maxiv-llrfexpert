@@ -125,8 +125,10 @@ class Start(BaseLLRFWidget):
     def start_dev(self):
         """Methos to start running the lyrtech DS
         """
-        self._device_proxy.start()
-        self._device_diag_proxy.start()
+        #self._device_proxy.start()
+        #self._device_diag_proxy.start()
+        self._device_proxy.init_hardware()
+        self._device_diag_proxy.init_hardware()
     
     @alert_problems
     def stop_dev(self):
