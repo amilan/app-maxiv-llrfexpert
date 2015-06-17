@@ -98,20 +98,20 @@ class ItckOutDisable(BaseLLRFWidget):
         self._attributes = []
 
         self._attributes_readback = [
-            (self.ui.tauValueLabel_DACsOffDisA, "Diag_DacsDisableCommand"),
-            (self.ui.tauValueLabel_PINSwitchDisA, "Diag_PinSwitch"),
-            (self.ui.tauValueLabel_triggerFDLLoopsDisA, "Diag_FdlTriggerToLoopsdiagboard"),
-            (self.ui.tauValueLabel_triggerFDLDiagDisA, "Diag_FdlTriggerForDiagnosticsPursposes"),
-            (self.ui.tauValueLabel_outputPLCDisA, "Diag_OutputToPlc"),
+            (self.ui.tauValueLabel_DACsOffDisA, "Diag_DacsDisableCommandA"),
+            (self.ui.tauValueLabel_PINSwitchDisA, "Diag_PinSwitchA"),
+            (self.ui.tauValueLabel_triggerFDLLoopsDisA, "Diag_FdlTriggerToLoopsdiagboardA"),
+            (self.ui.tauValueLabel_triggerFDLDiagDisA, "Diag_FdlTriggerForDiagnosticsPursposesA"),
+            (self.ui.tauValueLabel_outputPLCDisA, "Diag_OutputToPlcA"),
             #(self.ui.tauValueLabel_outputUpLevelDisA, "OutputUpperLevelDisA"),
         ]
 
         self._comboboxes = [
-            (self.ui.comboBox_DACsOffDisA, "Diag_DacsDisableCommand"),
-            (self.ui.comboBox_PINSwitchDisA, "Diag_PinSwitch"),
-            (self.ui.comboBox_triggerFDLLoopsDisA, "Diag_FdlTriggerToLoopsdiagboard"),
-            (self.ui.comboBox_triggerFDLDiagDisA, "Diag_FdlTriggerForDiagnosticsPursposes"),
-            (self.ui.comboBox_outputPLCDisA, "Diag_OutputToPlc"),
+            (self.ui.comboBox_DACsOffDisA, "Diag_DacsDisableCommandA"),
+            (self.ui.comboBox_PINSwitchDisA, "Diag_PinSwitchA"),
+            (self.ui.comboBox_triggerFDLLoopsDisA, "Diag_FdlTriggerToLoopsdiagboardA"),
+            (self.ui.comboBox_triggerFDLDiagDisA, "Diag_FdlTriggerForDiagnosticsPursposesA"),
+            (self.ui.comboBox_outputPLCDisA, "Diag_OutputToPlcA"),
             #(self.ui.comboBox_outputUpLevelDisA, "OutputUpperLevelDisA"),
         ]
 

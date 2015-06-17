@@ -104,9 +104,9 @@ class Vcxo(BaseLLRFWidget):
         self._attributes = []
 
         self._attributes_readback = [
-            (self.ui.tauValueLabel_Power, "VCXOPowered"),
-            (self.ui.tauValueLabel_Ref, "VCXORef"),
-            (self.ui.tauValueLabel_Locked, "VCXOLocked"),
+            (self.ui.tauValueLabel_Power, "VCXOPoweredA"),
+            (self.ui.tauValueLabel_Ref, "VCXORefA"),
+            (self.ui.tauValueLabel_Locked, "VCXOLockedA"),
         ]
 
         self._comboboxes = []

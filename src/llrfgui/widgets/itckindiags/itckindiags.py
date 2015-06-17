@@ -91,22 +91,22 @@ class ItckInDiags(BaseLLRFWidget):
     @alert_problems
     def _create_attributes_lists(self):
         self._attributes = [
-            (self.ui.taurusWheelEdit, "ItckNumber")
+            (self.ui.taurusWheelEdit, "ItckNumberA")
         ]
 
         self._attributes_readback = [
-            (self.ui.taurusBoolLed, "Diag_Rvtet1"),
-            (self.ui.taurusBoolLed_2, "Diag_Rvtet2"),
-            (self.ui.taurusBoolLed_3, "Diag_Rvcirc"),
-            (self.ui.taurusBoolLed_4, "Diag_Fwload"),
-            (self.ui.taurusBoolLed_5, "Diag_Fwhybload"),
-            (self.ui.taurusBoolLed_6, "Diag_Rvcav"),
-            (self.ui.taurusBoolLed_7, "Diag_ManualInterlock"),
-            (self.ui.taurusBoolLed_8, "Diag_Arcs"),
-            (self.ui.taurusBoolLed_9, "Diag_Vacuum"),
-            (self.ui.taurusBoolLed_10, "Diag_ExternalItck"),
-            (self.ui.taurusBoolLed_41, "Diag_PlungerEndSwitchUp"),
-            (self.ui.taurusBoolLed_43, "Diag_PlungerEndSwitchDown"),
+            (self.ui.taurusBoolLed, "Diag_Rvtet1A"),
+            (self.ui.taurusBoolLed_2, "Diag_Rvtet2A"),
+            (self.ui.taurusBoolLed_3, "Diag_RvcircA"),
+            (self.ui.taurusBoolLed_4, "Diag_FwloadA"),
+            (self.ui.taurusBoolLed_5, "Diag_FwhybloadA"),
+            (self.ui.taurusBoolLed_6, "Diag_RvcavA"),
+            (self.ui.taurusBoolLed_7, "Diag_ManualInterlockA"),
+            (self.ui.taurusBoolLed_8, "Diag_ArcsA"),
+            (self.ui.taurusBoolLed_9, "Diag_VacuumA"),
+            (self.ui.taurusBoolLed_10, "Diag_ExternalItckA"),
+            (self.ui.taurusBoolLed_41, "Diag_PlungerEndSwitchUpA"),
+            (self.ui.taurusBoolLed_43, "Diag_PlungerEndSwitchDownA"),
             #(self.ui.tauValueLabel_itckTimestamp, "ITCKTimestampA"),
         ]
 

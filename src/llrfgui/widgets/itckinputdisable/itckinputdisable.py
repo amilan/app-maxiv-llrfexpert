@@ -77,18 +77,18 @@ class ItckInputDisable(BaseLLRFWidget):
 
     @alert_problems
     def enableAllInterlocksA(self):
-        attrs_to_enable = [ "DisableItckRvTet1",
-                            "DisableItckRvTet2",
-                            "DisableItckRvcirc",
-                            "DisableItckFwload",
-                            "DisableItckFwhybload",
-                            "DisableItckRvcav",
-                            "DisableItckManualInterlock",
-                            "DisableItckArcs",
-                            "DisableItckVacuum",
-                            #"DisableItckExtITCK",
-                            "DisableItckPlungerEndSwitchesUp",
-                            "DisableItckPlungerEndSwitchesDown"
+        attrs_to_enable = [ "DisableItckRvTet1A",
+                            "DisableItckRvTet2A",
+                            "DisableItckRvcircA",
+                            "DisableItckFwloadA",
+                            "DisableItckFwhybloadA",
+                            "DisableItckRvcavA",
+                            "DisableItckManualInterlockA",
+                            "DisableItckArcsA",
+                            "DisableItckVacuumA",
+                            #"DisableItckExtITCKA",
+                            "DisableItckPlungerEndSwitchesUpA",
+                            "DisableItckPlungerEndSwitchesDownA"
                             ]
         for att in attrs_to_enable:
             #self._device_proxy[att] = 'Enable'
@@ -96,18 +96,18 @@ class ItckInputDisable(BaseLLRFWidget):
 
     @alert_problems
     def disableAllInterlocksA(self):
-        attrs_to_disable = [ "DisableItckRvTet1",
-                             "DisableItckRvTet2",
-                             "DisableItckRvcirc",
-                             "DisableItckFwload",
-                             "DisableItckFwhybload",
-                             "DisableItckRvcav",
-                             "DisableItckManualInterlock",
-                             "DisableItckArcs",
-                             "DisableItckVacuum",
-                             #"DisableItckExtITCK",
-                             "DisableItckPlungerEndSwitchesUp",
-                             "DisableItckPlungerEndSwitchesDown"
+        attrs_to_disable = [ "DisableItckRvTet1A",
+                             "DisableItckRvTet2A",
+                             "DisableItckRvcircA",
+                             "DisableItckFwloadA",
+                             "DisableItckFwhybloadA",
+                             "DisableItckRvcavA",
+                             "DisableItckManualInterlockA",
+                             "DisableItckArcsA",
+                             "DisableItckVacuumA",
+                             #"DisableItckExtITCKA",
+                             "DisableItckPlungerEndSwitchesUpA",
+                             "DisableItckPlungerEndSwitchesDownA"
                             ]
         for att in attrs_to_disable:
             #self._device_proxy[att] = 'Disable'
@@ -155,33 +155,33 @@ class ItckInputDisable(BaseLLRFWidget):
         self._attributes = []
 
         self._attributes_readback = [
-            (self.ui.tauValueLabel_RvTet1DisA, "DisableItckRvTet1"),
-            (self.ui.tauValueLabel_RvTet2DisA, "DisableItckRvTet2"),
-            (self.ui.tauValueLabel_RvCircDisA, "DisableItckRvcirc"),
-            (self.ui.tauValueLabel_FwLoadDisA, "DisableItckFwload"),
-            (self.ui.tauValueLabel_FwHybLoadDisA, "DisableItckFwhybload"),
-            (self.ui.tauValueLabel_RvCavDisA, "DisableItckRvcav"),
-            (self.ui.tauValueLabel_ManualITCKDisA, "DisableItckManualInterlock"),
-            (self.ui.tauValueLabel_ArcsDisA, "DisableItckArcs"),
-            (self.ui.tauValueLabel_VacuumDisA, "DisableItckVacuum"),
+            (self.ui.tauValueLabel_RvTet1DisA, "DisableItckRvTet1A"),
+            (self.ui.tauValueLabel_RvTet2DisA, "DisableItckRvTet2A"),
+            (self.ui.tauValueLabel_RvCircDisA, "DisableItckRvcircA"),
+            (self.ui.tauValueLabel_FwLoadDisA, "DisableItckFwloadA"),
+            (self.ui.tauValueLabel_FwHybLoadDisA, "DisableItckFwhybloadA"),
+            (self.ui.tauValueLabel_RvCavDisA, "DisableItckRvcavA"),
+            (self.ui.tauValueLabel_ManualITCKDisA, "DisableItckManualInterlockA"),
+            (self.ui.tauValueLabel_ArcsDisA, "DisableItckArcsA"),
+            (self.ui.tauValueLabel_VacuumDisA, "DisableItckVacuumA"),
             # (self.ui.tauValueLabel_ExtITCKDisA, "ExtITCKDisA"),
-            (self.ui.tauValueLabel_ExtITCKDisB_2, "DisableItckPlungerEndSwitchesUp"),
-            (self.ui.tauValueLabel_ExtITCKDisB_3, "DisableItckPlungerEndSwitchesDown"),
+            (self.ui.tauValueLabel_ExtITCKDisB_2, "DisableItckPlungerEndSwitchesUpA"),
+            (self.ui.tauValueLabel_ExtITCKDisB_3, "DisableItckPlungerEndSwitchesDownA"),
         ]
 
         self._comboboxes = [
-            (self.ui.comboBox_RvTet1DisA, "DisableItckRvTet1"),
-            (self.ui.comboBox_RvTet2DisA, "DisableItckRvTet2"),
-            (self.ui.comboBox_RvCircDisA, "DisableItckRvcirc"),
-            (self.ui.comboBox_FwLoadDisA, "DisableItckFwload"),
-            (self.ui.comboBox_FwHybLoadDisA, "DisableItckFwhybload"),
-            (self.ui.comboBox_RvCavDisA, "DisableItckRvcav"),
-            (self.ui.comboBox_ManualITCKDisA, "DisableItckManualInterlock"),
-            (self.ui.comboBox_ArcsDisA, "DisableItckArcs"),
-            (self.ui.comboBox_VacuumDisA, "DisableItckVacuum"),
+            (self.ui.comboBox_RvTet1DisA, "DisableItckRvTet1A"),
+            (self.ui.comboBox_RvTet2DisA, "DisableItckRvTet2A"),
+            (self.ui.comboBox_RvCircDisA, "DisableItckRvcircA"),
+            (self.ui.comboBox_FwLoadDisA, "DisableItckFwloadA"),
+            (self.ui.comboBox_FwHybLoadDisA, "DisableItckFwhybloadA"),
+            (self.ui.comboBox_RvCavDisA, "DisableItckRvcavA"),
+            (self.ui.comboBox_ManualITCKDisA, "DisableItckManualInterlockA"),
+            (self.ui.comboBox_ArcsDisA, "DisableItckArcsA"),
+            (self.ui.comboBox_VacuumDisA, "DisableItckVacuumA"),
             # (self.ui.comboBox_ExtDisA, "ExtITCKDisA"),
-            (self.ui.comboBox_ExtITCKDisB_2, "DisableItckPlungerEndSwitchesUp"),
-            (self.ui.comboBox_ExtITCKDisB_3, "DisableItckPlungerEndSwitchesDown"),
+            (self.ui.comboBox_ExtITCKDisB_2, "DisableItckPlungerEndSwitchesUpA"),
+            (self.ui.comboBox_ExtITCKDisB_3, "DisableItckPlungerEndSwitchesDownA"),
         ]
 
 def main():

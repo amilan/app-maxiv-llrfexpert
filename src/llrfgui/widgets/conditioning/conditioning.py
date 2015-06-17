@@ -60,8 +60,8 @@ class Conditioning(BaseLLRFWidget):
             (self.ui.tauValueLabel_autoConditioningEnable, "AutoConditioningEnableA"),
             (self.ui.tauValueLabel_pulseMode, "PulseModeEnableA"),
             (self.ui.tauValueLabel_dutyCycle_2, "ConditioningDutyCicleA"),
-            (self.ui.taurusBoolLed_23, "Diag_Vaccum1"),
-            (self.ui.taurusBoolLed_24, "Diag_Vaccum2"),
+            (self.ui.taurusBoolLed_23, "Diag_Vaccum1A"),
+            (self.ui.taurusBoolLed_24, "Diag_Vaccum2A"),
             ]
 
         self._comboboxes = [

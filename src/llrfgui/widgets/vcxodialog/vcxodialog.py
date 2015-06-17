@@ -64,25 +64,25 @@ class VCXODialog(QtGui.QDialog):
         """Method to connect all the attributes
         """
         
-        self.ui.taurusValueLineEdit.setModel(self.device + "/MDivider")
-        self.ui.taurusValueLineEdit_3.setModel(self.device + "/NDivider")
-        self.ui.taurusValueLineEdit_4.setModel(self.device + "/MuxSel")
-        self.ui.taurusValueComboBox.setModelName(self.device + "/Mux0Divider")
-        self.ui.taurusValueComboBox_2.setModelName(self.device + "/Mux1Divider")
-        self.ui.taurusValueComboBox_3.setModelName(self.device + "/Mux2Divider")
-        self.ui.taurusValueComboBox_4.setModelName(self.device + "/Mux3Divider")
-        self.ui.taurusValueComboBox_5.setModelName(self.device + "/Mux4Divider")
-        self.ui.taurusValueComboBox_6.setModelName(self.device + "/Cpdir")
+        self.ui.taurusValueLineEdit.setModel(self.device + "/MDividerA")
+        self.ui.taurusValueLineEdit_3.setModel(self.device + "/NDividerA")
+        self.ui.taurusValueLineEdit_4.setModel(self.device + "/MuxSelA")
+        self.ui.taurusValueComboBox.setModelName(self.device + "/Mux0DividerA")
+        self.ui.taurusValueComboBox_2.setModelName(self.device + "/Mux1DividerA")
+        self.ui.taurusValueComboBox_3.setModelName(self.device + "/Mux2DividerA")
+        self.ui.taurusValueComboBox_4.setModelName(self.device + "/Mux3DividerA")
+        self.ui.taurusValueComboBox_5.setModelName(self.device + "/Mux4DividerA")
+        self.ui.taurusValueComboBox_6.setModelName(self.device + "/CpdirA")
         
-        self.ui.taurusLabel.setModel(self.device + "/MDivider")
-        self.ui.taurusLabel_3.setModel(self.device + "/NDivider")
-        self.ui.taurusLabel_4.setModel(self.device + "/MuxSel")
-        self.ui.taurusLabel_5.setModel(self.device + "/Mux0Divider")
-        self.ui.taurusLabel_6.setModel(self.device + "/Mux1Divider")
-        self.ui.taurusLabel_7.setModel(self.device + "/Mux2Divider")
-        self.ui.taurusLabel_8.setModel(self.device + "/Mux3Divider")
-        self.ui.taurusLabel_9.setModel(self.device + "/Mux4Divider")
-        self.ui.taurusLabel_2.setModel(self.device + "/Cpdir")
+        self.ui.taurusLabel.setModel(self.device + "/MDividerA")
+        self.ui.taurusLabel_3.setModel(self.device + "/NDividerA")
+        self.ui.taurusLabel_4.setModel(self.device + "/MuxSelA")
+        self.ui.taurusLabel_5.setModel(self.device + "/Mux0DividerA")
+        self.ui.taurusLabel_6.setModel(self.device + "/Mux1DividerA")
+        self.ui.taurusLabel_7.setModel(self.device + "/Mux2DividerA")
+        self.ui.taurusLabel_8.setModel(self.device + "/Mux3DividerA")
+        self.ui.taurusLabel_9.setModel(self.device + "/Mux4DividerA")
+        self.ui.taurusLabel_2.setModel(self.device + "/CpdirA")
         
     @alert_problems
     def sendWord(self):
@@ -90,8 +90,8 @@ class VCXODialog(QtGui.QDialog):
             It must write an 1 in the corresponding attribute,
             and after this, write a 0.
         """
-        self.dp['SendWord'] = True
-        self.dp['SendWord'] = False
+        self.dp['SendWordA'] = True
+        self.dp['SendWordA'] = False
     
     @alert_problems
     def fillComboBoxes(self):

@@ -83,10 +83,10 @@ class Fpgaclock(BaseLLRFWidget):
         ]
 
         self._attributes_readback = [
-            (self.ui.tauValueLabel_Source, self._device_name + "/FPGAClockSource"),
-            (self.ui.tauValueLabel_Locked_2, self._device_name + "/FPGALocked"),
-            (self.ui.tauValueLabel_Source_3, self._device_diag_name + "/FPGAClockSource"),
-            (self.ui.tauValueLabel_Locked_4, self._device_diag_name + "/FPGALocked"),
+            (self.ui.tauValueLabel_Source, self._device_name + "/FPGAClockSourceA"),
+            (self.ui.tauValueLabel_Locked_2, self._device_name + "/FPGALockedA"),
+            (self.ui.tauValueLabel_Source_3, self._device_diag_name + "/FPGAClockSourceA"),
+            (self.ui.tauValueLabel_Locked_4, self._device_diag_name + "/FPGALockedA"),
         ]
 
         self._comboboxes = []

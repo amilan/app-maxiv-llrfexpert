@@ -112,18 +112,18 @@ class ManualTuning(BaseLLRFWidget):
         ]
 
         self._attributes_readback = [
-            (self.ui.taurusBoolLed_27, "Diag_ManualTuningOn"),
-            (self.ui.taurusBoolLed_28, "Diag_ManualTuningFreqUp"),
+            (self.ui.taurusBoolLed_27, "Diag_ManualTuningOnA"),
+            (self.ui.taurusBoolLed_28, "Diag_ManualTuningFreqUpA"),
             (self.ui.tauValueLabel_numberPulses_2, "NumStepsA"),
             (self.ui.tauValueLabel_moveUp, "MoveUpA"),
             (self.ui.tauValueLabel_movePlg1, "MoveA"),
-            (self.ui.tauValueLabel_freqPulses, "PulsesFrequency"),
+            (self.ui.tauValueLabel_freqPulses, "PulsesFrequencyA"),
         ]
 
         self._comboboxes = [
             (self.ui.comboBox_moveUp, "MoveUpA"),
             (self.ui.comboBox_movePlg, "MoveA"),
-            (self.ui.comboBox_freqPulses, "PulsesFrequency"),
+            (self.ui.comboBox_freqPulses, "PulsesFrequencyA"),
             ]
 
 def main():

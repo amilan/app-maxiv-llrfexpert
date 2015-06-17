@@ -75,21 +75,21 @@ class InterlockLevel(BaseLLRFWidget):
     @alert_problems
     def _create_attributes_lists(self):
         self._attributes = [
-            (self.ui.lineEdit_RvTet1A, "Rvtet1"),
-            (self.ui.lineEdit_RvTet2A, "Rvtet2"),
-            (self.ui.lineEdit_RvCircA, "Rvcirc"),
-            (self.ui.lineEdit_FwLoadA, "Fwload"),
-            (self.ui.lineEdit_FwHybLoadA, "Fwhybload"),
-            (self.ui.lineEdit_RvCavA, "Rvcav"),
+            (self.ui.lineEdit_RvTet1A, "Rvtet1A"),
+            (self.ui.lineEdit_RvTet2A, "Rvtet2A"),
+            (self.ui.lineEdit_RvCircA, "RvcircA"),
+            (self.ui.lineEdit_FwLoadA, "FwloadA"),
+            (self.ui.lineEdit_FwHybLoadA, "FwhybloadA"),
+            (self.ui.lineEdit_RvCavA, "RvcavA"),
         ]
 
         self._attributes_readback = [
-            (self.ui.tauValueLabel_RvTet1A, "RvTet1"),
-            (self.ui.tauValueLabel_RvTet2A, "RvTet2"),
-            (self.ui.tauValueLabel_RvCircA, "RvCirc"),
-            (self.ui.tauValueLabel_FwLoadA, "Fwload"),
-            (self.ui.tauValueLabel_FwHybLoadA, "Fwhybload"),
-            (self.ui.tauValueLabel_RvCavA, "Rvcav"),
+            (self.ui.tauValueLabel_RvTet1A, "RvTet1A"),
+            (self.ui.tauValueLabel_RvTet2A, "RvTet2A"),
+            (self.ui.tauValueLabel_RvCircA, "RvCircA"),
+            (self.ui.tauValueLabel_FwLoadA, "FwloadA"),
+            (self.ui.tauValueLabel_FwHybLoadA, "FwhybloadA"),
+            (self.ui.tauValueLabel_RvCavA, "RvcavA"),
         ]
 
         self._comboboxes = []

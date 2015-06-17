@@ -87,9 +87,9 @@ class TuningDiag(BaseLLRFWidget):
         self._attributes = []
 
         self._attributes_readback = [
-            (self.ui.tauValueLabel_rTuningD, "Diag_AngCavFw"),
-            (self.ui.tauValueLabel_rFwAmp, "Diag_AngFwL"),
-            (self.ui.tauValueLabel_rCavVolt, "Diag_AngCavL"),
+            (self.ui.tauValueLabel_rTuningD, "Diag_AngCavFwA"),
+            (self.ui.tauValueLabel_rFwAmp, "Diag_AngFwLA"),
+            (self.ui.tauValueLabel_rCavVolt, "Diag_AngCavLA"),
             #(self.ui.tauValueLabel_rPlung1Pos, "tango://srvv0-tangohost-0:10000/m2sr/llrf/cav2/voltage"),
             #(self.ui.tauValueLabel_rPlung1Pos,
              #"tango://srvv0-tangohost-0:10000/m2sr/llrf/cav2/voltage"),

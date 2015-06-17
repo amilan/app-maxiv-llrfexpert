@@ -74,8 +74,8 @@ class Landau(BaseLLRFWidget):
 
     @alert_problems
     def landau_reset(self):
-        self._device_proxy['Landautuningreset'] = True
-        self._device_proxy['Landautuningreset'] = False
+        self._device_proxy['LandautuningresetA'] = True
+        self._device_proxy['LandautuningresetA'] = False
 
     @alert_problems
     def _set_comboboxes(self):
@@ -106,37 +106,37 @@ class Landau(BaseLLRFWidget):
     @alert_problems
     def _create_attributes_lists(self):
         self._attributes = [
-            (self.ui.lineEdit_numberPulses_3, self._device_diag + "/Numsteps"),
-            (self.ui.lineEdit_tuningOffset_3, self._device_diag + "/Landauphaseoffset"),
-            (self.ui.lineEdit_marginUp_4, self._device_diag + "/Landaumarginup"),
-            (self.ui.lineEdit_marginLow_4, self._device_diag + "/Landaumarginlow"),
-            (self.ui.lineEdit_landauAmpSet, self._device_diag + "/Landauampsetting"),
-            (self.ui.lineEdit_forwardMin_4, self._device_diag + "/MinimumLandauAmplitude"),
+            (self.ui.lineEdit_numberPulses_3, self._device_diag + "/NumstepsA"),
+            (self.ui.lineEdit_tuningOffset_3, self._device_diag + "/LandauphaseoffsetA"),
+            (self.ui.lineEdit_marginUp_4, self._device_diag + "/LandaumarginupA"),
+            (self.ui.lineEdit_marginLow_4, self._device_diag + "/LandaumarginlowA"),
+            (self.ui.lineEdit_landauAmpSet, self._device_diag + "/LandauampsettingA"),
+            (self.ui.lineEdit_forwardMin_4, self._device_diag + "/MinimumLandauAmplitudeA"),
         ]
 
         self._attributes_readback = [
-            (self.ui.taurusBoolLed_37, self._device_diag + "/Diag_PlungerMovingManualTuning"),
-            (self.ui.taurusBoolLed_38, self._device_diag + "/Diag_PlungerMovingUpManualTuning"),
-            (self.ui.tauValueLabel_numberPulses_4, self._device_diag + "/NumSteps"),
-            (self.ui.tauValueLabel_moveUp_3, self._device_diag + "/Movelandauup"),
-            (self.ui.tauValueLabel_movePlg1_3, self._device_diag + "/Movelandauplg"),
-            (self.ui.taurusBoolLed_39, self._device_diag + "/Diag_PlungerMovingAutomaticTuning"),
-            (self.ui.taurusBoolLed_40, self._device_diag + "/Diag_PlungerMovingUpAutomaticTuning"),
+            (self.ui.taurusBoolLed_37, self._device_diag + "/Diag_PlungerMovingManualTuningA"),
+            (self.ui.taurusBoolLed_38, self._device_diag + "/Diag_PlungerMovingUpManualTuningA"),
+            (self.ui.tauValueLabel_numberPulses_4, self._device_diag + "/NumStepsA"),
+            (self.ui.tauValueLabel_moveUp_3, self._device_diag + "/MovelandauupA"),
+            (self.ui.tauValueLabel_movePlg1_3, self._device_diag + "/MovelandauplgA"),
+            (self.ui.taurusBoolLed_39, self._device_diag + "/Diag_PlungerMovingAutomaticTuningA"),
+            (self.ui.taurusBoolLed_40, self._device_diag + "/Diag_PlungerMovingUpAutomaticTuningA"),
 
-            (self.ui.tauValueLabel_tuningOffset_3, self._device_diag + "/Landauphaseoffset"),
-            (self.ui.tauValueLabel_marginUp_3, self._device_diag + "/Landaumarginup"),
-            (self.ui.tauValueLabel_marginLow_3, self._device_diag + "/LandauMarginLow"),
-            (self.ui.tauValueLabel_landauAmpSet, self._device_diag + "/Landauampsetting"),
-            (self.ui.tauValueLabel_forwardMin_5, self._device_diag + "/MinimumLandauAmplitude"),
-            (self.ui.tauValueLabel_tuningEn_3, self._device_diag + "/Landautuningenable"),
-            (self.ui.tauValueLabel_tuningPosEn_3, self._device_diag + "/LandauPositiveEnable"),
+            (self.ui.tauValueLabel_tuningOffset_3, self._device_diag + "/LandauphaseoffsetA"),
+            (self.ui.tauValueLabel_marginUp_3, self._device_diag + "/LandaumarginupA"),
+            (self.ui.tauValueLabel_marginLow_3, self._device_diag + "/LandauMarginLowA"),
+            (self.ui.tauValueLabel_landauAmpSet, self._device_diag + "/LandauampsettingA"),
+            (self.ui.tauValueLabel_forwardMin_5, self._device_diag + "/MinimumLandauAmplitudeA"),
+            (self.ui.tauValueLabel_tuningEn_3, self._device_diag + "/LandautuningenableA"),
+            (self.ui.tauValueLabel_tuningPosEn_3, self._device_diag + "/LandauPositiveEnableA"),
         ]
 
         self._comboboxes = [
-            (self.ui.comboBox_moveUp_3, self._device_diag + "/Movelandauup"),
-            (self.ui.comboBox_movePlg_3, self._device_diag + "/Movelandauplg"),
-            (self.ui.comboBox_tuningEn_3, self._device_diag + "/Landautuningenable"),
-            (self.ui.comboBox_tuningPosEn_3, self._device_diag + "/LandauPositiveEnable"),
+            (self.ui.comboBox_moveUp_3, self._device_diag + "/MovelandauupA"),
+            (self.ui.comboBox_movePlg_3, self._device_diag + "/MovelandauplgA"),
+            (self.ui.comboBox_tuningEn_3, self._device_diag + "/LandautuningenableA"),
+            (self.ui.comboBox_tuningPosEn_3, self._device_diag + "/LandauPositiveEnableA"),
         ]
 
 def main():

@@ -84,80 +84,80 @@ class IqLoopsSettings(BaseLLRFWidget):
     @alert_problems
     def _create_attributes_lists(self):
         self._attributes = [
-                (self.ui.lineEdit_AmpLoopA, "Amprefin"),
-                (self.ui.lineEdit_PhaseLoopA, "Phrefin"),
+                (self.ui.lineEdit_AmpLoopA, "AmprefinA"),
+                (self.ui.lineEdit_PhaseLoopA, "PhrefinA"),
 
-                (self.ui.lineEdit_ampRefMinA, "Amprefmin"),
-                (self.ui.lineEdit_phaseRefMinA, "Phrefmin"),
+                (self.ui.lineEdit_ampRefMinA, "AmprefminA"),
+                (self.ui.lineEdit_phaseRefMinA, "PhrefminA"),
 
                 (self.ui.lineEdit_PILimit, "PILimitA"),
                 (self.ui.lineEdit_ki, "KiA"),
                 (self.ui.lineEdit_kp, "KpA"),
 
-                (self.ui.lineEdit_gainola, "GainOl"),
+                (self.ui.lineEdit_gainola, "GainOlA"),
 
-                (self.ui.lineEdit_phaseShift, "PhaseShiftCav"),
-                (self.ui.lineEdit_phaseShift_10, "PhaseShiftFwTet1"),
-                (self.ui.lineEdit_phaseShift_11, "PhaseShiftFwTet2"),
-                (self.ui.lineEdit_phaseShift_13, "PhaseShiftFwcircin"),
-                (self.ui.lineEdit_phaseShift_15, "PhaseShiftFwCav"),
+                (self.ui.lineEdit_phaseShift, "PhaseShiftCavA"),
+                (self.ui.lineEdit_phaseShift_10, "PhaseShiftFwTet1A"),
+                (self.ui.lineEdit_phaseShift_11, "PhaseShiftFwTet2A"),
+                (self.ui.lineEdit_phaseShift_13, "PhaseShiftFwcircinA"),
+                (self.ui.lineEdit_phaseShift_15, "PhaseShiftFwCavA"),
 
-                (self.ui.lineEdit_phaseShift_3, "PhaseShiftControlSignalTet1"),
-                (self.ui.lineEdit_phaseShift_5, "PhaseShiftControlSignalTet2"),
+                (self.ui.lineEdit_phaseShift_3, "PhaseShiftControlSignalTet1A"),
+                (self.ui.lineEdit_phaseShift_5, "PhaseShiftControlSignalTet2A"),
 
-                (self.ui.lineEdit_Tetrode1A, "GainTetrode1"),
-                (self.ui.lineEdit_Tetrode2A, "GainTetrode2"),
+                (self.ui.lineEdit_Tetrode1A, "GainTetrode1A"),
+                (self.ui.lineEdit_Tetrode2A, "GainTetrode2A"),
 
-                (self.ui.lineEdit_filterStage, "FilterStages"),
-                (self.ui.lineEdit_samplesAv, "SamplesToAverage"),
+                (self.ui.lineEdit_filterStage, "FilterStagesA"),
+                (self.ui.lineEdit_samplesAv, "SamplesToAverageA"),
                 ]
 
         self._attributes_readback = [
-                (self.ui.tauValueLabel_AmpLoop, "Amprefin"),
-                (self.ui.tauValueLabel_PhaseLoop, "Phrefin"),
+                (self.ui.tauValueLabel_AmpLoop, "AmprefinA"),
+                (self.ui.tauValueLabel_PhaseLoop, "PhrefinA"),
 
-                (self.ui.tauValueLabel_voltInc, "VoltageIncreaseRate"),
-                (self.ui.tauValueLabel_phaseIncRate, "PhaseIncreaseRate"),
+                (self.ui.tauValueLabel_voltInc, "VoltageIncreaseRateA"),
+                (self.ui.tauValueLabel_phaseIncRate, "PhaseIncreaseRateA"),
 
-                (self.ui.tauValueLabel_ampRefMinA, "Amprefmin"),
-                (self.ui.tauValueLabel_phaseRefMinA, "Phrefmin"),
+                (self.ui.tauValueLabel_ampRefMinA, "AmprefminA"),
+                (self.ui.tauValueLabel_phaseRefMinA, "PhrefminA"),
 
                 (self.ui.tauValueLabel_PILimit_2, "PILimitA"),
                 (self.ui.tauValueLabel_ki_2, "KiA"),
                 (self.ui.tauValueLabel_kp_2, "KpA"),
                 (self.ui.tauValueLabel_quad, "QuadrantSelectionA"),
                 (self.ui.tauValueLabel_lookRef, "LookRefA"),
-                (self.ui.tauValueLabel_IqLoopsEn, "SlowIqLoopEnable"),
-                (self.ui.tauValueLabel_IqloopsInputA, "SlowIqLoopInputSelection"),
+                (self.ui.tauValueLabel_IqLoopsEn, "SlowIqLoopEnableA"),
+                (self.ui.tauValueLabel_IqloopsInputA, "SlowIqLoopInputSelectionA"),
 
                 #(self.ui.tauValueLabel_loopInputA, self._device_name + "/LoopInputA"),
-                (self.ui.tauValueLabel_gainola, "GainOl"),
+                (self.ui.tauValueLabel_gainola, "GainOlA"),
                 (self.ui.tauValueLabel_phaseShiftEn, "ADCsPhaseShiftEnableA"),
-                (self.ui.tauValueLabel_phaseShift_2, "PhaseShiftCav"),
-                (self.ui.tauValueLabel_phaseShift_11, "PhaseShiftFwTet1"),
-                (self.ui.tauValueLabel_phaseShift_12, "PhaseShiftFwTet2"),
-                (self.ui.tauValueLabel_phaseShift_14, "PhaseShiftFwcircin"),
-                (self.ui.tauValueLabel_phaseShift_16, "PhaseShiftFwCav"),
+                (self.ui.tauValueLabel_phaseShift_2, "PhaseShiftCavA"),
+                (self.ui.tauValueLabel_phaseShift_11, "PhaseShiftFwTet1A"),
+                (self.ui.tauValueLabel_phaseShift_12, "PhaseShiftFwTet2A"),
+                (self.ui.tauValueLabel_phaseShift_14, "PhaseShiftFwcircinA"),
+                (self.ui.tauValueLabel_phaseShift_16, "PhaseShiftFwCavA"),
                 (self.ui.tauValueLabel_DACsGainEn, "DACsPhaseShiftEnableA"),
 
-                (self.ui.tauValueLabel_phaseShift_4, "PhaseShiftControlSignalTet1"),
-                (self.ui.tauValueLabel_phaseShift_6, "PhaseShiftControlSignalTet2"),
+                (self.ui.tauValueLabel_phaseShift_4, "PhaseShiftControlSignalTet1A"),
+                (self.ui.tauValueLabel_phaseShift_6, "PhaseShiftControlSignalTet2A"),
                 #(self.ui.tauValueLabel_Tetrode1AEn, self._device_name + "/GainTetrodeEnableA"),
 
-                (self.ui.tauValueLabel_Tetrode1A, "GainTetrode1"),
-                (self.ui.tauValueLabel_Tetrode2A, "GainTetrode2"),
+                (self.ui.tauValueLabel_Tetrode1A, "GainTetrode1A"),
+                (self.ui.tauValueLabel_Tetrode2A, "GainTetrode2A"),
 
-                (self.ui.tauValueLabel_filterStage, "FilterStages"),
-                (self.ui.tauValueLabel_samplesAv, "SamplesToAverage"),
+                (self.ui.tauValueLabel_filterStage, "FilterStagesA"),
+                (self.ui.tauValueLabel_samplesAv, "SamplesToAverageA"),
                 ]
 
         self._comboboxes = [
-                (self.ui.comboBox_voltInc, "VoltageIncreaseRate"),
-                (self.ui.comboBox_phaseIncRate, "PhaseIncreaseRate"),
+                (self.ui.comboBox_voltInc, "VoltageIncreaseRateA"),
+                (self.ui.comboBox_phaseIncRate, "PhaseIncreaseRateA"),
                 (self.ui.comboBox_quad, "QuadrantSelectionA"),
                 (self.ui.comboBox_lookRef, "LookRefA"),
-                (self.ui.comboBox_loopEn, "SlowIqLoopEnable"),
-                (self.ui.comboBox_loopInputA, "SlowIqLoopInputSelection"),
+                (self.ui.comboBox_loopEn, "SlowIqLoopEnableA"),
+                (self.ui.comboBox_loopInputA, "SlowIqLoopInputSelectionA"),
                 (self.ui.comboBox_phaseShiftEn, "ADCsPhaseShiftEnableA"),
                 (self.ui.comboBox_DACsGainEn, "DACsPhaseShiftEnableA"),
                 #(self.ui.comboBox_GainTetA1En, self._device_name + "/GainTetrodeEnableA"),

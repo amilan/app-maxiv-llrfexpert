@@ -99,11 +99,11 @@ class ItckOutDiag(BaseLLRFWidget):
         self._attributes = []
 
         self._attributes_readback = [
-            (self.ui.taurusBoolLed_21, "Diag_DacsDisableCommand"),
-            (self.ui.taurusBoolLed_22, "Diag_PinSwitch"),
-            (self.ui.taurusBoolLed_45, "Diag_FdlTriggerToLoopsdiagboard"),
-            (self.ui.taurusBoolLed_47, "Diag_OutputToPlc"),
-            (self.ui.taurusBoolLed_48, "Diag_OutputToMps"),
+            (self.ui.taurusBoolLed_21, "Diag_DacsDisableCommandA"),
+            (self.ui.taurusBoolLed_22, "Diag_PinSwitchA"),
+            (self.ui.taurusBoolLed_45, "Diag_FdlTriggerToLoopsdiagboardA"),
+            (self.ui.taurusBoolLed_47, "Diag_OutputToPlcA"),
+            (self.ui.taurusBoolLed_48, "Diag_OutputToMpsA"),
         ]
 
         self._comboboxes = []

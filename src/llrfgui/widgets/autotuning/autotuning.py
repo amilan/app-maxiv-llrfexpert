@@ -66,32 +66,32 @@ class AutoTuning(BaseLLRFWidget):
         self._attributes = [
             (self.ui.lineEdit_marginUp_2, "MarginUpA"),
             (self.ui.lineEdit_marginLow_2, "MarginLowA"),
-            (self.ui.lineEdit_forwardMin, "Fwmina"),
+            (self.ui.lineEdit_forwardMin, "FwminA"),
             (self.ui.lineEdit_tuningOffset, "PhaseOffsetA"),
-            (self.ui.lineEdit_tuningDelayA, "Tuningdelay"),
+            (self.ui.lineEdit_tuningDelayA, "TuningdelayA"),
         ]
 
         self._attributes_readback = [
-            (self.ui.taurusBoolLed_31, "_Diag_MovingPlungerAuto"),
-            (self.ui.taurusBoolLed_32, "Diag_FreqUp"),
+            (self.ui.taurusBoolLed_31, "_Diag_MovingPlungerAutoA"),
+            (self.ui.taurusBoolLed_32, "Diag_FreqUpA"),
             (self.ui.tauValueLabel_tuningEn, "TuningEnableA"),
             (self.ui.tauValueLabel_tuningPosEn, "TuningPosEnA"),
-            (self.ui.tauValueLabel_tuningFreq, "PulsesFrequency"),
+            (self.ui.tauValueLabel_tuningFreq, "PulsesFrequencyA"),
             (self.ui.tauValueLabel_marginUp, "MarginUpA"),
             (self.ui.tauValueLabel_marginLow, "MarginLowA"),
             (self.ui.tauValueLabel_tuningOffset, "PhaseOffsetA"),
-            (self.ui.tauValueLabel_forwardMin_2, "Fwmina"),
-            (self.ui.tauValueLabel_tuningFilterEnA,"Tuningfilterenable"),
-            (self.ui.tauValueLabel_tuningDelayA, "Tuningdelay"),
-            (self.ui.tauValueLabel_tuningTrgEnA, "Tuningtriggerenable"),
+            (self.ui.tauValueLabel_forwardMin_2, "FwminA"),
+            (self.ui.tauValueLabel_tuningFilterEnA,"TuningfilterenableA"),
+            (self.ui.tauValueLabel_tuningDelayA, "TuningdelayA"),
+            (self.ui.tauValueLabel_tuningTrgEnA, "TuningtriggerenableA"),
         ]
 
         self._comboboxes = [
             (self.ui.comboBox_tuningEn, "TuningEnableA"),
             (self.ui.comboBox_tuningPosEn, "TuningPosEnA"),
-            (self.ui.comboBox_tuningFreq, "PulsesFrequency"),
-            (self.ui.comboBox_tuningTrgEnA, "Tuningtriggerenable"),
-            (self.ui.comboBox_tuningFilterEnA, "Tuningfilterenable"),
+            (self.ui.comboBox_tuningFreq, "PulsesFrequencyA"),
+            (self.ui.comboBox_tuningTrgEnA, "TuningtriggerenableA"),
+            (self.ui.comboBox_tuningFilterEnA, "TuningfilterenableA"),
         ]
 
 def main():
