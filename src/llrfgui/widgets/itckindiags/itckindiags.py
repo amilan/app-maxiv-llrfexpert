@@ -91,7 +91,7 @@ class ItckInDiags(BaseLLRFWidget):
     @alert_problems
     def _create_attributes_lists(self):
         self._attributes = [
-            (self.ui.taurusWheelEdit, "ItckNumberA")
+            (self.ui.taurusWheelEdit, "ItckNumber")
         ]
 
         self._attributes_readback = [

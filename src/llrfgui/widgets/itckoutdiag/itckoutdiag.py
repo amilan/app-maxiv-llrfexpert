@@ -63,11 +63,15 @@ class ItckOutDiag(BaseLLRFWidget):
     @alert_problems
     def connect_signals(self):
         QtCore.QObject.connect(self.ui.pushButton_resetITCKA, QtCore.SIGNAL("clicked()"), self.resetITCKA)
-        #QtCore.QObject.connect(self.ui.pushButton_resetITCKB, QtCore.SIGNAL("clicked()"), self.resetITCKB)
+        QtCore.QObject.connect(self.ui.pushButton_resetITCKB, QtCore.SIGNAL("clicked()"), self.resetITCKB)
 
     @alert_problems
     def resetITCKA(self):
-        self._device_proxy.reset_itck()
+        self._device_proxy.reset_itckA()
+
+    @alert_problems
+    def resetITCKB(self):
+        self._device_proxy.reset_itckB()
 
    # @alert_problems
    # def _set_comboboxes(self):

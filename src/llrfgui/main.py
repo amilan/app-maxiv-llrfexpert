@@ -36,6 +36,10 @@ from taurus.qt.qtgui.application import TaurusApplication
 
 # Local imports
 
+# Constants
+PERIOD_ARG = '--taurus-polling-period='
+PERIOD = 500
+
 def configure_pythonpath():
     """ This method extends the pythonpath with the path where the module
         llrfgui is installed. This is extrange, but at this moment it's needed
@@ -68,8 +72,18 @@ def hide_toolbars(gui):
     gui.statusBar().hide()
     gui.setLockView(False)
 
-def run():
+def set_polling_period(period):
+    for arg in sys.argv:
+        if arg.startswith(PERIOD_ARG):
+            break
+    else:
+        sys.argv.append(PERIOD_ARG+str(period))
+
+def run(period=PERIOD):
     """Run LLRF expert GUI"""
+    #set_polling_period(period)
+    import taurus
+    taurus.Manager().changeDefaultPollingPeriod(period)
     configure_pythonpath()
     app, gui = create_application()
     hide_toolbars(gui)
