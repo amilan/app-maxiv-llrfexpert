@@ -155,3 +155,36 @@ CPIR = [
         ['10',6],
         ['Inmediatly apply',7],
     ]
+
+CFDL = [
+        ['All signals', 1],
+        ['IQCav', 2],
+        ['I&QContr', 3],
+        ['I&QCont1', 4],
+        ['I&QCont2', 5],
+        ['I&QError', 6],
+        ['I&QErrorAccum', 7],
+        ['I&QFwCav', 8],
+        ['TuningDephase&CavPhase', 9],
+        ['I&QRef', 10],
+        ['AmpFw&PhFw', 11],
+        ['I&QFwTet1', 12],
+        ['I&QFwTet2', 13],
+        ['I&QCavFilt', 14],
+        ['I&QMO', 15],
+        ['Amp&PhCav', 16],
+    ]
+
+CFDLDIAG = [
+        ['All signals', 1],
+        ['RvTet1', 2],
+        ['RvTet2', 3],
+        ['FwCircIn', 4],
+        ['RvCircIr', 5],
+        ['FwLoad', 6],
+        ['FwHybLoad', 7],
+        ['RvCav', 8],
+        ['MO_landau', 9],
+    ]
+              
+              

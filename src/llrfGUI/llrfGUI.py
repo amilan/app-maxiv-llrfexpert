@@ -32,6 +32,7 @@ from ui_llrf import Ui_LLRF
 from tih import *
 from taurus.qt.qtgui.display import TaurusStateLed
 
+time.sleep(1.0)
 
 #ScrollabeArea
 class ScrollableArea:
@@ -89,7 +90,7 @@ class llrfGUI(QtGui.QMainWindow):
         self.createStateLeds()
         
         ## Create custom widgets //////////////////////////////////////////////
-        self.createCustomWidgets()
+        #self.createCustomWidgets()
         
         ## Initialize lists ///////////////////////////////////////////////////
         self.connectedAttributeWidgets = []  ##For saving and restore attribute
@@ -122,7 +123,7 @@ class llrfGUI(QtGui.QMainWindow):
         if self.sector == 'LAB':
             self.device = MAIN_DEVICE_LAB
             self.deviceDiag = DIAG_DEVICE_LAB
-            self.devicePLC = PLC_DEVICE_LAB
+            #self.devicePLC = PLC_DEVICE_LAB
             self.deviceAlarm = ALARM_DEVICE_LAB
             self.alarmDevice = ALARM_DEVICE_LAB
             
@@ -183,11 +184,17 @@ class llrfGUI(QtGui.QMainWindow):
         self.ui.comboBox_tuningEn.addValueNames(CB)
         self.ui.comboBox_tuningPosEn.addValueNames(CB)
         self.ui.comboBox_tuningFreq.addValueNames(CC)
+        self.ui.comboBox_tuningTrgEnA.addValueNames(CFS)
+        self.ui.comboBox_tuningFFEnA.addValueNames(CB)
+        self.ui.comboBox_tuningFilterEnA.addValueNames(CB)
         
         ## Tuning Loop B //////////////////////////////////////////////////////
         self.ui.comboBox_tuningEn_2.addValueNames(CB)
         self.ui.comboBox_tuningPosEn_2.addValueNames(CB)
         self.ui.comboBox_tuningFreq_2.addValueNames(CC)
+        self.ui.comboBox_tuningTrgEnB.addValueNames(CFS)
+        self.ui.comboBox_tuningFFEnB.addValueNames(CB)
+        self.ui.comboBox_tuningFilterEnB.addValueNames(CB)
         
         ## Manual Tuning A ////////////////////////////////////////////////////
         self.ui.comboBox_moveUp.addValueNames(CB)
@@ -214,6 +221,8 @@ class llrfGUI(QtGui.QMainWindow):
         self.ui.comboBox_ArcsDisA.addValueNames(CEN)
         self.ui.comboBox_VacuumDisA.addValueNames(CEN)
         self.ui.comboBox_ExtDisA.addValueNames(CEN)
+        self.ui.comboBox_ExtITCKDisB_2.addValueNames(CEN)
+        self.ui.comboBox_ExtITCKDisB_3.addValueNames(CEN)
         
         self.ui.comboBox_RvTet1DisB.addValueNames(CEN)
         self.ui.comboBox_RvTet2DisB.addValueNames(CEN)
@@ -225,6 +234,8 @@ class llrfGUI(QtGui.QMainWindow):
         self.ui.comboBox_ArcsDisB.addValueNames(CEN)
         self.ui.comboBox_VacuumDisB.addValueNames(CEN)
         self.ui.comboBox_ExtITCKDisB.addValueNames(CEN)
+        self.ui.comboBox_ExtDisA_2.addValueNames(CEN)
+        self.ui.comboBox_ExtDisA_3.addValueNames(CEN)
         
         #Interlocks output disable comboboxes//////////////////////////////////
         self.ui.comboBox_DACsOffDisA.addValueNames(CEN)
@@ -260,6 +271,12 @@ class llrfGUI(QtGui.QMainWindow):
         self.ui.comboBox_tuningEn_3.addValueNames(CB)
         self.ui.comboBox_tuningPosEn_3.addValueNames(CB)
         
+        #FDL //////////////////////////////////////////////////////////////////
+        self.ui.taurusValueComboBox_chSrA.addValueNames(CFDL)
+        self.ui.taurusValueComboBox_chSrDA.addValueNames(CFDLDIAG)
+        self.ui.taurusValueComboBox_chSrB.addValueNames(CFDL)
+        self.ui.taurusValueComboBox_chSrDB.addValueNames(CFDLDIAG)
+        
         
     @alert_problems
     def connectSignals(self):
@@ -290,37 +307,100 @@ class llrfGUI(QtGui.QMainWindow):
         QtCore.QObject.connect(self.ui.pushButton_OVRLoops, QtCore.SIGNAL("clicked()"), self.openOVRLoops)
         QtCore.QObject.connect(self.ui.pushButton_OVRDiag, QtCore.SIGNAL("clicked()"), self.openOVRDiag)
         
+        # Interlocks input disable
+        QtCore.QObject.connect(self.ui.pushButton_3, QtCore.SIGNAL("clicked()"), self.enableAllInterlocksA)
+        QtCore.QObject.connect(self.ui.pushButton_4, QtCore.SIGNAL("clicked()"), self.disableAllInterlocksA)
+        QtCore.QObject.connect(self.ui.pushButton_5, QtCore.SIGNAL("clicked()"), self.enableAllInterlocksB)
+        QtCore.QObject.connect(self.ui.pushButton_6, QtCore.SIGNAL("clicked()"), self.disableAllInterlocksB)
+
         # PLC buttons
         QtCore.QObject.connect(self.ui.pushButton_startPump, QtCore.SIGNAL("clicked()"), self.startPump)
         QtCore.QObject.connect(self.ui.pushButton_stopPump, QtCore.SIGNAL("clicked()"), self.stopPump)
         QtCore.QObject.connect(self.ui.pushButton_enableHF, QtCore.SIGNAL("clicked()"), self.enableHF)
         QtCore.QObject.connect(self.ui.pushButton_disableHF, QtCore.SIGNAL("clicked()"), self.disableHF)
         QtCore.QObject.connect(self.ui.pushButton_resetAlarm, QtCore.SIGNAL("clicked()"), self.resetAlarm)
+        
+        # FDL buttons
+        QtCore.QObject.connect(self.ui.pushButton_FDLStartLoops, QtCore.SIGNAL("clicked()"), self.fdlStart)
+        QtCore.QObject.connect(self.ui.pushButton_FDLStopLoops, QtCore.SIGNAL("clicked()"), self.fdlStop)
+
+        QtCore.QObject.connect(self.ui.pushButton_FDLStartDiag, QtCore.SIGNAL("clicked()"), self.fdlStartDiag)
+        QtCore.QObject.connect(self.ui.pushButton_FDLStopDiag, QtCore.SIGNAL("clicked()"), self.fdlStopDiag)
+        
+        QtCore.QObject.connect(self.ui.pushButton_FDLSWTrgLoops, QtCore.SIGNAL("clicked()"), self.fdlSWTriggerLoops)
+        QtCore.QObject.connect(self.ui.pushButton_FDLSWTrgDiag, QtCore.SIGNAL("clicked()"), self.fdlSWTriggerDiag)
+        
+        QtCore.QObject.connect(self.ui.pushButton_FDLLoopsPath, QtCore.SIGNAL("clicked()"), self.setFDLLoopsPath)
+        QtCore.QObject.connect(self.ui.pushButton_FDLDiagPath, QtCore.SIGNAL("clicked()"), self.setFDLDiagPath)
+        
+    @alert_problems
+    def setFDLLoopsPath(self):
+        path = QtGui.QFileDialog.getExistingDirectory(self, self.tr("Path to save FDL Data"))
+        self.dp['FDLDataFilePath'] = path
+        
+    @alert_problems
+    def setFDLDiagPath(self):
+        path = QtGui.QFileDialog.getExistingDirectory(self, self.tr("Path to save FDL Data"))
+        self.dpDiag['FDLDataFilePath'] = path
+        
+    @alert_problems
+    def fdlSWTriggerLoops(self):
+        self.dp.FDLSWTrigger()
+        
+    @alert_problems
+    def fdlSWTriggerDiag(self):
+        self.dpDiag.FDLSWTrigger()
     
+    @alert_problems
+    def fdlStart(self):
+        self.dp['FDLStart'] = 1
+
+    @alert_problems
+    def fdlStop(self):
+        self.dp['FDLStart'] = 0
+
+    @alert_problems
+    def fdlStartDiag(self):
+        self.dpDiag['FDLStart'] = 1
+
+    @alert_problems
+    def fdlStopDiag(self):
+        self.dpDiag['FDLStart'] = 0
+
     @alert_problems
     def startPump(self):
         #self.dpPLC['TANGO_COM'] = PLC_CMD_START_PUMP
-        self.devicePLC['TANGO_COM'] = PLC_CMD_START_PUMP
+        #self.devicePLC['TANGO_COM'] = PLC_CMD_START_PUMP
+        #@TODO: Remove this method for plc and the whole widget
+        pass
         
     @alert_problems
     def stopPump(self):
         #self.dpPLC['TANGO_COM'] = PLC_CMD_STOP_PUMP
-        self.devicePLC['TANGO_COM'] = PLC_CMD_STOP_PUMP
+        #self.devicePLC['TANGO_COM'] = PLC_CMD_STOP_PUMP
+        #@TODO: Remove this method for plc and the whole widget
+        pass
         
     @alert_problems
     def enableHF(self):
         #self.dpPLC['TANGO_COM'] = PLC_CMD_ENABLE_HF
-        self.devicePLC['TANGO_COM'] = PLC_CMD_ENABLE_HF
+        #self.devicePLC['TANGO_COM'] = PLC_CMD_ENABLE_HF
+        #@TODO: Remove this method for plc and the whole widget
+        pass
 
     @alert_problems
     def disableHF(self):
         #self.dpPLC['TANGO_COM'] = PLC_CMD_DISABLE_HF
-        self.devicePLC['TANGO_COM'] = PLC_CMD_DISABLE_HF
+        #self.devicePLC['TANGO_COM'] = PLC_CMD_DISABLE_HF
+        #@TODO: Remove this method for plc and the whole widget
+        pass
     
     @alert_problems
     def resetAlarm(self):
         #self.dpPLC['TANGO_COM'] = PLC_CMD_RESET_ALARM
-        self.devicePLC['TANGO_COM'] = PLC_CMD_RESET_ALARM
+        #self.devicePLC['TANGO_COM'] = PLC_CMD_RESET_ALARM
+        #@TODO: Remove this method for plc and the whole widget
+        pass
     
     @alert_problems
     def openVCXO(self):
@@ -424,6 +504,79 @@ class llrfGUI(QtGui.QMainWindow):
         """
         self.close()
         
+    @alert_problems
+    def enableAllInterlocksA(self):
+        attrs_to_enable = [ "RvTet1DisA",
+                            "RvTet2DisA",
+                            "RvCircDisA",
+                            "FwLoadDisA",
+                            "FwHybLoadDisA",
+                            "RvCavDisA",
+                            "ManualITCKDisA",
+                            "ArcsDisA",
+                            "VacuumDisA",
+                            "ExtITCKDisA",
+                            "PlungerEndSwitchUpDisA",
+                            "PlungerEndSwitchDownDisA"
+                            ]
+        for att in attrs_to_enable:
+            self.dpDiag[att] = 'Enable'
+
+    @alert_problems
+    def disableAllInterlocksA(self):
+        attrs_to_disable = [ "RvTet1DisA",
+                             "RvTet2DisA",
+                             "RvCircDisA",
+                             "FwLoadDisA",
+                             "FwHybLoadDisA",
+                             "RvCavDisA",
+                             "ManualITCKDisA",
+                             "ArcsDisA",
+                             "VacuumDisA",
+                             "ExtITCKDisA",
+                             "PlungerEndSwitchUpDisA",
+                             "PlungerEndSwitchDownDisA"
+                            ]
+        for att in attrs_to_disable:
+            self.dpDiag[att] = 'Disable'
+
+    @alert_problems
+    def enableAllInterlocksB(self):
+        attrs_to_enable = [ "RvTet1DisB",
+                            "RvTet2DisB",
+                            "RvCircDisB",
+                            "FwLoadDisB",
+                            "FwHybLoadDisB",
+                            "RvCavDisB",
+                            "ManualITCKDisB",
+                            "ArcsDisB",
+                            "VacuumDisB",
+                            "ExtITCKDisB",
+                            "PlungerEndSwitchUpDisB",
+                            "PlungerEndSwitchDownDisB"
+                            ]
+        for att in attrs_to_enable:
+            self.dpDiag[att] = 'Enable'
+
+
+    @alert_problems
+    def disableAllInterlocksB(self):
+        attrs_to_disable = [ "RvTet1DisB",
+                             "RvTet2DisB",
+                             "RvCircDisB",
+                             "FwLoadDisB",
+                             "FwHybLoadDisB",
+                             "RvCavDisB",
+                             "ManualITCKDisB",
+                             "ArcsDisB",
+                             "VacuumDisB",
+                             "ExtITCKDisB",
+                             "PlungerEndSwitchUpDisB",
+                             "PlungerEndSwitchDownDisB"
+                            ]
+        for att in attrs_to_disable:
+            self.dpDiag[att] = 'Disable'
+
     @alert_problems
     def closeEvent(self, event):
         """Method for saving settings and ask for close the app.
@@ -618,24 +771,28 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.tauValueLabel_IcavVolt, self.device + "/ICavA"),
                 (self.ui.tauValueLabel_IerrorP, self.device + "/IErrorA"),
                 (self.ui.tauValueLabel_IerrorA, self.device + "/IErrorAccumA"),
+                (self.ui.tauValueLabel_IcrtlA, self.device + "/IControlA"),
                 (self.ui.tauValueLabel_IcrtlAc, self.device + "/IControl1A"),
                 (self.ui.tauValueLabel_IcrtlAc2, self.device + "/IControl2A"),
                 (self.ui.tauValueLabel_QcavRef, self.device + "/QRefDiagA"),
                 (self.ui.tauValueLabel_QcavVolt, self.device + "/QCavA"),
                 (self.ui.tauValueLabel_QerrorP, self.device + "/QErrorA"),
                 (self.ui.tauValueLabel_QerrorA, self.device + "/QErrorAccumA"),
+                (self.ui.tauValueLabel_QctrlA, self.device + "/QControlA"),
                 (self.ui.tauValueLabel_QctrlAc, self.device + "/QControl1A"),
                 (self.ui.tauValueLabel_QctrlAc2, self.device + "/QControl2A"),
                 (self.ui.tauValueLabel_ampCavRef, self.device + "/AmpRefDiagA"),
                 (self.ui.tauValueLabel_ampCavVolt, self.device + "/AmpCavA"),
                 (self.ui.tauValueLabel_ampErrorP, self.device + "/AmpErrorA"),
                 (self.ui.tauValueLabel_ampErrorA, self.device + "/AmpErrorAccumA"),
+                (self.ui.tauValueLabel_ampCtrlA, self.device + "/AmpControlA"),
                 (self.ui.tauValueLabel_ampCtrlAc, self.device + "/AmpControl1A"),
                 (self.ui.tauValueLabel_ampCtrlAc2, self.device + "/AmpControl2A"),
                 (self.ui.tauValueLabel_phaseCavRef, self.device + "/PhRefDiagA"),
                 (self.ui.tauValueLabel_phaseCavVolt, self.device + "/PhCavA"),
                 (self.ui.tauValueLabel_phaseErrorP, self.device + "/PhErrorA"),
                 (self.ui.tauValueLabel_phaseErrorA, self.device + "/PhErrorAccumA"),
+                (self.ui.tauValueLabel_PhCrtlA, self.device + "/PhControlA"),
                 (self.ui.tauValueLabel_phaseCtrlAc, self.device + "/PhControl1A"),
                 (self.ui.tauValueLabel_phaseCtrlAc_2, self.device + "/PhControl2A"),
                 
@@ -643,24 +800,28 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.tauValueLabel_IcavVolt_2, self.device + "/ICavB"),
                 (self.ui.tauValueLabel_IerrorP_2, self.device + "/IErrorB"),
                 (self.ui.tauValueLabel_IerrorA_2, self.device + "/IErrorAccumB"),
+                (self.ui.tauValueLabel_IctrlA_2, self.device + "/IControlB"),
                 (self.ui.tauValueLabel_IcrtlAc_4, self.device + "/IControl1B"),
                 (self.ui.tauValueLabel_IcrtlAc_8, self.device + "/IControl2B"),
                 (self.ui.tauValueLabel_QcavRef_2, self.device + "/QRefDiagB"),
                 (self.ui.tauValueLabel_QcavVolt_2, self.device + "/QCavB"),
                 (self.ui.tauValueLabel_QerrorP_2, self.device + "/QErrorB"),
                 (self.ui.tauValueLabel_QerrorA_2, self.device + "/QErrorAccumB"),
+                (self.ui.tauValueLabel_QCtrlA_3, self.device + "/QControlB"),
                 (self.ui.tauValueLabel_QctrlAc_4, self.device + "/QControl1B"),
                 (self.ui.tauValueLabel_QctrlAc_8, self.device + "/QControl2B"),
                 (self.ui.tauValueLabel_ampCavRef_2, self.device + "/AmpRefDiagB"),
                 (self.ui.tauValueLabel_ampCavVolt_2, self.device + "/AmpCavB"),
                 (self.ui.tauValueLabel_ampErrorP_2, self.device + "/AmpErrorB"),
                 (self.ui.tauValueLabel_ampErrorA_2, self.device + "/AmpErrorAccumB"),
+                (self.ui.tauValueLabel_ampCtrlA_2, self.device + "/AmpControlB"),
                 (self.ui.tauValueLabel_ampCtrlAc_4, self.device + "/AmpControl1B"),
                 (self.ui.tauValueLabel_ampCtrlAc_8, self.device + "/AmpControl2B"),
                 (self.ui.tauValueLabel_phaseCavRef_2, self.device + "/PhRefDiagB"),
                 (self.ui.tauValueLabel_phaseCavVolt_2, self.device + "/PhCavB"),
                 (self.ui.tauValueLabel_phaseErrorP_2, self.device + "/PhErrorB"),
                 (self.ui.tauValueLabel_phaseErrorA_2, self.device + "/PhErrorAccumB"),
+                (self.ui.tauValueLabel_phaseCtrlA_5, self.device + "/PhControlB"),
                 (self.ui.tauValueLabel_phaseCtrlAc_4, self.device + "/PhControl1B"),
                 (self.ui.tauValueLabel_phaseCtrlAc_8, self.device + "/PhControl2B"),
                 
@@ -716,6 +877,11 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.tauValueLabel_marginUp, self.device + "/MarginUpA"),
                 (self.ui.tauValueLabel_marginLow, self.device + "/MarginLowA"),
                 (self.ui.tauValueLabel_forwardMin_2, self.device + "/FwMinA"),
+                (self.ui.tauValueLabel_tuningDelayA, self.device + "/TuningDelayA"),
+                (self.ui.tauValueLabel_tuningTrgEnA, self.device + "/TuningTriggerEnableA"),
+                (self.ui.tauValueLabel_tuningFFEnA, self.device + "/TuningFFA"),
+                (self.ui.tauValueLabel_tuningFFStepsA, self.device + "/TuningFFStepsA"),
+                (self.ui.tauValueLabel_tuningFilterEnA, self.device + "/TuningFilterEnableA"),
                 
                 (self.ui.tauValueLabel_tuningEn_2, self.device + "/TuningEnableB"),
                 (self.ui.tauValueLabel_tuningPosEn_2, self.device + "/TuningPosEnB"),
@@ -723,6 +889,11 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.tauValueLabel_marginUp_2, self.device + "/MarginUpB"),
                 (self.ui.tauValueLabel_marginLow_2, self.device + "/MarginLowB"),
                 (self.ui.tauValueLabel_forwardMin_3, self.device + "/FwMinB"),
+                (self.ui.tauValueLabel_tuningDelayB, self.device + "/TuningDelayB"),
+                (self.ui.tauValueLabel_tuningTrgEnB, self.device + "/TuningTriggerEnableB"),
+                (self.ui.tauValueLabel_tuningFFEnB, self.device + "/TuningFFB"),
+                (self.ui.tauValueLabel_tuningFFStepsB, self.device + "/TuningFFStepsB"),
+                (self.ui.tauValueLabel_tuningFilterEnB, self.device + "/TuningFilterEnableB"),
                 
                 (self.ui.tauValueLabel_tuningOffset, self.device + "/PhaseOffsetA"),
                 (self.ui.tauValueLabel_tuningOffset_2, self.device + "/PhaseOffsetB"),
@@ -869,6 +1040,8 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.tauValueLabel_ArcsDisA, self.deviceDiag + "/ArcsDisA"),
                 (self.ui.tauValueLabel_VacuumDisA, self.deviceDiag + "/VacuumDisA"),
                 (self.ui.tauValueLabel_ExtITCKDisA, self.deviceDiag + "/ExtITCKDisA"),
+                (self.ui.tauValueLabel_ExtITCKDisB_2, self.deviceDiag + "/PlungerEndSwitchUpDisA"),
+                (self.ui.tauValueLabel_ExtITCKDisB_3, self.deviceDiag + "/PlungerEndSwitchDownDisA"),
                 
                 (self.ui.tauValueLabel_RvTet1DisB, self.deviceDiag + "/RvTet1DisB"),
                 (self.ui.tauValueLabel_RvTet2DisB, self.deviceDiag + "/RvTet2DisB"),
@@ -880,6 +1053,8 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.tauValueLabel_ArcsDisB, self.deviceDiag + "/ArcsDisB"),
                 (self.ui.tauValueLabel_VacuumDisB, self.deviceDiag + "/VacuumDisB"),
                 (self.ui.tauValueLabel_ExtITCKDisB, self.deviceDiag + "/ExtITCKDisB"),
+                (self.ui.tauValueLabel_ExtITCKDisA_2, self.deviceDiag + "/PlungerEndSwitchUpDisB"),
+                (self.ui.tauValueLabel_ExtITCKDisA_3, self.deviceDiag + "/PlungerEndSwitchDownDisB"),
                 
                 #Interlock outputs disable
                 (self.ui.tauValueLabel_DACsOffDisA, self.deviceDiag + "/DACsOffDisA"),
@@ -907,6 +1082,8 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.taurusBoolLed_8, self.deviceDiag + "/ArcsDiagA"),
                 (self.ui.taurusBoolLed_9, self.deviceDiag + "/VacuumDiagA"),
                 (self.ui.taurusBoolLed_10, self.deviceDiag + "/ExternalITCKDiagA"),
+                (self.ui.taurusBoolLed_41, self.deviceDiag + "/PlungerEndSwitchUpDiagA"),
+                (self.ui.taurusBoolLed_43, self.deviceDiag + "/PlungerEndSwitchDownDiagA"),
                 
                 (self.ui.taurusBoolLed_11, self.deviceDiag + "/RvTet1DiagB"),
                 (self.ui.taurusBoolLed_12, self.deviceDiag + "/RvTet2DiagB"),
@@ -918,6 +1095,8 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.taurusBoolLed_18, self.deviceDiag + "/ArcsDiagB"),
                 (self.ui.taurusBoolLed_19, self.deviceDiag + "/VacuumDiagB"),
                 (self.ui.taurusBoolLed_20, self.deviceDiag + "/ExternalITCKDiagB"),
+                (self.ui.taurusBoolLed_42, self.deviceDiag + "/PlungerEndSwitchUpDiagB"),
+                (self.ui.taurusBoolLed_44, self.deviceDiag + "/PlungerEndSwitchDownDiagB"),
                 (self.ui.tauValueLabel_itckTimestamp, self.deviceDiag + "/ITCKTimestampA"),
                 (self.ui.tauValueLabel_itckTimestamp_2, self.deviceDiag + "/ITCKTimestampB"),
                 
@@ -1012,25 +1191,52 @@ class llrfGUI(QtGui.QMainWindow):
                 #(self.ui., self.deviceDiag + "DephaseMOLandauB")
                 
                 #PLC ///////////////////////////////////////////////
-                (self.ui.taurusLabel_airTemp, self.devicePLC + "/AIR_TEMP_HPC_1"),
-                (self.ui.taurusLabel_vacPressure, self.devicePLC + "/M2COND_VAC_C1_SCALE"),
-                (self.ui.taurusLabel_watTempReturn, self.devicePLC + "/TEMP_RET_PUMP"),
-                (self.ui.taurusLabel_watTempOConductor, self.devicePLC + "/TEMP_SLINGA_SC"),
-                (self.ui.taurusLabel_watTempLoop, self.devicePLC + "/TEMP_STUBB_SC"),
-                (self.ui.taurusLed_pumpOn, self.devicePLC + "/FLODE_OK"),
-                (self.ui.taurusLed_hfOn, self.devicePLC + "/HF_ENABLE_ON"),
-                (self.ui.taurusLed_airTemp, self.devicePLC + "/A_AIR_TEMP_HPC_1_50"),
-                (self.ui.taurusLed_fanError, self.devicePLC + "/A_FAN_ERROR"),
-                (self.ui.taurusLed_cavTemp, self.devicePLC + "/A_CAV_90G"),
-                (self.ui.taurusLed_vacPumpControlUnit, self.devicePLC + "/A_VAC_INT_FROM_RFCAB_1"),
-                (self.ui.taurusLed_watCircFlowBody, self.devicePLC + "/A_CIRK_WATER_FL1"),
-                (self.ui.taurusLed_watCircFlowLoad, self.devicePLC + "/A_CIRK_WATER_FL2"),
-                (self.ui.taurusLed_watHighReturnTemp, self.devicePLC + "/A_HIGH_TEMP_RETURN"),
-                (self.ui.taurusLed_watLowPressure, self.devicePLC + "/A_LOW_PRESSURE"),
-                (self.ui.taurusLed_watPumpLowFlow, self.devicePLC + "/A_TIM_CAV_OFF_FLOW"),
+                #(self.ui.taurusLabel_airTemp, self.devicePLC + "/AIR_TEMP_HPC_1"),
+                #(self.ui.taurusLabel_vacPressure, self.devicePLC + "/M2COND_VAC_C1_SCALE"),
+                #(self.ui.taurusLabel_watTempReturn, self.devicePLC + "/TEMP_RET_PUMP"),
+                #(self.ui.taurusLabel_watTempOConductor, self.devicePLC + "/TEMP_SLINGA_SC"),
+                #(self.ui.taurusLabel_watTempLoop, self.devicePLC + "/TEMP_STUBB_SC"),
+                #(self.ui.taurusLed_pumpOn, self.devicePLC + "/FLODE_OK"),
+                #(self.ui.taurusLed_hfOn, self.devicePLC + "/HF_ENABLE_ON"),
+                #(self.ui.taurusLed_airTemp, self.devicePLC + "/A_AIR_TEMP_HPC_1_50"),
+                #(self.ui.taurusLed_fanError, self.devicePLC + "/A_FAN_ERROR"),
+                #(self.ui.taurusLed_cavTemp, self.devicePLC + "/A_CAV_90G"),
+                #(self.ui.taurusLed_vacPumpControlUnit, self.devicePLC + "/A_VAC_INT_FROM_RFCAB_1"),
+                #(self.ui.taurusLed_watCircFlowBody, self.devicePLC + "/A_CIRK_WATER_FL1"),
+                #(self.ui.taurusLed_watCircFlowLoad, self.devicePLC + "/A_CIRK_WATER_FL2"),
+                #(self.ui.taurusLed_watHighReturnTemp, self.devicePLC + "/A_HIGH_TEMP_RETURN"),
+                #(self.ui.taurusLed_watLowPressure, self.devicePLC + "/A_LOW_PRESSURE"),
+                #(self.ui.taurusLed_watPumpLowFlow, self.devicePLC + "/A_TIM_CAV_OFF_FLOW"),
                 
                 #PyAlarm widget////////////////////////////////////////////////
-                (self.alarmWidget, self.deviceAlarm),
+                #(self.alarmWidget, self.deviceAlarm),
+                
+                #FDL //////////////////////////////////////////////////////////
+                (self.ui.taurusLed_3, self.device + "/FDLTriggerState"),
+                (self.ui.taurusLed_4, self.deviceDiag + "/FDLTriggerState"),
+                (self.ui.taurusLabel_bufferSize, self.device + "/FDLDataBufferSize"),
+                (self.ui.taurusLabel_buffersizeD, self.deviceDiag + "/FDLDataBufferSize"),
+                (self.ui.taurusLabel_trgDelay, self.device + "/FDLTriggerDelay"),
+                (self.ui.taurusLabel_trgDelayD, self.deviceDiag + "/FDLTriggerDelay"),
+                (self.ui.taurusLabel_chSrA, self.device + "/FDLChannelSourceA"),
+                (self.ui.taurusLabel_chSrDA, self.deviceDiag + "/FDLChannelSourceA"),
+                (self.ui.taurusLabel_chSrB, self.device + "/FDLChannelSourceB"),
+                (self.ui.taurusLabel_chSrDB, self.deviceDiag + "/FDLChannelSourceB"),
+                
+                #//////////////////////////////////////////////////////////////
+                (self.ui.tauValueLabel_gainola, self.device + "/GainOLA"),
+                (self.ui.tauValueLabel_gainolb, self.device + "/GainOLB"),
+                (self.ui.tauValueLabel_phaseShift_11, self.device + "/PhaseShiftFwTet1A"),
+                (self.ui.tauValueLabel_phaseShift_10, self.device + "/PhaseShiftFwTet1B"),
+                
+                (self.ui.tauValueLabel_FwTet1Loop, self.device + "/IFwTet1ALoop"),
+                (self.ui.tauValueLabel_FwTet1Loop_2, self.device + "/QFwTet1ALoop"),
+                (self.ui.tauValueLabel_FwTet1Loop_3, self.device + "/AmpFwTet1ALoop"),
+                (self.ui.tauValueLabel_FwTet1Loop_4, self.device + "/PhFwTet1ALoop"),
+                (self.ui.tauValueLabel_FwTet1Loop_5, self.device + "/IFwTet1BLoop"),
+                (self.ui.tauValueLabel_FwTet1Loop_6, self.device + "/QFwTet1BLoop"),
+                (self.ui.tauValueLabel_FwTet1Loop_7, self.device + "/AmpFwTet1BLoop"),
+                (self.ui.tauValueLabel_FwTet1Loop_8, self.device + "/PhFwTet1BLoop"),
                 
             ]
         
@@ -1087,6 +1293,11 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.lineEdit_marginLow_2, self.device + "/MarginLowA"),
                 (self.ui.lineEdit_forwardMin, self.device + "/FwMinA"),
                 
+                (self.ui.lineEdit_tuningDelayA, self.device + "/TuningDelayA"),
+                (self.ui.lineEdit_tuningFFStepsA, self.device + "/TuningFFStepsA"),
+                (self.ui.lineEdit_tuningDelayB, self.device + "/TuningDelayB"),
+                (self.ui.lineEdit_tuningFFStepsB, self.device + "/TuningFFStepsB"),
+                
                 (self.ui.lineEdit_marginUp_3, self.device + "/MarginUpB"),
                 (self.ui.lineEdit_marginLow_3, self.device + "/MarginLowB"),
                 (self.ui.lineEdit_forwardMin_2, self.device + "/FwMinB"),
@@ -1132,6 +1343,18 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.lineEdit_ampRampEndB, self.device + "/AmpRampEndB"),
                 (self.ui.lineEdit_phaseRampInitB, self.device + "/PhaseRampInitB"),
                 (self.ui.lineEdit_phaseRampEndB, self.device + "/PhaseRampEndB"),
+                
+                #FDL //////////////////////////////////////////////////////////
+                (self.ui.taurusValueLineEdit_bufferSize, self.device + "/FDLDataBufferSize"),
+                (self.ui.taurusValueLineEdit_bufferSizeD, self.deviceDiag + "/FDLDataBufferSize"),
+                (self.ui.taurusValueLineEdit_trgDelay, self.device + "/FDLTriggerDelay"),
+                (self.ui.taurusValueLineEdit_trgDelayD, self.deviceDiag + "/FDLTriggerDelay"),
+                
+                #//////////////////////////////////////////////////////////////
+                (self.ui.lineEdit_gainola, self.device + "/GainOLA"),
+                (self.ui.lineEdit_gainolb, self.device + "/GainOLB"),
+                (self.ui.lineEdit_phaseShift_10, self.device + "/PhaseShiftFwTet1A"),
+                (self.ui.lineEdit_phaseShift_9, self.device + "/PhaseShiftFwTet1B"),
             ]
             
         self._comboList = [
@@ -1177,6 +1400,12 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.comboBox_tuningPosEn_2, self.device + "/TuningPosEnB"),
                 (self.ui.comboBox_tuningFreq_2, self.device + "/PulsesFrequencyB"),
                 (self.ui.tauValueComboBox_clockSource, self.device + "/FPGAClockSource"),
+                (self.ui.comboBox_tuningTrgEnA, self.device + "/TuningTriggerEnableA"),
+                (self.ui.comboBox_tuningFFEnA, self.device + "/TuningFFA"),
+                (self.ui.comboBox_tuningFilterEnA, self.device + "/TuningFilterEnableA"),
+                (self.ui.comboBox_tuningTrgEnB, self.device + "/TuningTriggerEnableB"),
+                (self.ui.comboBox_tuningFFEnB, self.device + "/TuningFFB"),
+                (self.ui.comboBox_tuningFilterEnB, self.device + "/TuningFilterEnableB"),
                 
                 #Interlocks inputs disable comboboxes
                 (self.ui.tauValueComboBox_clockSource_3, self.deviceDiag + "/FPGAClockSource"),
@@ -1190,6 +1419,8 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.comboBox_ArcsDisA, self.deviceDiag + "/ArcsDisA"),
                 (self.ui.comboBox_VacuumDisA, self.deviceDiag + "/VacuumDisA"),
                 (self.ui.comboBox_ExtDisA, self.deviceDiag + "/ExtITCKDisA"),
+                (self.ui.comboBox_ExtITCKDisB_2, self.deviceDiag + "/PlungerEndSwitchUpDisA"),
+                (self.ui.comboBox_ExtITCKDisB_3, self.deviceDiag + "/PlungerEndSwitchDownDisA"),
                 
                 (self.ui.comboBox_RvTet1DisB, self.deviceDiag + "/RvTet1DisB"),
                 (self.ui.comboBox_RvTet2DisB, self.deviceDiag + "/RvTet2DisB"),
@@ -1201,6 +1432,8 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.comboBox_ArcsDisB, self.deviceDiag + "/ArcsDisB"),
                 (self.ui.comboBox_VacuumDisB, self.deviceDiag + "/VacuumDisB"),
                 (self.ui.comboBox_ExtITCKDisB, self.deviceDiag + "/ExtITCKDisB"),
+                (self.ui.comboBox_ExtDisA_2, self.deviceDiag + "/PlungerEndSwitchUpDisB"),
+                (self.ui.comboBox_ExtDisA_3, self.deviceDiag + "/PlungerEndSwitchDownDisB"),
                 
                 #Interlocks output disable comboboxes
                 (self.ui.comboBox_DACsOffDisA, self.deviceDiag + "/DACsOffDisA"),
@@ -1236,6 +1469,11 @@ class llrfGUI(QtGui.QMainWindow):
                 (self.ui.comboBox_movePlg_3, self.deviceDiag + "/MoveLandauPLG"),
                 (self.ui.comboBox_tuningEn_3, self.deviceDiag + "/LandauTuningEnable"),
                 (self.ui.comboBox_tuningPosEn_3, self.deviceDiag + "/LandauPositiveEn"),
+                
+                (self.ui.taurusValueComboBox_chSrA, self.device + "/FDLChannelSourceA"),
+                (self.ui.taurusValueComboBox_chSrDA, self.deviceDiag + "/FDLChannelSourceA"),
+                (self.ui.taurusValueComboBox_chSrB, self.device + "/FDLChannelSourceB"),
+                (self.ui.taurusValueComboBox_chSrDB, self.deviceDiag + "/FDLChannelSourceB")
                 
             ]
     
