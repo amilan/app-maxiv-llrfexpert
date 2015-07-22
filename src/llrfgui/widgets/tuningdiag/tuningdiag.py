@@ -29,11 +29,8 @@ __author__ = "amilan"
 
 __docformat__ = 'restructuredtext'
 
-from taurus.external.qt import Qt
 from taurus.qt.qtgui.util.ui import UILoadable
 
-from llrfgui.utils.commons import *
-from llrfgui.utils.decorators import alert_problems
 from llrfgui.widgets.basellrfwidget import BaseLLRFWidget
 
 
@@ -41,21 +38,22 @@ from llrfgui.widgets.basellrfwidget import BaseLLRFWidget
 class TuningDiag(BaseLLRFWidget):
 
     def __init__(self, parent=None):
-        BaseLLRFWidget.__init__(self, parent)
+        config_file = self._get_config_file_name(__file__)
+        BaseLLRFWidget.__init__(self, config_file, parent)
         self.loadUi()
 
-    @alert_problems
-    def setModel(self, model):
-        """
-        :param model: tuple where the first element is the device name
-                        and the second the plunger name
-
-        """
-        self._device_name = model[0]
-        self._plunger = model[1]
-        self._set_comboboxes()
-        self._create_attributes_lists()
-        self._connect_all_attributes()
+    # @alert_problems
+    # def setModel(self, model):
+    #     """
+    #     :param model: tuple where the first element is the device name
+    #                     and the second the plunger name
+    #
+    #     """
+    #     self._device_name = model[0]
+    #     self._plunger = model[1]
+    #     self._set_comboboxes()
+    #     self._create_attributes_lists()
+    #     self._connect_all_attributes()
 
    # @alert_problems
    # def _set_comboboxes(self):
@@ -82,28 +80,16 @@ class TuningDiag(BaseLLRFWidget):
    #     attribute = self._device_name + '/' + attribute
    #     widget.setModelName(attribute)
 
-    @alert_problems
-    def _create_attributes_lists(self):
-        self._attributes = []
 
-        self._attributes_readback = [
-            (self.ui.tauValueLabel_rTuningD, "Diag_AngCavFwA"),
-            (self.ui.tauValueLabel_rFwAmp, "Diag_AngFwLA"),
-            (self.ui.tauValueLabel_rCavVolt, "Diag_AngCavLA"),
-            #(self.ui.tauValueLabel_rPlung1Pos, "tango://srvv0-tangohost-0:10000/m2sr/llrf/cav2/voltage"),
-            #(self.ui.tauValueLabel_rPlung1Pos,
-             #"tango://srvv0-tangohost-0:10000/m2sr/llrf/cav2/voltage"),
-        ]
-
-        self._comboboxes = []
 
 def main():
     import sys
     from taurus.qt.qtgui.application import TaurusApplication
 
     app = TaurusApplication()
-    model = ''
+    model = 'ws/rf/pynutaq_1'
     panel = TuningDiag()
+    panel.setModel(model)
     panel.show()
 
     sys.exit(app.exec_())

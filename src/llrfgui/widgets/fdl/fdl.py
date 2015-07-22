@@ -41,51 +41,53 @@ from llrfgui.widgets.basellrfwidget import BaseLLRFWidget
 class Fdl(BaseLLRFWidget):
 
     def __init__(self, parent=None):
-        BaseLLRFWidget.__init__(self, parent)
+        config_file = self._get_config_file_name(__file__)
+        BaseLLRFWidget.__init__(self, config_file, parent)
         self.loadUi()
 
-   # @alert_problems
-   # def setModel(self, model):
-   #     self._device_name = model
-   #     self._set_comboboxes()
-   #     self._create_attributes_lists()
-   #     self._connect_all_attributes()
+    # @alert_problems
+    # def setModel(self, model):
+    #     self._device_name = model
+    #     self._set_comboboxes()
+    #     self._create_attributes_lists()
+    #     self._connect_all_attributes()
 
-   # @alert_problems
-   # def _set_comboboxes(self):
-   #     pass
+    # @alert_problems
+    # def _set_comboboxes(self):
+    #     pass
 
-   # @alert_problems
-   # def _connect_all_attributes(self):
-   #     for attribute in self._attributes:
-   #         self.connect_attribute(attribute[0], attribute[1])
+    # @alert_problems
+    # def _connect_all_attributes(self):
+    #     for attribute in self._attributes:
+    #         self.connect_attribute(attribute[0], attribute[1])
 
-   #     for combobox in self._comboboxes:
-   #         self.connect_combobox(combobox[0], combobox[1])
+    #     for combobox in self._comboboxes:
+    #         self.connect_combobox(combobox[0], combobox[1])
 
-   # @alert_problems
-   # def connect_attribute(self, widget, attribute):
-   #     widget.setModel(attribute)
+    # @alert_problems
+    # def connect_attribute(self, widget, attribute):
+    #     widget.setModel(attribute)
 
-   # @alert_problems
-   # def connect_combobox(self, widget, attribute):
-   #     widget.setModelName(attribute)
+    # @alert_problems
+    # def connect_combobox(self, widget, attribute):
+    #     widget.setModelName(attribute)
 
-   # @alert_problems
-   # def _create_attributes_lists(self):
-   #     self._attributes = [
-   #                         ]
+    # @alert_problems
+    # def _create_attributes_lists(self):
+    #     self._attributes = [
+    #                         ]
 
-   #     self._comboboxes = [
-   #                         ]
+    #     self._comboboxes = [
+    #                         ]
 
 def main():
     import sys
     from taurus.qt.qtgui.application import TaurusApplication
 
     app = TaurusApplication()
-    model = ''
+    model = ['ws/rf/pynutaq_1', 'ws/rf/pynutaqdiags_1']
     panel = Fdl()
+    panel.setModel(model)
     panel.show()
 
     sys.exit(app.exec_())

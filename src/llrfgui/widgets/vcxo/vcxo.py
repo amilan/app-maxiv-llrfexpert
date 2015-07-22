@@ -32,7 +32,6 @@ __docformat__ = 'restructuredtext'
 from taurus.external.qt import Qt, QtCore, QtGui
 from taurus.qt.qtgui.util.ui import UILoadable
 
-from llrfgui.utils.commons import *
 from llrfgui.utils.decorators import alert_problems
 from llrfgui.widgets.basellrfwidget import BaseLLRFWidget
 
@@ -41,7 +40,8 @@ from llrfgui.widgets.basellrfwidget import BaseLLRFWidget
 class Vcxo(BaseLLRFWidget):
 
     def __init__(self, parent=None):
-        BaseLLRFWidget.__init__(self, parent)
+        config_file = self._get_config_file_name(__file__)
+        BaseLLRFWidget.__init__(self, config_file, parent)
         self.loadUi()
 
    # @alert_problems
@@ -99,25 +99,26 @@ class Vcxo(BaseLLRFWidget):
    #     attribute = self._device_name + '/' + attribute
    #     widget.setModelName(attribute)
 
-    @alert_problems
-    def _create_attributes_lists(self):
-        self._attributes = []
-
-        self._attributes_readback = [
-            (self.ui.tauValueLabel_Power, "VCXOPoweredA"),
-            (self.ui.tauValueLabel_Ref, "VCXORefA"),
-            (self.ui.tauValueLabel_Locked, "VCXOLockedA"),
-        ]
-
-        self._comboboxes = []
+    # @alert_problems
+    # def _create_attributes_lists(self):
+    #     self._attributes = []
+    #
+    #     self._attributes_readback = [
+    #         (self.ui.tauValueLabel_Power, "VCXOPoweredA"),
+    #         (self.ui.tauValueLabel_Ref, "VCXORefA"),
+    #         (self.ui.tauValueLabel_Locked, "VCXOLockedA"),
+    #     ]
+    #
+    #     self._comboboxes = []
 
 def main():
     import sys
     from taurus.qt.qtgui.application import TaurusApplication
 
     app = TaurusApplication()
-    model = ''
+    model = 'ws/rf/pynutaq_1'
     panel = Vcxo()
+    panel.setModel(model)
     panel.show()
 
     sys.exit(app.exec_())

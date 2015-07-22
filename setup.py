@@ -45,7 +45,8 @@ def main():
     package_data = {
         'llrfgui': ['images/maxivlogo.png',
                     'widgets/*/ui/*',
-        ]
+                    'widgets/*/*.yaml'
+                    ]
     }
 
     scripts = ['scripts/ctllrfgui']

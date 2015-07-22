@@ -1,0 +1,76 @@
+# YAML configuration file used to connect each widget to its model.
+# The data structure will be a dictionary compose by lists of
+# the following elements:
+
+#  -------------------------------------------------------
+# |                      attributes                       |
+#  -------------------------------------------------------
+# |              widget_name | tango_attribute            |
+#  -------------------------------------------------------
+
+#  -------------------------------------------------------
+# |                      readback                         |
+#  -------------------------------------------------------
+# |              widget_name | tango_attribute            |
+#  -------------------------------------------------------
+
+#  -------------------------------------------------------
+# |                      comboboxes                       |
+#  -------------------------------------------------------
+# | widget_name | tango_attribute | values_for_comboboxes |
+#  -------------------------------------------------------
+
+attributes:
+-
+
+readback:
+# Cavity A
+- [tauValueLabel_RvTet1DisA, DisableItckRvTet1A]
+- [tauValueLabel_RvTet2DisA, DisableItckRvTet2A]
+- [tauValueLabel_RvCircDisA, DisableItckRvcircA]
+- [tauValueLabel_FwLoadDisA, DisableItckFwloadA]
+- [tauValueLabel_FwHybLoadDisA, DisableItckFwhybloadA]
+- [tauValueLabel_RvCavDisA, DisableItckRvcavA]
+- [tauValueLabel_ManualITCKDisA, DisableItckManualInterlockA]
+- [tauValueLabel_ArcsDisA, DisableItckArcsA]
+- [tauValueLabel_VacuumDisA, DisableItckVaccumA]
+- [tauValueLabel_ExtITCKDisB_2, DisableItckPlungerEndSwitchesUpA]
+- [tauValueLabel_ExtITCKDisB_3, DisableItckPlungerEndSwitchesDownA]
+# Cavity B
+- [tauValueLabel_RvTet1DisB, DisableItckRvTet1B]
+- [tauValueLabel_RvTet2DisB, DisableItckRvTet2B]
+- [tauValueLabel_RvCircDisB, DisableItckRvcircB]
+- [tauValueLabel_FwLoadDisB, DisableItckFwloadB]
+- [tauValueLabel_FwHybLoadDisB, DisableItckFwhybloadB]
+- [tauValueLabel_RvCavDisB, DisableItckRvcavB]
+- [tauValueLabel_ManualITCKDisB, DisableItckManualInterlockB]
+- [tauValueLabel_ArcsDisB, DisableItckArcsB]
+- [tauValueLabel_VacuumDisB, DisableItckVaccumB]
+- [tauValueLabel_ExtITCKDisA_2, DisableItckPlungerEndSwitchesUpB]
+- [tauValueLabel_ExtITCKDisA_3, DisableItckPlungerEndSwitchesDownB]
+
+comboboxes:
+# Cavity A
+- [comboBox_RvTet1DisA, DisableItckRvTet1A, CEN]
+- [comboBox_RvTet2DisA, DisableItckRvTet2A, CEN]
+- [comboBox_RvCircDisA, DisableItckRvcircA, CEN]
+- [comboBox_FwLoadDisA, DisableItckFwloadA, CEN]
+- [comboBox_FwHybLoadDisA, DisableItckFwhybloadA, CEN]
+- [comboBox_RvCavDisA, DisableItckRvcavA, CEN]
+- [comboBox_ManualITCKDisA, DisableItckManualInterlockA, CEN]
+- [comboBox_ArcsDisA, DisableItckArcsA, CEN]
+- [comboBox_VacuumDisA, DisableItckVaccumA, CEN]
+- [comboBox_ExtITCKDisB_2, DisableItckPlungerEndSwitchesUpA, CEN]
+- [comboBox_ExtITCKDisB_3, DisableItckPlungerEndSwitchesDownA, CEN]
+# Cavity A
+- [comboBox_RvTet1DisB, DisableItckRvTet1B, CEN]
+- [comboBox_RvTet2DisB, DisableItckRvTet2B, CEN]
+- [comboBox_RvCircDisB, DisableItckRvcircB, CEN]
+- [comboBox_FwLoadDisB, DisableItckFwloadB, CEN]
+- [comboBox_FwHybLoadDisB, DisableItckFwhybloadB, CEN]
+- [comboBox_RvCavDisB, DisableItckRvcavB, CEN]
+- [comboBox_ManualITCKDisB, DisableItckManualInterlockB, CEN]
+- [comboBox_ArcsDisB, DisableItckArcsB, CEN]
+- [comboBox_VacuumDisB, DisableItckVaccumB, CEN]
+- [comboBox_ExtDisA_2, DisableItckPlungerEndSwitchesUpB, CEN]
+- [comboBox_ExtDisA_3, DisableItckPlungerEndSwitchesDownB, CEN]

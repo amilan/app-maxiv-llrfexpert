@@ -34,7 +34,6 @@ import PyTango
 from taurus.external.qt import Qt, QtCore
 from taurus.qt.qtgui.util.ui import UILoadable
 
-from llrfgui.utils.commons import *
 from llrfgui.utils.decorators import alert_problems
 from llrfgui.widgets.basellrfwidget import BaseLLRFWidget
 
@@ -43,17 +42,9 @@ from llrfgui.widgets.basellrfwidget import BaseLLRFWidget
 class Ramping(BaseLLRFWidget):
 
     def __init__(self, parent=None):
-        BaseLLRFWidget.__init__(self, parent)
+        config_file = self._get_config_file_name(__file__)
+        BaseLLRFWidget.__init__(self, config_file, parent)
         self.loadUi()
-
-    @alert_problems
-    def setModel(self, model):
-        self._device_name = model
-        self._set_comboboxes()
-        self._create_attributes_lists()
-        self._connect_all_attributes()
-        self.connect_with_devices()
-        self.connect_signals()
 
     @alert_problems
     def connect_with_devices(self):
@@ -72,6 +63,16 @@ class Ramping(BaseLLRFWidget):
                                QtCore.SIGNAL("clicked()"),
                                self.writeSlopesA)
 
+        QtCore.QObject.connect(self.ui.pushButton_rampingB,
+                               QtCore.SIGNAL("clicked()"),
+                               self.resetRampingUpB)
+        QtCore.QObject.connect(self.ui.pushButton_rampingB_3,
+                               QtCore.SIGNAL("clicked()"),
+                               self.resetRampingDownB)
+        QtCore.QObject.connect(self.ui.pushButton_writeSlopesB,
+                               QtCore.SIGNAL("clicked()"),
+                               self.writeSlopesB)
+
     @alert_problems
     def resetRampingUpA(self):
         self._device_proxy['RampUpA'] = True
@@ -87,64 +88,28 @@ class Ramping(BaseLLRFWidget):
         self._device_proxy.WriteSlopesA()
 
     @alert_problems
-    def _set_comboboxes(self):
-        self.ui.comboBox_rampingEnA.addValueNames(CB)
-
-   # @alert_problems
-   # def _connect_all_attributes(self):
-   #     for attribute in self._attributes:
-   #         self.connect_attribute(attribute[0], attribute[1])
-
-   #     for attribute in self._attributes_readback:
-   #         self.connect_attribute(attribute[0], attribute[1])
-
-   #     for combobox in self._comboboxes:
-   #         self.connect_combobox(combobox[0], combobox[1])
-
-   # @alert_problems
-   # def connect_attribute(self, widget, attribute):
-   #     attribute = self._device_name + '/' + attribute
-   #     widget.setModel(attribute)
-
-   # @alert_problems
-   # def connect_combobox(self, widget, attribute):
-   #     attribute = self._device_name + '/' + attribute
-   #     widget.setModelName(attribute)
+    def resetRampingUpB(self):
+        self._device_proxy['RampUpB'] = True
+        self._device_proxy['RampUpB'] = False
 
     @alert_problems
-    def _create_attributes_lists(self):
-        self._attributes = []
+    def resetRampingDownB(self):
+        self._device_proxy['RampDownB'] = True
+        self._device_proxy['RampDownB'] = False
 
-        self._attributes_readback = [
-            (self.ui.tauValueLabel_RampingEnA, "RampingEnA"),
-            (self.ui.tauValueLabel_timeRampUpA, "TimeRampUpA"),
-            (self.ui.tauValueLabel_timeRampDownA, "TimeRampDownA"),
-            (self.ui.tauValueLabel_ampRampInitA, "AmpRampInitA"),
-            (self.ui.tauValueLabel_ampRampEndA, "AmpRampEndA"),
-            (self.ui.tauValueLabel_phaseRampInitA, "PhaseRampInitA"),
-            (self.ui.tauValueLabel_phaseRampEndA, "PhaseRampEndA"),
-            
-            (self.ui.tauValueLabel_IRampInitA, "IRampInitA"),
-            (self.ui.tauValueLabel_QRampInitA, "QRampInitA"),
-            (self.ui.tauValueLabel_IRampEndA, "IRampEndA"),
-            (self.ui.tauValueLabel_QRampEndA, "QRampEndA"),
-            (self.ui.tauValueLabel_AmpSlopeRampUpA, "AmpSlopeRampUpA"),
-            (self.ui.tauValueLabel_PhaseSlopeRampUpA, "PhaseSlopeRampUpA"),
-            (self.ui.tauValueLabel_AmpSlopeRampDownA, "AmpSlopeRampDownA"),
-            (self.ui.tauValueLabel_PhaseSlopeRampDownA, "PhaseSlopeRampDownA"),
-        ]
+    @alert_problems
+    def writeSlopesB(self):
+        self._device_proxy.WriteSlopesB()
 
-        self._comboboxes = [
-            (self.ui.comboBox_rampingEnA, "RampingEnA"),
-        ]
 
 def main():
     import sys
     from taurus.qt.qtgui.application import TaurusApplication
 
     app = TaurusApplication()
-    model = ''
+    model = 'ws/rf/pynutaq_1'
     panel = Ramping()
+    panel.setModel(model)
     panel.show()
 
     sys.exit(app.exec_())

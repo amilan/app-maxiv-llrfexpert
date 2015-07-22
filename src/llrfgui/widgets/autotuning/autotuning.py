@@ -29,12 +29,8 @@ __author__ = "amilan"
 
 __docformat__ = 'restructuredtext'
 
-from taurus.external.qt import Qt
 from taurus.qt.qtgui.util.ui import UILoadable
 
-#from utils import tih, alert_problems
-from llrfgui.utils.commons import *
-from llrfgui.utils.decorators import alert_problems
 from llrfgui.widgets.basellrfwidget import BaseLLRFWidget
 
 
@@ -42,65 +38,18 @@ from llrfgui.widgets.basellrfwidget import BaseLLRFWidget
 class AutoTuning(BaseLLRFWidget):
 
     def __init__(self, parent=None):
-        BaseLLRFWidget.__init__(self, parent)
+        config_file = self._get_config_file_name(__file__)
+        BaseLLRFWidget.__init__(self, config_file, parent)
         self.loadUi()
-
-    @alert_problems
-    def _set_comboboxes(self):
-        # Tuning Loop A
-        self.ui.comboBox_tuningEn.addValueNames(CB)
-        self.ui.comboBox_tuningPosEn.addValueNames(CB)
-        self.ui.comboBox_tuningFreq.addValueNames(CC)
-        self.ui.comboBox_tuningTrgEnA.addValueNames(CFS)
-        self.ui.comboBox_tuningFilterEnA.addValueNames(CB)
-
-        # Tuning Loop B
-        # self.ui.comboBox_tuningEn_2.addValueNames(CB)
-        # self.ui.comboBox_tuningPosEn_2.addValueNames(CB)
-        # self.ui.comboBox_tuningFreq_2.addValueNames(CC)
-        # self.ui.comboBox_tuningTrgEnB.addValueNames(CFS)
-        # self.ui.comboBox_tuningFilterEnB.addValueNames(CB)
-
-    @alert_problems
-    def _create_attributes_lists(self):
-        self._attributes = [
-            (self.ui.lineEdit_marginUp_2, "MarginUpA"),
-            (self.ui.lineEdit_marginLow_2, "MarginLowA"),
-            (self.ui.lineEdit_forwardMin, "FwminA"),
-            (self.ui.lineEdit_tuningOffset, "PhaseOffsetA"),
-            (self.ui.lineEdit_tuningDelayA, "TuningdelayA"),
-        ]
-
-        self._attributes_readback = [
-            (self.ui.taurusBoolLed_31, "_Diag_MovingPlungerAutoA"),
-            (self.ui.taurusBoolLed_32, "Diag_FreqUpA"),
-            (self.ui.tauValueLabel_tuningEn, "TuningEnableA"),
-            (self.ui.tauValueLabel_tuningPosEn, "TuningPosEnA"),
-            (self.ui.tauValueLabel_tuningFreq, "PulsesFrequencyA"),
-            (self.ui.tauValueLabel_marginUp, "MarginUpA"),
-            (self.ui.tauValueLabel_marginLow, "MarginLowA"),
-            (self.ui.tauValueLabel_tuningOffset, "PhaseOffsetA"),
-            (self.ui.tauValueLabel_forwardMin_2, "FwminA"),
-            (self.ui.tauValueLabel_tuningFilterEnA,"TuningfilterenableA"),
-            (self.ui.tauValueLabel_tuningDelayA, "TuningdelayA"),
-            (self.ui.tauValueLabel_tuningTrgEnA, "TuningtriggerenableA"),
-        ]
-
-        self._comboboxes = [
-            (self.ui.comboBox_tuningEn, "TuningEnableA"),
-            (self.ui.comboBox_tuningPosEn, "TuningPosEnA"),
-            (self.ui.comboBox_tuningFreq, "PulsesFrequencyA"),
-            (self.ui.comboBox_tuningTrgEnA, "TuningtriggerenableA"),
-            (self.ui.comboBox_tuningFilterEnA, "TuningfilterenableA"),
-        ]
 
 def main():
     import sys
     from taurus.qt.qtgui.application import TaurusApplication
 
     app = TaurusApplication()
-    model = ''
+    model = 'ws/rf/pynutaq_1'
     panel = AutoTuning()
+    panel.setModel(model)
     panel.show()
 
     sys.exit(app.exec_())

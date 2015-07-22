@@ -1,0 +1,145 @@
+# YAML configuration file used to connect each widget to its model.
+# The data structure will be a dictionary compose by lists of
+# the following elements:
+
+#  -------------------------------------------------------------------------
+# |                               attributes                                |
+#  -------------------------------------------------------------------------
+# |    widget_name    |    tango_attribute    |    use_diagnostic_device    |
+#  -------------------------------------------------------------------------
+
+#  -------------------------------------------------------------------------
+# |                                readback                                 |
+#  -------------------------------------------------------------------------
+# |    widget_name    |    tango_attribute    |    use_diagnostic_device    |
+#  -------------------------------------------------------------------------
+
+#  -------------------------------------------------------------------------
+# |                               comboboxes                                |
+#  -------------------------------------------------------------------------
+# | widget_name | tango_attribute | values_for_comboboxes | use_diag_device |
+#  -------------------------------------------------------------------------
+
+
+attributes:
+-
+
+readback:
+# Cavity A
+# I signals
+- [tauValueLabel_ICavVolt, Diag_IcavLoopsA, false]
+- [tauValueLabel_IFwCavVolt_5, Diag_IFwCavLoopsA, false]
+- [tauValueLabel_IRvCavVolt_3,  Diag_IrvcavA, true]
+- [tauValueLabel_IFwTet1_3, Diag_IFwTet1LoopsA, false]
+- [tauValueLabel_IFwTet2_3, Diag_IFwTet2LoopsA, false]
+- [tauValueLabel_IRvTet1_3,  Diag_Irvtet1A, true]
+- [tauValueLabel_IRvTet2_3,  Diag_Irvtet2A, true]
+- [tauValueLabel_IFwCirc_3, Diag_IFwCircInLoopsA, false]
+- [tauValueLabel_IRvCirc_3,  Diag_IrvcircA, true]
+- [tauValueLabel_IFwLoad_3,  Diag_IfwloadA, true]
+- [tauValueLabel_IFwHybLoad_3,  Diag_IfwhybloadA, true]
+- [tauValueLabel_IMO_5,  Diag_ImoA, true]
+- [tauValueLabel_Landau,  Diag_IlandauA, true]
+# Q signals
+- [tauValueLabel_QCavVolt, Diag_QcavLoopsA, false]
+- [tauValueLabel_QFwCavVolt_5, Diag_QFwCavLoopsA, false]
+- [tauValueLabel_QRvCavVolt_3,  Diag_QrvcavA, true]
+- [tauValueLabel_QFwTet1_3, Diag_QFwTet1LoopsA, false]
+- [tauValueLabel_QFwTet2_3, Diag_QFwTet2LoopsA, false]
+- [tauValueLabel_QRvTet1_3,  Diag_Qrvtet1A, true]
+- [tauValueLabel_QRvTet2_3,  Diag_Qrvtet2A, true]
+- [tauValueLabel_QFwCirc_3, Diag_QFwCircInLoopsA, false]
+- [tauValueLabel_QRvCirc_3,  Diag_Qrvcirca, true]
+- [tauValueLabel_QFwLoad_3,  Diag_QfwloadA, true]
+- [tauValueLabel_QFwHybLoad_3,  Diag_QfwhybloadA, true]
+- [tauValueLabel_QMO_5,  Diag_QmoA, true]
+- [tauValueLabel_QMO_6,  Diag_QlandauA, true]
+# Amp signals
+- [tauValueLabel_ampFwCavVolt_6, Diag_AmpCavLoopsA, false]
+- [tauValueLabel_ampFwCavVolt_5, Diag_AmpFwCavLoopsA, false]
+- [tauValueLabel_ampRvCavVolt_3,  Diag_AmpRvcavA, true]
+- [tauValueLabel_ampFwTet1_3, Diag_AmpFwTet1LoopsA, false]
+- [tauValueLabel_ampFwTet2_3, Diag_AmpFwTet2LoopsA, false]
+- [tauValueLabel_ampRvTet1_3,  Diag_AmpRvtet1A, true]
+- [tauValueLabel_ampRvTet2_3,  Diag_AmpRvtet2A, true]
+- [tauValueLabel_ampFwCirc_3, Diag_AmpFwCircInLoopsA, false]
+- [tauValueLabel_ampRvCirc_3,  Diag_AmpRvcircA, true]
+- [tauValueLabel_ampFwLoad_3,  Diag_AmpFwloadA, true]
+- [tauValueLabel_ampFwHybLoad_3,  Diag_AmpFwhybloadA, true]
+- [tauValueLabel_ampMO_5,  Diag_AmpMoA, true]
+- [tauValueLabel_ampMO_6,  Diag_AmpLandauA, true]
+# Phase signals
+- [tauValueLabel_phaseFwCavVolt_6, Diag_PhCavLoopsA, false]
+- [tauValueLabel_phaseFwCavVolt_5, Diag_PhFwCavLoopsA, false]
+- [tauValueLabel_phaseRvCavVolt_3,  Diag_PhRvcavA, true]
+- [tauValueLabel_phaseFwTet1_3, Diag_PhFwTet1LoopsA, false]
+- [tauValueLabel_phaseFwTet2_3, Diag_PhFwTet2LoopsA, false]
+- [tauValueLabel_phaseRvTet1_3,  Diag_PhRvtet1A, true]
+- [tauValueLabel_phaseRvTet2_3,  Diag_PhRvtet2A, true]
+- [tauValueLabel_phaseFwCirc_3, Diag_PhFwCircInLoopsA, false]
+- [tauValueLabel_phaseRvCirc_3,  Diag_PhRvcircA, true]
+- [tauValueLabel_phaseFwLoad_3,  Diag_PhFwloadA, true]
+- [tauValueLabel_phaseFwHybLoad_3,  Diag_PhFwhybloadA, true]
+- [tauValueLabel_phaseMO_5,  Diag_PhMoA, true]
+- [tauValueLabel_phaseMO_6,  Diag_PhLandauA, true]
+
+# Cavity B
+# I signals
+- [tauValueLabel_IFwCavVolt_8, Diag_IcavLoopsB, false]
+- [tauValueLabel_IFwCavVolt_7, Diag_IFwCavLoopsB, false]
+- [tauValueLabel_IRvCavVolt_4,  Diag_IrvcavB, true]
+- [tauValueLabel_IFwTet1_4, Diag_IFwTet1LoopsB, false]
+- [tauValueLabel_IFwTet2_4, Diag_IFwTet2LoopsB, false]
+- [tauValueLabel_IRvTet1_4,  Diag_Irvtet1B, true]
+- [tauValueLabel_IRvTet2_4,  Diag_Irvtet2B, true]
+- [tauValueLabel_IFwCirc_4, Diag_IFwCircInLoopsB, false]
+- [tauValueLabel_IRvCirc_4,  Diag_IrvcircB, true]
+- [tauValueLabel_IFwLoad_4,  Diag_IfwloadB, true]
+- [tauValueLabel_IFwHybLoad_4,  Diag_IfwhybloadB, true]
+- [tauValueLabel_IMO_7,  Diag_ImoB, true]
+- [tauValueLabel_IMO_8,  Diag_IlandauB, true]
+# Q signals
+- [tauValueLabel_QFwCavVolt_8, Diag_QcavLoopsB, false]
+- [tauValueLabel_QFwCavVolt_7, Diag_QFwCavLoopsB, false]
+- [tauValueLabel_QRvCavVolt_4,  Diag_QrvcavB, true]
+- [tauValueLabel_QFwTet1_4, Diag_QFwTet1LoopsB, false]
+- [tauValueLabel_QFwTet2_4, Diag_QFwTet2LoopsB, false]
+- [tauValueLabel_QRvTet1_4,  Diag_Qrvtet1B, true]
+- [tauValueLabel_QRvTet2_4,  Diag_Qrvtet2B, true]
+- [tauValueLabel_QFwCirc_4, Diag_QFwCircInLoopsB, false]
+- [tauValueLabel_QRvCirc_4,  Diag_QrvcircB, true]
+- [tauValueLabel_QFwLoad_4,  Diag_QfwloadB, true]
+- [tauValueLabel_QFwHybLoad_4,  Diag_QfwhybloadB, true]
+- [tauValueLabel_QMO_7,  Diag_QmoB, true]
+- [tauValueLabel_QMO_8,  Diag_QlandauB, true]
+# Amp signals
+- [tauValueLabel_ampFwCavVolt_8, Diag_AmpCavLoopsB, false]
+- [tauValueLabel_ampFwCavVolt_7, Diag_AmpFwCavLoopsB, false]
+- [tauValueLabel_ampRvCavVolt_4,  Diag_AmpRvcavB, true]
+- [tauValueLabel_ampFwTet1_4, Diag_AmpFwTet1LoopsB, false]
+- [tauValueLabel_ampFwTet2_4, Diag_AmpFwTet2LoopsB, false]
+- [tauValueLabel_ampRvTet1_4,  Diag_AmpRvtet1B, true]
+- [tauValueLabel_ampRvTet2_4,  Diag_AmpRvtet2B, true]
+- [tauValueLabel_ampFwCirc_4, Diag_AmpFwCircInLoopsB, false]
+- [tauValueLabel_ampRvCirc_4,  Diag_AmpRvcircB, true]
+- [tauValueLabel_ampFwLoad_4,  Diag_AmpFwloadB, true]
+- [tauValueLabel_ampFwHybLoad_4,  Diag_AmpFwhybloadB, true]
+- [tauValueLabel_ampMO_7,  Diag_AmpMoB, true]
+- [tauValueLabel_ampMO_8,  Diag_AmpLandauB, true]
+# Phase signals
+- [tauValueLabel_phaseFwCavVolt_8, Diag_PhCavLoopsB, false]
+- [tauValueLabel_phaseFwCavVolt_7, Diag_PhFwCavLoopsB, false]
+- [tauValueLabel_phaseRvCavVolt_4,  Diag_PhRvcavB, true]
+- [tauValueLabel_phaseFwTet1_4, Diag_PhFwTet1LoopsB, false]
+- [tauValueLabel_phaseFwTet2_4, Diag_PhFwTet2LoopsB, false]
+- [tauValueLabel_phaseRvTet1_4,  Diag_PhRvtet1B, true]
+- [tauValueLabel_phaseRvTet2_4,  Diag_PhRvtet2B, true]
+- [tauValueLabel_phaseFwCirc_4, Diag_PhFwCircInLoopsB, false]
+- [tauValueLabel_phaseRvCirc_4,  Diag_PhRvcircB, true]
+- [tauValueLabel_phaseFwLoad_4,  Diag_PhFwloadB, true]
+- [tauValueLabel_phaseFwHybLoad_4,  Diag_PhFwhybloadB, true]
+- [tauValueLabel_phaseMO_7,  Diag_PhMoB, true]
+- [tauValueLabel_phaseMO_8,  Diag_PhLandauB, true]
+
+comboboxes:
+-

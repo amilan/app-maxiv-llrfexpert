@@ -1,0 +1,58 @@
+# YAML configuration file used to connect each widget to its model.
+# The data structure will be a dictionary compose by lists of
+# the following elements:
+
+#  -------------------------------------------------------
+# |                      attributes                       |
+#  -------------------------------------------------------
+# |              widget_name | tango_attribute            |
+#  -------------------------------------------------------
+
+#  -------------------------------------------------------
+# |                      readback                         |
+#  -------------------------------------------------------
+# |              widget_name | tango_attribute            |
+#  -------------------------------------------------------
+
+#  -------------------------------------------------------
+# |                      comboboxes                       |
+#  -------------------------------------------------------
+# | widget_name | tango_attribute | values_for_comboboxes |
+#  -------------------------------------------------------
+
+attributes:
+-
+
+readback:
+# Cavity A
+- [tauValueLabel_DACsOffDisA, Diag_DacsDisableCommandA]
+- [tauValueLabel_PINSwitchDisA, Diag_PinSwitchA]
+- [tauValueLabel_triggerFDLLoopsDisA, Diag_FdlTriggerToLoopsdiagboardA]
+- [tauValueLabel_triggerFDLDiagDisA, Diag_FdlTriggerForDiagnosticsPursposesA]
+- [tauValueLabel_outputPLCDisA, Diag_OutputToPlcA]
+#(self.ui.tauValueLabel_outputUpLevelDisA, OutputUpperLevelDisA]
+
+# Cavity B
+- [tauValueLabel_DACsOffDisB, Diag_DacsDisableCommandB]
+- [tauValueLabel_PINSwitchDisB, Diag_PinSwitchB]
+- [tauValueLabel_triggerFDLLoopsDisB, Diag_FdlTriggerToLoopsdiagboardB]
+- [tauValueLabel_triggerFDLDiagDisB, Diag_FdlTriggerForDiagnosticsPursposesB]
+- [tauValueLabel_outputPLCDisB, Diag_OutputToPlcB]
+#- [tauValueLabel_outputUpLevelDisB, OutputUpperLevelDisB]
+
+comboboxes:
+# Cavity A
+- [comboBox_DACsOffDisA, Diag_DacsDisableCommandA, CEN]
+- [comboBox_PINSwitchDisA, Diag_PinSwitchA, CEN]
+- [comboBox_triggerFDLLoopsDisA, Diag_FdlTriggerToLoopsdiagboardA, CEN]
+- [comboBox_triggerFDLDiagDisA, Diag_FdlTriggerForDiagnosticsPursposesA, CEN]
+- [comboBox_outputPLCDisA, Diag_OutputToPlcA, CEN]
+#(self.ui.comboBox_outputUpLevelDisA, OutputUpperLevelDisA, CEN]
+
+# Cavity B
+- [comboBox_DACsOffDisB, Diag_DacsDisableCommandB, CEN]
+- [comboBox_PINSwitchDisB, Diag_PinSwitchB, CEN]
+- [comboBox_triggerFDLLoopsDisB, Diag_FdlTriggerToLoopsdiagboardB, CEN]
+- [comboBox_triggerFDLDiagDisB, Diag_FdlTriggerForDiagnosticsPursposesB, CEN]
+- [comboBox_outputPLCDisB, Diag_OutputToPlcB, CEN]
+#- [comboBox_outputUpLevelDisB, OutputUpperLevelDisB, CEN]

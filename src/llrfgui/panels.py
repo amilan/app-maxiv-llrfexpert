@@ -52,8 +52,8 @@ def get_models_dict(loops_device, diags_device):
         'AutoTuning': loops_device,
         'Conditioning': loops_device,
         'Diagdc': loops_device,
-        'Diags':[loops_device, diags_device],
-        'Fdl':loops_device,
+        'Diags': [loops_device, diags_device],
+        'Fdl': [loops_device, diags_device],
         'Fpgaclock': [loops_device, diags_device],
         'FpgaVersion': [loops_device, diags_device],
         'InterlockLevel': diags_device,
@@ -62,12 +62,12 @@ def get_models_dict(loops_device, diags_device):
         'ItckInputDisable': diags_device,
         'ItckOutDiag': diags_device,
         'ItckOutDisable': diags_device,
-        'Landau': [loops_device, diags_device],
+        'Landau': diags_device,
         'ManualTuning': loops_device,
         'Ramping': loops_device,
         'RampingDiag': loops_device,
         'Start': [loops_device, diags_device],
-        'TuningDiag': [loops_device, diags_device],
+        'TuningDiag': loops_device,
         'Vcxo': loops_device,
         'PolarDiag': loops_device,
         'FIM': diags_device,
@@ -84,7 +84,7 @@ def create_panels():
             modulename = 'llrfgui.widgets.' + name.lower(),
             model = models_dict[name]
         )
-#:todo: fix this and set it in a __main__ or add all 
+# :todo: fix this and set it in a __main__ or add all
 #       this functions in another library, and don't include it in the doc.
 loops, diags = get_model()
 models_dict = get_models_dict(loops, diags)

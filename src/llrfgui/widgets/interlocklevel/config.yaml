@@ -1,0 +1,56 @@
+# YAML configuration file used to connect each widget to its model.
+# The data structure will be a dictionary compose by lists of
+# the following elements:
+
+#  -------------------------------------------------------
+# |                      attributes                       |
+#  -------------------------------------------------------
+# |              widget_name | tango_attribute            |
+#  -------------------------------------------------------
+
+#  -------------------------------------------------------
+# |                      readback                         |
+#  -------------------------------------------------------
+# |              widget_name | tango_attribute            |
+#  -------------------------------------------------------
+
+#  -------------------------------------------------------
+# |                      comboboxes                       |
+#  -------------------------------------------------------
+# | widget_name | tango_attribute | values_for_comboboxes |
+#  -------------------------------------------------------
+
+attributes:
+# Cavity A
+- [lineEdit_RvTet1A, Rvtet1A]
+- [lineEdit_RvTet2A, Rvtet2A]
+- [lineEdit_RvCircA, RvcircA]
+- [lineEdit_FwLoadA, FwloadA]
+- [lineEdit_FwHybLoadA, FwhybloadA]
+- [lineEdit_RvCavA, RvcavA]
+# Cavity B
+- [lineEdit_RvTet1B, Rvtet1B]
+- [lineEdit_RvTet2B, Rvtet2B]
+- [lineEdit_RvCircB, RvcircB]
+- [lineEdit_FwLoadB, FwloadB]
+- [lineEdit_FwHybLoadB, FwhybloadB]
+- [lineEdit_RvCavB, RvcavB]
+
+readback:
+# Cavity A
+- [tauValueLabel_RvTet1A, RvTet1A]
+- [tauValueLabel_RvTet2A, RvTet2A]
+- [tauValueLabel_RvCircA, RvCircA]
+- [tauValueLabel_FwLoadA, FwloadA]
+- [tauValueLabel_FwHybLoadA, FwhybloadA]
+- [tauValueLabel_RvCavA, RvcavA]
+# Cavity A
+- [tauValueLabel_RvTet1B, RvTet1B]
+- [tauValueLabel_RvTet2B, RvTet2B]
+- [tauValueLabel_RvCircB, RvCircB]
+- [tauValueLabel_FwLoadB, FwloadB]
+- [tauValueLabel_FwHybLoadB, FwhybloadB]
+- [tauValueLabel_RvCavB, RvcavB]
+
+comboboxes:
+-

@@ -1,0 +1,85 @@
+# YAML configuration file used to connect each widget to its model.
+# The data structure will be a dictionary compose by lists of
+# the following elements:
+
+#  -------------------------------------------------------
+# |                      attributes                       |
+#  -------------------------------------------------------
+# |              widget_name | tango_attribute            |
+#  -------------------------------------------------------
+
+#  -------------------------------------------------------
+# |                      readback                         |
+#  -------------------------------------------------------
+# |              widget_name | tango_attribute            |
+#  -------------------------------------------------------
+
+#  -------------------------------------------------------
+# |                      comboboxes                       |
+#  -------------------------------------------------------
+# | widget_name | tango_attribute | values_for_comboboxes |
+#  -------------------------------------------------------
+
+attributes:
+# Cavity A
+- [lineEdit_numberPulses_3, NumstepsA]
+- [lineEdit_tuningOffset_3, LandauphaseoffsetA]
+- [lineEdit_marginUp_4, LandaumarginupA]
+- [lineEdit_marginLow_4, LandaumarginlowA]
+- [lineEdit_landauAmpSet, LandauampsettingA]
+- [lineEdit_forwardMin_4, MinimumLandauAmplitudeA]
+## Cavity B
+#- [lineEdit_numberPulses_3, NumstepsB]
+#- [lineEdit_tuningOffset_3, LandauphaseoffsetB]
+#- [lineEdit_marginUp_4, LandaumarginupB]
+#- [lineEdit_marginLow_4, LandaumarginlowB]
+#- [lineEdit_landauAmpSet, LandauampsettingB]
+#- [lineEdit_forwardMin_4, MinimumLandauAmplitudeB]
+
+readback:
+# Cavity A
+- [taurusBoolLed_37, Diag_PlungerMovingManualTuningA]
+- [taurusBoolLed_38, Diag_PlungerMovingUpManualTuningA]
+- [tauValueLabel_numberPulses_4, NumStepsA]
+- [tauValueLabel_moveUp_3, MovelandauupA]
+- [tauValueLabel_movePlg1_3, MovelandauplgA]
+- [taurusBoolLed_39, Diag_PlungerMovingAutomaticTuningA]
+- [taurusBoolLed_40, Diag_PlungerMovingUpAutomaticTuningA]
+
+- [tauValueLabel_tuningOffset_3, LandauphaseoffsetA]
+- [tauValueLabel_marginUp_3, LandaumarginupA]
+- [tauValueLabel_marginLow_3, LandauMarginLowA]
+- [tauValueLabel_landauAmpSet, LandauampsettingA]
+- [tauValueLabel_forwardMin_5, MinimumLandauAmplitudeA]
+- [tauValueLabel_tuningEn_3, LandautuningenableA]
+- [tauValueLabel_tuningPosEn_3, LandauPositiveEnableA]
+
+## Cavity B
+#- [taurusBoolLed_37, Diag_PlungerMovingManualTuningB]
+#- [taurusBoolLed_38, Diag_PlungerMovingUpManualTuningB]
+#- [tauValueLabel_numberPulses_4, NumStepsB]
+#- [tauValueLabel_moveUp_3, MovelandauupB]
+#- [tauValueLabel_movePlg1_3, MovelandauplgB]
+#- [taurusBoolLed_39, Diag_PlungerMovingAutomaticTuningB]
+#- [taurusBoolLed_40, Diag_PlungerMovingUpAutomaticTuningB]
+#
+#- [tauValueLabel_tuningOffset_3, LandauphaseoffsetB]
+#- [tauValueLabel_marginUp_3, LandaumarginupB]
+#- [tauValueLabel_marginLow_3, LandauMarginLowB]
+#- [tauValueLabel_landauAmpSet, LandauampsettingB]
+#- [tauValueLabel_forwardMin_5, MinimumLandauAmplitudeB]
+#- [tauValueLabel_tuningEn_3, LandautuningenableB]
+#- [tauValueLabel_tuningPosEn_3, LandauPositiveEnableB]
+
+comboboxes:
+# Cavity A
+- [comboBox_moveUp_3, MovelandauupA, CB]
+- [comboBox_movePlg_3, MovelandauplgA, CB]
+- [comboBox_tuningEn_3, LandautuningenableA, CB]
+- [comboBox_tuningPosEn_3, LandauPositiveEnableA, CB]
+
+## Cavity B
+#- [comboBox_moveUp_3, MovelandauupB, CB]
+#- [comboBox_movePlg_3, MovelandauplgB, CB]
+#- [comboBox_tuningEn_3, LandautuningenableB, CB]
+#- [comboBox_tuningPosEn_3, LandauPositiveEnableB, CB]

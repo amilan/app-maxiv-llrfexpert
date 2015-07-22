@@ -2118,13 +2118,13 @@
    <header>taurus.qt.qtgui.display</header>
   </customwidget>
   <customwidget>
-   <class>TaurusValueLineEdit</class>
-   <extends>QLineEdit</extends>
+   <class>TaurusValueComboBox</class>
+   <extends>QComboBox</extends>
    <header>taurus.qt.qtgui.input</header>
   </customwidget>
   <customwidget>
-   <class>TaurusValueComboBox</class>
-   <extends>QComboBox</extends>
+   <class>TaurusValueLineEdit</class>
+   <extends>QLineEdit</extends>
    <header>taurus.qt.qtgui.input</header>
   </customwidget>
   <customwidget>

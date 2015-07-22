@@ -276,7 +276,7 @@
           </widget>
          </item>
          <item row="4" column="2">
-          <widget class="TaurusLabel" name="tauValueLabel_autoStartUpA_2">
+          <widget class="TaurusLabel" name="tauValueLabel_EPSITCKA">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -369,7 +369,7 @@
           </widget>
          </item>
          <item row="4" column="1">
-          <widget class="TaurusValueComboBox" name="comboBox_EPSITCK">
+          <widget class="TaurusValueComboBox" name="comboBox_EPSITCKA">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -596,7 +596,7 @@
           </widget>
          </item>
          <item row="5" column="1">
-          <widget class="TaurusValueComboBox" name="comboBox_FIMITCK">
+          <widget class="TaurusValueComboBox" name="comboBox_FIMITCKA">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -626,7 +626,7 @@
           </widget>
          </item>
          <item row="5" column="2">
-          <widget class="TaurusLabel" name="tauValueLabel_autoStartUpA_3">
+          <widget class="TaurusLabel" name="tauValueLabel_FIMITCKA">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -1017,7 +1017,7 @@
           </widget>
          </item>
          <item row="4" column="1">
-          <widget class="TaurusLabel" name="tauValueLabel_autoStartUpA_4">
+          <widget class="TaurusLabel" name="tauValueLabel_EPSITCKB">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -1047,7 +1047,7 @@
           </widget>
          </item>
          <item row="5" column="1">
-          <widget class="TaurusLabel" name="tauValueLabel_autoStartUpA_5">
+          <widget class="TaurusLabel" name="tauValueLabel_FIMITCKB">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -1077,7 +1077,7 @@
           </widget>
          </item>
          <item row="4" column="0">
-          <widget class="TaurusValueComboBox" name="comboBox_autoStartUpA_4">
+          <widget class="TaurusValueComboBox" name="comboBox_EPSITCKB">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -1107,7 +1107,7 @@
           </widget>
          </item>
          <item row="5" column="0">
-          <widget class="TaurusValueComboBox" name="comboBox_autoStartUpA_5">
+          <widget class="TaurusValueComboBox" name="comboBox_FIMITCKB">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
              <horstretch>0</horstretch>

@@ -1,0 +1,112 @@
+# YAML configuration file used to connect each widget to its model.
+# The data structure will be a dictionary compose by lists of
+# the following elements:
+
+#  -------------------------------------------------------
+# |                      attributes                       |
+#  -------------------------------------------------------
+# |              widget_name | tango_attribute            |
+#  -------------------------------------------------------
+
+#  -------------------------------------------------------
+# |                      readback                         |
+#  -------------------------------------------------------
+# |              widget_name | tango_attribute            |
+#  -------------------------------------------------------
+
+#  -------------------------------------------------------
+# |                      comboboxes                       |
+#  -------------------------------------------------------
+# | widget_name | tango_attribute | values_for_comboboxes |
+#  -------------------------------------------------------
+
+attributes:
+- [taurusValueCheckBox, DisitckRvTet1DacsoffloopsstbyA]
+- [taurusValueCheckBox_1, DisitckRvTet1PindiodeswitchA]
+- [taurusValueCheckBox_2, DisitckRvTet1FdltrgA]
+- [taurusValueCheckBox_3, DisitckRvTet1PlctxoffA]
+- [taurusValueCheckBox_4, DisitckRvTet1MpsA]
+- [taurusValueCheckBox_5, DisitckRvTet1DiagA]
+
+- [taurusValueCheckBox_6, DisitckRvTet2DacsoffloopsstbyA]
+- [taurusValueCheckBox_7, DisitckRvTet2PindiodeswitchA]
+- [taurusValueCheckBox_8, DisitckRvTet2FdltrgA]
+- [taurusValueCheckBox_9, DisitckRvTet2PlctxoffA]
+- [taurusValueCheckBox_10, DisitckRvTet2MpsA]
+- [taurusValueCheckBox_11, DisitckRvTet2DiagA]
+
+- [taurusValueCheckBox_12, DisitckRvCircDacsoffloopsstbyA]
+- [taurusValueCheckBox_13, DisitckRvCircPindiodeswitchA]
+- [taurusValueCheckBox_14, DisitckRvCircFdltrgA]
+- [taurusValueCheckBox_15, DisitckRvCircPlctxoffA]
+- [taurusValueCheckBox_16, DisitckRvCircMpsA]
+- [taurusValueCheckBox_17, DisitckRvCircDiagA]
+
+- [taurusValueCheckBox_18, DisitckFwLoadDacsoffloopsstbyA]
+- [taurusValueCheckBox_19, DisitckFwLoadPindiodeswitchA]
+- [taurusValueCheckBox_20, DisitckFwLoadFdltrgA]
+- [taurusValueCheckBox_21, DisitckFwLoadPlctxoffA]
+- [taurusValueCheckBox_22, DisitckFwLoadMpsA]
+- [taurusValueCheckBox_23, DisitckFwLoadDiagA]
+
+- [taurusValueCheckBox_24, DisitckFwHybLoadDacsoffloopsstbyA]
+- [taurusValueCheckBox_25, DisitckFwHybLoadPindiodeswitchA]
+- [taurusValueCheckBox_26, DisitckFwHybLoadFdltrgA]
+- [taurusValueCheckBox_27, DisitckFwHybLoadPlctxoffA]
+- [taurusValueCheckBox_28, DisitckFwHybLoadMpsA]
+- [taurusValueCheckBox_29, DisitckFwHybLoadDiagA]
+
+- [taurusValueCheckBox_30, DisitckRvCavDacsoffloopsstbyA]
+- [taurusValueCheckBox_31, DisitckRvCavPindiodeswitchA]
+- [taurusValueCheckBox_32, DisitckRvCavFdltrgA]
+- [taurusValueCheckBox_33, DisitckRvCavPlctxoffA]
+- [taurusValueCheckBox_34, DisitckRvCavMpsA]
+- [taurusValueCheckBox_35, DisitckRvCavDiagA]
+
+- [taurusValueCheckBox_36, DisitckArcsDacsoffloopsstbyA]
+- [taurusValueCheckBox_37, DisitckArcsPindiodeswitchA]
+- [taurusValueCheckBox_38, DisitckArcsFdltrgA]
+- [taurusValueCheckBox_39, DisitckArcsPlctxoffA]
+- [taurusValueCheckBox_40, DisitckArcsMpsA]
+- [taurusValueCheckBox_41, DisitckArcsDiagA]
+
+- [taurusValueCheckBox_42, DisitckVacuumDacsoffloopsstbyA]
+- [taurusValueCheckBox_43, DisitckVacuumPindiodeswitchA]
+- [taurusValueCheckBox_44, DisitckVacuumFdltrgA]
+- [taurusValueCheckBox_45, DisitckVacuumPlctxoffA]
+- [taurusValueCheckBox_46, DisitckVacuumMpsA]
+- [taurusValueCheckBox_47, DisitckVacuumDiagA]
+
+- [taurusValueCheckBox_48, DisitckManualInterlockDacsoffloopsstbyA]
+- [taurusValueCheckBox_49, DisitckManualInterlockPindiodeswitchA]
+- [taurusValueCheckBox_50, DisitckManualInterlockFdltrgA]
+- [taurusValueCheckBox_51, DisitckManualInterlockPlctxoffA]
+- [taurusValueCheckBox_52, DisitckManualInterlockMpsA]
+- [taurusValueCheckBox_53, DisitckManualInterlockDiagA]
+
+- [taurusValueCheckBox_54, DisitckPlungerEndSwitchesUPDacsoffloopsstbyA]
+- [taurusValueCheckBox_55, DisitckPlungerEndSwitchesUPPindiodeswitchA]
+- [taurusValueCheckBox_56, DisitckPlungerEndSwitchesUPFdltrgA]
+- [taurusValueCheckBox_57, DisitckPlungerEndSwitchesUPPlctxoffA]
+- [taurusValueCheckBox_58, DisitckPlungerEndSwitchesUPMpsA]
+- [taurusValueCheckBox_59, DisitckPlungerEndSwitchesUPDiagA]
+
+- [taurusValueCheckBox_60, DisitckPlungerEndSwitchesDownDacsoffloopsstbyA]
+- [taurusValueCheckBox_61, DisitckPlungerEndSwitchesDownPindiodeswitchA]
+- [taurusValueCheckBox_62, DisitckPlungerEndSwitchesDownFdltrgA]
+- [taurusValueCheckBox_63, DisitckPlungerEndSwitchesDownPlctxoffA]
+- [taurusValueCheckBox_64, DisitckPlungerEndSwitchesDownMpsA]
+- [taurusValueCheckBox_65, DisitckPlungerEndSwitchesDownDiagA]
+
+- [taurusValueCheckBox_66, DisitckMpsDacsoffloopsstbyA]
+- [taurusValueCheckBox_67, DisitckMpsPindiodeswitchA]
+- [taurusValueCheckBox_68, DisitckMpsFdltrgA]
+- [taurusValueCheckBox_69, DisitckMpsPlctxoffA]
+- [taurusValueCheckBox_70, DisitckMpsMpsA]
+- [taurusValueCheckBox_71, DisitckMpsDiagA]
+
+readback:
+-
+
+comboboxes:
+-

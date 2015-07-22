@@ -34,7 +34,6 @@ import PyTango
 from taurus.external.qt import Qt, QtCore
 from taurus.qt.qtgui.util.ui import UILoadable
 
-from llrfgui.utils.commons import *
 from llrfgui.utils.decorators import alert_problems
 from llrfgui.widgets.basellrfwidget import BaseLLRFWidget
 
@@ -43,17 +42,9 @@ from llrfgui.widgets.basellrfwidget import BaseLLRFWidget
 class InterlockLevel(BaseLLRFWidget):
 
     def __init__(self, parent=None):
-        BaseLLRFWidget.__init__(self, parent)
+        config_file = self._get_config_file_name(__file__)
+        BaseLLRFWidget.__init__(self, config_file, parent)
         self.loadUi()
-
-    @alert_problems
-    def setModel(self, model):
-        self._device_name = model
-        self._set_comboboxes()
-        self._create_attributes_lists()
-        self._connect_all_attributes()
-        self.connect_with_devices()
-        self.connect_signals()
 
     @alert_problems
     def connect_with_devices(self):
@@ -63,44 +54,30 @@ class InterlockLevel(BaseLLRFWidget):
 
     @alert_problems
     def connect_signals(self):
-        QtCore.QObject.connect(self.ui.pushButton_SWITCKA, 
+        QtCore.QObject.connect(self.ui.pushButton_SWITCKA,
                                QtCore.SIGNAL("clicked()"),
-                               self.reset_manual_itck)
+                               self.reset_manual_itckA)
+
+        QtCore.QObject.connect(self.ui.pushButton_SWITCKB,
+                               QtCore.SIGNAL("clicked()"),
+                               self.reset_manual_itckB)
 
     @alert_problems
-    def reset_manual_itck(self):
-        self._device_proxy.reset_manual_itck()
-
+    def reset_manual_itckA(self):
+        self._device_proxy.reset_manual_itckA()
 
     @alert_problems
-    def _create_attributes_lists(self):
-        self._attributes = [
-            (self.ui.lineEdit_RvTet1A, "Rvtet1A"),
-            (self.ui.lineEdit_RvTet2A, "Rvtet2A"),
-            (self.ui.lineEdit_RvCircA, "RvcircA"),
-            (self.ui.lineEdit_FwLoadA, "FwloadA"),
-            (self.ui.lineEdit_FwHybLoadA, "FwhybloadA"),
-            (self.ui.lineEdit_RvCavA, "RvcavA"),
-        ]
-
-        self._attributes_readback = [
-            (self.ui.tauValueLabel_RvTet1A, "RvTet1A"),
-            (self.ui.tauValueLabel_RvTet2A, "RvTet2A"),
-            (self.ui.tauValueLabel_RvCircA, "RvCircA"),
-            (self.ui.tauValueLabel_FwLoadA, "FwloadA"),
-            (self.ui.tauValueLabel_FwHybLoadA, "FwhybloadA"),
-            (self.ui.tauValueLabel_RvCavA, "RvcavA"),
-        ]
-
-        self._comboboxes = []
+    def reset_manual_itckB(self):
+        self._device_proxy.reset_manual_itckB()
 
 def main():
     import sys
     from taurus.qt.qtgui.application import TaurusApplication
 
     app = TaurusApplication()
-    model = ''
+    model = 'ws/rf/pynutaqdiags_1'
     panel = InterlockLevel()
+    panel.setModel(model)
     panel.show()
 
     sys.exit(app.exec_())

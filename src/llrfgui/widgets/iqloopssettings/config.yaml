@@ -1,0 +1,143 @@
+# YAML configuration file used to connect each widget to its model.
+# The data structure will be a dictionary compose by lists of
+# the following elements:
+
+#  -------------------------------------------------------
+# |                      attributes                       |
+#  -------------------------------------------------------
+# |              widget_name | tango_attribute            |
+#  -------------------------------------------------------
+
+#  -------------------------------------------------------
+# |                      readback                         |
+#  -------------------------------------------------------
+# |              widget_name | tango_attribute            |
+#  -------------------------------------------------------
+
+#  -------------------------------------------------------
+# |                      comboboxes                       |
+#  -------------------------------------------------------
+# | widget_name | tango_attribute | values_for_comboboxes |
+#  -------------------------------------------------------
+
+attributes:
+# Cavity A
+- [lineEdit_AmpLoopA, AmprefinA]
+- [lineEdit_PhaseLoopA, PhrefinA]
+- [lineEdit_ampRefMinA, AmprefminA]
+- [lineEdit_phaseRefMinA, PhrefminA]
+- [lineEdit_PILimit, PILimitA]
+- [lineEdit_ki, KiA]
+- [lineEdit_kp, KpA]
+- [lineEdit_gainola, GainOlA]
+- [lineEdit_phaseShift, PhaseShiftCavA]
+- [lineEdit_phaseShift_10, PhaseShiftFwTet1A]
+- [lineEdit_phaseShift_11, PhaseShiftFwTet2A]
+- [lineEdit_phaseShift_13, PhaseShiftFwcircinA]
+- [lineEdit_phaseShift_15, PhaseShiftFwCavA]
+- [lineEdit_phaseShift_3, PhaseShiftControlSignalTet1A]
+- [lineEdit_phaseShift_5, PhaseShiftControlSignalTet2A]
+- [lineEdit_Tetrode1A, GainTetrode1A]
+- [lineEdit_Tetrode2A, GainTetrode2A]
+- [lineEdit_filterStage, FilterStagesA]
+- [lineEdit_samplesAv, SamplesToAverageA]
+
+# Cavity B
+- [lineEdit_cavVolt_2, AmprefinB]
+- [lineEdit_cavPhase_2, PhrefinB]
+- [lineEdit_ampRefMinB, AmprefminB]
+- [lineEdit_phaseRefMinB, PhrefminB]
+- [lineEdit_PILimit_2, PILimitB]
+- [lineEdit_ki_2, KiB]
+- [lineEdit_kp_2, KpB]
+- [lineEdit_gainolb, GainOlB]
+- [lineEdit_phaseShift_2, PhaseShiftCavB]
+- [lineEdit_phaseShift_9, PhaseShiftFwTet1B]
+- [lineEdit_phaseShift_12, PhaseShiftFwTet2B]
+- [lineEdit_phaseShift_14, PhaseShiftFwcircinB]
+- [lineEdit_phaseShift_16, PhaseShiftFwCavB]
+- [lineEdit_phaseShift_4, PhaseShiftControlSignalTet1B]
+- [lineEdit_phaseShift_6, PhaseShiftControlSignalTet2B]
+- [lineEdit_Tetrode1B, GainTetrode1B]
+- [lineEdit_Tetrode2B, GainTetrode2B]
+- [lineEdit_filterStage_2, FilterStagesB]
+- [lineEdit_samplesAv_2, SamplesToAverageB]
+
+readback:
+# Cavity A
+- [tauValueLabel_AmpLoop, AmprefinA]
+- [tauValueLabel_PhaseLoop, PhrefinA]
+- [tauValueLabel_voltInc, VoltageIncreaseRateA]
+- [tauValueLabel_phaseIncRate, PhaseIncreaseRateA]
+- [tauValueLabel_ampRefMinA, AmprefminA]
+- [tauValueLabel_phaseRefMinA, PhrefminA]
+- [tauValueLabel_PILimit_2, PILimitA]
+- [tauValueLabel_ki_2, KiA]
+- [tauValueLabel_kp_2, KpA]
+- [tauValueLabel_quad, QuadrantSelectionA]
+- [tauValueLabel_lookRef, LookRefA]
+- [tauValueLabel_IqLoopsEn, SlowIqLoopEnableA]
+- [tauValueLabel_IqloopsInputA, SlowIqLoopInputSelectionA]
+- [tauValueLabel_gainola, GainOlA]
+- [tauValueLabel_phaseShiftEn, ADCsPhaseShiftEnableA]
+- [tauValueLabel_phaseShift_2, PhaseShiftCavA]
+- [tauValueLabel_phaseShift_11, PhaseShiftFwTet1A]
+- [tauValueLabel_phaseShift_12, PhaseShiftFwTet2A]
+- [tauValueLabel_phaseShift_14, PhaseShiftFwcircinA]
+- [tauValueLabel_phaseShift_16, PhaseShiftFwCavA]
+- [tauValueLabel_DACsGainEn, DACsPhaseShiftEnableA]
+- [tauValueLabel_phaseShift_4, PhaseShiftControlSignalTet1A]
+- [tauValueLabel_phaseShift_6, PhaseShiftControlSignalTet2A]
+- [tauValueLabel_Tetrode1A, GainTetrode1A]
+- [tauValueLabel_Tetrode2A, GainTetrode2A]
+- [tauValueLabel_filterStage, FilterStagesA]
+- [tauValueLabel_samplesAv, SamplesToAverageA]
+
+# Cavity B
+- [tauValueLabel_cavVolt_3, AmprefinB]
+- [tauValueLabel_cavPhase_3, PhrefinB]
+- [tauValueLabel_voltInc_3, VoltageIncreaseRateB]
+- [tauValueLabel_phaseIncRate_2, PhaseIncreaseRateB]
+- [tauValueLabel_ampRefMinB, AmprefminB]
+- [tauValueLabel_phaseRefMinB, PhrefminB]
+- [tauValueLabel_PILimit_3, PILimitB]
+- [tauValueLabel_ki_3, KiB]
+- [tauValueLabel_kp_3, KpB]
+- [tauValueLabel_quad_2, QuadrantSelectionB]
+- [tauValueLabel_lookRef_2, LookRefB]
+- [tauValueLabel_lookEn_2, SlowIqLoopEnableB]
+- [tauValueLabel_loopInputB, SlowIqLoopInputSelectionB]
+- [tauValueLabel_gainolb, GainOlB]
+- [tauValueLabel_phaseShiftEn_3, ADCsPhaseShiftEnableB]
+- [tauValueLabel_phaseShift_3, PhaseShiftCavB]
+- [tauValueLabel_phaseShift_10, PhaseShiftFwTet1B]
+- [tauValueLabel_phaseShift_13, PhaseShiftFwTet2B]
+- [tauValueLabel_phaseShift_15, PhaseShiftFwcircinB]
+- [tauValueLabel_phaseShift_17, PhaseShiftFwCavB]
+- [tauValueLabel_DACsGainEn_2, DACsPhaseShiftEnableB]
+- [tauValueLabel_phaseShift_5, PhaseShiftControlSignalTet1B]
+- [tauValueLabel_phaseShift_7, PhaseShiftControlSignalTet2B]
+- [tauValueLabel_Tetrode1B, GainTetrode1B]
+- [tauValueLabel_Tetrode2B, GainTetrode2B]
+- [tauValueLabel_filterStage_2, FilterStagesB]
+- [tauValueLabel_samplesAv_2, SamplesToAverageB]
+
+comboboxes:
+# Cavity A
+- [comboBox_voltInc, VoltageIncreaseRateA, CV]
+- [comboBox_phaseIncRate, PhaseIncreaseRateA, CPIR]
+- [comboBox_quad, QuadrantSelectionA, CQ]
+- [comboBox_lookRef, LookRefA, CB]
+- [comboBox_loopEn, SlowIqLoopEnableA, CB]
+- [comboBox_loopInputA, SlowIqLoopInputSelectionA, CSLOWIQINPUT]
+- [comboBox_phaseShiftEn, ADCsPhaseShiftEnableA, CB]
+- [comboBox_DACsGainEn, DACsPhaseShiftEnableA, CB]
+# Cavity B
+- [comboBox_voltInc_3, VoltageIncreaseRateB, CV]
+- [comboBox_phaseIncRate_2, PhaseIncreaseRateB, CPIR]
+- [comboBox_quad_2, QuadrantSelectionB, CQ]
+- [comboBox_lookRef_2, LookRefB, CB]
+- [comboBox_loopEn_2, SlowIqLoopEnableB, CB]
+- [comboBox_loopInputB, SlowIqLoopInputSelectionB, CSLOWIQINPUT]
+- [comboBox_phaseShiftEn_3, ADCsPhaseShiftEnableB, CB]
+- [comboBox_DACsGainEn_2, DACsPhaseShiftEnableB, CB]

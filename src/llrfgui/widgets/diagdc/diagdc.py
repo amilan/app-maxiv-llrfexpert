@@ -29,11 +29,8 @@ __author__ = "amilan"
 
 __docformat__ = 'restructuredtext'
 
-from taurus.external.qt import Qt
 from taurus.qt.qtgui.util.ui import UILoadable
 
-from llrfgui.utils.commons import *
-from llrfgui.utils.decorators import alert_problems
 from llrfgui.widgets.basellrfwidget import BaseLLRFWidget
 
 
@@ -41,93 +38,19 @@ from llrfgui.widgets.basellrfwidget import BaseLLRFWidget
 class Diagdc(BaseLLRFWidget):
 
     def __init__(self, parent=None):
-        BaseLLRFWidget.__init__(self, parent)
+        config_file = self._get_config_file_name(__file__)
+        BaseLLRFWidget.__init__(self, config_file, parent)
         self.loadUi()
 
-    @alert_problems
-    def _create_attributes_lists(self):
-        self._attributes = []
-
-        self._attributes_readback = [
-                # I attributes
-                (self.ui.tauValueLabel_IcavRef, "Diag_IRefA"),
-                (self.ui.tauValueLabel_IcavVolt, "Diag_IcavLoopsA"),
-                (self.ui.tauValueLabel_IFwTet1Loop, "Diag_IFwTet1LoopsA"),
-                (self.ui.tauValueLabel_IFwTet2Loop, "Diag_IFwTet2LoopsA"),
-                (self.ui.tauValueLabel_IFwCircInLoop, "Diag_IFwCircInLoopsA"),
-                (self.ui.tauValueLabel_IFwCavLoop, "Diag_IFwCavLoopsA"),
-                (self.ui.tauValueLabel_ILoopInput, "Diag_IloopinputSlowpiIqA"),
-                (self.ui.tauValueLabel_IerrorP, "Diag_IerrorA"),
-                (self.ui.tauValueLabel_IerrorA, "Diag_IerroraccumA"),
-                (self.ui.tauValueLabel_IcrtlA, "Diag_IcontrolA"),
-                (self.ui.tauValueLabel_IcrtlAc1, "Diag_Icontrol1A"),
-                (self.ui.tauValueLabel_IcrtlAc2, "Diag_Icontrol2A"),
-                (self.ui.tauValueLabel_IMOA, "Diag_ImoA"),
-                (self.ui.tauValueLabel_IFastIQLoopRef, "Diag_IrefloopinputFastpiIqA"),
-                (self.ui.tauValueLabel_IFastIQLoopIn, "Diag_IloopinputFastpiIqA"),
-                (self.ui.tauValueLabel_IFastIQControlOut, "Diag_IcontrolFastpiIqA"),
-                # Q attributes
-                (self.ui.tauValueLabel_QcavRef, "Diag_QrefA"),
-                (self.ui.tauValueLabel_QcavVolt, "Diag_QcavLoopsA"),
-                (self.ui.tauValueLabel_QFwTet1Loop, "Diag_QFwTet1LoopsA"),
-                (self.ui.tauValueLabel_QFwTet2Loop, "Diag_QFwTet2LoopsA"),
-                (self.ui.tauValueLabel_QFwCircInLoop, "Diag_QFwCircInLoopsA"),
-                (self.ui.tauValueLabel_QFwCavLoop, "Diag_QFwCavLoopsA"),
-                (self.ui.tauValueLabel_QLoopInput, "Diag_QloopinputSlowpiIqA"),
-                (self.ui.tauValueLabel_QerrorP, "Diag_QerrorA"),
-                (self.ui.tauValueLabel_QerrorA, "Diag_QerroraccumA"),
-                (self.ui.tauValueLabel_QctrlA, "Diag_QcontrolA"),
-                (self.ui.tauValueLabel_QctrlAc1, "Diag_Qcontrol1A"),
-                (self.ui.tauValueLabel_QctrlAc2, "Diag_Qcontrol2A"),
-                (self.ui.tauValueLabel_QMOA, "Diag_QmoA"),
-                (self.ui.tauValueLabel_QFastIQLoopRef, "Diag_QrefloopinputFastpiIqA"),
-                (self.ui.tauValueLabel_QFastIQLoopIn, "Diag_QloopinputFastpiIqA"),
-                (self.ui.tauValueLabel_QFastIQControlOut, "Diag_QcontrolFastpiIqA"),
-                # Amp attributes
-                (self.ui.tauValueLabel_ampcavRef, "Diag_AmprefA"),
-                (self.ui.tauValueLabel_ampCavVolt, "Diag_AmpcavLoopsA"),
-                (self.ui.tauValueLabel_ampFwTet1Loop, "Diag_AmpFwTet1LoopsA"),
-                (self.ui.tauValueLabel_ampFwTet2Loop, "Diag_AmpFwTet2LoopsA"),
-                (self.ui.tauValueLabel_ampFwCircInLoop, "Diag_AmpFwCircInLoopsA"),
-                (self.ui.tauValueLabel_ampFwCavLoop, "Diag_AmpFwCavLoopsA"),
-                (self.ui.tauValueLabel_ampLoopInput, "Diag_AmploopinputSlowpiIqA"),
-                (self.ui.tauValueLabel_amperrorP, "Diag_AmperrorA"),
-                (self.ui.tauValueLabel_amperrorA, "Diag_AmperroraccumA"),
-                (self.ui.tauValueLabel_ampctrlA, "Diag_AmpcontrolA"),
-                (self.ui.tauValueLabel_ampctrlAc1, "Diag_Ampcontrol1A"),
-                (self.ui.tauValueLabel_ampctrlAc2, "Diag_Ampcontrol2A"),
-                (self.ui.tauValueLabel_ampMOA, "Diag_AmpmoA"),
-                (self.ui.tauValueLabel_ampFastIQLoopRef, "Diag_AmpRefloopinputfastpiIqA"),
-                (self.ui.tauValueLabel_ampFastIQLoopIn, "Diag_AmpLoopinputfastpiiqA"),
-                (self.ui.tauValueLabel_ampFastIQControlOut, "Diag_AmpControlfastpiiqA"),
-                # # Phase attributes
-                (self.ui.tauValueLabel_phasecavRef, "Diag_PhrefA"),
-                (self.ui.tauValueLabel_phasecavVolt, "Diag_PhcavLoopsA"),
-                (self.ui.tauValueLabel_phaseFwTet1Loop, "Diag_PhFwTet1LoopsA"),
-                (self.ui.tauValueLabel_phaseFwTet2Loop, "Diag_PhFwTet2LoopsA"),
-                (self.ui.tauValueLabel_phaseFwCircInLoop, "Diag_PhFwCircInLoopsA"),
-                (self.ui.tauValueLabel_phaseFwCavLoop, "Diag_PhFwCavLoopsA"),
-                (self.ui.tauValueLabel_phaseLoopInput, "Diag_PhloopinputSlowpiIqA"),
-                (self.ui.tauValueLabel_phaseerrorP, "Diag_PherrorA"),
-                (self.ui.tauValueLabel_phaseerrorA, "Diag_PherroraccumA"),
-                (self.ui.tauValueLabel_phasectrlA, "Diag_PhcontrolA"),
-                (self.ui.tauValueLabel_phasectrlAc1, "Diag_Phcontrol1A"),
-                (self.ui.tauValueLabel_phasectrlAc2, "Diag_Phcontrol2A"),
-                (self.ui.tauValueLabel_phaseMOA, "Diag_PhmoA"),
-                (self.ui.tauValueLabel_phaseFastIQLoopRef, "Diag_PhRefloopinputfastpiIqA"),
-                (self.ui.tauValueLabel_phaseFastIQLoopIn, "Diag_PhLoopinputfastpiiqA"),
-                (self.ui.tauValueLabel_phaseFastIQControlOut, "Diag_PhControlfastpiiqA"),
-        ]
-
-        self._comboboxes = []
 
 def main():
     import sys
     from taurus.qt.qtgui.application import TaurusApplication
 
     app = TaurusApplication()
-    model = ''
+    model = 'ws/rf/pynutaq_1'
     panel = Diagdc()
+    panel.setModel(model)
     panel.show()
 
     sys.exit(app.exec_())
