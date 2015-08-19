@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2.7
 
 ###########################################################################
 #     LLRF expert Graphical User Interface.
@@ -29,16 +29,22 @@ __docformat__ = 'restructuredtext'
 
 # Standard library imports
 import sys
+import importlib
 
 # 3rd party imports
 from taurus.qt.qtgui.taurusgui import TaurusGui
 from taurus.qt.qtgui.application import TaurusApplication
+from taurus.qt.qtgui.taurusgui.utils import PanelDescription
 
 # Local imports
+from dialog import get_model
 
 # Constants
+GUI_NAME = 'llrfExpertGUI'
+ORGANIZATION = 'MAXIV'
 PERIOD_ARG = '--taurus-polling-period='
 PERIOD = 500
+CONSOLE = False
 
 def configure_pythonpath():
     """ This method extends the pythonpath with the path where the module
@@ -49,8 +55,9 @@ def configure_pythonpath():
     """
     from distutils.sysconfig import get_python_lib
     module_path = get_python_lib()
-    panels_path = module_path + '/llrfgui'
+    panels_path = module_path
     sys.path.extend([panels_path])
+    #print sys.path
 
 def create_application():
     '''
@@ -59,8 +66,10 @@ def create_application():
         :return: Tuple compose by a TaurusApplication and a TaurusGUI
         :rtype: tuple
     '''
-    app = TaurusApplication()
-    gui = TaurusGui(confname='panels')
+    app = TaurusApplication(app_name=GUI_NAME)
+    app.setOrganizationName(ORGANIZATION)
+    #gui = TaurusGui(confname='llrfgui.panels')
+    gui = TaurusGui()
     return app, gui
 
 def hide_toolbars(gui):
@@ -78,6 +87,62 @@ def set_polling_period(period):
             break
     else:
         sys.argv.append(PERIOD_ARG+str(period))
+        
+def apply_panels(gui):
+    loops, diags = get_model()
+    create_panels(gui, loops, diags)
+        
+def create_panels(gui, loops_device, diags_device):
+    """Create panels and set application name."""
+    models_dict = {
+        'AutoStartUp': loops_device,
+        'AutoTuning': loops_device,
+        'Conditioning': loops_device,
+        'Diagdc': loops_device,
+        'Diags': [loops_device, diags_device],
+        'Fdl': [loops_device, diags_device],
+        'Fpgaclock': [loops_device, diags_device],
+        'FpgaVersion': [loops_device, diags_device],
+        'InterlockLevel': diags_device,
+        'IqLoopsSettings': loops_device,
+        'ItckInDiags': diags_device,
+        'ItckInputDisable': diags_device,
+        'ItckOutDiag': diags_device,
+        'ItckOutDisable': diags_device,
+        'Landau': diags_device,
+        'ManualTuning': loops_device,
+        'Ramping': loops_device,
+        'RampingDiag': loops_device,
+        'Start': [loops_device, diags_device],
+        'TuningDiag': loops_device,
+        'Vcxo': loops_device,
+        'PolarDiag': loops_device,
+        'FIM': diags_device,
+    }
+    # panelsDict = {}
+
+    for name in models_dict.keys():
+        print 'PROCESSING', name
+        module_name='llrfgui.widgets.' + name.lower()
+        print 'My module name is: ', module_name
+        widget_instance = get_class_object(module_name, name)
+        print widget_instance
+        gui.createPanel(widget_instance, name, floating=False, permanent=True)
+        model=models_dict[name]
+        gui.getPanel(name).widget().setModel(model)
+
+        # panelsDict[name] = PanelDescription(
+        #     name,
+        #     classname=name,
+        #     modulename='llrfgui.widgets.' + name.lower(),
+        #     model=models_dict[name]
+        # )
+    #return panelsDict
+
+def get_class_object(module_name, class_name):
+    mod = importlib.import_module(module_name)
+    klass = getattr(mod, class_name)()
+    return klass
 
 def run(period=PERIOD):
     """Run LLRF expert GUI"""
@@ -88,6 +153,7 @@ def run(period=PERIOD):
     app, gui = create_application()
     hide_toolbars(gui)
     gui.show()
+    apply_panels(gui)
     sys.exit(app.exec_())
 
 if __name__ == '__main__':
