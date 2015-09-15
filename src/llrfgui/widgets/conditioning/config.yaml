@@ -28,13 +28,13 @@ attributes:
 
 readback:
 # Cavity A
-- [tauValueLabel_autoConditioningEnable, AutoConditioningEnableA]
+- [tauValueLabel_autoConditioningEnable, AutomaticConditioningEnableA]
 - [tauValueLabel_pulseMode, PulseModeEnableA]
 - [tauValueLabel_dutyCycle_2, ConditioningDutyCicleA]
 - [taurusBoolLed_23, Diag_Vaccum1A]
 - [taurusBoolLed_24, Diag_Vaccum2A]
 # Cavity B
-- [tauValueLabel_autoConditioningEnable_2, AutoConditioningEnableB]
+- [tauValueLabel_autoConditioningEnable_2, AutomaticConditioningEnableB]
 - [tauValueLabel_pulseMode_3, PulseModeEnableB]
 - [tauValueLabel_dutyCycle_4, ConditioningDutyCicleB]
 - [taurusBoolLed_25, Diag_Vaccum1B]
@@ -42,8 +42,8 @@ readback:
 
 comboboxes:
 # Cavity A
-- [comboBox_autoConditioningEnable, AutoConditioningEnableA, CB]
+- [comboBox_autoConditioningEnable, AutomaticConditioningEnableA, CB]
 - [comboBox_pulseMode, PulseModeEnableA, CB]
 # Cavity B
-- [comboBox_autoConditioningEnable_2, AutoConditioningEnableB, CB]
+- [comboBox_autoConditioningEnable_2, AutomaticConditioningEnableB, CB]
 - [comboBox_pulseMode_3, PulseModeEnableB, CB]

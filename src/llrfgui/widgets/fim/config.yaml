@@ -109,7 +109,7 @@ attributes:
 
 # Cavity B
 
-- [taurusValueCheckBox,_73 DisitckRvTet1DacsoffloopsstbyB]
+- [taurusValueCheckBox_73, DisitckRvTet1DacsoffloopsstbyB]
 - [taurusValueCheckBox_74, DisitckRvTet1PindiodeswitchB]
 - [taurusValueCheckBox_75, DisitckRvTet1FdltrgB]
 - [taurusValueCheckBox_76, DisitckRvTet1PlctxoffB]

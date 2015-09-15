@@ -47,7 +47,7 @@ def get_models_dict(loops_device, diags_device):
                                   to be set in each widget.
         :rtype: dict
     """
-    models_dict = {
+models_dict = {
         'AutoStartUp': loops_device,
         'AutoTuning': loops_device,
         'Conditioning': loops_device,

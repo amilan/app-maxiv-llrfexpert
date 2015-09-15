@@ -34,7 +34,6 @@ import importlib
 # 3rd party imports
 from taurus.qt.qtgui.taurusgui import TaurusGui
 from taurus.qt.qtgui.application import TaurusApplication
-from taurus.qt.qtgui.taurusgui.utils import PanelDescription
 
 # Local imports
 from dialog import get_model
@@ -68,7 +67,6 @@ def create_application():
     '''
     app = TaurusApplication(app_name=GUI_NAME)
     app.setOrganizationName(ORGANIZATION)
-    #gui = TaurusGui(confname='llrfgui.panels')
     gui = TaurusGui()
     return app, gui
 
@@ -119,25 +117,14 @@ def create_panels(gui, loops_device, diags_device):
         'PolarDiag': loops_device,
         'FIM': diags_device,
     }
-    # panelsDict = {}
 
     for name in models_dict.keys():
         print 'PROCESSING', name
         module_name='llrfgui.widgets.' + name.lower()
-        print 'My module name is: ', module_name
         widget_instance = get_class_object(module_name, name)
-        print widget_instance
         gui.createPanel(widget_instance, name, floating=False, permanent=True)
         model=models_dict[name]
         gui.getPanel(name).widget().setModel(model)
-
-        # panelsDict[name] = PanelDescription(
-        #     name,
-        #     classname=name,
-        #     modulename='llrfgui.widgets.' + name.lower(),
-        #     model=models_dict[name]
-        # )
-    #return panelsDict
 
 def get_class_object(module_name, class_name):
     mod = importlib.import_module(module_name)
