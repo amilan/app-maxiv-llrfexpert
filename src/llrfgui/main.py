@@ -58,14 +58,18 @@ def configure_pythonpath():
     sys.path.extend([panels_path])
     #print sys.path
 
-def create_application():
+def create_app_name(section):
+    app_name = GUI_NAME + '_' + section
+    return app_name
+
+def create_application(name):
     '''
         Create the application and return an (application, taurusgui) tuple.
         
         :return: Tuple compose by a TaurusApplication and a TaurusGUI
         :rtype: tuple
     '''
-    app = TaurusApplication(app_name=GUI_NAME)
+    app = TaurusApplication(app_name=name)
     app.setOrganizationName(ORGANIZATION)
     gui = TaurusGui()
     return app, gui
@@ -87,10 +91,10 @@ def set_polling_period(period):
         sys.argv.append(PERIOD_ARG+str(period))
         
 def apply_panels(gui):
-    loops, diags = get_model()
-    create_panels(gui, loops, diags)
+    section, loops, diags = get_model()
+    create_panels(gui, section, loops, diags)
         
-def create_panels(gui, loops_device, diags_device):
+def create_panels(gui, section, loops_device, diags_device):
     """Create panels and set application name."""
     models_dict = {
         'AutoStartUp': loops_device,
@@ -137,10 +141,12 @@ def run(period=PERIOD):
     import taurus
     taurus.Manager().changeDefaultPollingPeriod(period)
     configure_pythonpath()
-    app, gui = create_application()
+    section, loops, diags = get_model()
+    app_name = create_app_name(section)
+    app, gui = create_application(app_name)
     hide_toolbars(gui)
     gui.show()
-    apply_panels(gui)
+    create_panels(gui, section, loops, diags)
     sys.exit(app.exec_())
 
 if __name__ == '__main__':
