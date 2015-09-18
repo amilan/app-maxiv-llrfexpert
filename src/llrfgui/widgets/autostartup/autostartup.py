@@ -29,11 +29,7 @@ __author__ = "amilan"
 
 __docformat__ = 'restructuredtext'
 
-#from taurus.external.qt import Qt
 from taurus.qt.qtgui.util.ui import UILoadable
-
-from llrfgui.utils.commons import *
-from llrfgui.utils.decorators import alert_problems
 
 from llrfgui.widgets.basellrfwidget import BaseLLRFWidget
 
@@ -42,41 +38,18 @@ from llrfgui.widgets.basellrfwidget import BaseLLRFWidget
 class AutoStartUp(BaseLLRFWidget):
 
     def __init__(self, parent=None):
-        BaseLLRFWidget.__init__(self, parent)
+        config_file = self._get_config_file_name(__file__)
+        BaseLLRFWidget.__init__(self, config_file, parent)
         self.loadUi()
-
-    @alert_problems
-    def _set_comboboxes(self):
-        self.ui.comboBox_autoStartUpA.addValueNames(CB)
-        self.ui.comboBox_CommandStartA.addValueNames(CCMDSTART)
-        self.ui.comboBox_EPSITCK.addValueNames(CB)
-        self.ui.comboBox_FIMITCK.addValueNames(CB)
-
-    @alert_problems
-    def _create_attributes_lists(self):
-        self._attributes = []
-
-        self._attributes_readback = [
-            (self.ui.tauValueLabel_autoStartUpA, "AutomaticStartUpEnableA"),
-            (self.ui.tauValueLabel_CommandStartA, "CommandStartA"),
-            (self.ui.tauValueLabel_autoStartUpA_2, "EpsItckDisableA"),
-            (self.ui.tauValueLabel_autoStartUpA_3, "FimItckDisableA")
-        ]
-
-        self._comboboxes = [
-            (self.ui.comboBox_autoStartUpA, "AutomaticStartUpEnableA"),
-            (self.ui.comboBox_CommandStartA, "CommandStartA"),
-            (self.ui.comboBox_EPSITCK, "EpsItckDisableA"),
-            (self.ui.comboBox_FIMITCK, "FimItckDisableA"),
-        ]
 
 def main():
     import sys
     from taurus.qt.qtgui.application import TaurusApplication
 
     app = TaurusApplication()
-    model = ''
+    model = 'ws/rf/pynutaq_1'
     panel = AutoStartUp()
+    panel.setModel(model)
     panel.show()
 
     sys.exit(app.exec_())

@@ -34,7 +34,6 @@ import PyTango
 from taurus.external.qt import Qt, QtCore
 from taurus.qt.qtgui.util.ui import UILoadable
 
-from llrfgui.utils.commons import *
 from llrfgui.utils.decorators import alert_problems
 from llrfgui.widgets.basellrfwidget import BaseLLRFWidget
 
@@ -43,17 +42,9 @@ from llrfgui.widgets.basellrfwidget import BaseLLRFWidget
 class ItckOutDiag(BaseLLRFWidget):
 
     def __init__(self, parent=None):
-        BaseLLRFWidget.__init__(self, parent)
+        config_file = self._get_config_file_name(__file__)
+        BaseLLRFWidget.__init__(self, config_file, parent)
         self.loadUi()
-
-    @alert_problems
-    def setModel(self, model):
-        self._device_name = model
-        self._set_comboboxes()
-        self._create_attributes_lists()
-        self._connect_all_attributes()
-        self.connect_with_devices()
-        self.connect_signals()
 
     @alert_problems
     def connect_with_devices(self):
@@ -62,8 +53,11 @@ class ItckOutDiag(BaseLLRFWidget):
 
     @alert_problems
     def connect_signals(self):
-        QtCore.QObject.connect(self.ui.pushButton_resetITCKA, QtCore.SIGNAL("clicked()"), self.resetITCKA)
-        QtCore.QObject.connect(self.ui.pushButton_resetITCKB, QtCore.SIGNAL("clicked()"), self.resetITCKB)
+        QtCore.QObject.connect(self.ui.pushButton_resetITCKA,
+                               QtCore.SIGNAL("clicked()"), self.resetITCKA)
+
+        QtCore.QObject.connect(self.ui.pushButton_resetITCKB,
+                               QtCore.SIGNAL("clicked()"), self.resetITCKB)
 
     @alert_problems
     def resetITCKA(self):
@@ -73,52 +67,14 @@ class ItckOutDiag(BaseLLRFWidget):
     def resetITCKB(self):
         self._device_proxy.reset_itckB()
 
-   # @alert_problems
-   # def _set_comboboxes(self):
-   #     pass
-
-   # @alert_problems
-   # def _connect_all_attributes(self):
-   #     for attribute in self._attributes:
-   #         self.connect_attribute(attribute[0], attribute[1])
-
-   #     for attribute in self._attributes_readback:
-   #         self.connect_attribute(attribute[0], attribute[1])
-
-   #     for combobox in self._comboboxes:
-   #         self.connect_combobox(combobox[0], combobox[1])
-
-   # @alert_problems
-   # def connect_attribute(self, widget, attribute):
-   #     attribute = self._device_name + '/' + attribute
-   #     widget.setModel(attribute)
-
-   # @alert_problems
-   # def connect_combobox(self, widget, attribute):
-   #     attribute = self._device_name + '/' + attribute
-   #     widget.setModelName(attribute)
-
-    @alert_problems
-    def _create_attributes_lists(self):
-        self._attributes = []
-
-        self._attributes_readback = [
-            (self.ui.taurusBoolLed_21, "Diag_DacsDisableCommandA"),
-            (self.ui.taurusBoolLed_22, "Diag_PinSwitchA"),
-            (self.ui.taurusBoolLed_45, "Diag_FdlTriggerToLoopsdiagboardA"),
-            (self.ui.taurusBoolLed_47, "Diag_OutputToPlcA"),
-            (self.ui.taurusBoolLed_48, "Diag_OutputToMpsA"),
-        ]
-
-        self._comboboxes = []
-
 def main():
     import sys
     from taurus.qt.qtgui.application import TaurusApplication
 
     app = TaurusApplication()
-    model = ''
+    model = 'ws/rf/pynutaqdiags_1'
     panel = ItckOutDiag()
+    panel.setModel(model)
     panel.show()
 
     sys.exit(app.exec_())

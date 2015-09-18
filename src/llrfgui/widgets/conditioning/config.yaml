@@ -1,0 +1,49 @@
+# YAML configuration file used to connect each widget to its model.
+# The data structure will be a dictionary compose by lists of
+# the following elements:
+
+#  -------------------------------------------------------
+# |                      attributes                       |
+#  -------------------------------------------------------
+# |              widget_name | tango_attribute            |
+#  -------------------------------------------------------
+
+#  -------------------------------------------------------
+# |                      readback                         |
+#  -------------------------------------------------------
+# |              widget_name | tango_attribute            |
+#  -------------------------------------------------------
+
+#  -------------------------------------------------------
+# |                      comboboxes                       |
+#  -------------------------------------------------------
+# | widget_name | tango_attribute | values_for_comboboxes |
+#  -------------------------------------------------------
+
+attributes:
+# Cavity A
+- [lineEdit_dutyCycle, ConditioningDutyCicleA]
+# Cavity B
+- [lineEdit_dutyCycle_3, ConditioningDutyCicleB]
+
+readback:
+# Cavity A
+- [tauValueLabel_autoConditioningEnable, AutomaticConditioningEnableA]
+- [tauValueLabel_pulseMode, PulseModeEnableA]
+- [tauValueLabel_dutyCycle_2, ConditioningDutyCicleA]
+- [taurusBoolLed_23, Diag_Vaccum1A]
+- [taurusBoolLed_24, Diag_Vaccum2A]
+# Cavity B
+- [tauValueLabel_autoConditioningEnable_2, AutomaticConditioningEnableB]
+- [tauValueLabel_pulseMode_3, PulseModeEnableB]
+- [tauValueLabel_dutyCycle_4, ConditioningDutyCicleB]
+- [taurusBoolLed_25, Diag_Vaccum1B]
+- [taurusBoolLed_26, Diag_Vaccum2B]
+
+comboboxes:
+# Cavity A
+- [comboBox_autoConditioningEnable, AutomaticConditioningEnableA, CB]
+- [comboBox_pulseMode, PulseModeEnableA, CB]
+# Cavity B
+- [comboBox_autoConditioningEnable_2, AutomaticConditioningEnableB, CB]
+- [comboBox_pulseMode_3, PulseModeEnableB, CB]

@@ -30,11 +30,8 @@ __author__ = "amilan"
 __docformat__ = 'restructuredtext'
 
 
-from taurus.external.qt import Qt
 from taurus.qt.qtgui.util.ui import UILoadable
 
-from llrfgui.utils.commons import *
-from llrfgui.utils.decorators import alert_problems
 from llrfgui.widgets.basellrfwidget import BaseLLRFWidget
 
 
@@ -42,40 +39,19 @@ from llrfgui.widgets.basellrfwidget import BaseLLRFWidget
 class Conditioning(BaseLLRFWidget):
 
     def __init__(self, parent=None):
-        BaseLLRFWidget.__init__(self, parent)
+        config_file = self._get_config_file_name(__file__)
+        BaseLLRFWidget.__init__(self, config_file, parent)
         self.loadUi()
 
-    @alert_problems
-    def _set_comboboxes(self):
-        self.ui.comboBox_autoConditioningEnable.addValueNames(CB)
-        self.ui.comboBox_pulseMode.addValueNames(CB)
-
-    @alert_problems
-    def _create_attributes_lists(self):
-        self._attributes = [
-            (self.ui.lineEdit_dutyCycle, "ConditioningDutyCicleA"),
-        ]
-
-        self._attributes_readback = [
-            (self.ui.tauValueLabel_autoConditioningEnable, "AutoConditioningEnableA"),
-            (self.ui.tauValueLabel_pulseMode, "PulseModeEnableA"),
-            (self.ui.tauValueLabel_dutyCycle_2, "ConditioningDutyCicleA"),
-            (self.ui.taurusBoolLed_23, "Diag_Vaccum1A"),
-            (self.ui.taurusBoolLed_24, "Diag_Vaccum2A"),
-            ]
-
-        self._comboboxes = [
-            (self.ui.comboBox_autoConditioningEnable, "AutoConditioningEnableA"),
-            (self.ui.comboBox_pulseMode, "PulseModeEnableA"),
-        ]
 
 def main():
     import sys
     from taurus.qt.qtgui.application import TaurusApplication
 
     app = TaurusApplication()
-    model = ''
+    model = 'ws/rf/pynutaq_1'
     panel = Conditioning()
+    panel.setModel(model)
     panel.show()
 
     sys.exit(app.exec_())

@@ -1,0 +1,81 @@
+# YAML configuration file used to connect each widget to its model.
+# The data structure will be a dictionary compose by lists of
+# the following elements:
+
+#  -------------------------------------------------------
+# |                      attributes                       |
+#  -------------------------------------------------------
+# |              widget_name | tango_attribute            |
+#  -------------------------------------------------------
+
+#  -------------------------------------------------------
+# |                      readback                         |
+#  -------------------------------------------------------
+# |              widget_name | tango_attribute            |
+#  -------------------------------------------------------
+
+#  -------------------------------------------------------
+# |                      comboboxes                       |
+#  -------------------------------------------------------
+# | widget_name | tango_attribute | values_for_comboboxes |
+#  -------------------------------------------------------
+
+attributes:
+# Cavity A
+- [lineEdit_timeRampUpA, TimeRampUpA]
+- [lineEdit_timeRampDownA, TimeRampDownA]
+- [lineEdit_ampRampInitA, AmpRampInitA]
+- [lineEdit_ampRampEndA, AmpRampEndA]
+- [lineEdit_phaseRampInitA, PhaseRampInitA]
+- [lineEdit_phaseRampEndA, PhaseRampEndA]
+
+# Cavity B
+- [lineEdit_timeRampUpB, TimeRampUpB]
+- [lineEdit_timeRampDownB, TimeRampDownB]
+- [lineEdit_ampRampInitB, AmpRampInitB]
+- [lineEdit_ampRampEndB, AmpRampEndB]
+- [lineEdit_phaseRampInitB, PhaseRampInitB]
+- [lineEdit_phaseRampEndB, PhaseRampEndB]
+
+readback:
+# Cavity A
+- [tauValueLabel_RampingEnA, RampingEnA]
+- [tauValueLabel_timeRampUpA, TimeRampUpA]
+- [tauValueLabel_timeRampDownA, TimeRampDownA]
+- [tauValueLabel_ampRampInitA, AmpRampInitA]
+- [tauValueLabel_ampRampEndA, AmpRampEndA]
+- [tauValueLabel_phaseRampInitA, PhaseRampInitA]
+- [tauValueLabel_phaseRampEndA, PhaseRampEndA]
+
+- [tauValueLabel_IRampInitA, IRampInitA]
+- [tauValueLabel_QRampInitA, QRampInitA]
+- [tauValueLabel_IRampEndA, IRampEndA]
+- [tauValueLabel_QRampEndA, QRampEndA]
+- [tauValueLabel_AmpSlopeRampUpA, AmpSlopeRampUpA]
+- [tauValueLabel_PhaseSlopeRampUpA, PhaseSlopeRampUpA]
+- [tauValueLabel_AmpSlopeRampDownA, AmpSlopeRampDownA]
+- [tauValueLabel_PhaseSlopeRampDownA, PhaseSlopeRampDownA]
+
+# Cavity B
+- [tauValueLabel_RampingEnB, RampingEnB]
+- [tauValueLabel_timeRampUpB, TimeRampUpB]
+- [tauValueLabel_timeRampDownB, TimeRampDownB]
+- [tauValueLabel_ampRampInitB, AmpRampInitB]
+- [tauValueLabel_ampRampEndB, AmpRampEndB]
+- [tauValueLabel_phaseRampInitB, PhaseRampInitB]
+- [tauValueLabel_phaseRampEndB, PhaseRampEndB]
+
+- [tauValueLabel_IRampInitB, IRampInitB]
+- [tauValueLabel_QRampInitB, QRampInitB]
+- [tauValueLabel_IRampEndB, IRampEndB]
+- [tauValueLabel_QRampEndB, QRampEndB]
+- [tauValueLabel_AmpSlopeRampUpB, AmpSlopeRampUpB]
+- [tauValueLabel_PhaseSlopeRampUpB, PhaseSlopeRampUpB]
+- [tauValueLabel_AmpSlopeRampDownB, AmpSlopeRampDownB]
+- [tauValueLabel_PhaseSlopeRampDownB, PhaseSlopeRampDownB]
+
+comboboxes:
+# Cavity A
+- [comboBox_rampingEnA, RampingEnA, CB]
+# Cavity B
+- [comboBox_rampingEnB, RampingEnB, CB]

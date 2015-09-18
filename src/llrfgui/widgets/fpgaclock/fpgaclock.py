@@ -41,63 +41,65 @@ from llrfgui.widgets.basellrfwidget import BaseLLRFWidget
 class Fpgaclock(BaseLLRFWidget):
 
     def __init__(self, parent=None):
-        BaseLLRFWidget.__init__(self, parent)
+        config_file = self._get_config_file_name(__file__)
+        BaseLLRFWidget.__init__(self, config_file, parent)
         self.loadUi()
-
-    @alert_problems
-    def setModel(self, model):
-        self._device_name = model[0]
-        self._device_diag_name = model[1]
-        self._set_comboboxes()
-        self._create_attributes_lists()
-        self._connect_all_attributes()
-
-  #  @alert_problems
-  #  def _set_comboboxes(self):
-  #      pass
-
-  #  @alert_problems
-  #  def _connect_all_attributes(self):
-  #      for attribute in self._attributes:
-  #          self.connect_attribute(attribute[0], attribute[1])
-
-  #      for attribute in self._attributes_readback:
-  #          self.connect_attribute(attribute[0], attribute[1])
-
-  #      for combobox in self._comboboxes:
-  #          self.connect_combobox(combobox[0], combobox[1])
-
-    @alert_problems
-    def connect_attribute(self, widget, attribute):
-        #attribute = self._device_name + '/' + attribute
-        widget.setModel(attribute)
-
-    @alert_problems
-    def connect_combobox(self, widget, attribute):
-        # attribute = self._device_name + '/' + attribute
-        widget.setModelName(attribute)
-
-    @alert_problems
-    def _create_attributes_lists(self):
-        self._attributes = [
-        ]
-
-        self._attributes_readback = [
-            (self.ui.tauValueLabel_Source, self._device_name + "/FPGAClockSourceA"),
-            (self.ui.tauValueLabel_Locked_2, self._device_name + "/FPGALockedA"),
-            (self.ui.tauValueLabel_Source_3, self._device_diag_name + "/FPGAClockSourceA"),
-            (self.ui.tauValueLabel_Locked_4, self._device_diag_name + "/FPGALockedA"),
-        ]
-
-        self._comboboxes = []
+  #
+  #   @alert_problems
+  #   def setModel(self, model):
+  #       self._device_name = model[0]
+  #       self._device_diag_name = model[1]
+  #       self._set_comboboxes()
+  #       self._create_attributes_lists()
+  #       self._connect_all_attributes()
+  #
+  # #  @alert_problems
+  # #  def _set_comboboxes(self):
+  # #      pass
+  #
+  # #  @alert_problems
+  # #  def _connect_all_attributes(self):
+  # #      for attribute in self._attributes:
+  # #          self.connect_attribute(attribute[0], attribute[1])
+  #
+  # #      for attribute in self._attributes_readback:
+  # #          self.connect_attribute(attribute[0], attribute[1])
+  #
+  # #      for combobox in self._comboboxes:
+  # #          self.connect_combobox(combobox[0], combobox[1])
+  #
+  #   @alert_problems
+  #   def connect_attribute(self, widget, attribute):
+  #       #attribute = self._device_name + '/' + attribute
+  #       widget.setModel(attribute)
+  #
+  #   @alert_problems
+  #   def connect_combobox(self, widget, attribute):
+  #       # attribute = self._device_name + '/' + attribute
+  #       widget.setModelName(attribute)
+  #
+  #   @alert_problems
+  #   def _create_attributes_lists(self):
+  #       self._attributes = [
+  #       ]
+  #
+  #       self._attributes_readback = [
+  #           (self.ui.tauValueLabel_Source, self._device_name + "/FPGAClockSourceA"),
+  #           (self.ui.tauValueLabel_Locked_2, self._device_name + "/FPGALockedA"),
+  #           (self.ui.tauValueLabel_Source_3, self._device_diag_name + "/FPGAClockSourceA"),
+  #           (self.ui.tauValueLabel_Locked_4, self._device_diag_name + "/FPGALockedA"),
+  #       ]
+  #
+  #       self._comboboxes = []
 
 def main():
     import sys
     from taurus.qt.qtgui.application import TaurusApplication
 
     app = TaurusApplication()
-    model = ''
+    model = ['ws/rf/pynutaq_1', 'ws/rf/pynutaqdiags_1']
     panel = Fpgaclock()
+    panel.setModel(model)
     panel.show()
 
     sys.exit(app.exec_())

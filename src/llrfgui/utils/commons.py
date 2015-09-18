@@ -27,18 +27,19 @@ __author__ = "amilan"
 
 __docformat__ = 'restructuredtext'
 
-# LAB devices
-MAIN_DEVICE_LAB = "ws/rf/lyrtech-01"
-DIAG_DEVICE_LAB = "ws/rf/lyrtech-02"
-PLC_DEVICE_LAB = "ws/plc/cav-cool-12"
-ALARM_DEVICE_LAB = "ws/plc/alarm"
-
-# PLC command codes
-PLC_CMD_START_PUMP  = 1 << 0
-PLC_CMD_STOP_PUMP   = 1 << 1
-PLC_CMD_RESET_ALARM = 1 << 2
-PLC_CMD_ENABLE_HF   = 1 << 3
-PLC_CMD_DISABLE_HF  = 1 << 4
+# This comes from a previous version. Probably not needed nevermore.
+# # LAB devices
+# MAIN_DEVICE_LAB = "ws/rf/lyrtech-01"
+# DIAG_DEVICE_LAB = "ws/rf/lyrtech-02"
+# PLC_DEVICE_LAB = "ws/plc/cav-cool-12"
+# ALARM_DEVICE_LAB = "ws/plc/alarm"
+#
+# # PLC command codes
+# PLC_CMD_START_PUMP  = 1 << 0
+# PLC_CMD_STOP_PUMP   = 1 << 1
+# PLC_CMD_RESET_ALARM = 1 << 2
+# PLC_CMD_ENABLE_HF   = 1 << 3
+# PLC_CMD_DISABLE_HF  = 1 << 4
 
 # Definition of possible values for comboBoxes
 CQ = [ 

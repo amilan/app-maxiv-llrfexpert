@@ -1,0 +1,35 @@
+# YAML configuration file used to connect each widget to its model.
+# The data structure will be a dictionary compose by lists of
+# the following elements:
+
+#  -------------------------------------------------------------------------
+# |                               attributes                                |
+#  -------------------------------------------------------------------------
+# |    widget_name    |    tango_attribute    |    use_diagnostic_device    |
+#  -------------------------------------------------------------------------
+
+#  -------------------------------------------------------------------------
+# |                                readback                                 |
+#  -------------------------------------------------------------------------
+# |    widget_name    |    tango_attribute    |    use_diagnostic_device    |
+#  -------------------------------------------------------------------------
+
+#  -------------------------------------------------------------------------
+# |                               comboboxes                                |
+#  -------------------------------------------------------------------------
+# | widget_name | tango_attribute | values_for_comboboxes | use_diag_device |
+#  -------------------------------------------------------------------------
+
+
+attributes:
+-
+
+readback:
+# Cavity A
+- [tauValueLabel_Source, FPGAClockSourceA, false]
+- [tauValueLabel_Locked_2, FPGALockedA, false]
+- [tauValueLabel_Source_3, FPGAClockSourceA, true]
+- [tauValueLabel_Locked_4, FPGALockedA, true]
+
+comboboxes:
+-

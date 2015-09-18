@@ -34,7 +34,6 @@ import PyTango
 from taurus.external.qt import Qt, QtCore
 from taurus.qt.qtgui.util.ui import UILoadable
 
-from llrfgui.utils.commons import *
 from llrfgui.utils.decorators import alert_problems
 from llrfgui.widgets.basellrfwidget import BaseLLRFWidget
 
@@ -43,17 +42,9 @@ from llrfgui.widgets.basellrfwidget import BaseLLRFWidget
 class ManualTuning(BaseLLRFWidget):
 
     def __init__(self, parent=None):
-        BaseLLRFWidget.__init__(self, parent)
+        config_file = self._get_config_file_name(__file__)
+        BaseLLRFWidget.__init__(self, config_file, parent)
         self.loadUi()
-
-    @alert_problems
-    def setModel(self, model):
-        self._device_name = model
-        self._set_comboboxes()
-        self._create_attributes_lists()
-        self._connect_all_attributes()
-        self.connect_with_devices()
-        self.connect_signals()
 
     @alert_problems
     def connect_with_devices(self):
@@ -80,59 +71,14 @@ class ManualTuning(BaseLLRFWidget):
         self._device_proxy['TuningResetB'] = True
         self._device_proxy['TuningResetB'] = False
 
-    @alert_problems
-    def _set_comboboxes(self):
-        self.ui.comboBox_moveUp.addValueNames(CB)
-        self.ui.comboBox_movePlg.addValueNames(CB)
-        self.ui.comboBox_freqPulses.addValueNames(CC)
-
-   # @alert_problems
-   # def _connect_all_attributes(self):
-   #     for attribute in self._attributes:
-   #         self.connect_attribute(attribute[0], attribute[1])
-
-   #     for attribute in self._attributes_readback:
-   #         self.connect_attribute(attribute[0], attribute[1])
-
-   #     for combobox in self._comboboxes:
-   #         self.connect_combobox(combobox[0], combobox[1])
-
-   # @alert_problems
-   # def connect_attribute(self, widget, attribute):
-   #     widget.setModel(attribute)
-
-   # @alert_problems
-   # def connect_combobox(self, widget, attribute):
-   #     widget.setModelName(attribute)
-
-    @alert_problems
-    def _create_attributes_lists(self):
-        self._attributes = [
-            (self.ui.lineEdit_numberPulses, "NumStepsA")
-        ]
-
-        self._attributes_readback = [
-            (self.ui.taurusBoolLed_27, "Diag_ManualTuningOnA"),
-            (self.ui.taurusBoolLed_28, "Diag_ManualTuningFreqUpA"),
-            (self.ui.tauValueLabel_numberPulses_2, "NumStepsA"),
-            (self.ui.tauValueLabel_moveUp, "MoveUpA"),
-            (self.ui.tauValueLabel_movePlg1, "MoveA"),
-            (self.ui.tauValueLabel_freqPulses, "PulsesFrequencyA"),
-        ]
-
-        self._comboboxes = [
-            (self.ui.comboBox_moveUp, "MoveUpA"),
-            (self.ui.comboBox_movePlg, "MoveA"),
-            (self.ui.comboBox_freqPulses, "PulsesFrequencyA"),
-            ]
-
 def main():
     import sys
     from taurus.qt.qtgui.application import TaurusApplication
 
     app = TaurusApplication()
-    model = ''
     panel = ManualTuning()
+    model = 'ws/rf/pynutaq_1'
+    panel.setModel(model)
     panel.show()
 
     sys.exit(app.exec_())

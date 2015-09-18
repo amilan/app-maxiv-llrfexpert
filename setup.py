@@ -26,7 +26,7 @@ def main():
 
     name = "taurusgui-llrfexpert"
 
-    version = "1.4.4"
+    version = "1.5.0"
 
     description = "Taurus GUI for Low Level RF expert users."
 
@@ -45,7 +45,8 @@ def main():
     package_data = {
         'llrfgui': ['images/maxivlogo.png',
                     'widgets/*/ui/*',
-        ]
+                    'widgets/*/*.yaml'
+                    ]
     }
 
     scripts = ['scripts/ctllrfgui']

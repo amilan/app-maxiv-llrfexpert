@@ -832,7 +832,7 @@
             <enum>QFrame::StyledPanel</enum>
            </property>
            <property name="text">
-            <string>Vacumm</string>
+            <string>Vacuum</string>
            </property>
           </widget>
          </item>
