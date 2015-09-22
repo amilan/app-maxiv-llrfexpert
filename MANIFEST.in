@@ -1,4 +1,3 @@
 include src/llrfgui/images/*
-include config/llrfExpertGUI.ini
 include *.desktop
 

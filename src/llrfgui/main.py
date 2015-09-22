@@ -28,6 +28,7 @@ __author__ = 'antmil'
 __docformat__ = 'restructuredtext'
 
 # Standard library imports
+import os
 import sys
 import importlib
 
@@ -135,6 +136,10 @@ def get_class_object(module_name, class_name):
     klass = getattr(mod, class_name)()
     return klass
 
+def load_settings(gui):
+    default_ini = os.path.abspath(os.path.dirname(__file__)) + '/default.ini'
+    gui.loadSettings(factorySettingsFileName=default_ini)
+
 def run(period=PERIOD):
     """Run LLRF expert GUI"""
     #set_polling_period(period)
@@ -147,6 +152,7 @@ def run(period=PERIOD):
     hide_toolbars(gui)
     gui.show()
     create_panels(gui, section, loops, diags)
+    load_settings(gui)
     sys.exit(app.exec_())
 
 if __name__ == '__main__':
