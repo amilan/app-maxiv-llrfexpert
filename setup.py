@@ -43,7 +43,8 @@ def main():
     packages = find_packages('src')
 
     package_data = {
-        'llrfgui': ['images/maxivlogo.png',
+        'llrfgui': ['default.ini',
+                    'images/maxivlogo.png',
                     'widgets/*/ui/*',
                     'widgets/*/*.yaml'
                     ]
@@ -60,7 +61,6 @@ def main():
     ]
 
     data_files = [('/usr/share/applications', ['maxiv-r3-llrfexpert.desktop']),
-                  ('/home/controlroom/.config/MAXIV', ['config/llrfExpertGUI.ini']),
     ]
 
     setup(
