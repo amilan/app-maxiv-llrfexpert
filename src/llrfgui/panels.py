@@ -47,31 +47,31 @@ def get_models_dict(loops_device, diags_device):
                                   to be set in each widget.
         :rtype: dict
     """
-models_dict = {
-        'AutoStartUp': loops_device,
-        'AutoTuning': loops_device,
-        'Conditioning': loops_device,
-        'Diagdc': loops_device,
-        'Diags': [loops_device, diags_device],
-        'Fdl': [loops_device, diags_device],
-        'Fpgaclock': [loops_device, diags_device],
-        'FpgaVersion': [loops_device, diags_device],
-        'InterlockLevel': diags_device,
-        'IqLoopsSettings': loops_device,
-        'ItckInDiags': diags_device,
-        'ItckInputDisable': diags_device,
-        'ItckOutDiag': diags_device,
-        'ItckOutDisable': diags_device,
-        'Landau': diags_device,
-        'ManualTuning': loops_device,
-        'Ramping': loops_device,
-        'RampingDiag': loops_device,
-        'Start': [loops_device, diags_device],
-        'TuningDiag': loops_device,
-        'Vcxo': loops_device,
-        'PolarDiag': loops_device,
-        'FIM': diags_device,
-    }
+    models_dict = {
+            'AutoStartUp': loops_device,
+            'AutoTuning': loops_device,
+            'Conditioning': loops_device,
+            'Diagdc': loops_device,
+            'Diags': [loops_device, diags_device],
+            'Fdl': [loops_device, diags_device],
+            'Fpgaclock': [loops_device, diags_device],
+            'FpgaVersion': [loops_device, diags_device],
+            'InterlockLevel': diags_device,
+            'IqLoopsSettings': loops_device,
+            'ItckInDiags': diags_device,
+            'ItckInputDisable': diags_device,
+            'ItckOutDiag': diags_device,
+            'ItckOutDisable': diags_device,
+            'Landau': diags_device,
+            'ManualTuning': loops_device,
+            'Ramping': loops_device,
+            'RampingDiag': loops_device,
+            'Start': [loops_device, diags_device],
+            'TuningDiag': loops_device,
+            'Vcxo': loops_device,
+            'PolarDiag': loops_device,
+            'FIM': diags_device,
+        }
     return models_dict
 
 def create_panels():
