@@ -68,7 +68,7 @@ class Vcxo(BaseLLRFWidget):
     @alert_problems
     def openVCXO(self):
         #from VCXODialog import VCXODialog
-        from widgets.vcxodialog import VCXODialog
+        from llrfgui.widgets.vcxodialog import VCXODialog
         vcxo = VCXODialog(self._device_name)
         #vcxo = VCXODialog(self._device_name_diag)
         vcxo.exec_()
