@@ -1,0 +1,45 @@
+# YAML configuration file used to connect each widget to its model.
+# The data structure will be a dictionary compose by lists of
+# the following elements:
+
+#  -------------------------------------------------------
+# |                      attributes                       |
+#  -------------------------------------------------------
+# |              widget_name | tango_attribute            |
+#  -------------------------------------------------------
+
+#  -------------------------------------------------------
+# |                      readback                         |
+#  -------------------------------------------------------
+# |              widget_name | tango_attribute            |
+#  -------------------------------------------------------
+
+#  -------------------------------------------------------
+# |                      comboboxes                       |
+#  -------------------------------------------------------
+# | widget_name | tango_attribute | values_for_comboboxes |
+#  -------------------------------------------------------
+
+attributes:
+# Cavity A
+- [lineEdit_tuningOffset, PhaseOffsetA]
+# Cavity B
+- [lineEdit_tuningOffset_2, PhaseOffsetB]
+
+readback:
+# Cavity A
+- [tauValueLabel_tuningEn, TuningEnableA]
+- [tauValueLabel_tuningPosEn, TuningPosEnA]
+- [tauValueLabel_tuningOffset, PhaseOffsetA]
+# Cavity B
+- [tauValueLabel_tuningEn_2, TuningEnableB]
+- [tauValueLabel_tuningPosEn_2, TuningPosEnB]
+- [tauValueLabel_tuningOffset_2, PhaseOffsetB]
+
+comboboxes:
+# Cavity A
+- [comboBox_tuningEn, TuningEnableA, CB]
+- [comboBox_tuningPosEn, TuningPosEnA, CB]
+# Cavity B
+- [comboBox_tuningEn_2, TuningEnableB, CB]
+- [comboBox_tuningPosEn_2, TuningPosEnB, CB]

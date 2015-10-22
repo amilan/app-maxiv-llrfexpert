@@ -1,0 +1,49 @@
+# YAML configuration file used to connect each widget to its model.
+# The data structure will be a dictionary compose by lists of
+# the following elements:
+
+#  -------------------------------------------------------
+# |                      attributes                       |
+#  -------------------------------------------------------
+# |              widget_name | tango_attribute            |
+#  -------------------------------------------------------
+
+#  -------------------------------------------------------
+# |                      readback                         |
+#  -------------------------------------------------------
+# |              widget_name | tango_attribute            |
+#  -------------------------------------------------------
+
+#  -------------------------------------------------------
+# |                      comboboxes                       |
+#  -------------------------------------------------------
+# | widget_name | tango_attribute | values_for_comboboxes |
+#  -------------------------------------------------------
+
+attributes:
+# Cavity A
+- [lineEdit_numberPulses, NumStepsA]
+# Cavity B
+- [lineEdit_numberPulses_3, NumStepsB]
+
+readback:
+# Cavity A
+- [taurusBoolLed_27, Diag_ManualTuningOnA]
+- [taurusBoolLed_28, Diag_ManualTuningFreqUpA]
+- [tauValueLabel_numberPulses_2, NumStepsA]
+- [tauValueLabel_moveUp, MoveUpA]
+- [tauValueLabel_movePlg1, MoveA]
+# Cavity B
+- [taurusBoolLed_32, Diag_ManualTuningOnB]
+- [taurusBoolLed_31, Diag_ManualTuningFreqUpB]
+- [tauValueLabel_numberPulses_4, NumStepsB]
+- [tauValueLabel_moveUp_3, MoveUpB]
+- [tauValueLabel_movePlg1_3, MoveB]
+
+comboboxes:
+# Cavity A
+- [comboBox_moveUp, MoveUpA, CB]
+- [comboBox_movePlg, MoveA, CB]
+# Cavity B
+- [comboBox_moveUp_3, MoveUpB, CB]
+- [comboBox_movePlg_3, MoveB, CB]
