@@ -30,6 +30,7 @@ from PyQt4.QtGui import QInputDialog, QApplication
 # local imports
 from commons import sections_dict
 
+
 # Process decorator
 def in_different_process(func):
     """Decorator to run the function in a different process."""
@@ -45,14 +46,23 @@ def in_different_process(func):
         return queue.get(False)
     return wrapper
 
-def get_model():
+
+def get_model(is_expert, section=None):
     list_of_options = sections_dict.keys()
-    choose = choose_server(list_of_options)
-    section = str(choose)
+    if section is None:
+        choose = choose_server(list_of_options)
+        section = str(choose)
+
     loops = sections_dict[section]['loops']
     diags = sections_dict[section]['diags']
 
-    return section, loops, diags
+    if not is_expert:
+        llrf = sections_dict[section]['llrf']
+        llrfdiags = sections_dict[section]['llrfdiags']
+        return section, loops, diags, llrf, llrfdiags
+    else:
+        return section, loops, diags
+
 
 # Server selection dialog
 @in_different_process

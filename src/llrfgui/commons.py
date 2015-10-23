@@ -44,20 +44,40 @@ sections_dict = {
     #    'loops': 'ws/rf/pynutaq-3',
     #    'diags': 'ws/rf/pynutaq-4'
     #},
-    'amilan_tests': {
-        'loops': 'ws/rf/pynutaq_1',
-        'diags': 'ws/rf/pynutaqdiags_1'
-    },
-    'R3-A100111CAB03': {
-        'loops': 'R3-A100111CAB03/RF/NUTAQ-01',
-        'diags': 'R3-A100111CAB03/RF/NUTAQDIAGS-01'
-    },
-    'R3-A101711CAB03': {
+    # 'amilan_tests': {
+    #     'loops': 'ws/rf/pynutaq_1',
+    #     'diags': 'ws/rf/pynutaqdiags_1',
+    #     'llrf': 'ws/rf/llrf-1',
+    #     'llrfdiags': 'ws/rf/llrfdiags_1'
+    # },
+    # 'R3-A100111CAB03': {
+    #     'loops': 'R3-A100111CAB03/RF/NUTAQ-01',
+    #     'diags': 'R3-A100111CAB03/RF/NUTAQDIAGS-01'
+    # },
+    # 'R3-A101711CAB03': {
+    #     'loops': 'R3-A101711CAB03/RF/NUTAQ-01',
+    #     'diags': 'R3-A101711CAB03/RF/NUTAQDIAGS-01'
+    # },
+    # 'R3-A101911CAB03': {
+    #     'loops': 'R3-A101911CAB03/RF/NUTAQ-01',
+    #     'diags': 'R3-A101911CAB03/RF/NUTAQDIAGS-01'
+    # },
+    'RF-ROOM-1': {
         'loops': 'R3-A101711CAB03/RF/NUTAQ-01',
-        'diags': 'R3-A101711CAB03/RF/NUTAQDIAGS-01'
+        'diags': 'R3-A101711CAB03/RF/NUTAQDIAGS-01',
+        'llrf': 'R3-A101711CAB03/RF/LLRF-01',
+        'llrfdiags': 'R3-A101711CAB03/RF/LLRFDIAGS-01'
     },
-    'R3-A101911CAB03': {
+    'RF-ROOM-2': {
         'loops': 'R3-A101911CAB03/RF/NUTAQ-01',
-        'diags': 'R3-A101911CAB03/RF/NUTAQDIAGS-01'
+        'diags': 'R3-A101911CAB03/RF/NUTAQDIAGS-01',
+        'llrf': 'R3-A101911CAB03/RF/LLRF-01',
+        'llrfdiags': 'R3-A101911CAB03/RF/LLRFDIAGS-01'
+    },
+    'RF-ROOM-3': {
+        'loops': 'R3-A100111CAB03/RF/NUTAQ-01',
+        'diags': 'R3-A100111CAB03/RF/NUTAQDIAGS-01',
+        'llrf': 'R3-A100111CAB03/RF/LLRF-01',
+        'llrfdiags': 'R3-A100111CAB03/RF/LLRFDIAGS-01'
     },
 }

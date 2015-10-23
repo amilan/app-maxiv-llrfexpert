@@ -31,6 +31,7 @@ __docformat__ = 'restructuredtext'
 import os
 import sys
 import importlib
+# import argparse
 
 # 3rd party imports
 from taurus.qt.qtgui.taurusgui import TaurusGui
@@ -40,11 +41,13 @@ from taurus.qt.qtgui.application import TaurusApplication
 from dialog import get_model
 
 # Constants
-GUI_NAME = 'llrfExpertGUI'
+EXPERT_GUI_NAME = 'llrfExpertGUI'
+USER_GUI_NAME = 'llrfGUI'
 ORGANIZATION = 'MAXIV'
 PERIOD_ARG = '--taurus-polling-period='
 PERIOD = 500
 CONSOLE = False
+
 
 def configure_pythonpath():
     """ This method extends the pythonpath with the path where the module
@@ -59,21 +62,27 @@ def configure_pythonpath():
     sys.path.extend([panels_path])
     #print sys.path
 
-def create_app_name(section):
-    app_name = GUI_NAME + '_' + section
+
+def create_app_name(section, is_expert):
+    if is_expert:
+        app_name = EXPERT_GUI_NAME + '_' + section
+    else:
+        app_name = USER_GUI_NAME + '_' + section
     return app_name
 
-def create_application(name):
-    '''
+
+def create_application(name, parser):
+    """
         Create the application and return an (application, taurusgui) tuple.
         
         :return: Tuple compose by a TaurusApplication and a TaurusGUI
         :rtype: tuple
-    '''
-    app = TaurusApplication(app_name=name)
+    """
+    app = TaurusApplication(app_name=name, cmd_line_parser=parser)
     app.setOrganizationName(ORGANIZATION)
     gui = TaurusGui()
     return app, gui
+
 
 def hide_toolbars(gui):
     """Hide unnecessary toolbars.
@@ -84,6 +93,7 @@ def hide_toolbars(gui):
     gui.statusBar().hide()
     gui.setLockView(False)
 
+
 def set_polling_period(period):
     for arg in sys.argv:
         if arg.startswith(PERIOD_ARG):
@@ -91,13 +101,16 @@ def set_polling_period(period):
     else:
         sys.argv.append(PERIOD_ARG+str(period))
         
-def apply_panels(gui):
-    section, loops, diags = get_model()
-    create_panels(gui, section, loops, diags)
+
+# def apply_panels(gui):
+#     section, loops, diags = get_model()
+#     create_panels(gui, section, loops, diags)
         
-def create_panels(gui, section, loops_device, diags_device):
+
+def create_panels(gui, section, loops_device, diags_device, is_expert,
+                  llrf_device=None, llrfdiags_device=None):
     """Create panels and set application name."""
-    models_dict = {
+    models_dict_expert = {
         'AutoStartUp': loops_device,
         'AutoTuning': loops_device,
         'Conditioning': loops_device,
@@ -123,37 +136,112 @@ def create_panels(gui, section, loops_device, diags_device):
         'FIM': diags_device,
     }
 
+    models_dict_user = {
+        'AutoTuningSimple': loops_device,
+        'ItckOutDiagSimple': diags_device,
+        'ManualTuningSimple': loops_device,
+        'LlrfSimple': [llrf_device, llrfdiags_device]
+    }
+
+    if is_expert:
+        models_dict = models_dict_expert
+    else:
+        models_dict = models_dict_user
+
     for name in models_dict.keys():
         print 'PROCESSING', name
         module_name='llrfgui.widgets.' + name.lower()
-        widget_instance = get_class_object(module_name, name)
+        widget_instance =   get_class_object(module_name, name)
         gui.createPanel(widget_instance, name, floating=False, permanent=True)
         model=models_dict[name]
         gui.getPanel(name).widget().setModel(model)
+
 
 def get_class_object(module_name, class_name):
     mod = importlib.import_module(module_name)
     klass = getattr(mod, class_name)()
     return klass
 
-def load_settings(gui):
-    default_ini = os.path.abspath(os.path.dirname(__file__)) + '/default.ini'
+
+def load_settings(gui, is_expert):
+    if is_expert:
+        default_ini = os.path.abspath(os.path.dirname(__file__)) + '/default.ini'
+    else:
+        default_ini = os.path.abspath(os.path.dirname(__file__)) + '/default_user.ini'
     gui.loadSettings(factorySettingsFileName=default_ini)
+
 
 def run(period=PERIOD):
     """Run LLRF expert GUI"""
+
+    # parse arguments
+    ## parser = argparse.ArgumentParser(description="Graphical User Interface to control a LLRF system.")
+    ## parser.add_argument('-e', '--expert', action='store_true',
+    ##                    help="""Launch the GUI in expert mode""",
+    ##                    )
+    # parser.add_argument('rf_room',
+    #                     help='''RF Room to be controlled''',
+    #                     nargs='?', type=str, const='user', default='user'
+    #                     )
+
+    import taurus.core.util.argparse as argparse
+    parser = argparse.get_taurus_parser()
+    parser.set_usage("%prog [-e, --expert]")
+    parser.set_description("Graphical User Interface to control a LLRF system.")
+    parser.add_option('-e', '--expert', action='store_true',
+                      help="Launch the GUI in expert mode")
+
+    parser.add_option('-r', '--rf_room', type=str,
+                      help="""RF Room to be controlled.
+                              \nAvailable options:
+                              \n  RF-ROOM-1,RF-ROOM-2,RF-ROOM-3
+                           """)
+
+    parser, options, args = argparse.init_taurus_args(parser=parser)
+
+    #args = parser.parse_args()
+    # if args.expert:
+#    if options.expert:
     #set_polling_period(period)
+
     import taurus
     taurus.Manager().changeDefaultPollingPeriod(period)
     configure_pythonpath()
-    section, loops, diags = get_model()
-    app_name = create_app_name(section)
-    app, gui = create_application(app_name)
-    hide_toolbars(gui)
+
+    if options.expert:
+        section, loops, diags = get_model(options.expert, options.rf_room)
+        llrf = None
+        llrfdiags = None
+    else:
+        section, loops, diags, llrf, llrfdiags = get_model(options.expert, options.rf_room)
+
+    app_name = create_app_name(section, options.expert)
+    app, gui = create_application(app_name, parser=parser)
+
+    # # Splash screen from taurusgui
+    # from PyQt4.QtGui import QSplashScreen, QPixmap
+    # from PyQt4.QtCore import Qt
+    # pixmap = QPixmap('maxiv.png')
+    # splashScreen = QSplashScreen(pixmap, Qt.WindowStaysOnTopHint)
+    # splashScreen.setMask(pixmap.mask())
+    # splashScreen.show()
+    # app.processEvents()
+    # splashScreen.showMessage("Testing ... ")
+    #
+    # hide_toolbars(gui)
+    # import time
+    # time.sleep(1)
+    # splashScreen.showMessage("Testing ... More")
+
     gui.show()
-    create_panels(gui, section, loops, diags)
-    load_settings(gui)
+
+    create_panels(gui, section, loops, diags, options.expert, llrf, llrfdiags)
+    load_settings(gui, options.expert)
+
+    # splashScreen.finish(gui)
+
     sys.exit(app.exec_())
+
 
 if __name__ == '__main__':
     run()
