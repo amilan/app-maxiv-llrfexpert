@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 ###############################################################################
-#     ManualTuning is a widget used for the LLRF Expert GUI.
+#     ManualTuningSimple is a widget used for the LLRF Expert GUI.
 #
 #     Copyright (C) 2013  Max IV Laboratory, Lund Sweden
 #
@@ -20,13 +20,13 @@
 ###############################################################################
 
 """
-ManualTuning is a widget used for the LLRF Expert GUI.
+ManualTuningSimple is a widget used for the LLRF Expert GUI.
 """
 
-__all__ = ['ManualTuning']
+__all__ = ['ManualTuningSimple']
 
 __author__ = "amilan"
 
 __docformat__ = 'restructuredtext'
 
-from manualtuning import ManualTuning
+from manualtuningsimple import ManualTuningSimple

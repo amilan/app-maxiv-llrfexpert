@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 ###############################################################################
-#     AutoTuning is a widget used for the LLRF Expert GUI.
+#     AutoTuningSimple is a widget used for the LLRF Expert GUI.
 #
 #     Copyright (C) 2013  Max IV Laboratory, Lund Sweden
 #
@@ -20,13 +20,13 @@
 ###############################################################################
 
 """
-AutoTuning is a widget used for the LLRF Expert GUI.
+AutoTuningSimple is a widget used for the LLRF Expert GUI.
 """
 
-__all__ = ['AutoTuning']
+__all__ = ['AutoTuningSimple']
 
 __author__ = "amilan"
 
 __docformat__ = 'restructuredtext'
 
-from autotuning import AutoTuning
+from autotuningsimple import AutoTuningSimple

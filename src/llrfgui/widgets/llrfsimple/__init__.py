@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 ###############################################################################
-#     ItckOutDiagSimple is a widget used for the LLRF Expert GUI.
+#     LlrfSimple is a widget used for the LLRF Expert GUI.
 #
 #     Copyright (C) 2013  Max IV Laboratory, Lund Sweden
 #
@@ -20,13 +20,13 @@
 ###############################################################################
 
 """
-ItckOutDiagSimple is a widget used for the LLRF Expert GUI.
+LlrfSimple is a widget used for the LLRF Expert GUI.
 """
 
-__all__ = ['ItckOutDiagSimple']
+__all__ = ['LlrfSimple']
 
 __author__ = "amilan"
 
 __docformat__ = 'restructuredtext'
 
-from itckoutdiagsimple import ItckOutDiagSimple
+from llrfsimple import LlrfSimple

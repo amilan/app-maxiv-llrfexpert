@@ -1,0 +1,60 @@
+# YAML configuration file used to connect each widget to its model.
+# The data structure will be a dictionary compose by lists of
+# the following elements:
+
+#  -------------------------------------------------------------------------
+# |                               attributes                                |
+#  -------------------------------------------------------------------------
+# |    widget_name    |    tango_attribute    |    use_diagnostic_device    |
+#  -------------------------------------------------------------------------
+
+#  -------------------------------------------------------------------------
+# |                                readback                                 |
+#  -------------------------------------------------------------------------
+# |    widget_name    |    tango_attribute    |    use_diagnostic_device    |
+#  -------------------------------------------------------------------------
+
+#  -------------------------------------------------------------------------
+# |                               comboboxes                                |
+#  -------------------------------------------------------------------------
+# | widget_name | tango_attribute | values_for_comboboxes | use_diag_device |
+#  -------------------------------------------------------------------------
+
+
+attributes:
+# Cavity A
+- [mAXLineEdit, AmpRefInA, false]
+- [mAXLineEdit_2, PhRefInA, false]
+
+# Cavity B
+- [mAXLineEdit_3, AmpRefInB, false]
+- [mAXLineEdit_4, PhRefInB, false]
+
+readback:
+# Cavity A
+- [taurusLabel, AmpRefInA, false]
+- [taurusLabel_2, PhRefInA, false]
+- [taurusLabel_5, Diag_AmpRefA, false]
+- [taurusLabel_6, Diag_PhRefA, false]
+- [taurusLabel_8, Diag_AmpCavLoopsA, false]
+- [taurusLabel_7, Diag_AmpFwCavLoopsA, false]
+- [taurusLabel_10, Diag_PhcavLoopsA, false]
+- [taurusLabel_9, Diag_PhFwCavLoopsA, false]
+- [taurusLabel_12, Diag_AmpRvCavA, true]
+- [taurusLabel_11, Diag_PhRvCavA, true]
+
+# Cavity B
+- [taurusLabel_3, AmpRefInA, false]
+- [taurusLabel_4, PhRefInA, false]
+- [taurusLabel_21, Diag_AmpRefB, false]
+- [taurusLabel_22, Diag_PhRefB, false]
+- [taurusLabel_23, Diag_AmpCavLoopsB, false]
+- [taurusLabel_24, Diag_AmpFwCavLoopsB, false]
+- [taurusLabel_25, Diag_PhcavLoopsB, false]
+- [taurusLabel_26, Diag_PhFwCavLoopsB, false]
+- [taurusLabel_27, Diag_AmpRvCavB, true]
+- [taurusLabel_28, Diag_PhRvCavB, true]
+
+comboboxes:
+-
+
