@@ -228,7 +228,7 @@ def run(period=PERIOD):
     # app.processEvents()
     # splashScreen.showMessage("Testing ... ")
     #
-    # hide_toolbars(gui)
+    hide_toolbars(gui)
     # import time
     # time.sleep(1)
     # splashScreen.showMessage("Testing ... More")
