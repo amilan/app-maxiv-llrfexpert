@@ -31,7 +31,6 @@ __docformat__ = 'restructuredtext'
 import os
 import sys
 import importlib
-# import argparse
 
 # 3rd party imports
 from taurus.qt.qtgui.taurusgui import TaurusGui
@@ -60,7 +59,6 @@ def configure_pythonpath():
     module_path = get_python_lib()
     panels_path = module_path
     sys.path.extend([panels_path])
-    #print sys.path
 
 
 def create_app_name(section, is_expert):
@@ -174,16 +172,6 @@ def load_settings(gui, is_expert):
 def run(period=PERIOD):
     """Run LLRF expert GUI"""
 
-    # parse arguments
-    ## parser = argparse.ArgumentParser(description="Graphical User Interface to control a LLRF system.")
-    ## parser.add_argument('-e', '--expert', action='store_true',
-    ##                    help="""Launch the GUI in expert mode""",
-    ##                    )
-    # parser.add_argument('rf_room',
-    #                     help='''RF Room to be controlled''',
-    #                     nargs='?', type=str, const='user', default='user'
-    #                     )
-
     import taurus.core.util.argparse as argparse
     parser = argparse.get_taurus_parser()
     parser.set_usage("%prog [-e, --expert]")
@@ -199,10 +187,7 @@ def run(period=PERIOD):
 
     parser, options, args = argparse.init_taurus_args(parser=parser)
 
-    #args = parser.parse_args()
-    # if args.expert:
-#    if options.expert:
-    #set_polling_period(period)
+    # set_polling_period(period)
 
     import taurus
     taurus.Manager().changeDefaultPollingPeriod(period)
@@ -218,27 +203,11 @@ def run(period=PERIOD):
     app_name = create_app_name(section, options.expert)
     app, gui = create_application(app_name, parser=parser)
 
-    # # Splash screen from taurusgui
-    # from PyQt4.QtGui import QSplashScreen, QPixmap
-    # from PyQt4.QtCore import Qt
-    # pixmap = QPixmap('maxiv.png')
-    # splashScreen = QSplashScreen(pixmap, Qt.WindowStaysOnTopHint)
-    # splashScreen.setMask(pixmap.mask())
-    # splashScreen.show()
-    # app.processEvents()
-    # splashScreen.showMessage("Testing ... ")
-    #
     hide_toolbars(gui)
-    # import time
-    # time.sleep(1)
-    # splashScreen.showMessage("Testing ... More")
-
     gui.show()
 
     create_panels(gui, section, loops, diags, options.expert, llrf, llrfdiags)
     load_settings(gui, options.expert)
-
-    # splashScreen.finish(gui)
 
     sys.exit(app.exec_())
 
