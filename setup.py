@@ -26,7 +26,7 @@ def main():
 
     name = "taurusgui-llrfexpert"
 
-    version = "2.1.0"
+    version = "2.1.1"
 
     description = "Taurus GUI for Low Level RF expert users."
 

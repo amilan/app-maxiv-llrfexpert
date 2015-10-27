@@ -30,7 +30,7 @@ readback:
 - [tauValueLabel_EPSITCKA, EpsItckDisableA]
 - [tauValueLabel_FIMITCKA, FimItckDisableA]
 # Cavity B
-- [tauValueLabel_autoStartUpB, AutomaticStartUpEnablerB]
+- [tauValueLabel_autoStartUpB, AutomaticStartUpEnableB]
 - [tauValueLabel_CommandStartB, CommandStartB]
 - [tauValueLabel_EPSITCKB, EpsItckDisableB]
 - [tauValueLabel_FIMITCKB, FimItckDisableB]
