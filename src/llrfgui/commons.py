@@ -48,7 +48,7 @@ sections_dict = {
     #     'loops': 'ws/rf/pynutaq_1',
     #     'diags': 'ws/rf/pynutaqdiags_1',
     #     'llrf': 'ws/rf/llrf-1',
-    #     'llrfdiags': 'ws/rf/llrfdiags_1'
+    #     'llrfdiags': 'ws/rf/llrfdiags-3'
     # },
     # 'R3-A100111CAB03': {
     #     'loops': 'R3-A100111CAB03/RF/NUTAQ-01',
