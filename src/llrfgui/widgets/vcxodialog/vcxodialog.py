@@ -98,11 +98,11 @@ class VCXODialog(QtGui.QDialog):
         """Method to fill the comboBoxes
         """
         options = [
-            ['1', 1],
-            ['2', 2],
-            ['4', 4],
-            ['8', 8],
-            ['16', 16]
+            ['1', 0],
+            ['2', 1],
+            ['4', 2],
+            ['8', 3],
+            ['16', 4]
         ]
 
         booleanOptions = [
