@@ -44,8 +44,8 @@ readback:
 - [taurusLabel_11, Diag_PhRvCavA, true]
 
 # Cavity B
-- [taurusLabel_3, AmpRefInA, false]
-- [taurusLabel_4, PhRefInA, false]
+- [taurusLabel_3, AmpRefInB, false]
+- [taurusLabel_4, PhRefInB, false]
 - [taurusLabel_21, Diag_AmpRefB, false]
 - [taurusLabel_22, Diag_PhRefB, false]
 - [taurusLabel_23, Diag_AmpCavLoopsB, false]
