@@ -1,0 +1,912 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>339</width>
+    <height>329</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QScrollArea" name="scrollArea">
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="scrollAreaWidgetContents">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>339</width>
+        <height>329</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <layout class="QGridLayout" name="_22">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <item row="13" column="0">
+          <widget class="QLabel" name="label_146">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>130</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>130</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>Interlock timestamp (ms)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="13" column="2">
+          <widget class="TaurusLabel" name="tauValueLabel_itckTimestamp_2">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>93</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>93</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>7</pointsize>
+            </font>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_152">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>93</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>RvTet1</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="TaurusBoolLed" name="taurusBoolLed">
+           <property name="ledColor" stdset="0">
+            <string>RED</string>
+           </property>
+           <property name="ledColorOff" stdset="0">
+            <string>REDOFF</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_153">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>93</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>RvTet2</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="TaurusBoolLed" name="taurusBoolLed_2">
+           <property name="ledColor" stdset="0">
+            <string>RED</string>
+           </property>
+           <property name="ledColorOff" stdset="0">
+            <string>REDOFF</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_147">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>93</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>RvCirc</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="TaurusBoolLed" name="taurusBoolLed_3">
+           <property name="ledColor" stdset="0">
+            <string>RED</string>
+           </property>
+           <property name="ledColorOff" stdset="0">
+            <string>REDOFF</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_148">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>93</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>FwLoad</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="TaurusBoolLed" name="taurusBoolLed_4">
+           <property name="ledColor" stdset="0">
+            <string>RED</string>
+           </property>
+           <property name="ledColorOff" stdset="0">
+            <string>REDOFF</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="label_149">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>93</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>FwHybLoad</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <widget class="TaurusBoolLed" name="taurusBoolLed_5">
+           <property name="ledColor" stdset="0">
+            <string>RED</string>
+           </property>
+           <property name="ledColorOff" stdset="0">
+            <string>REDOFF</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0">
+          <widget class="QLabel" name="label_150">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>93</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>RvCav</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="1">
+          <widget class="TaurusBoolLed" name="taurusBoolLed_6">
+           <property name="ledColor" stdset="0">
+            <string>RED</string>
+           </property>
+           <property name="ledColorOff" stdset="0">
+            <string>REDOFF</string>
+           </property>
+          </widget>
+         </item>
+         <item row="8" column="0">
+          <widget class="QLabel" name="label_156">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>93</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>Arcs</string>
+           </property>
+          </widget>
+         </item>
+         <item row="8" column="1">
+          <widget class="TaurusBoolLed" name="taurusBoolLed_8">
+           <property name="ledColor" stdset="0">
+            <string>RED</string>
+           </property>
+           <property name="ledColorOff" stdset="0">
+            <string>REDOFF</string>
+           </property>
+          </widget>
+         </item>
+         <item row="9" column="0">
+          <widget class="QLabel" name="label_157">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>93</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>Vacumm</string>
+           </property>
+          </widget>
+         </item>
+         <item row="9" column="1">
+          <widget class="TaurusBoolLed" name="taurusBoolLed_9">
+           <property name="ledColor" stdset="0">
+            <string>RED</string>
+           </property>
+           <property name="ledColorOff" stdset="0">
+            <string>REDOFF</string>
+           </property>
+          </widget>
+         </item>
+         <item row="10" column="0">
+          <widget class="QLabel" name="label_158">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>External ITCK Input</string>
+           </property>
+          </widget>
+         </item>
+         <item row="10" column="1">
+          <widget class="TaurusBoolLed" name="taurusBoolLed_10">
+           <property name="ledColor" stdset="0">
+            <string>RED</string>
+           </property>
+           <property name="ledColorOff" stdset="0">
+            <string>REDOFF</string>
+           </property>
+          </widget>
+         </item>
+         <item row="13" column="1">
+          <widget class="TaurusLabel" name="tauValueLabel_itckTimestamp">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>93</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>93</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>7</pointsize>
+            </font>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="TaurusBoolLed" name="taurusBoolLed_11">
+           <property name="ledColor" stdset="0">
+            <string>RED</string>
+           </property>
+           <property name="ledColorOff" stdset="0">
+            <string>REDOFF</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="2">
+          <widget class="TaurusBoolLed" name="taurusBoolLed_12">
+           <property name="ledColor" stdset="0">
+            <string>RED</string>
+           </property>
+           <property name="ledColorOff" stdset="0">
+            <string>REDOFF</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="2">
+          <widget class="TaurusBoolLed" name="taurusBoolLed_13">
+           <property name="ledColor" stdset="0">
+            <string>RED</string>
+           </property>
+           <property name="ledColorOff" stdset="0">
+            <string>REDOFF</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="2">
+          <widget class="TaurusBoolLed" name="taurusBoolLed_14">
+           <property name="ledColor" stdset="0">
+            <string>RED</string>
+           </property>
+           <property name="ledColorOff" stdset="0">
+            <string>REDOFF</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="2">
+          <widget class="TaurusBoolLed" name="taurusBoolLed_15">
+           <property name="ledColor" stdset="0">
+            <string>RED</string>
+           </property>
+           <property name="ledColorOff" stdset="0">
+            <string>REDOFF</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="2">
+          <widget class="TaurusBoolLed" name="taurusBoolLed_16">
+           <property name="ledColor" stdset="0">
+            <string>RED</string>
+           </property>
+           <property name="ledColorOff" stdset="0">
+            <string>REDOFF</string>
+           </property>
+          </widget>
+         </item>
+         <item row="8" column="2">
+          <widget class="TaurusBoolLed" name="taurusBoolLed_18">
+           <property name="ledColor" stdset="0">
+            <string>RED</string>
+           </property>
+           <property name="ledColorOff" stdset="0">
+            <string>REDOFF</string>
+           </property>
+          </widget>
+         </item>
+         <item row="9" column="2">
+          <widget class="TaurusBoolLed" name="taurusBoolLed_19">
+           <property name="ledColor" stdset="0">
+            <string>RED</string>
+           </property>
+           <property name="ledColorOff" stdset="0">
+            <string>REDOFF</string>
+           </property>
+          </widget>
+         </item>
+         <item row="10" column="2">
+          <widget class="TaurusBoolLed" name="taurusBoolLed_20">
+           <property name="ledColor" stdset="0">
+            <string>RED</string>
+           </property>
+           <property name="ledColorOff" stdset="0">
+            <string>REDOFF</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="label_251">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="layoutDirection">
+            <enum>Qt::RightToLeft</enum>
+           </property>
+           <property name="text">
+            <string>RF Chain A</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QLabel" name="label_252">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="layoutDirection">
+            <enum>Qt::RightToLeft</enum>
+           </property>
+           <property name="text">
+            <string>RF Chain B</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="0">
+          <widget class="QLabel" name="label_142">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>93</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>Manual Interlock</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="1">
+          <widget class="TaurusBoolLed" name="taurusBoolLed_7">
+           <property name="ledColor" stdset="0">
+            <string>RED</string>
+           </property>
+           <property name="ledColorOff" stdset="0">
+            <string>REDOFF</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="2">
+          <widget class="TaurusBoolLed" name="taurusBoolLed_17">
+           <property name="ledColor" stdset="0">
+            <string>RED</string>
+           </property>
+           <property name="ledColorOff" stdset="0">
+            <string>REDOFF</string>
+           </property>
+          </widget>
+         </item>
+         <item row="11" column="0">
+          <widget class="QLabel" name="label_264">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>End Switch Up</string>
+           </property>
+          </widget>
+         </item>
+         <item row="11" column="1">
+          <widget class="TaurusBoolLed" name="taurusBoolLed_41">
+           <property name="ledColor" stdset="0">
+            <string>RED</string>
+           </property>
+           <property name="ledColorOff" stdset="0">
+            <string>REDOFF</string>
+           </property>
+          </widget>
+         </item>
+         <item row="11" column="2">
+          <widget class="TaurusBoolLed" name="taurusBoolLed_42">
+           <property name="ledColor" stdset="0">
+            <string>RED</string>
+           </property>
+           <property name="ledColorOff" stdset="0">
+            <string>REDOFF</string>
+           </property>
+          </widget>
+         </item>
+         <item row="12" column="0">
+          <widget class="QLabel" name="label_265">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>End Switch Down</string>
+           </property>
+          </widget>
+         </item>
+         <item row="12" column="1">
+          <widget class="TaurusBoolLed" name="taurusBoolLed_43">
+           <property name="ledColor" stdset="0">
+            <string>RED</string>
+           </property>
+           <property name="ledColorOff" stdset="0">
+            <string>REDOFF</string>
+           </property>
+          </widget>
+         </item>
+         <item row="12" column="2">
+          <widget class="TaurusBoolLed" name="taurusBoolLed_44">
+           <property name="ledColor" stdset="0">
+            <string>RED</string>
+           </property>
+           <property name="ledColorOff" stdset="0">
+            <string>REDOFF</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="0">
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <widget class="QLabel" name="label_159">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>93</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>Interlock number</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="TaurusWheelEdit" name="taurusWheelEdit">
+           <property name="integerDigits" stdset="0">
+            <number>1</number>
+           </property>
+           <property name="decimalDigits" stdset="0">
+            <number>0</number>
+           </property>
+           <property name="value" stdset="0">
+            <double>1.000000000000000</double>
+           </property>
+           <property name="minValue" stdset="0">
+            <double>1.000000000000000</double>
+           </property>
+           <property name="maxValue" stdset="0">
+            <double>8.000000000000000</double>
+           </property>
+           <property name="autoApply" stdset="0">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>TaurusLabel</class>
+   <extends>QLabel</extends>
+   <header>taurus.qt.qtgui.display</header>
+  </customwidget>
+  <customwidget>
+   <class>TaurusBoolLed</class>
+   <extends>QLabel</extends>
+   <header>taurus.qt.qtgui.display</header>
+  </customwidget>
+  <customwidget>
+   <class>TaurusWheelEdit</class>
+   <extends>QFrame</extends>
+   <header>taurus.qt.qtgui.input</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

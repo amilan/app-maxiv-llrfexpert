@@ -1,0 +1,136 @@
+# YAML configuration file used to connect each widget to its model.
+# The data structure will be a dictionary compose by lists of
+# the following elements:
+
+#  -------------------------------------------------------
+# |                      attributes                       |
+#  -------------------------------------------------------
+# |              widget_name | tango_attribute            |
+#  -------------------------------------------------------
+
+#  -------------------------------------------------------
+# |                      readback                         |
+#  -------------------------------------------------------
+# |              widget_name | tango_attribute            |
+#  -------------------------------------------------------
+
+#  -------------------------------------------------------
+# |                      comboboxes                       |
+#  -------------------------------------------------------
+# | widget_name | tango_attribute | values_for_comboboxes |
+#  -------------------------------------------------------
+
+attributes:
+-
+
+readback:
+# Cavity A
+# I attributes
+- [tauValueLabel_IcavRef, Diag_IRefA]
+- [tauValueLabel_IcavVolt, Diag_IcavLoopsA]
+- [tauValueLabel_IFwTet1Loop, Diag_IFwTet1LoopsA]
+- [tauValueLabel_IFwTet2Loop, Diag_IFwTet2LoopsA]
+- [tauValueLabel_IFwCircInLoop, Diag_IFwCircInLoopsA]
+- [tauValueLabel_IFwCavLoop, Diag_IFwCavLoopsA]
+- [tauValueLabel_ILoopInput, Diag_IpolarForAmplitudeLoopA]
+- [tauValueLabel_IPhLoopInput, Diag_IpolarForPhaseLoopA]
+- [tauValueLabel_IcrtlA, Diag_IcontrolA]
+- [tauValueLabel_IcrtlAc1, Diag_Icontrol1A]
+- [tauValueLabel_IcrtlAc2, Diag_Icontrol2A]
+# Q attributes
+- [tauValueLabel_QcavRef, Diag_QrefA]
+- [tauValueLabel_QcavVolt, Diag_QcavLoopsA]
+- [tauValueLabel_QFwTet1Loop, Diag_QFwTet1LoopsA]
+- [tauValueLabel_QFwTet2Loop, Diag_QFwTet2LoopsA]
+- [tauValueLabel_QFwCircInLoop, Diag_QFwCircInLoopsA]
+- [tauValueLabel_QFwCavLoop, Diag_QFwCavLoopsA]
+- [tauValueLabel_QLoopInput, Diag_QpolarForAmplitudeLoopA]
+- [tauValueLabel_QPhLoopInput, Diag_QpolarForPhaseLoopA]
+- [tauValueLabel_QctrlA, Diag_QcontrolA]
+- [tauValueLabel_QctrlAc1, Diag_Qcontrol1A]
+- [tauValueLabel_QctrlAc2, Diag_Qcontrol2A]
+# Amp attributes
+- [tauValueLabel_ampcavRef, Diag_AmprefA]
+- [tauValueLabel_ampCavVolt, Diag_AmpcavLoopsA]
+- [tauValueLabel_ampFwTet1Loop, Diag_AmpFwTet1LoopsA]
+- [tauValueLabel_ampFwTet2Loop, Diag_AmpFwTet2LoopsA]
+- [tauValueLabel_ampFwCircInLoop, Diag_AmpFwCircInLoopsA]
+- [tauValueLabel_ampFwCavLoop, Diag_AmpFwCavLoopsA]
+- [tauValueLabel_ampLoopInput, Diag_AmpInputOfAmpLoopA]
+- [tauValueLabel_ampPhLoopInput, Diag_AmpInputOfAmpLoopA]
+- [tauValueLabel_ampLoopError, Diag_AmpLoopErrorA]
+- [tauValueLabel_ampctrlA, Diag_AmpcontrolA]
+- [tauValueLabel_ampctrlAc1, Diag_Ampcontrol1A]
+- [tauValueLabel_ampctrlAc2, Diag_Ampcontrol2A]
+- [tauValueLabel_ampLoopErrorAccum, Diag_AmpLoopErrorAccumA]
+# # Phase attributes
+- [tauValueLabel_phasecavRef, Diag_PhrefA]
+- [tauValueLabel_phasecavVolt, Diag_PhcavLoopsA]
+- [tauValueLabel_phaseFwTet1Loop, Diag_PhFwTet1LoopsA]
+- [tauValueLabel_phaseFwTet2Loop, Diag_PhFwTet2LoopsA]
+- [tauValueLabel_phaseFwCircInLoop, Diag_PhFwCircInLoopsA]
+- [tauValueLabel_phaseFwCavLoop, Diag_PhFwCavLoopsA]
+- [tauValueLabel_phaseLoopInput, Diag_PhaseInputOfAmpLoopA]
+- [tauValueLabel_phasePhLoopInput, Diag_PhInputOfPhaseLoopA]
+- [tauValueLabel_phaseLoopError, Diag_PhLoopErrorA]
+- [tauValueLabel_phasectrlA, Diag_PhcontrolA]
+- [tauValueLabel_phasectrlAc1, Diag_Phcontrol1A]
+- [tauValueLabel_phasectrlAc2, Diag_Phcontrol2A]
+- [tauValueLabel_phaseLoopErrorAccum, Diag_PhLoopErrorAccumA]
+
+# Cavity B
+# I attributes
+- [tauValueLabel_IcavRef_2, Diag_IRefB]
+- [tauValueLabel_IcavVolt_2, Diag_IcavLoopsB]
+- [tauValueLabel_FwTet1Loop_5, Diag_IFwTet1LoopsB]
+- [tauValueLabel_IcavRef_4, Diag_IFwTet2LoopsB]
+- [tauValueLabel_IcavRef_6, Diag_IFwCircInLoopsB]
+- [tauValueLabel_IcavRef_8, Diag_IFwCavLoopsB]
+- [tauValueLabel_IcavRef_10, Diag_IpolarForAmplitudeLoopB]
+- [tauValueLabel_IerrorP_2, Diag_IpolarForPhaseLoopB]
+- [tauValueLabel_IctrlA_2, Diag_IcontrolB]
+- [tauValueLabel_IcrtlAc_4, Diag_Icontrol1B]
+- [tauValueLabel_IcrtlAc_8, Diag_Icontrol2B]
+# Q attributes
+- [tauValueLabel_QcavRef_2, Diag_QrefB]
+- [tauValueLabel_QcavVolt_2, Diag_QcavLoopsB]
+- [tauValueLabel_FwTet1Loop_6, Diag_QFwTet1LoopsB]
+- [tauValueLabel_QcavRef_4, Diag_QFwTet2LoopsB]
+- [tauValueLabel_QcavRef_6, Diag_QFwCircInLoopsB]
+- [tauValueLabel_QcavRef_8, Diag_QFwCavLoopsB]
+- [tauValueLabel_QcavRef_10, Diag_QpolarForAmplitudeLoopB]
+- [tauValueLabel_QerrorP_2, Diag_QpolarForPhaseLoopB]
+- [tauValueLabel_QCtrlA_3, Diag_QcontrolB]
+- [tauValueLabel_QctrlAc_4, Diag_Qcontrol1B]
+- [tauValueLabel_QctrlAc_8, Diag_Qcontrol2B]
+# Amp attributes
+- [tauValueLabel_ampCavRef_2, Diag_AmprefB]
+- [tauValueLabel_ampCavVolt_2, Diag_AmpcavLoopsB]
+- [tauValueLabel_FwTet1Loop_7, Diag_AmpFwTet1LoopsB]
+- [tauValueLabel_ampCavRef_4, Diag_AmpFwTet2LoopsB]
+- [tauValueLabel_ampCavRef_6, Diag_AmpFwCircInLoopsB]
+- [tauValueLabel_ampCavRef_8, Diag_AmpFwCavLoopsB]
+- [tauValueLabel_ampCavRef_10, Diag_AmpInputOfAmpLoopB]
+- [tauValueLabel_ampErrorP_2, Diag_AmpInputOfAmpLoopB]
+- [tauValueLabel_ampErrorA_2, Diag_AmpLoopErrorB]
+- [tauValueLabel_AmpMOB, Diag_AmpLoopErrorAccumB]
+- [tauValueLabel_ampCtrlA_2, Diag_AmpcontrolB]
+- [tauValueLabel_ampCtrlAc_4, Diag_Ampcontrol1B]
+- [tauValueLabel_ampCtrlAc_8, Diag_Ampcontrol2B]
+# # Phase attributes
+- [tauValueLabel_phaseCavRef_2, Diag_PhrefB]
+- [tauValueLabel_phaseCavVolt_2, Diag_PhcavLoopsB]
+- [tauValueLabel_FwTet1Loop_8, Diag_PhFwTet1LoopsB]
+- [tauValueLabel_phaseCavRef_4, Diag_PhFwTet2LoopsB]
+- [tauValueLabel_phaseCavRef_6, Diag_PhFwCircInLoopsB]
+- [tauValueLabel_phaseCavRef_8, Diag_PhFwCavLoopsB]
+- [tauValueLabel_phaseCavRef_10, Diag_PhaseInputOfAmpLoopB]
+- [tauValueLabel_phaseErrorP_2, Diag_PhInputOfPhaseLoopB]
+- [tauValueLabel_phaseErrorA_2, Diag_PhLoopErrorB]
+- [tauValueLabel_PhMOB, Diag_PhLoopErrorAccumB]
+- [tauValueLabel_phaseCtrlA_5, Diag_PhcontrolB]
+- [tauValueLabel_phaseCtrlAc_4, Diag_Phcontrol1B]
+- [tauValueLabel_phaseCtrlAc_8, Diag_Phcontrol2B]
+
+comboboxes:
+-

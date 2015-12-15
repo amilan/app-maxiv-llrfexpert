@@ -1,0 +1,3 @@
+include src/llrfgui/images/*
+include *.desktop
+

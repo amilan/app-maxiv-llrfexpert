@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>llrfgui.widgets.basellrfwidget.basellrfwidget &mdash; LLRF expert GUI 1.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '1.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <link rel="top" title="LLRF expert GUI 1.0.0 documentation" href="../../../../index.html" />
+    <link rel="up" title="Module code" href="../../../index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">LLRF expert GUI 1.0.0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../../../index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for llrfgui.widgets.basellrfwidget.basellrfwidget</h1><div class="highlight"><pre>
+<span class="c">#!/usr/bin/env python</span>
+
+<span class="c">###############################################################################</span>
+<span class="c">#     Base llrf Widget is a base class that will be used by all the LLRF</span>
+<span class="c">#     widgets.</span>
+<span class="c">#</span>
+<span class="c">#     Copyright (C) 2013  Max IV Laboratory, Lund Sweden</span>
+<span class="c">#</span>
+<span class="c">#     This program is free software: you can redistribute it and/or modify</span>
+<span class="c">#     it under the terms of the GNU General Public License as published by</span>
+<span class="c">#     the Free Software Foundation, either version 3 of the License, or</span>
+<span class="c">#     (at your option) any later version.</span>
+<span class="c">#</span>
+<span class="c">#     This program is distributed in the hope that it will be useful,</span>
+<span class="c">#     but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="c">#     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<span class="c">#     GNU General Public License for more details.</span>
+<span class="c">#</span>
+<span class="c">#     You should have received a copy of the GNU General Public License</span>
+<span class="c">#     along with this program.  If not, see [http://www.gnu.org/licenses/].</span>
+<span class="c">###############################################################################</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Base class widget to be inherit by all the llrf widgets.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;BaseLLRFWidget&#39;</span><span class="p">]</span>
+
+<span class="n">__author__</span> <span class="o">=</span> <span class="s">&quot;amilan&quot;</span>
+
+<span class="n">__docformat__</span> <span class="o">=</span> <span class="s">&#39;restructuredtext&#39;</span>
+
+
+<span class="kn">from</span> <span class="nn">taurus.external.qt</span> <span class="kn">import</span> <span class="n">Qt</span>
+<span class="kn">from</span> <span class="nn">taurus.qt.qtgui.util.ui</span> <span class="kn">import</span> <span class="n">UILoadable</span>
+
+<span class="kn">from</span> <span class="nn">llrfgui.utils.commons</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">llrfgui.utils.decorators</span> <span class="kn">import</span> <span class="n">alert_problems</span>
+
+
+<span class="c">#@UILoadable(with_ui=&#39;ui&#39;)</span>
+<div class="viewcode-block" id="BaseLLRFWidget"><a class="viewcode-back" href="../../../../widgets/base.html#llrfgui.widgets.basellrfwidget.BaseLLRFWidget">[docs]</a><span class="k">class</span> <span class="nc">BaseLLRFWidget</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">QWidget</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Base class to be used by any other LLRF widget.</span>
+<span class="sd">    It provides the basic interface.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="n">Qt</span><span class="o">.</span><span class="n">QWidget</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">)</span>
+        <span class="c">#self.loadUi()</span>
+
+    <span class="nd">@alert_problems</span>
+<div class="viewcode-block" id="BaseLLRFWidget.setModel"><a class="viewcode-back" href="../../../../widgets/base.html#llrfgui.widgets.basellrfwidget.BaseLLRFWidget.setModel">[docs]</a>    <span class="k">def</span> <span class="nf">setModel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">            Set the model of the widget. This method could be overwritten</span>
+<span class="sd">            if needed due to a different model (i.e. widgets with a list of</span>
+<span class="sd">            devices as model)</span>
+
+<span class="sd">            :param str model: Model to be set.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_device_name</span> <span class="o">=</span> <span class="n">model</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_set_comboboxes</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_create_attributes_lists</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_connect_all_attributes</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">connect_with_devices</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">connect_signals</span><span class="p">()</span>
+</div>
+    <span class="nd">@alert_problems</span>
+<div class="viewcode-block" id="BaseLLRFWidget.connect_with_devices"><a class="viewcode-back" href="../../../../widgets/base.html#llrfgui.widgets.basellrfwidget.BaseLLRFWidget.connect_with_devices">[docs]</a>    <span class="k">def</span> <span class="nf">connect_with_devices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;This method creates the tango device proxys. </span>
+<span class="sd">            To be overwritten if needed.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">pass</span>
+        <span class="c">#self._device_proxy = PyTango.DeviceProxy(self._device_name)</span>
+</div>
+    <span class="nd">@alert_problems</span>
+<div class="viewcode-block" id="BaseLLRFWidget.connect_signals"><a class="viewcode-back" href="../../../../widgets/base.html#llrfgui.widgets.basellrfwidget.BaseLLRFWidget.connect_signals">[docs]</a>    <span class="k">def</span> <span class="nf">connect_signals</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">            Method to connect QT signals with methods. By default is</span>
+<span class="sd">            void, and it should be implemented by the widget itself.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">pass</span>
+</div>
+    <span class="nd">@alert_problems</span>
+<div class="viewcode-block" id="BaseLLRFWidget._set_comboboxes"><a class="viewcode-back" href="../../../../widgets/base.html#llrfgui.widgets.basellrfwidget.BaseLLRFWidget._set_comboboxes">[docs]</a>    <span class="k">def</span> <span class="nf">_set_comboboxes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">            Method to set comboboxes models. By default is</span>
+<span class="sd">            void, and it should be implemented by the widget itself.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">pass</span>
+</div>
+    <span class="nd">@alert_problems</span>
+<div class="viewcode-block" id="BaseLLRFWidget._connect_all_attributes"><a class="viewcode-back" href="../../../../widgets/base.html#llrfgui.widgets.basellrfwidget.BaseLLRFWidget._connect_all_attributes">[docs]</a>    <span class="k">def</span> <span class="nf">_connect_all_attributes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">            Private method in charge of connect a list of tango attributes with</span>
+<span class="sd">            their correspondent widget.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">for</span> <span class="n">attribute</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_attributes</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">connect_attribute</span><span class="p">(</span><span class="n">attribute</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">attribute</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+        <span class="k">for</span> <span class="n">attribute</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_attributes_readback</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">connect_attribute</span><span class="p">(</span><span class="n">attribute</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">attribute</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+        <span class="k">for</span> <span class="n">combobox</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_comboboxes</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">connect_combobox</span><span class="p">(</span><span class="n">combobox</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">combobox</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</div>
+    <span class="nd">@alert_problems</span>
+<div class="viewcode-block" id="BaseLLRFWidget.connect_attribute"><a class="viewcode-back" href="../../../../widgets/base.html#llrfgui.widgets.basellrfwidget.BaseLLRFWidget.connect_attribute">[docs]</a>    <span class="k">def</span> <span class="nf">connect_attribute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">widget</span><span class="p">,</span> <span class="n">attribute</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">            Method to connect a single tango attribute with a widget.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">attribute</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_device_name</span> <span class="o">+</span> <span class="s">&#39;/&#39;</span> <span class="o">+</span> <span class="n">attribute</span>
+        <span class="n">widget</span><span class="o">.</span><span class="n">setModel</span><span class="p">(</span><span class="n">attribute</span><span class="p">)</span>
+</div>
+    <span class="nd">@alert_problems</span>
+<div class="viewcode-block" id="BaseLLRFWidget.connect_combobox"><a class="viewcode-back" href="../../../../widgets/base.html#llrfgui.widgets.basellrfwidget.BaseLLRFWidget.connect_combobox">[docs]</a>    <span class="k">def</span> <span class="nf">connect_combobox</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">widget</span><span class="p">,</span> <span class="n">attribute</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">            Method to connect a single combobox with its tango attribute</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">attribute</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_device_name</span> <span class="o">+</span> <span class="s">&#39;/&#39;</span> <span class="o">+</span> <span class="n">attribute</span>
+        <span class="n">widget</span><span class="o">.</span><span class="n">setModelName</span><span class="p">(</span><span class="n">attribute</span><span class="p">)</span>
+</div>
+    <span class="nd">@alert_problems</span>
+<div class="viewcode-block" id="BaseLLRFWidget._create_attributes_lists"><a class="viewcode-back" href="../../../../widgets/base.html#llrfgui.widgets.basellrfwidget.BaseLLRFWidget._create_attributes_lists">[docs]</a>    <span class="k">def</span> <span class="nf">_create_attributes_lists</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">            Create empty lists for the tango attributes that will be connected</span>
+<span class="sd">            to the internal widgets.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_attributes</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_attributes_readback</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_comboboxes</span> <span class="o">=</span> <span class="p">[]</span>
+</div></div>
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="kn">import</span> <span class="nn">sys</span>
+    <span class="kn">from</span> <span class="nn">taurus.qt.qtgui.application</span> <span class="kn">import</span> <span class="n">TaurusApplication</span>
+
+    <span class="n">app</span> <span class="o">=</span> <span class="n">TaurusApplication</span><span class="p">()</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+    <span class="n">panel</span> <span class="o">=</span> <span class="n">BaseLLRFWidget</span><span class="p">()</span>
+    <span class="n">panel</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec_</span><span class="p">())</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Antonio Milan Otero.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.4</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

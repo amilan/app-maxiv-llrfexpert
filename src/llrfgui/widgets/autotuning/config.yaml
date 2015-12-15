@@ -1,0 +1,77 @@
+# YAML configuration file used to connect each widget to its model.
+# The data structure will be a dictionary compose by lists of
+# the following elements:
+
+#  -------------------------------------------------------
+# |                      attributes                       |
+#  -------------------------------------------------------
+# |              widget_name | tango_attribute            |
+#  -------------------------------------------------------
+
+#  -------------------------------------------------------
+# |                      readback                         |
+#  -------------------------------------------------------
+# |              widget_name | tango_attribute            |
+#  -------------------------------------------------------
+
+#  -------------------------------------------------------
+# |                      comboboxes                       |
+#  -------------------------------------------------------
+# | widget_name | tango_attribute | values_for_comboboxes |
+#  -------------------------------------------------------
+
+attributes:
+# Cavity A
+- [lineEdit_marginUp_2, MarginUpA]
+- [lineEdit_marginLow_2, MarginLowA]
+- [lineEdit_forwardMin, FwminA]
+- [lineEdit_tuningOffset, PhaseOffsetA]
+- [lineEdit_tuningDelayA, TuningdelayA]
+# Cavity B
+- [lineEdit_marginUp_3, MarginUpB]
+- [lineEdit_marginLow_3, MarginLowB]
+- [lineEdit_forwardMin_2, FwminB]
+- [lineEdit_tuningOffset_2, PhaseOffsetB]
+- [lineEdit_tuningDelayB, TuningdelayB]
+
+readback:
+# Cavity A
+- [taurusBoolLed_31, _Diag_MovingPlungerAutoA]
+- [taurusBoolLed_32, Diag_FreqUpA]
+- [tauValueLabel_tuningEn, TuningEnableA]
+- [tauValueLabel_tuningPosEn, TuningPosEnA]
+- [tauValueLabel_tuningFreq, PulsesFrequencyA]
+- [tauValueLabel_marginUp, MarginUpA]
+- [tauValueLabel_marginLow, MarginLowA]
+- [tauValueLabel_tuningOffset, PhaseOffsetA]
+- [tauValueLabel_forwardMin_2, FwminA]
+- [tauValueLabel_tuningFilterEnA,TuningfilterenableA]
+- [tauValueLabel_tuningDelayA, TuningdelayA]
+- [tauValueLabel_tuningTrgEnA, TuningtriggerenableA]
+# Cavity B
+- [taurusBoolLed_34, _Diag_MovingPlungerAutoB]
+- [taurusBoolLed_33, Diag_FreqUpB]
+- [tauValueLabel_tuningEn_2, TuningEnableB]
+- [tauValueLabel_tuningPosEn_2, TuningPosEnB]
+- [tauValueLabel_tuningFreq_2, PulsesFrequencyB]
+- [tauValueLabel_marginUp_2, MarginUpB]
+- [tauValueLabel_marginLow_2, MarginLowB]
+- [tauValueLabel_tuningOffset_2, PhaseOffsetB]
+- [tauValueLabel_forwardMin_3, FwminB]
+- [tauValueLabel_tuningFilterEnB,TuningfilterenableB]
+- [tauValueLabel_tuningDelayB, TuningdelayB]
+- [tauValueLabel_tuningTrgEnB, TuningtriggerenableB]
+
+comboboxes:
+# Cavity A
+- [comboBox_tuningEn, TuningEnableA, CB]
+- [comboBox_tuningPosEn, TuningPosEnA, CB]
+- [comboBox_tuningFreq, PulsesFrequencyA, CC]
+- [comboBox_tuningTrgEnA, TuningtriggerenableA, CFS]
+- [comboBox_tuningFilterEnA, TuningfilterenableA, CB]
+# Cavity B
+- [comboBox_tuningEn_2, TuningEnableB, CB]
+- [comboBox_tuningPosEn_2, TuningPosEnB, CB]
+- [comboBox_tuningFreq_2, PulsesFrequencyB, CC]
+- [comboBox_tuningTrgEnB, TuningtriggerenableB, CFS]
+- [comboBox_tuningFilterEnB, TuningfilterenableB, CB]

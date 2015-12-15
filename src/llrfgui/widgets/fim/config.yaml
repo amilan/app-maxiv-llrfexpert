@@ -1,0 +1,368 @@
+# YAML configuration file used to connect each widget to its model.
+# The data structure will be a dictionary compose by lists of
+# the following elements:
+
+#  -------------------------------------------------------
+# |                      attributes                       |
+#  -------------------------------------------------------
+# |              widget_name | tango_attribute            |
+#  -------------------------------------------------------
+
+#  -------------------------------------------------------
+# |                      readback                         |
+#  -------------------------------------------------------
+# |              widget_name | tango_attribute            |
+#  -------------------------------------------------------
+
+#  -------------------------------------------------------
+# |                      comboboxes                       |
+#  -------------------------------------------------------
+# | widget_name | tango_attribute | values_for_comboboxes |
+#  -------------------------------------------------------
+
+attributes:
+# Cavity A
+
+- [taurusValueCheckBox, DisitckRvTet1DacsoffloopsstbyA]
+- [taurusValueCheckBox_2, DisitckRvTet1PindiodeswitchA]
+- [taurusValueCheckBox_3, DisitckRvTet1FdltrgA]
+- [taurusValueCheckBox_4, DisitckRvTet1PlctxoffA]
+- [taurusValueCheckBox_5, DisitckRvTet1MpsA]
+- [taurusValueCheckBox_6, DisitckRvTet1DiagA]
+
+- [taurusValueCheckBox_7, DisitckRvTet2DacsoffloopsstbyA]
+- [taurusValueCheckBox_8, DisitckRvTet2PindiodeswitchA]
+- [taurusValueCheckBox_9, DisitckRvTet2FdltrgA]
+- [taurusValueCheckBox_10, DisitckRvTet2PlctxoffA]
+- [taurusValueCheckBox_11, DisitckRvTet2MpsA]
+- [taurusValueCheckBox_12, DisitckRvTet2DiagA]
+
+- [taurusValueCheckBox_13, DisitckRvCircDacsoffloopsstbyA]
+- [taurusValueCheckBox_14, DisitckRvCircPindiodeswitchA]
+- [taurusValueCheckBox_15, DisitckRvCircFdltrgA]
+- [taurusValueCheckBox_16, DisitckRvCircPlctxoffA]
+- [taurusValueCheckBox_17, DisitckRvCircMpsA]
+- [taurusValueCheckBox_18, DisitckRvCircDiagA]
+
+- [taurusValueCheckBox_19, DisitckFwLoadDacsoffloopsstbyA]
+- [taurusValueCheckBox_20, DisitckFwLoadPindiodeswitchA]
+- [taurusValueCheckBox_21, DisitckFwLoadFdltrgA]
+- [taurusValueCheckBox_22, DisitckFwLoadPlctxoffA]
+- [taurusValueCheckBox_23, DisitckFwLoadMpsA]
+- [taurusValueCheckBox_24, DisitckFwLoadDiagA]
+
+- [taurusValueCheckBox_25, DisitckFwHybLoadDacsoffloopsstbyA]
+- [taurusValueCheckBox_26, DisitckFwHybLoadPindiodeswitchA]
+- [taurusValueCheckBox_27, DisitckFwHybLoadFdltrgA]
+- [taurusValueCheckBox_28, DisitckFwHybLoadPlctxoffA]
+- [taurusValueCheckBox_29, DisitckFwHybLoadMpsA]
+- [taurusValueCheckBox_30, DisitckFwHybLoadDiagA]
+
+- [taurusValueCheckBox_31, DisitckRvCavDacsoffloopsstbyA]
+- [taurusValueCheckBox_32, DisitckRvCavPindiodeswitchA]
+- [taurusValueCheckBox_33, DisitckRvCavFdltrgA]
+- [taurusValueCheckBox_34, DisitckRvCavPlctxoffA]
+- [taurusValueCheckBox_35, DisitckRvCavMpsA]
+- [taurusValueCheckBox_36, DisitckRvCavDiagA]
+
+- [taurusValueCheckBox_37, DisitckArcsDacsoffloopsstbyA]
+- [taurusValueCheckBox_38, DisitckArcsPindiodeswitchA]
+- [taurusValueCheckBox_39, DisitckArcsFdltrgA]
+- [taurusValueCheckBox_40, DisitckArcsPlctxoffA]
+- [taurusValueCheckBox_41, DisitckArcsMpsA]
+- [taurusValueCheckBox_42, DisitckArcsDiagA]
+
+- [taurusValueCheckBox_43, DisitckVacuumDacsoffloopsstbyA]
+- [taurusValueCheckBox_44, DisitckVacuumPindiodeswitchA]
+- [taurusValueCheckBox_45, DisitckVacuumFdltrgA]
+- [taurusValueCheckBox_46, DisitckVacuumPlctxoffA]
+- [taurusValueCheckBox_47, DisitckVacuumMpsA]
+- [taurusValueCheckBox_48, DisitckVacuumDiagA]
+
+- [taurusValueCheckBox_49, DisitckManualInterlockDacsoffloopsstbyA]
+- [taurusValueCheckBox_50, DisitckManualInterlockPindiodeswitchA]
+- [taurusValueCheckBox_51, DisitckManualInterlockFdltrgA]
+- [taurusValueCheckBox_52, DisitckManualInterlockPlctxoffA]
+- [taurusValueCheckBox_53, DisitckManualInterlockMpsA]
+- [taurusValueCheckBox_54, DisitckManualInterlockDiagA]
+
+- [taurusValueCheckBox_55, DisitckPlungerEndSwitchesUPDacsoffloopsstbyA]
+- [taurusValueCheckBox_56, DisitckPlungerEndSwitchesUPPindiodeswitchA]
+- [taurusValueCheckBox_57, DisitckPlungerEndSwitchesUPFdltrgA]
+- [taurusValueCheckBox_58, DisitckPlungerEndSwitchesUPPlctxoffA]
+- [taurusValueCheckBox_59, DisitckPlungerEndSwitchesUPMpsA]
+- [taurusValueCheckBox_60, DisitckPlungerEndSwitchesUPDiagA]
+
+- [taurusValueCheckBox_61, DisitckPlungerEndSwitchesDownDacsoffloopsstbyA]
+- [taurusValueCheckBox_62, DisitckPlungerEndSwitchesDownPindiodeswitchA]
+- [taurusValueCheckBox_63, DisitckPlungerEndSwitchesDownFdltrgA]
+- [taurusValueCheckBox_64, DisitckPlungerEndSwitchesDownPlctxoffA]
+- [taurusValueCheckBox_65, DisitckPlungerEndSwitchesDownMpsA]
+- [taurusValueCheckBox_66, DisitckPlungerEndSwitchesDownDiagA]
+
+- [taurusValueCheckBox_67, DisitckMpsDacsoffloopsstbyA]
+- [taurusValueCheckBox_68, DisitckMpsPindiodeswitchA]
+- [taurusValueCheckBox_69, DisitckMpsFdltrgA]
+- [taurusValueCheckBox_70, DisitckMpsPlctxoffA]
+- [taurusValueCheckBox_71, DisitckMpsMpsA]
+- [taurusValueCheckBox_72, DisitckMpsDiagA]
+
+# Cavity B
+
+- [taurusValueCheckBox_73, DisitckRvTet1DacsoffloopsstbyB]
+- [taurusValueCheckBox_74, DisitckRvTet1PindiodeswitchB]
+- [taurusValueCheckBox_75, DisitckRvTet1FdltrgB]
+- [taurusValueCheckBox_76, DisitckRvTet1PlctxoffB]
+- [taurusValueCheckBox_77, DisitckRvTet1MpsB]
+- [taurusValueCheckBox_78, DisitckRvTet1DiagB]
+
+- [taurusValueCheckBox_79, DisitckRvTet2DacsoffloopsstbyB]
+- [taurusValueCheckBox_80, DisitckRvTet2PindiodeswitchB]
+- [taurusValueCheckBox_81, DisitckRvTet2FdltrgB]
+- [taurusValueCheckBox_82, DisitckRvTet2PlctxoffB]
+- [taurusValueCheckBox_83, DisitckRvTet2MpsB]
+- [taurusValueCheckBox_84, DisitckRvTet2DiagB]
+
+- [taurusValueCheckBox_85, DisitckRvCircDacsoffloopsstbyB]
+- [taurusValueCheckBox_86, DisitckRvCircPindiodeswitchB]
+- [taurusValueCheckBox_87, DisitckRvCircFdltrgB]
+- [taurusValueCheckBox_88, DisitckRvCircPlctxoffB]
+- [taurusValueCheckBox_89, DisitckRvCircMpsB]
+- [taurusValueCheckBox_90, DisitckRvCircDiagB]
+
+- [taurusValueCheckBox_91, DisitckFwLoadDacsoffloopsstbyB]
+- [taurusValueCheckBox_92, DisitckFwLoadPindiodeswitchB]
+- [taurusValueCheckBox_93, DisitckFwLoadFdltrgB]
+- [taurusValueCheckBox_94, DisitckFwLoadPlctxoffB]
+- [taurusValueCheckBox_95, DisitckFwLoadMpsB]
+- [taurusValueCheckBox_96, DisitckFwLoadDiagB]
+
+- [taurusValueCheckBox_97, DisitckFwHybLoadDacsoffloopsstbyB]
+- [taurusValueCheckBox_98, DisitckFwHybLoadPindiodeswitchB]
+- [taurusValueCheckBox_99, DisitckFwHybLoadFdltrgB]
+- [taurusValueCheckBox_100, DisitckFwHybLoadPlctxoffB]
+- [taurusValueCheckBox_101, DisitckFwHybLoadMpsB]
+- [taurusValueCheckBox_102, DisitckFwHybLoadDiagB]
+
+- [taurusValueCheckBox_103, DisitckRvCavDacsoffloopsstbyB]
+- [taurusValueCheckBox_104, DisitckRvCavPindiodeswitchB]
+- [taurusValueCheckBox_105, DisitckRvCavFdltrgB]
+- [taurusValueCheckBox_106, DisitckRvCavPlctxoffB]
+- [taurusValueCheckBox_107, DisitckRvCavMpsB]
+- [taurusValueCheckBox_108, DisitckRvCavDiagB]
+
+- [taurusValueCheckBox_109, DisitckArcsDacsoffloopsstbyB]
+- [taurusValueCheckBox_110, DisitckArcsPindiodeswitchB]
+- [taurusValueCheckBox_111, DisitckArcsFdltrgB]
+- [taurusValueCheckBox_112, DisitckArcsPlctxoffB]
+- [taurusValueCheckBox_113, DisitckArcsMpsB]
+- [taurusValueCheckBox_114, DisitckArcsDiagB]
+
+- [taurusValueCheckBox_115, DisitckVacuumDacsoffloopsstbyB]
+- [taurusValueCheckBox_116, DisitckVacuumPindiodeswitchB]
+- [taurusValueCheckBox_117, DisitckVacuumFdltrgB]
+- [taurusValueCheckBox_118, DisitckVacuumPlctxoffB]
+- [taurusValueCheckBox_119, DisitckVacuumMpsB]
+- [taurusValueCheckBox_120, DisitckVacuumDiagB]
+
+- [taurusValueCheckBox_121, DisitckManualInterlockDacsoffloopsstbyB]
+- [taurusValueCheckBox_122, DisitckManualInterlockPindiodeswitchB]
+- [taurusValueCheckBox_123, DisitckManualInterlockFdltrgB]
+- [taurusValueCheckBox_124, DisitckManualInterlockPlctxoffB]
+- [taurusValueCheckBox_125, DisitckManualInterlockMpsB]
+- [taurusValueCheckBox_126, DisitckManualInterlockDiagB]
+
+- [taurusValueCheckBox_127, DisitckPlungerEndSwitchesUPDacsoffloopsstbyB]
+- [taurusValueCheckBox_128, DisitckPlungerEndSwitchesUPPindiodeswitchB]
+- [taurusValueCheckBox_129, DisitckPlungerEndSwitchesUPFdltrgB]
+- [taurusValueCheckBox_130, DisitckPlungerEndSwitchesUPPlctxoffB]
+- [taurusValueCheckBox_131, DisitckPlungerEndSwitchesUPMpsB]
+- [taurusValueCheckBox_132, DisitckPlungerEndSwitchesUPDiagB]
+
+- [taurusValueCheckBox_133, DisitckPlungerEndSwitchesDownDacsoffloopsstbyB]
+- [taurusValueCheckBox_134, DisitckPlungerEndSwitchesDownPindiodeswitchB]
+- [taurusValueCheckBox_135, DisitckPlungerEndSwitchesDownFdltrgB]
+- [taurusValueCheckBox_136, DisitckPlungerEndSwitchesDownPlctxoffB]
+- [taurusValueCheckBox_137, DisitckPlungerEndSwitchesDownMpsB]
+- [taurusValueCheckBox_138, DisitckPlungerEndSwitchesDownDiagB]
+
+- [taurusValueCheckBox_139, DisitckMpsDacsoffloopsstbyB]
+- [taurusValueCheckBox_140, DisitckMpsPindiodeswitchB]
+- [taurusValueCheckBox_141, DisitckMpsFdltrgB]
+- [taurusValueCheckBox_142, DisitckMpsPlctxoffB]
+- [taurusValueCheckBox_143, DisitckMpsMpsB]
+- [taurusValueCheckBox_144, DisitckMpsDiagB]
+
+readback:
+# Cavity A
+- [taurusLed, DisitckRvTet1DacsoffloopsstbyA]
+- [taurusLed_2, DisitckRvTet1PindiodeswitchA]
+- [taurusLed_3, DisitckRvTet1FdltrgA]
+- [taurusLed_4, DisitckRvTet1PlctxoffA]
+- [taurusLed_5, DisitckRvTet1MpsA]
+- [taurusLed_6, DisitckRvTet1DiagA]
+
+- [taurusLed_7, DisitckRvTet2DacsoffloopsstbyA]
+- [taurusLed_8, DisitckRvTet2PindiodeswitchA]
+- [taurusLed_9, DisitckRvTet2FdltrgA]
+- [taurusLed_10, DisitckRvTet2PlctxoffA]
+- [taurusLed_11, DisitckRvTet2MpsA]
+- [taurusLed_12, DisitckRvTet2DiagA]
+
+- [taurusLed_13, DisitckRvCircDacsoffloopsstbyA]
+- [taurusLed_14, DisitckRvCircPindiodeswitchA]
+- [taurusLed_15, DisitckRvCircFdltrgA]
+- [taurusLed_16, DisitckRvCircPlctxoffA]
+- [taurusLed_17, DisitckRvCircMpsA]
+- [taurusLed_18, DisitckRvCircDiagA]
+
+- [taurusLed_19, DisitckFwLoadDacsoffloopsstbyA]
+- [taurusLed_20, DisitckFwLoadPindiodeswitchA]
+- [taurusLed_21, DisitckFwLoadFdltrgA]
+- [taurusLed_22, DisitckFwLoadPlctxoffA]
+- [taurusLed_23, DisitckFwLoadMpsA]
+- [taurusLed_24, DisitckFwLoadDiagA]
+
+- [taurusLed_25, DisitckFwHybLoadDacsoffloopsstbyA]
+- [taurusLed_26, DisitckFwHybLoadPindiodeswitchA]
+- [taurusLed_27, DisitckFwHybLoadFdltrgA]
+- [taurusLed_28, DisitckFwHybLoadPlctxoffA]
+- [taurusLed_29, DisitckFwHybLoadMpsA]
+- [taurusLed_30, DisitckFwHybLoadDiagA]
+
+- [taurusLed_31, DisitckRvCavDacsoffloopsstbyA]
+- [taurusLed_32, DisitckRvCavPindiodeswitchA]
+- [taurusLed_33, DisitckRvCavFdltrgA]
+- [taurusLed_34, DisitckRvCavPlctxoffA]
+- [taurusLed_35, DisitckRvCavMpsA]
+- [taurusLed_36, DisitckRvCavDiagA]
+
+- [taurusLed_37, DisitckArcsDacsoffloopsstbyA]
+- [taurusLed_38, DisitckArcsPindiodeswitchA]
+- [taurusLed_39, DisitckArcsFdltrgA]
+- [taurusLed_40, DisitckArcsPlctxoffA]
+- [taurusLed_41, DisitckArcsMpsA]
+- [taurusLed_42, DisitckArcsDiagA]
+
+- [taurusLed_43, DisitckVacuumDacsoffloopsstbyA]
+- [taurusLed_44, DisitckVacuumPindiodeswitchA]
+- [taurusLed_45, DisitckVacuumFdltrgA]
+- [taurusLed_46, DisitckVacuumPlctxoffA]
+- [taurusLed_47, DisitckVacuumMpsA]
+- [taurusLed_48, DisitckVacuumDiagA]
+
+- [taurusLed_49, DisitckManualInterlockDacsoffloopsstbyA]
+- [taurusLed_50, DisitckManualInterlockPindiodeswitchA]
+- [taurusLed_51, DisitckManualInterlockFdltrgA]
+- [taurusLed_52, DisitckManualInterlockPlctxoffA]
+- [taurusLed_53, DisitckManualInterlockMpsA]
+- [taurusLed_54, DisitckManualInterlockDiagA]
+
+- [taurusLed_55, DisitckPlungerEndSwitchesUPDacsoffloopsstbyA]
+- [taurusLed_56, DisitckPlungerEndSwitchesUPPindiodeswitchA]
+- [taurusLed_57, DisitckPlungerEndSwitchesUPFdltrgA]
+- [taurusLed_58, DisitckPlungerEndSwitchesUPPlctxoffA]
+- [taurusLed_59, DisitckPlungerEndSwitchesUPMpsA]
+- [taurusLed_60, DisitckPlungerEndSwitchesUPDiagA]
+
+- [taurusLed_61, DisitckPlungerEndSwitchesDownDacsoffloopsstbyA]
+- [taurusLed_62, DisitckPlungerEndSwitchesDownPindiodeswitchA]
+- [taurusLed_63, DisitckPlungerEndSwitchesDownFdltrgA]
+- [taurusLed_64, DisitckPlungerEndSwitchesDownPlctxoffA]
+- [taurusLed_65, DisitckPlungerEndSwitchesDownMpsA]
+- [taurusLed_66, DisitckPlungerEndSwitchesDownDiagA]
+
+- [taurusLed_67, DisitckMpsDacsoffloopsstbyA]
+- [taurusLed_68, DisitckMpsPindiodeswitchA]
+- [taurusLed_69, DisitckMpsFdltrgA]
+- [taurusLed_70, DisitckMpsPlctxoffA]
+- [taurusLed_71, DisitckMpsMpsA]
+- [taurusLed_72, DisitckMpsDiagA]
+
+# Cavity B
+- [taurusLed_73, DisitckRvTet1DacsoffloopsstbyB]
+- [taurusLed_74, DisitckRvTet1PindiodeswitchB]
+- [taurusLed_75, DisitckRvTet1FdltrgB]
+- [taurusLed_76, DisitckRvTet1PlctxoffB]
+- [taurusLed_77, DisitckRvTet1MpsB]
+- [taurusLed_78, DisitckRvTet1DiagB]
+
+- [taurusLed_79, DisitckRvTet2DacsoffloopsstbyB]
+- [taurusLed_80, DisitckRvTet2PindiodeswitchB]
+- [taurusLed_81, DisitckRvTet2FdltrgB]
+- [taurusLed_82, DisitckRvTet2PlctxoffB]
+- [taurusLed_83, DisitckRvTet2MpsB]
+- [taurusLed_84, DisitckRvTet2DiagB]
+
+- [taurusLed_85, DisitckRvCircDacsoffloopsstbyB]
+- [taurusLed_86, DisitckRvCircPindiodeswitchB]
+- [taurusLed_87, DisitckRvCircFdltrgB]
+- [taurusLed_88, DisitckRvCircPlctxoffB]
+- [taurusLed_89, DisitckRvCircMpsB]
+- [taurusLed_90, DisitckRvCircDiagB]
+
+- [taurusLed_91, DisitckFwLoadDacsoffloopsstbyB]
+- [taurusLed_92, DisitckFwLoadPindiodeswitchB]
+- [taurusLed_93, DisitckFwLoadFdltrgB]
+- [taurusLed_94, DisitckFwLoadPlctxoffB]
+- [taurusLed_95, DisitckFwLoadMpsB]
+- [taurusLed_96, DisitckFwLoadDiagB]
+
+- [taurusLed_97, DisitckFwHybLoadDacsoffloopsstbyB]
+- [taurusLed_98, DisitckFwHybLoadPindiodeswitchB]
+- [taurusLed_99, DisitckFwHybLoadFdltrgB]
+- [taurusLed_100, DisitckFwHybLoadPlctxoffB]
+- [taurusLed_101, DisitckFwHybLoadMpsB]
+- [taurusLed_102, DisitckFwHybLoadDiagB]
+
+- [taurusLed_103, DisitckRvCavDacsoffloopsstbyB]
+- [taurusLed_104, DisitckRvCavPindiodeswitchB]
+- [taurusLed_105, DisitckRvCavFdltrgB]
+- [taurusLed_106, DisitckRvCavPlctxoffB]
+- [taurusLed_107, DisitckRvCavMpsB]
+- [taurusLed_108, DisitckRvCavDiagB]
+
+- [taurusLed_109, DisitckArcsDacsoffloopsstbyB]
+- [taurusLed_110, DisitckArcsPindiodeswitchB]
+- [taurusLed_111, DisitckArcsFdltrgB]
+- [taurusLed_112, DisitckArcsPlctxoffB]
+- [taurusLed_113, DisitckArcsMpsB]
+- [taurusLed_114, DisitckArcsDiagB]
+
+- [taurusLed_115, DisitckVacuumDacsoffloopsstbyB]
+- [taurusLed_116, DisitckVacuumPindiodeswitchB]
+- [taurusLed_117, DisitckVacuumFdltrgB]
+- [taurusLed_118, DisitckVacuumPlctxoffB]
+- [taurusLed_119, DisitckVacuumMpsB]
+- [taurusLed_120, DisitckVacuumDiagB]
+
+- [taurusLed_121, DisitckManualInterlockDacsoffloopsstbyB]
+- [taurusLed_122, DisitckManualInterlockPindiodeswitchB]
+- [taurusLed_123, DisitckManualInterlockFdltrgB]
+- [taurusLed_124, DisitckManualInterlockPlctxoffB]
+- [taurusLed_125, DisitckManualInterlockMpsB]
+- [taurusLed_126, DisitckManualInterlockDiagB]
+
+- [taurusLed_127, DisitckPlungerEndSwitchesUPDacsoffloopsstbyB]
+- [taurusLed_128, DisitckPlungerEndSwitchesUPPindiodeswitchB]
+- [taurusLed_129, DisitckPlungerEndSwitchesUPFdltrgB]
+- [taurusLed_130, DisitckPlungerEndSwitchesUPPlctxoffB]
+- [taurusLed_131, DisitckPlungerEndSwitchesUPMpsB]
+- [taurusLed_132, DisitckPlungerEndSwitchesUPDiagB]
+
+- [taurusLed_133, DisitckPlungerEndSwitchesDownDacsoffloopsstbyB]
+- [taurusLed_134, DisitckPlungerEndSwitchesDownPindiodeswitchB]
+- [taurusLed_135, DisitckPlungerEndSwitchesDownFdltrgB]
+- [taurusLed_136, DisitckPlungerEndSwitchesDownPlctxoffB]
+- [taurusLed_137, DisitckPlungerEndSwitchesDownMpsB]
+- [taurusLed_138, DisitckPlungerEndSwitchesDownDiagB]
+
+- [taurusLed_139, DisitckMpsDacsoffloopsstbyB]
+- [taurusLed_140, DisitckMpsPindiodeswitchB]
+- [taurusLed_141, DisitckMpsFdltrgB]
+- [taurusLed_142, DisitckMpsPlctxoffB]
+- [taurusLed_143, DisitckMpsMpsB]
+- [taurusLed_144, DisitckMpsDiagB]
+
+comboboxes:
+-

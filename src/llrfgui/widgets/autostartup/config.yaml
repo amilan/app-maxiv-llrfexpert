@@ -1,0 +1,48 @@
+# YAML configuration file used to connect each widget to its model.
+# The data structure will be a dictionary compose by lists of
+# the following elements:
+
+#  -------------------------------------------------------
+# |                      attributes                       |
+#  -------------------------------------------------------
+# |              widget_name | tango_attribute            |
+#  -------------------------------------------------------
+
+#  -------------------------------------------------------
+# |                      readback                         |
+#  -------------------------------------------------------
+# |              widget_name | tango_attribute            |
+#  -------------------------------------------------------
+
+#  -------------------------------------------------------
+# |                      comboboxes                       |
+#  -------------------------------------------------------
+# | widget_name | tango_attribute | values_for_comboboxes |
+#  -------------------------------------------------------
+
+attributes:
+-
+
+readback:
+# Cavity A
+- [tauValueLabel_autoStartUpA, AutomaticStartUpEnableA]
+- [tauValueLabel_CommandStartA, CommandStartA]
+- [tauValueLabel_EPSITCKA, EpsItckDisableA]
+- [tauValueLabel_FIMITCKA, FimItckDisableA]
+# Cavity B
+- [tauValueLabel_autoStartUpB, AutomaticStartUpEnableB]
+- [tauValueLabel_CommandStartB, CommandStartB]
+- [tauValueLabel_EPSITCKB, EpsItckDisableB]
+- [tauValueLabel_FIMITCKB, FimItckDisableB]
+
+comboboxes:
+# Cavity A
+- [comboBox_autoStartUpA, AutomaticStartUpEnableA, CB]
+- [comboBox_CommandStartA, CommandStartA, CCMDSTART]
+- [comboBox_EPSITCKA, EpsItckDisableA, CB]
+- [comboBox_FIMITCKA, FimItckDisableA, CB]
+# Cavity B
+- [comboBox_autoStartUpB, AutomaticStartUpEnableB, CB]
+- [comboBox_CommandStartB, CommandStartB, CCMDSTART]
+- [comboBox_EPSITCKB, EpsItckDisableB, CB]
+- [comboBox_FIMITCKB, FimItckDisableB, CB]

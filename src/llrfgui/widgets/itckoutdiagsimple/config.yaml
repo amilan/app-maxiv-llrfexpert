@@ -1,0 +1,42 @@
+# YAML configuration file used to connect each widget to its model.
+# The data structure will be a dictionary compose by lists of
+# the following elements:
+
+#  -------------------------------------------------------
+# |                      attributes                       |
+#  -------------------------------------------------------
+# |              widget_name | tango_attribute            |
+#  -------------------------------------------------------
+
+#  -------------------------------------------------------
+# |                      readback                         |
+#  -------------------------------------------------------
+# |              widget_name | tango_attribute            |
+#  -------------------------------------------------------
+
+#  -------------------------------------------------------
+# |                      comboboxes                       |
+#  -------------------------------------------------------
+# | widget_name | tango_attribute | values_for_comboboxes |
+#  -------------------------------------------------------
+
+attributes:
+-
+
+readback:
+# Cavity A
+- [taurusBoolLed_21, Diag_DacsDisableCommandA]
+- [taurusBoolLed_22, Diag_PinSwitchA]
+- [taurusBoolLed_45, Diag_FdlTriggerToLoopsdiagboardA]
+- [taurusBoolLed_47, Diag_OutputToPlcA]
+- [taurusBoolLed_48, Diag_OutputToMpsA]
+
+# Cavity B
+- [taurusBoolLed_49, Diag_DacsDisableCommandB]
+- [taurusBoolLed_50, Diag_PinSwitchB]
+- [taurusBoolLed_51, Diag_FdlTriggerToLoopsdiagboardB]
+- [taurusBoolLed_53, Diag_OutputToPlcB]
+- [taurusBoolLed_54, Diag_OutputToMpsB]
+
+comboboxes:
+-

@@ -1,0 +1,55 @@
+# YAML configuration file used to connect each widget to its model.
+# The data structure will be a dictionary compose by lists of
+# the following elements:
+
+#  -------------------------------------------------------
+# |                      attributes                       |
+#  -------------------------------------------------------
+# |              widget_name | tango_attribute            |
+#  -------------------------------------------------------
+
+#  -------------------------------------------------------
+# |                      readback                         |
+#  -------------------------------------------------------
+# |              widget_name | tango_attribute            |
+#  -------------------------------------------------------
+
+#  -------------------------------------------------------
+# |                      comboboxes                       |
+#  -------------------------------------------------------
+# | widget_name | tango_attribute | values_for_comboboxes |
+#  -------------------------------------------------------
+
+attributes:
+- [taurusWheelEdit, ItckNumber]
+
+readback:
+# Cavity A
+- [taurusBoolLed, Diag_Rvtet1A]
+- [taurusBoolLed_2, Diag_Rvtet2A]
+- [taurusBoolLed_3, Diag_RvcircA]
+- [taurusBoolLed_4, Diag_FwloadA]
+- [taurusBoolLed_5, Diag_FwhybloadA]
+- [taurusBoolLed_6, Diag_RvcavA]
+- [taurusBoolLed_7, Diag_ManualInterlockA]
+- [taurusBoolLed_8, Diag_ArcsA]
+- [taurusBoolLed_9, Diag_VacuumA]
+- [taurusBoolLed_10, Diag_ExternalItckA]
+- [taurusBoolLed_41, Diag_PlungerEndSwitchUpA]
+- [taurusBoolLed_43, Diag_PlungerEndSwitchDownA]
+# Cavity A
+- [taurusBoolLed_11, Diag_Rvtet1B]
+- [taurusBoolLed_12, Diag_Rvtet2B]
+- [taurusBoolLed_13, Diag_RvcircB]
+- [taurusBoolLed_14, Diag_FwloadB]
+- [taurusBoolLed_15, Diag_FwhybloadB]
+- [taurusBoolLed_16, Diag_RvcavB]
+- [taurusBoolLed_17, Diag_ManualInterlockB]
+- [taurusBoolLed_18, Diag_ArcsB]
+- [taurusBoolLed_19, Diag_VacuumB]
+- [taurusBoolLed_20, Diag_ExternalItckB]
+- [taurusBoolLed_42, Diag_PlungerEndSwitchUpB]
+- [taurusBoolLed_44, Diag_PlungerEndSwitchDownB]
+
+comboboxes:
+-
