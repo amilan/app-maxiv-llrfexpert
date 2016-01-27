@@ -24,7 +24,7 @@
    relationship between device servers and sections.
 """
 
-__all__ = ['sections_dict']
+__all__ = ['sections_dict', 'sections_dict_tests']
 
 __author__ = 'antmil'
 
@@ -80,4 +80,13 @@ sections_dict = {
         'llrf': 'R3-A100111CAB03/RF/LLRF-01',
         'llrfdiags': 'R3-A100111CAB03/RF/LLRFDIAGS-01'
     },
+}
+
+sections_dict_tests = {
+    'test': {
+        'loops': 'ws/rf/pynutaq_1',
+        'diags': 'ws/rf/pynutaqdiags_1',
+        'llrf': 'ws/rf/llrf-1',
+        'llrfdiags': 'ws/rf/llrfdiags-3'
+    }
 }

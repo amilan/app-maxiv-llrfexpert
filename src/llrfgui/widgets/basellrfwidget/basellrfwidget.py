@@ -137,6 +137,8 @@ class BaseLLRFWidget(Qt.QWidget):
         """
             Method to connect a single tango attribute with a widget.
         """
+        # TODO: if attribute is a full tango attribute name, then avoid adding the device name.
+
         if use_diag_device:
             attribute = self._device_diag + '/' + attribute
         else:

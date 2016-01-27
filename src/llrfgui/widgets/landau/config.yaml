@@ -28,13 +28,14 @@ attributes:
 - [lineEdit_marginLow_4, LandaumarginlowA]
 - [lineEdit_landauAmpSet, LandauampsettingA]
 - [lineEdit_forwardMin_4, MinimumLandauAmplitudeA]
-## Cavity B
-#- [lineEdit_numberPulses_3, NumstepsB]
-#- [lineEdit_tuningOffset_3, LandauphaseoffsetB]
-#- [lineEdit_marginUp_4, LandaumarginupB]
-#- [lineEdit_marginLow_4, LandaumarginlowB]
-#- [lineEdit_landauAmpSet, LandauampsettingB]
-#- [lineEdit_forwardMin_4, MinimumLandauAmplitudeB]
+
+# Cavity B
+- [lineEdit_numberPulses_4, NumstepsB]
+- [lineEdit_tuningOffset_4, LandauphaseoffsetB]
+- [lineEdit_marginUp_5, LandaumarginupB]
+- [lineEdit_marginLow_5, LandaumarginlowB]
+- [lineEdit_landauAmpSet_2, LandauampsettingB]
+- [lineEdit_forwardMin_5, MinimumLandauAmplitudeB]
 
 readback:
 # Cavity A
@@ -43,9 +44,9 @@ readback:
 - [tauValueLabel_numberPulses_4, NumStepsA]
 - [tauValueLabel_moveUp_3, MovelandauupA]
 - [tauValueLabel_movePlg1_3, MovelandauplgA]
+
 - [taurusBoolLed_39, Diag_PlungerMovingAutomaticTuningA]
 - [taurusBoolLed_40, Diag_PlungerMovingUpAutomaticTuningA]
-
 - [tauValueLabel_tuningOffset_3, LandauphaseoffsetA]
 - [tauValueLabel_marginUp_3, LandaumarginupA]
 - [tauValueLabel_marginLow_3, LandauMarginLowA]
@@ -53,23 +54,27 @@ readback:
 - [tauValueLabel_forwardMin_5, MinimumLandauAmplitudeA]
 - [tauValueLabel_tuningEn_3, LandautuningenableA]
 - [tauValueLabel_tuningPosEn_3, LandauPositiveEnableA]
+- [tauValueLabel_tuningEn_5, Landau3gevRingEnableA]
+- [tauValueLabel_tuningPosEn_5, LandauCavEnableA]
 
-## Cavity B
-#- [taurusBoolLed_37, Diag_PlungerMovingManualTuningB]
-#- [taurusBoolLed_38, Diag_PlungerMovingUpManualTuningB]
-#- [tauValueLabel_numberPulses_4, NumStepsB]
-#- [tauValueLabel_moveUp_3, MovelandauupB]
-#- [tauValueLabel_movePlg1_3, MovelandauplgB]
-#- [taurusBoolLed_39, Diag_PlungerMovingAutomaticTuningB]
-#- [taurusBoolLed_40, Diag_PlungerMovingUpAutomaticTuningB]
-#
-#- [tauValueLabel_tuningOffset_3, LandauphaseoffsetB]
-#- [tauValueLabel_marginUp_3, LandaumarginupB]
-#- [tauValueLabel_marginLow_3, LandauMarginLowB]
-#- [tauValueLabel_landauAmpSet, LandauampsettingB]
-#- [tauValueLabel_forwardMin_5, MinimumLandauAmplitudeB]
-#- [tauValueLabel_tuningEn_3, LandautuningenableB]
-#- [tauValueLabel_tuningPosEn_3, LandauPositiveEnableB]
+# Cavity B
+- [taurusBoolLed_41, Diag_PlungerMovingManualTuningB]
+- [taurusBoolLed_42, Diag_PlungerMovingUpManualTuningB]
+- [tauValueLabel_numberPulses_5, NumStepsB]
+- [tauValueLabel_moveUp_4, MovelandauupB]
+- [tauValueLabel_movePlg1_4, MovelandauplgB]
+
+- [taurusBoolLed_44, Diag_PlungerMovingAutomaticTuningB]
+- [taurusBoolLed_43, Diag_PlungerMovingUpAutomaticTuningB]
+- [tauValueLabel_tuningOffset_4, LandauphaseoffsetB]
+- [tauValueLabel_marginUp_4, LandaumarginupB]
+- [tauValueLabel_marginLow_4, LandauMarginLowB]
+- [tauValueLabel_landauAmpSet_2, LandauampsettingB]
+- [tauValueLabel_forwardMin_6, MinimumLandauAmplitudeB]
+- [tauValueLabel_tuningEn_4, LandautuningenableB]
+- [tauValueLabel_tuningPosEn_4, LandauPositiveEnableB]
+- [tauValueLabel_tuningEn_6, Landau3gevRingEnableB]
+- [tauValueLabel_tuningPosEn_6, LandauCavEnableB]
 
 comboboxes:
 # Cavity A
@@ -77,9 +82,13 @@ comboboxes:
 - [comboBox_movePlg_3, MovelandauplgA, CB]
 - [comboBox_tuningEn_3, LandautuningenableA, CB]
 - [comboBox_tuningPosEn_3, LandauPositiveEnableA, CB]
+- [comboBox_tuningEn_5, Landau3gevRingEnableA, CB]
+- [comboBox_tuningPosEn_5, LandauCavEnableA, CB]
 
-## Cavity B
-#- [comboBox_moveUp_3, MovelandauupB, CB]
-#- [comboBox_movePlg_3, MovelandauplgB, CB]
-#- [comboBox_tuningEn_3, LandautuningenableB, CB]
-#- [comboBox_tuningPosEn_3, LandauPositiveEnableB, CB]
+# Cavity B
+- [comboBox_moveUp_4, MovelandauupB, CB]
+- [comboBox_movePlg_4, MovelandauplgB, CB]
+- [comboBox_tuningEn_4, LandautuningenableB, CB]
+- [comboBox_tuningPosEn_4, LandauPositiveEnableB, CB]
+- [comboBox_tuningEn_6, Landau3gevRingEnableB, CB]
+- [comboBox_tuningPosEn_6, LandauCavEnableB, CB]

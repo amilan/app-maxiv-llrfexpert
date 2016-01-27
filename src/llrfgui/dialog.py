@@ -28,7 +28,7 @@ from multiprocessing import Queue, Process
 from PyQt4.QtGui import QInputDialog, QApplication
 
 # local imports
-from commons import sections_dict
+# from commons import sections_dict
 
 
 # Process decorator
@@ -48,6 +48,12 @@ def in_different_process(func):
 
 
 def get_model(is_expert, section=None):
+    if section is not None and section.lower() == 'test':
+        from commons import sections_dict_tests
+        sections_dict = sections_dict_tests
+    else:
+        from commons import sections_dict
+
     list_of_options = sections_dict.keys()
     if section is None:
         choose = choose_server(list_of_options)

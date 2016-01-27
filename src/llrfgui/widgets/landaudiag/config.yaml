@@ -1,0 +1,50 @@
+# YAML configuration file used to connect each widget to its model.
+# The data structure will be a dictionary compose by lists of
+# the following elements:
+
+#  -------------------------------------------------------
+# |                      attributes                       |
+#  -------------------------------------------------------
+# |              widget_name | tango_attribute            |
+#  -------------------------------------------------------
+
+#  -------------------------------------------------------
+# |                      readback                         |
+#  -------------------------------------------------------
+# |              widget_name | tango_attribute            |
+#  -------------------------------------------------------
+
+#  -------------------------------------------------------
+# |                      comboboxes                       |
+#  -------------------------------------------------------
+# | widget_name | tango_attribute | values_for_comboboxes |
+#  -------------------------------------------------------
+
+attributes:
+-
+
+readback:
+# Cavity A
+- [tauValueLabel_master_oscillator_ampA, Diag_AmpMOA]
+- [tauValueLabel_landau_cav_volt_ampA, Diag_AmplandauA]
+- [tauValueLabel_dephase_ampA, Diag_DephaseMoLandauA]
+- [tauValueLabel_plunger_posA, ]
+- [taurusBoolLed_end_sw_upA, Diag_EndSwitchUpA]
+- [taurusBoolLed_end_sw_downA, Diag_EndSwitchDownA]
+- [tauValueLabel_master_oscillator_phA, Diag_PhMOA]
+- [tauValueLabel_landau_cav_volt_phA, Diag_PhLandauA]
+# - [tauValueLabel_dephase_phA, ]
+
+# Cavity B
+- [tauValueLabel_master_oscillator_ampB, Diag_AmpMOB]
+- [tauValueLabel_landau_cav_volt_ampB, Diag_AmplandauB]
+- [tauValueLabel_dephase_ampB, Diag_DephaseMoLandauB]
+- [tauValueLabel_plunger_posB, ]
+- [taurusBoolLed_end_sw_upB, Diag_EndSwitchUpB]
+- [taurusBoolLed_end_sw_downB, Diag_EndSwitchDownB]
+- [tauValueLabel_master_oscillator_phB, Diag_PhMOB]
+- [tauValueLabel_landau_cav_volt_phB, Diag_PhLandauB]
+# - [tauValueLabel_dephase_phB, ]
+
+comboboxes:
+-
