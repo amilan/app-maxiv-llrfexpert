@@ -26,7 +26,7 @@ def main():
 
     name = "taurusgui-llrfexpert"
 
-    version = "2.1.3"
+    version = "2.2.0"
 
     description = "Taurus GUI for Low Level RF expert users."
 
@@ -34,7 +34,7 @@ def main():
 
     author_email = "antonio.milan_otero@maxlab.lu.se"
 
-    license = "GPLv3"
+    license = "LGPL"
 
     url = "http://www.maxlab.lu.se"
 

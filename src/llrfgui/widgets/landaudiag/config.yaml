@@ -21,22 +21,31 @@
 #  -------------------------------------------------------
 
 attributes:
-# Cavity A
-- [lineEdit_plungerA, extra//POT_A]
-# Cavity B
-- [lineEdit_plungerB, extra//POT_B]
+- [lineEdit_plungerA, extra//LANDAU_A]
+- [lineEdit_plungerB, extra//LANDAU_B]
 
 readback:
 # Cavity A
-- [tauValueLabel_rTuningD, Diag_AngCavFwA]
-- [tauValueLabel_rFwAmp, Diag_AngFwLA]
-- [tauValueLabel_rCavVolt, Diag_AngCavLA]
-- [tauValueLabel_rPlung1Pos, extra//POT_A]
+- [tauValueLabel_master_oscillator_ampA, Diag_AmpMOA]
+- [tauValueLabel_landau_cav_volt_ampA, Diag_AmplandauA]
+- [tauValueLabel_dephase_ampA, Diag_DephaseMoLandauA]
+- [tauValueLabel_plunger_posA, extra//LANDAU_A]
+- [taurusBoolLed_end_sw_upA, Diag_EndSwitchUpA]
+- [taurusBoolLed_end_sw_downA, Diag_EndSwitchDownA]
+- [tauValueLabel_master_oscillator_phA, Diag_PhMOA]
+- [tauValueLabel_landau_cav_volt_phA, Diag_PhLandauA]
+# - [tauValueLabel_dephase_phA, ]
+
 # Cavity B
-- [tauValueLabel_rTuningD_2, Diag_AngCavFwB]
-- [tauValueLabel_rFwAmp_2, Diag_AngFwLB]
-- [tauValueLabel_rCavVolt_2, Diag_AngCavLB]
-- [tauValueLabel_rPlung1Pos_2, extra//POT_B]
+- [tauValueLabel_master_oscillator_ampB, Diag_AmpMOB]
+- [tauValueLabel_landau_cav_volt_ampB, Diag_AmplandauB]
+- [tauValueLabel_dephase_ampB, Diag_DephaseMoLandauB]
+- [tauValueLabel_plunger_posB, extra//LANDAU_B]
+- [taurusBoolLed_end_sw_upB, Diag_EndSwitchUpB]
+- [taurusBoolLed_end_sw_downB, Diag_EndSwitchDownB]
+- [tauValueLabel_master_oscillator_phB, Diag_PhMOB]
+- [tauValueLabel_landau_cav_volt_phB, Diag_PhLandauB]
+# - [tauValueLabel_dephase_phB, ]
 
 comboboxes:
 -
