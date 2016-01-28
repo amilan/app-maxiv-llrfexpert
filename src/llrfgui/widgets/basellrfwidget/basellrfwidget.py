@@ -56,19 +56,23 @@ class BaseLLRFWidget(Qt.QWidget):
         self._device_diag = None
 
     @alert_problems
-    def setModel(self, model):
+    def setModel(self, model, section=None):
         """
             Set the model of the widget. This method could be overwritten
             if needed due to a different model (i.e. widgets with a list of
             devices as model)
 
             :param str model: Model to be set.
+            :param str section: Section to be controlled.
         """
+
         if type(model) == str:
             self._device_name = model
         elif type(model) == list:
             self._device_name = model[0]
             self._device_diag = model[1]
+
+        self._section = section
 
         self._get_attributes_from_yaml()
         self._set_comboboxes()
@@ -137,14 +141,30 @@ class BaseLLRFWidget(Qt.QWidget):
         """
             Method to connect a single tango attribute with a widget.
         """
-        
-        if use_diag_device:
-            attribute = self._device_diag + '/' + attribute
+
+        if self.is_extra_attribute(attribute):
+            extended_attribute = self.get_extended_attribute(attribute)
         else:
-            attribute = self._device_name + '/' + attribute
+            if use_diag_device:
+                extended_attribute = self._device_diag + '/' + attribute
+            else:
+                extended_attribute = self._device_name + '/' + attribute
 
         widget = getattr(self.ui, widget)
-        widget.setModel(attribute)
+        widget.setModel(extended_attribute)
+
+    @alert_problems
+    def is_extra_attribute(self, attribute):
+        return 'extra//' in attribute
+
+    @alert_problems
+    def get_extended_attribute(self, attribute):
+        from llrfgui.commons import extra_attributes_dict
+
+        attr_key = attribute.split('//')[1]
+
+        extended_attribute = extra_attributes_dict[self._section][attr_key]
+        return extended_attribute
 
     @alert_problems
     def connect_combobox(self, widget, attribute, use_diag_device=False):

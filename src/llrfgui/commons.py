@@ -24,7 +24,7 @@
    relationship between device servers and sections.
 """
 
-__all__ = ['sections_dict', 'sections_dict_tests']
+__all__ = ['sections_dict', 'sections_dict_tests', 'extra_attributes_dict']
 
 __author__ = 'antmil'
 
@@ -33,6 +33,12 @@ __docformat__ = 'restructuredtext'
 # Old nutaq equipment
 
 # Solaris nutaq equipment
+
+# Constants definition
+LANDAU_A_POTENTIOMETER = 'R3-313S2/RF/RF-03/Potentiometer01'
+LANDAU_B_POTENTIOMETER = 'R3-314S2/RF/RF-03/Potentiometer01'
+LANDAU_A_POTENTIOMETER_test = 'test/fakedevice/1/output1'
+LANDAU_B_POTENTIOMETER_test = 'test/fakedevice/fake-02/R3-A1'
 
 # This will be substitude by an autodiscovery method ... soon ...
 sections_dict = {
@@ -90,3 +96,25 @@ sections_dict_tests = {
         'llrfdiags': 'ws/rf/llrfdiags-3'
     }
 }
+
+extra_attributes_dict = {'RF-ROOM-1': {'POT_A': 'R3-315S2/RF/RF-03/Potentiometer01',
+                                       'POT_B': 'R3-316S2/RF/RF-01/Potentiometer01',
+                                       'LANDAU_A': LANDAU_A_POTENTIOMETER,
+                                       'LANDAU_B': LANDAU_B_POTENTIOMETER
+                                       },
+                         'RF-ROOM-2': {'POT_A': 'R3-317S2/RF/RF-01/Potentiometer01',
+                                       'POT_B': 'R3-319S2/RF/RF-01/Potentiometer01',
+                                       'LANDAU_A': LANDAU_A_POTENTIOMETER,
+                                       'LANDAU_B': LANDAU_B_POTENTIOMETER
+                                       },
+                         'RF-ROOM-3': {'POT_A': 'R3-320S2/RF/RF-01/Potentiometer01',
+                                       'POT_B': 'R3-301S2/RF/RF-01/Potentiometer01',
+                                       'LANDAU_A': LANDAU_A_POTENTIOMETER,
+                                       'LANDAU_B': LANDAU_B_POTENTIOMETER
+                                       },
+                         'test': {'POT_A': '',
+                                  'POT_B': '',
+                                  'LANDAU_A': LANDAU_A_POTENTIOMETER_test,
+                                  'LANDAU_B': LANDAU_B_POTENTIOMETER_test
+                                  }
+                         }

@@ -153,7 +153,7 @@ def create_panels(gui, section, loops_device, diags_device, is_expert,
         widget_instance = get_class_object(module_name, name)
         gui.createPanel(widget_instance, name, floating=False, permanent=True)
         model = models_dict[name]
-        gui.getPanel(name).widget().setModel(model)
+        gui.getPanel(name).widget().setModel(model, section)
 
 
 def get_class_object(module_name, class_name):
