@@ -34,7 +34,7 @@ def main():
 
     author_email = "antonio.milan_otero@maxlab.lu.se"
 
-    license = "GPLv3"
+    license = "LGPL"
 
     url = "http://www.maxlab.lu.se"
 

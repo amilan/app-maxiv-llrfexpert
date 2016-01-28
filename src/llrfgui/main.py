@@ -124,6 +124,7 @@ def create_panels(gui, section, loops_device, diags_device, is_expert,
         'ItckOutDiag': diags_device,
         'ItckOutDisable': diags_device,
         'Landau': diags_device,
+        'LandauDiag': diags_device,
         'ManualTuning': loops_device,
         'Ramping': loops_device,
         'RampingDiag': loops_device,
@@ -148,11 +149,11 @@ def create_panels(gui, section, loops_device, diags_device, is_expert,
 
     for name in models_dict.keys():
         print 'PROCESSING', name
-        module_name='llrfgui.widgets.' + name.lower()
-        widget_instance =   get_class_object(module_name, name)
+        module_name = 'llrfgui.widgets.' + name.lower()
+        widget_instance = get_class_object(module_name, name)
         gui.createPanel(widget_instance, name, floating=False, permanent=True)
-        model=models_dict[name]
-        gui.getPanel(name).widget().setModel(model)
+        model = models_dict[name]
+        gui.getPanel(name).widget().setModel(model, section)
 
 
 def get_class_object(module_name, class_name):
