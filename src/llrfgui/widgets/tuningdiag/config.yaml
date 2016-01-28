@@ -21,17 +21,22 @@
 #  -------------------------------------------------------
 
 attributes:
--
+# Cavity A
+- [lineEdit_plungerA, extra//POT_A]
+# Cavity B
+- [lineEdit_plungerB, extra//POT_B]
 
 readback:
 # Cavity A
 - [tauValueLabel_rTuningD, Diag_AngCavFwA]
 - [tauValueLabel_rFwAmp, Diag_AngFwLA]
 - [tauValueLabel_rCavVolt, Diag_AngCavLA]
+- [tauValueLabel_rPlung1Pos, extra//POT_A]
 # Cavity B
 - [tauValueLabel_rTuningD_2, Diag_AngCavFwB]
 - [tauValueLabel_rFwAmp_2, Diag_AngFwLB]
 - [tauValueLabel_rCavVolt_2, Diag_AngCavLB]
+- [tauValueLabel_rPlung1Pos_2, extra//POT_B]
 
 comboboxes:
 -

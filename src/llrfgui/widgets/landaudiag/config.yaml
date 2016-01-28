@@ -21,7 +21,8 @@
 #  -------------------------------------------------------
 
 attributes:
--
+- [lineEdit_plungerA, extra//LANDAU_A]
+- [lineEdit_plungerB, extra//LANDAU_B]
 
 readback:
 # Cavity A

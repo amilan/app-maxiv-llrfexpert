@@ -37,8 +37,8 @@ __docformat__ = 'restructuredtext'
 # Constants definition
 LANDAU_A_POTENTIOMETER = 'R3-313S2/RF/RF-03/Potentiometer01'
 LANDAU_B_POTENTIOMETER = 'R3-314S2/RF/RF-03/Potentiometer01'
-LANDAU_A_POTENTIOMETER_test = 'test/fakedevice/1/output1'
-LANDAU_B_POTENTIOMETER_test = 'test/fakedevice/fake-02/R3-A1'
+POTENTIOMETER_A_test = 'test/fakedevice/1/output1'
+POTENTIOMETER_B_test = 'test/fakedevice/fake-02/R3-A1'
 
 # This will be substitude by an autodiscovery method ... soon ...
 sections_dict = {
@@ -112,9 +112,9 @@ extra_attributes_dict = {'RF-ROOM-1': {'POT_A': 'R3-315S2/RF/RF-03/Potentiometer
                                        'LANDAU_A': LANDAU_A_POTENTIOMETER,
                                        'LANDAU_B': LANDAU_B_POTENTIOMETER
                                        },
-                         'test': {'POT_A': '',
-                                  'POT_B': '',
-                                  'LANDAU_A': LANDAU_A_POTENTIOMETER_test,
-                                  'LANDAU_B': LANDAU_B_POTENTIOMETER_test
+                         'test': {'POT_A': POTENTIOMETER_A_test,
+                                  'POT_B': POTENTIOMETER_B_test,
+                                  'LANDAU_A': POTENTIOMETER_A_test,
+                                  'LANDAU_B': POTENTIOMETER_B_test
                                   }
                          }
