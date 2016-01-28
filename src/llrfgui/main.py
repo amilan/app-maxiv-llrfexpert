@@ -149,10 +149,10 @@ def create_panels(gui, section, loops_device, diags_device, is_expert,
 
     for name in models_dict.keys():
         print 'PROCESSING', name
-        module_name='llrfgui.widgets.' + name.lower()
-        widget_instance =   get_class_object(module_name, name)
+        module_name = 'llrfgui.widgets.' + name.lower()
+        widget_instance = get_class_object(module_name, name)
         gui.createPanel(widget_instance, name, floating=False, permanent=True)
-        model=models_dict[name]
+        model = models_dict[name]
         gui.getPanel(name).widget().setModel(model)
 
 
