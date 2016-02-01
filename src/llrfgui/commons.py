@@ -97,24 +97,20 @@ sections_dict_tests = {
     }
 }
 
-extra_attributes_dict = {'RF-ROOM-1': {'POT_A': 'R3-315S2/RF/RF-03/Potentiometer01',
-                                       'POT_B': 'R3-316S2/RF/RF-01/Potentiometer01',
-                                       'LANDAU_A': LANDAU_A_POTENTIOMETER,
-                                       'LANDAU_B': LANDAU_B_POTENTIOMETER
+extra_attributes_dict = {'RF-ROOM-1': {'POT_A': 'R3-316S2/RF/RF-01/Potentiometer01',
+                                       'POT_B': 'R3-317S2/RF/RF-01/Potentiometer01',
+                                       'LANDAU': 'R3-313S2/RF/RF-03/Potentiometer01',
                                        },
-                         'RF-ROOM-2': {'POT_A': 'R3-317S2/RF/RF-01/Potentiometer01',
+                         'RF-ROOM-2': {'POT_A': 'R3-318S2/RF/RF-01/Potentiometer01',
                                        'POT_B': 'R3-319S2/RF/RF-01/Potentiometer01',
-                                       'LANDAU_A': LANDAU_A_POTENTIOMETER,
-                                       'LANDAU_B': LANDAU_B_POTENTIOMETER
+                                       'LANDAU': 'R3-314S2/RF/RF-03/Potentiometer01',
                                        },
                          'RF-ROOM-3': {'POT_A': 'R3-320S2/RF/RF-01/Potentiometer01',
                                        'POT_B': 'R3-301S2/RF/RF-01/Potentiometer01',
-                                       'LANDAU_A': LANDAU_A_POTENTIOMETER,
-                                       'LANDAU_B': LANDAU_B_POTENTIOMETER
+                                       'LANDAU': 'R3-315S2/RF/RF-03/Potentiometer01',
                                        },
                          'test': {'POT_A': POTENTIOMETER_A_test,
                                   'POT_B': POTENTIOMETER_B_test,
-                                  'LANDAU_A': POTENTIOMETER_A_test,
-                                  'LANDAU_B': POTENTIOMETER_B_test
+                                  'LANDAU': POTENTIOMETER_A_test,
                                   }
                          }
