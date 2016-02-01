@@ -36,6 +36,8 @@ import importlib
 from taurus.qt.qtgui.taurusgui import TaurusGui
 from taurus.qt.qtgui.application import TaurusApplication
 
+from taurus.qt import Qt
+
 # Local imports
 from dialog import get_model
 
@@ -105,7 +107,7 @@ def set_polling_period(period):
 #     create_panels(gui, section, loops, diags)
         
 
-def create_panels(gui, section, loops_device, diags_device, is_expert,
+def create_panels(splashscreen, gui, section, loops_device, diags_device, is_expert,
                   llrf_device=None, llrfdiags_device=None):
     """Create panels and set application name."""
     models_dict_expert = {
@@ -148,7 +150,9 @@ def create_panels(gui, section, loops_device, diags_device, is_expert,
         models_dict = models_dict_user
 
     for name in models_dict.keys():
-        print 'PROCESSING', name
+        msg = 'PROCESSING ' + name
+        # print 'PROCESSING', name
+        splashscreen.showMessage(msg)
         module_name = 'llrfgui.widgets.' + name.lower()
         widget_instance = get_class_object(module_name, name)
         gui.createPanel(widget_instance, name, floating=False, permanent=True)
@@ -204,14 +208,30 @@ def run(period=PERIOD):
     app_name = create_app_name(section, options.expert)
     app, gui = create_application(app_name, parser=parser)
 
-    hide_toolbars(gui)
-    gui.show()
+    splashLogo = os.path.join(os.path.dirname(__file__), 'images/maxivlogo.png')
+    splashscreen = Qt.QSplashScreen(Qt.QPixmap(splashLogo))
+    splashscreen.show()
+    app.processEvents()
 
-    create_panels(gui, section, loops, diags, options.expert, llrf, llrfdiags)
+    hide_toolbars(gui)
+
+    splashscreen.showMessage('Creating panels')
+    create_panels(splashscreen, gui, section, loops, diags, options.expert, llrf, llrfdiags)
+    splashscreen.showMessage('Loading settings')
     load_settings(gui, options.expert)
 
+    gui.show()
+    splashscreen.finish(gui)
     sys.exit(app.exec_())
 
 
 if __name__ == '__main__':
+    import sys
+
+    EXPERT_MODE = '--expert'
+    TEST_MODE = '-rtest'
+
+    sys.argv.append(EXPERT_MODE)
+    sys.argv.append(TEST_MODE)
+
     run()

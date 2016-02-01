@@ -21,6 +21,7 @@
 #  -------------------------------------------------------
 
 attributes:
+-
 # Cavity A
 #- [lineEdit_plungerA, extra//POT_A]
 # Cavity B
