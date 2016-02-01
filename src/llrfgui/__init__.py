@@ -21,6 +21,10 @@
 
 """Module to run the Low Level Radio Frequency expert taurus GUI."""
 
+from main import run
+
 __author__ = 'antmil'
 
 __docformat__ = 'restructuredtext'
+
+__all__ = ['run']
