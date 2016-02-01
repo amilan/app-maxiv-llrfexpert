@@ -21,7 +21,7 @@
 #  -------------------------------------------------------
 
 attributes:
-- [lineEdit_plungerA, extra//LANDAU]
+# - [lineEdit_plungerA, extra//LANDAU]
 
 readback:
 # Cavity A
@@ -36,13 +36,13 @@ readback:
 # - [tauValueLabel_dephase_phA, ]
 
 # Cavity B
-- [tauValueLabel_master_oscillator_ampB, Diag_AmpMOB]
-- [tauValueLabel_landau_cav_volt_ampB, Diag_AmplandauB]
-- [tauValueLabel_dephase_ampB, Diag_DephaseMoLandauB]
-- [taurusBoolLed_end_sw_upB, Diag_EndSwitchUpB]
-- [taurusBoolLed_end_sw_downB, Diag_EndSwitchDownB]
-- [tauValueLabel_master_oscillator_phB, Diag_PhMOB]
-- [tauValueLabel_landau_cav_volt_phB, Diag_PhLandauB]
+#- [tauValueLabel_master_oscillator_ampB, Diag_AmpMOB]
+#- [tauValueLabel_landau_cav_volt_ampB, Diag_AmplandauB]
+#- [tauValueLabel_dephase_ampB, Diag_DephaseMoLandauB]
+#- [taurusBoolLed_end_sw_upB, Diag_EndSwitchUpB]
+#- [taurusBoolLed_end_sw_downB, Diag_EndSwitchDownB]
+#- [tauValueLabel_master_oscillator_phB, Diag_PhMOB]
+#- [tauValueLabel_landau_cav_volt_phB, Diag_PhLandauB]
 # - [tauValueLabel_dephase_phB, ]
 
 comboboxes:

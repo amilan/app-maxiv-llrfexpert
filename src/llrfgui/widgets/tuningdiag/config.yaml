@@ -22,9 +22,9 @@
 
 attributes:
 # Cavity A
-- [lineEdit_plungerA, extra//POT_A]
+#- [lineEdit_plungerA, extra//POT_A]
 # Cavity B
-- [lineEdit_plungerB, extra//POT_B]
+#- [lineEdit_plungerB, extra//POT_B]
 
 readback:
 # Cavity A
