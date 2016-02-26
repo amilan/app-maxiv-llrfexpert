@@ -22,6 +22,7 @@
 
 from setuptools import setup, find_packages
 
+
 def main():
 
     name = "taurusgui-llrfexpert"
@@ -34,7 +35,7 @@ def main():
 
     author_email = "antonio.milan_otero@maxlab.lu.se"
 
-    license = "LGPL"
+    license = "GPLv3"
 
     url = "http://www.maxlab.lu.se"
 
