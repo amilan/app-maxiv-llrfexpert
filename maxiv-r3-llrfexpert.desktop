@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=MAX IV R3 LLRF expert
+Name=3GeV LLRF expert
 Exec=ctllrfexpertgui
 Type=Application
 Categories=MAXIV;Science;
