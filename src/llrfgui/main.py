@@ -105,9 +105,10 @@ def set_polling_period(period):
 # def apply_panels(gui):
 #     section, loops, diags = get_model()
 #     create_panels(gui, section, loops, diags)
-        
 
-def create_panels(splashscreen, gui, section, loops_device, diags_device, is_expert,
+
+def create_panels(splashscreen, gui, section, loops_device, diags_device,
+                  is_expert, transmitter1, transmitter2,
                   llrf_device=None, llrfdiags_device=None):
     """Create panels and set application name."""
     models_dict_expert = {
@@ -135,6 +136,8 @@ def create_panels(splashscreen, gui, section, loops_device, diags_device, is_exp
         'Vcxo': loops_device,
         'PolarDiag': loops_device,
         'FIM': diags_device,
+        "RFtransmitter_1": transmitter1,
+        "RFtransmitter_2": transmitter2
     }
 
     models_dict_user = {
@@ -153,11 +156,17 @@ def create_panels(splashscreen, gui, section, loops_device, diags_device, is_exp
         msg = 'PROCESSING ' + name
         # print 'PROCESSING', name
         splashscreen.showMessage(msg)
-        module_name = 'llrfgui.widgets.' + name.lower()
-        widget_instance = get_class_object(module_name, name)
+        if name.startswith("RFtransmitter"):
+            widget_instance = get_class_object("rftransmittergui", "LlRfTransmitterWidget")
+        else:
+            module_name = 'llrfgui.widgets.' + name.lower()
+            widget_instance = get_class_object(module_name, name)
         gui.createPanel(widget_instance, name, floating=False, permanent=True)
         model = models_dict[name]
-        gui.getPanel(name).widget().setModel(model, section)
+        if name.startswith("RFtransmitter"):
+            gui.getPanel(name).widget().setModel(model)
+        else:
+            gui.getPanel(name).widget().setModel(model, section)
 
 
 def get_class_object(module_name, class_name):
@@ -199,11 +208,13 @@ def run(period=PERIOD):
     configure_pythonpath()
 
     if options.expert:
-        section, loops, diags = get_model(options.expert, options.rf_room)
+        models = get_model(options.expert, options.rf_room)
+        section, loops, diags, rftrans1, rftrans2 = models
         llrf = None
         llrfdiags = None
     else:
-        section, loops, diags, llrf, llrfdiags = get_model(options.expert, options.rf_room)
+        models = get_model(options.expert, options.rf_room)
+        section, loops, diags, llrf, llrfdiags, rftrans1, rftrans2 = models
 
     app_name = create_app_name(section, options.expert)
     app, gui = create_application(app_name, parser=parser)
@@ -216,7 +227,17 @@ def run(period=PERIOD):
     hide_toolbars(gui)
 
     splashscreen.showMessage('Creating panels')
-    create_panels(splashscreen, gui, section, loops, diags, options.expert, llrf, llrfdiags)
+    create_panels(
+        splashscreen=splashscreen,
+        gui=gui,
+        section=section,
+        loops_device=loops,
+        diags_device=diags,
+        is_expert=options.expert,
+        transmitter1=rftrans1,
+        transmitter2=rftrans2,
+        llrf_device=llrf,
+        llrfdiags_device=llrfdiags)
     splashscreen.showMessage('Loading settings')
     load_settings(gui, options.expert)
 
