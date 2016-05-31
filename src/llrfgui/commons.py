@@ -72,19 +72,25 @@ sections_dict = {
         'loops': 'R3-A101711CAB03/RF/NUTAQ-01',
         'diags': 'R3-A101711CAB03/RF/NUTAQDIAGS-01',
         'llrf': 'R3-A101711CAB03/RF/LLRF-01',
-        'llrfdiags': 'R3-A101711CAB03/RF/LLRFDIAGS-01'
+        'llrfdiags': 'R3-A101711CAB03/RF/LLRFDIAGS-01',
+        'rftransmitter1': 'r3-a101711/rf/txa-01',
+        'rftransmitter2':'r3-a101711/rf/txa-51'
     },
     'RF-ROOM-2': {
         'loops': 'R3-A101911CAB03/RF/NUTAQ-01',
         'diags': 'R3-A101911CAB03/RF/NUTAQDIAGS-01',
         'llrf': 'R3-A101911CAB03/RF/LLRF-01',
-        'llrfdiags': 'R3-A101911CAB03/RF/LLRFDIAGS-01'
+        'llrfdiags': 'R3-A101911CAB03/RF/LLRFDIAGS-01',
+        'rftransmitter1': 'r3-a101911/rf/txa-01',
+        'rftransmitter2':'r3-a101911/rf/txa-51'
     },
     'RF-ROOM-3': {
         'loops': 'R3-A100111CAB03/RF/NUTAQ-01',
         'diags': 'R3-A100111CAB03/RF/NUTAQDIAGS-01',
         'llrf': 'R3-A100111CAB03/RF/LLRF-01',
-        'llrfdiags': 'R3-A100111CAB03/RF/LLRFDIAGS-01'
+        'llrfdiags': 'R3-A100111CAB03/RF/LLRFDIAGS-01',
+        'rftransmitter1': 'r3-a100111/rf/txa-01',
+        'rftransmitter2':'r3-a100111/rf/txa-51'
     },
 }
 

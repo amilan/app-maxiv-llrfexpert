@@ -61,13 +61,14 @@ def get_model(is_expert, section=None):
 
     loops = sections_dict[section]['loops']
     diags = sections_dict[section]['diags']
-
+    rftrans1 = sections_dict[section]['rftransmitter1']
+    rftrans2 = sections_dict[section]['rftransmitter2']
     if not is_expert:
         llrf = sections_dict[section]['llrf']
         llrfdiags = sections_dict[section]['llrfdiags']
-        return section, loops, diags, llrf, llrfdiags
+        return section, loops, diags, llrf, llrfdiags, rftrans1, rftrans2
     else:
-        return section, loops, diags
+        return section, loops, diags, rftrans1, rftrans2
 
 
 # Server selection dialog
