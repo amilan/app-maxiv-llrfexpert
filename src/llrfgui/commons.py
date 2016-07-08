@@ -86,6 +86,12 @@ sections_dict = {
         'llrf': 'R3-A100111CAB03/RF/LLRF-01',
         'llrfdiags': 'R3-A100111CAB03/RF/LLRFDIAGS-01'
     },
+    'RF-LAB': {
+        'loops': 'rflab/llrf/nutaq_loops',
+        'diags': 'rflab/llrf/nutaq_diags',
+        'llrf': 'rflab/llrf/loops-01',
+        'llrfdiags': 'rflab/llrf/diags-01'
+    },
 }
 
 sections_dict_tests = {
@@ -109,6 +115,10 @@ extra_attributes_dict = {'RF-ROOM-1': {'POT_A': 'R3-316S2/RF/RF-01/Potentiometer
                                        'POT_B': 'R3-301S2/RF/RF-01/Potentiometer01',
                                        'LANDAU': 'R3-315S2/RF/RF-03/Potentiometer01',
                                        },
+                         'RF-LAB': {'POT_A': '',
+                                    'POT_B': '',
+                                    'LANDAU': '',
+                                    },
                          'test': {'POT_A': POTENTIOMETER_A_test,
                                   'POT_B': POTENTIOMETER_B_test,
                                   'LANDAU': POTENTIOMETER_A_test,

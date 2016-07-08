@@ -74,7 +74,7 @@ def create_app_name(section, is_expert):
 def create_application(name, parser):
     """
         Create the application and return an (application, taurusgui) tuple.
-        
+
         :return: Tuple compose by a TaurusApplication and a TaurusGUI
         :rtype: tuple
     """
@@ -86,7 +86,7 @@ def create_application(name, parser):
 
 def hide_toolbars(gui):
     """Hide unnecessary toolbars.
-       
+
        :param TaurusGui gui: TaurusGUI to hide toolbars
     """
     gui.jorgsBar.hide()
@@ -100,12 +100,12 @@ def set_polling_period(period):
             break
     else:
         sys.argv.append(PERIOD_ARG+str(period))
-        
+
 
 # def apply_panels(gui):
 #     section, loops, diags = get_model()
 #     create_panels(gui, section, loops, diags)
-        
+
 
 def create_panels(splashscreen, gui, section, loops_device, diags_device, is_expert,
                   llrf_device=None, llrfdiags_device=None):
@@ -187,7 +187,7 @@ def run(period=PERIOD):
     parser.add_option('-r', '--rf_room', type=str,
                       help="""RF Room to be controlled.
                               \nAvailable options:
-                              \n  RF-ROOM-1,RF-ROOM-2,RF-ROOM-3
+                              \n  RF-ROOM-1,RF-ROOM-2,RF-ROOM-3, RF-LAB
                            """)
 
     parser, options, args = argparse.init_taurus_args(parser=parser)

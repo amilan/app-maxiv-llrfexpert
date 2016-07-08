@@ -142,16 +142,19 @@ class BaseLLRFWidget(Qt.QWidget):
             Method to connect a single tango attribute with a widget.
         """
 
-        if self.is_extra_attribute(attribute):
-            extended_attribute = self.get_extended_attribute(attribute)
-        else:
-            if use_diag_device:
-                extended_attribute = self._device_diag + '/' + attribute
+        try:
+            if self.is_extra_attribute(attribute):
+                extended_attribute = self.get_extended_attribute(attribute)
             else:
-                extended_attribute = self._device_name + '/' + attribute
+                if use_diag_device:
+                    extended_attribute = self._device_diag + '/' + attribute
+                else:
+                    extended_attribute = self._device_name + '/' + attribute
 
-        widget = getattr(self.ui, widget)
-        widget.setModel(extended_attribute)
+            widget = getattr(self.ui, widget)
+            widget.setModel(extended_attribute)
+        except Exception:
+            print "There was an exception while connecting attributes"
 
     @alert_problems
     def is_extra_attribute(self, attribute):
@@ -163,8 +166,11 @@ class BaseLLRFWidget(Qt.QWidget):
 
         attr_key = attribute.split('//')[1]
 
-        extended_attribute = extra_attributes_dict[self._section][attr_key]
-        return extended_attribute
+        try:
+            extended_attribute = extra_attributes_dict[self._section][attr_key]
+            return extended_attribute
+        except KeyError:
+            print "No attribute found in extra_attributes_dict"
 
     @alert_problems
     def connect_combobox(self, widget, attribute, use_diag_device=False):
