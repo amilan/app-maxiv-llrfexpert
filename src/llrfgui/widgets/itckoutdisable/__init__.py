@@ -19,14 +19,10 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-"""
-ItckOutDisable is a widget used for the LLRF Expert GUI.
-"""
-
-__all__ = ['ItckOutDisable']
-
-__author__ = "amilan"
-
-__docformat__ = 'restructuredtext'
+"""ItckOutDisable is a widget used for the LLRF Expert GUI."""
 
 from itckoutdisable import ItckOutDisable
+
+__all__ = ['ItckOutDisable']
+__author__ = "amilan"
+__docformat__ = 'restructuredtext'

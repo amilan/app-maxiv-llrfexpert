@@ -19,14 +19,10 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-"""
-Diags is a widget used for the LLRF Expert GUI.
-"""
-
-__all__ = ['Diags']
-
-__author__ = "amilan"
-
-__docformat__ = 'restructuredtext'
+"""Diags is a widget used for the LLRF Expert GUI."""
 
 from diags import Diags
+
+__all__ = ['Diags']
+__author__ = "amilan"
+__docformat__ = 'restructuredtext'

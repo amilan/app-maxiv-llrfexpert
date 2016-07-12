@@ -19,14 +19,10 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-"""
-Start is a widget used for the LLRF Expert GUI.
-"""
-
-__all__ = ['Start']
-
-__author__ = "amilan"
-
-__docformat__ = 'restructuredtext'
+"""Start is a widget used for the LLRF Expert GUI."""
 
 from start import Start
+
+__all__ = ['Start']
+__author__ = "amilan"
+__docformat__ = 'restructuredtext'

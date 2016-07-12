@@ -19,14 +19,10 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-"""
-Conditioning is a widget used for the LLRF Expert GUI.
-"""
-
-__all__ = ['Conditioning']
-
-__author__ = "amilan"
-
-__docformat__ = 'restructuredtext'
+"""Conditioning is a widget used for the LLRF Expert GUI."""
 
 from conditioning import Conditioning
+
+__all__ = ['Conditioning']
+__author__ = "amilan"
+__docformat__ = 'restructuredtext'

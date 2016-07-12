@@ -19,14 +19,10 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-"""
-RampingDiag is a widget used for the LLRF Expert GUI.
-"""
-
-__all__ = ['RampingDiag']
-
-__author__ = "amilan"
-
-__docformat__ = 'restructuredtext'
+"""RampingDiag is a widget used for the LLRF Expert GUI."""
 
 from rampingdiag import RampingDiag
+
+__all__ = ['RampingDiag']
+__author__ = "amilan"
+__docformat__ = 'restructuredtext'

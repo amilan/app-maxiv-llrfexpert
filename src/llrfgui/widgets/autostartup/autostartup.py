@@ -19,28 +19,28 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-"""
-AutoStartUp widget to be used in the llrf expert gui
-"""
-
-__all__ = ['AutoStartUp']
-
-__author__ = "amilan"
-
-__docformat__ = 'restructuredtext'
+"""AutoStartUp widget to be used in the llrf expert GUI."""
 
 from taurus.qt.qtgui.util.ui import UILoadable
 
 from llrfgui.widgets.basellrfwidget import BaseLLRFWidget
 
 
+__all__ = ['AutoStartUp']
+__author__ = "amilan"
+__docformat__ = 'restructuredtext'
+
+
 @UILoadable(with_ui='ui')
 class AutoStartUp(BaseLLRFWidget):
+    """Class widget to control the AutoStartUp."""
 
     def __init__(self, parent=None):
+        """Class initialization."""
         config_file = self._get_config_file_name(__file__)
         BaseLLRFWidget.__init__(self, config_file, parent)
         self.loadUi()
+
 
 def main():
     import sys

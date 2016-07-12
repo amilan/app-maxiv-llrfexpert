@@ -19,14 +19,10 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-"""
-AutoTuningSimple is a widget used for the LLRF Expert GUI.
-"""
-
-__all__ = ['AutoTuningSimple']
-
-__author__ = "amilan"
-
-__docformat__ = 'restructuredtext'
+"""AutoTuningSimple is a widget used for the LLRF Expert GUI."""
 
 from autotuningsimple import AutoTuningSimple
+
+__all__ = ['AutoTuningSimple']
+__author__ = "amilan"
+__docformat__ = 'restructuredtext'

@@ -19,14 +19,10 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-"""
-FDL is a widget used for the LLRF Expert GUI.
-"""
-
-__all__ = ['Fdl']
-
-__author__ = "amilan"
-
-__docformat__ = 'restructuredtext'
+"""FDL is a widget used for the LLRF Expert GUI."""
 
 from fdl import Fdl
+
+__all__ = ['Fdl']
+__author__ = "amilan"
+__docformat__ = 'restructuredtext'

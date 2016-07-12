@@ -19,12 +19,9 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-"""
-Main module for the llrf widgets
-"""
+"""Main module for the llrf widgets."""
 
 __author__ = "amilan"
-
 __docformat__ = 'restructuredtext'
 
 # from autostartup import *

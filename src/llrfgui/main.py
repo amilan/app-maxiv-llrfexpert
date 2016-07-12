@@ -1,4 +1,4 @@
-#!/usr/bin/env python2.7
+#!/usr/bin/env python
 
 ###########################################################################
 #     LLRF expert Graphical User Interface.
@@ -21,15 +21,9 @@
 
 """Main module to run the Low Level Radio Frequency expert taurus GUI."""
 
-__all__ = ['run']
-
-__author__ = 'antmil'
-
-__docformat__ = 'restructuredtext'
-
 # Standard library imports
 import os
-import sys
+# import sys
 import importlib
 
 # 3rd party imports
@@ -49,13 +43,20 @@ PERIOD_ARG = '--taurus-polling-period='
 PERIOD = 500
 CONSOLE = False
 
+__all__ = ['run']
+__author__ = 'antmil'
+__docformat__ = 'restructuredtext'
+
 
 def configure_pythonpath():
-    """ This method extends the pythonpath with the path where the module
-        llrfgui is installed. This is extrange, but at this moment it's needed
-        in order to be able to import the module panels from the taurusgui.
-        Probably this method will be removed in the future if another (better)
-        way is found.
+    """
+    Extend the pythonpath adding the llrfgui path.
+
+    This method extends the pythonpath with the path where the module
+    llrfgui is installed. This is extrange, but at this moment it's needed
+    in order to be able to import the module panels from the taurusgui.
+    Probably this method will be removed in the future if another (better)
+    way is found.
     """
     from distutils.sysconfig import get_python_lib
     module_path = get_python_lib()
@@ -73,10 +74,10 @@ def create_app_name(section, is_expert):
 
 def create_application(name, parser):
     """
-        Create the application and return an (application, taurusgui) tuple.
+    Create the application and return an (application, taurusgui) tuple.
 
-        :return: Tuple compose by a TaurusApplication and a TaurusGUI
-        :rtype: tuple
+    :return: Tuple compose by a TaurusApplication and a TaurusGUI
+    :rtype: tuple
     """
     app = TaurusApplication(app_name=name, cmd_line_parser=parser)
     app.setOrganizationName(ORGANIZATION)
@@ -85,9 +86,10 @@ def create_application(name, parser):
 
 
 def hide_toolbars(gui):
-    """Hide unnecessary toolbars.
+    """
+    Hide unnecessary toolbars.
 
-       :param TaurusGui gui: TaurusGUI to hide toolbars
+    :param TaurusGui gui: TaurusGUI to hide toolbars
     """
     gui.jorgsBar.hide()
     gui.statusBar().hide()
@@ -107,8 +109,8 @@ def set_polling_period(period):
 #     create_panels(gui, section, loops, diags)
 
 
-def create_panels(splashscreen, gui, section, loops_device, diags_device, is_expert,
-                  llrf_device=None, llrfdiags_device=None):
+def create_panels(splashscreen, gui, section, loops_device, diags_device,
+                  is_expert, llrf_device=None, llrfdiags_device=None):
     """Create panels and set application name."""
     models_dict_expert = {
         'AutoStartUp': loops_device,
@@ -168,19 +170,21 @@ def get_class_object(module_name, class_name):
 
 def load_settings(gui, is_expert):
     if is_expert:
-        default_ini = os.path.abspath(os.path.dirname(__file__)) + '/default.ini'
+        ini_filename = '/default.ini'
     else:
-        default_ini = os.path.abspath(os.path.dirname(__file__)) + '/default_user.ini'
+        ini_filename = '/default_user.ini'
+
+    default_ini = os.path.abspath(os.path.dirname(__file__)) + ini_filename
     gui.loadSettings(factorySettingsFileName=default_ini)
 
 
 def run(period=PERIOD):
-    """Run LLRF expert GUI"""
-
+    """Run LLRF expert GUI."""
     import taurus.core.util.argparse as argparse
     parser = argparse.get_taurus_parser()
     parser.set_usage("%prog [-e, --expert]")
-    parser.set_description("Graphical User Interface to control a LLRF system.")
+    description_message = "Graphical User Interface to control a LLRF system."
+    parser.set_description(description_message)
     parser.add_option('-e', '--expert', action='store_true',
                       help="Launch the GUI in expert mode")
 
@@ -203,12 +207,14 @@ def run(period=PERIOD):
         llrf = None
         llrfdiags = None
     else:
-        section, loops, diags, llrf, llrfdiags = get_model(options.expert, options.rf_room)
+        section, loops, diags, llrf, llrfdiags = get_model(options.expert,
+                                                           options.rf_room)
 
     app_name = create_app_name(section, options.expert)
     app, gui = create_application(app_name, parser=parser)
 
-    splashLogo = os.path.join(os.path.dirname(__file__), 'images/maxivlogo.png')
+    splashLogo = os.path.join(os.path.dirname(__file__),
+                              'images/maxivlogo.png')
     splashscreen = Qt.QSplashScreen(Qt.QPixmap(splashLogo))
     splashscreen.show()
     app.processEvents()
@@ -216,7 +222,8 @@ def run(period=PERIOD):
     hide_toolbars(gui)
 
     splashscreen.showMessage('Creating panels')
-    create_panels(splashscreen, gui, section, loops, diags, options.expert, llrf, llrfdiags)
+    create_panels(splashscreen, gui, section, loops, diags,
+                  options.expert, llrf, llrfdiags)
     splashscreen.showMessage('Loading settings')
     load_settings(gui, options.expert)
 

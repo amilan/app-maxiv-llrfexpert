@@ -19,14 +19,10 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-"""
-ManualTuningSimple is a widget used for the LLRF Expert GUI.
-"""
-
-__all__ = ['ManualTuningSimple']
-
-__author__ = "amilan"
-
-__docformat__ = 'restructuredtext'
+"""ManualTuningSimple is a widget used for the LLRF Expert GUI."""
 
 from manualtuningsimple import ManualTuningSimple
+
+__all__ = ['ManualTuningSimple']
+__author__ = "amilan"
+__docformat__ = 'restructuredtext'

@@ -19,15 +19,7 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-"""
-ManualTuningSimple is a widget used for the LLRF Expert GUI.
-"""
-
-__all__ = ['ManualTuningSimple']
-
-__author__ = "amilan"
-
-__docformat__ = 'restructuredtext'
+"""ManualTuningSimple is a widget used for the LLRF Expert GUI."""
 
 import PyTango
 
@@ -37,23 +29,29 @@ from taurus.qt.qtgui.util.ui import UILoadable
 from llrfgui.utils.decorators import alert_problems
 from llrfgui.widgets.basellrfwidget import BaseLLRFWidget
 
+__all__ = ['ManualTuningSimple']
+__author__ = "amilan"
+__docformat__ = 'restructuredtext'
+
 
 @UILoadable(with_ui='ui')
 class ManualTuningSimple(BaseLLRFWidget):
+    """Manual tuning widget for the simplified version of the GUI."""
 
     def __init__(self, parent=None):
+        """Class initialization."""
         config_file = self._get_config_file_name(__file__)
         BaseLLRFWidget.__init__(self, config_file, parent)
         self.loadUi()
 
     @alert_problems
     def connect_with_devices(self):
-        """This method creates the tango device proxys. """
-
+        """Create the tango device proxys."""
         self._device_proxy = PyTango.DeviceProxy(self._device_name)
 
     @alert_problems
     def connect_signals(self):
+        """Implementation of connect_signals method."""
         QtCore.QObject.connect(self.ui.pushButton_rTU,
                                QtCore.SIGNAL("clicked()"),
                                self.tuning_resetA)
@@ -63,13 +61,16 @@ class ManualTuningSimple(BaseLLRFWidget):
 
     @alert_problems
     def tuning_resetA(self):
+        """Tuning reset for cavity A."""
         self._device_proxy['TuningResetA'] = True
         self._device_proxy['TuningResetA'] = False
 
     @alert_problems
     def tuning_resetB(self):
+        """Tuning reset for cavity B."""
         self._device_proxy['TuningResetB'] = True
         self._device_proxy['TuningResetB'] = False
+
 
 def main():
     import sys
