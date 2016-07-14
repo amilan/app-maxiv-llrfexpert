@@ -19,28 +19,26 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-"""
-FDL is a widget used for the LLRF Expert GUI.
-"""
+"""FDL is a widget used for the LLRF Expert GUI."""
 
-__all__ = ['Fdl']
-
-__author__ = "amilan"
-
-__docformat__ = 'restructuredtext'
-
-from taurus.external.qt import Qt
+# from taurus.external.qt import Qt
 from taurus.qt.qtgui.util.ui import UILoadable
 
-from llrfgui.utils.commons import *
-from llrfgui.utils.decorators import alert_problems
+# from llrfgui.utils.commons import *
+# from llrfgui.utils.decorators import alert_problems
 from llrfgui.widgets.basellrfwidget import BaseLLRFWidget
+
+__all__ = ['Fdl']
+__author__ = "amilan"
+__docformat__ = 'restructuredtext'
 
 
 @UILoadable(with_ui='_ui')
 class Fdl(BaseLLRFWidget):
+    """Widget to control the Fast Data Logger."""
 
     def __init__(self, parent=None):
+        """Class initialization."""
         config_file = self._get_config_file_name(__file__)
         BaseLLRFWidget.__init__(self, config_file, parent)
         self.loadUi()
@@ -80,6 +78,7 @@ class Fdl(BaseLLRFWidget):
     #     self._comboboxes = [
     #                         ]
 
+
 def main():
     import sys
     from taurus.qt.qtgui.application import TaurusApplication
@@ -94,5 +93,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-

@@ -36,7 +36,7 @@ def in_different_process(func):
     """Decorator to run the function in a different process."""
     @wraps(func)
     def wrapper(*args, **kwargs):
-        queue = Queue(1) 
+        queue = Queue(1)
         target = lambda: queue.put(func(*args, **kwargs))
         process = Process(target=target)
         process.start()
@@ -48,6 +48,12 @@ def in_different_process(func):
 
 
 def get_model(is_expert, section=None):
+    """
+    Return the models choosen from a dialog.
+
+    :return: list of models to be applied in the GUI.
+    :rtype: tuple
+    """
     if section is not None and section.lower() == 'test':
         from commons import sections_dict_tests
         sections_dict = sections_dict_tests
@@ -61,19 +67,22 @@ def get_model(is_expert, section=None):
 
     loops = sections_dict[section]['loops']
     diags = sections_dict[section]['diags']
-
+    rftrans1 = sections_dict[section]['rftransmitter1']
+    rftrans2 = sections_dict[section]['rftransmitter2']
     if not is_expert:
         llrf = sections_dict[section]['llrf']
         llrfdiags = sections_dict[section]['llrfdiags']
-        return section, loops, diags, llrf, llrfdiags
+        return section, loops, diags, llrf, llrfdiags, rftrans1, rftrans2
     else:
-        return section, loops, diags
+        return section, loops, diags, rftrans1, rftrans2
 
 
-# Server selection dialog
 @in_different_process
 def choose_server(servers):
-    """Prompt a selection dialog from a given list of servers.
+    """
+    Server selection dialog.
+
+    Prompt a selection dialog from a given list of servers.
     The selected server is returned.
     If the user cancel the dialog, the program stops.
     """

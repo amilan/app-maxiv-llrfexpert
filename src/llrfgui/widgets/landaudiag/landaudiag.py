@@ -19,29 +19,27 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-"""
-LandauDiag is a widget used for the LLRF Expert GUI.
-"""
+"""LandauDiag is a widget used for the LLRF Expert GUI."""
 
-__all__ = ['LandauDiag']
+# import PyTango
 
-__author__ = "amilan"
-
-__docformat__ = 'restructuredtext'
-
-import PyTango
-
-from taurus.external.qt import Qt, QtCore
+# from taurus.external.qt import Qt, QtCore
 from taurus.qt.qtgui.util.ui import UILoadable
 
-from llrfgui.utils.decorators import alert_problems
+# from llrfgui.utils.decorators import alert_problems
 from llrfgui.widgets.basellrfwidget import BaseLLRFWidget
+
+__all__ = ['LandauDiag']
+__author__ = "amilan"
+__docformat__ = 'restructuredtext'
 
 
 @UILoadable(with_ui='ui')
 class LandauDiag(BaseLLRFWidget):
+    """Widget to display diagnostics signals for the Landau cavity."""
 
     def __init__(self, parent=None):
+        """Class initialization."""
         config_file = self._get_config_file_name(__file__)
         BaseLLRFWidget.__init__(self, config_file, parent)
         self.loadUi()
@@ -53,7 +51,7 @@ def main():
 
     app = TaurusApplication()
     model = 'ws/rf/pynutaqdiags_1'
-    panel = Landau()
+    panel = LandauDiag()
     panel.setModel(model)
     panel.show()
 

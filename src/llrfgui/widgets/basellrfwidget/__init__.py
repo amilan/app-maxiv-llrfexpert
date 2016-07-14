@@ -20,14 +20,10 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-"""
-Base module to be used by all the llrf widgets.
-"""
-
-__all__ = ["BaseLLRFWidget"]
-
-__author__ = "amilan"
-
-__docformat__ = 'restructuredtext'
+"""Base module to be used by all the llrf widgets."""
 
 from basellrfwidget import BaseLLRFWidget
+
+__all__ = ["BaseLLRFWidget"]
+__author__ = "amilan"
+__docformat__ = 'restructuredtext'

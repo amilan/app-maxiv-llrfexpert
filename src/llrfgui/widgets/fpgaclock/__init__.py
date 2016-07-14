@@ -19,14 +19,10 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-"""
-Fpgaclock is a widget used for the LLRF Expert GUI.
-"""
-
-__all__ = ['Fpgaclock']
-
-__author__ = "amilan"
-
-__docformat__ = 'restructuredtext'
+"""Fpgaclock is a widget used for the LLRF Expert GUI."""
 
 from fpgaclock import Fpgaclock
+
+__all__ = ['Fpgaclock']
+__author__ = "amilan"
+__docformat__ = 'restructuredtext'

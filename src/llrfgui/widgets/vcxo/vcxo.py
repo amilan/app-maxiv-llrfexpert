@@ -19,15 +19,7 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-"""
-Vcxo is a widget used for the LLRF Expert GUI.
-"""
-
-__all__ = ['Vcxo']
-
-__author__ = "amilan"
-
-__docformat__ = 'restructuredtext'
+"""Vcxo is a widget used for the LLRF Expert GUI."""
 
 from taurus.external.qt import Qt, QtCore, QtGui
 from taurus.qt.qtgui.util.ui import UILoadable
@@ -35,81 +27,38 @@ from taurus.qt.qtgui.util.ui import UILoadable
 from llrfgui.utils.decorators import alert_problems
 from llrfgui.widgets.basellrfwidget import BaseLLRFWidget
 
+__all__ = ['Vcxo']
+__author__ = "amilan"
+__docformat__ = 'restructuredtext'
+
 
 @UILoadable(with_ui='ui')
 class Vcxo(BaseLLRFWidget):
+    """Widget to control the VCXO."""
 
     def __init__(self, parent=None):
+        """Class initialization."""
         config_file = self._get_config_file_name(__file__)
         BaseLLRFWidget.__init__(self, config_file, parent)
         self.loadUi()
 
-   # @alert_problems
-   # def setModel(self, model):
-   #     self._device_name = model
-   #     self._set_comboboxes()
-   #     self._create_attributes_lists()
-   #     self._connect_all_attributes()
-   #     self.connect_with_devices()
-   #     self.connect_signals()
-
-   # @alert_problems
-   # def connect_with_devices(self):
-   #     """This method creates the tango device proxys. """
-   #     pass
-   #     #self._device_proxy = PyTango.DeviceProxy(self._device_name)
-
     @alert_problems
     def connect_signals(self):
+        """Implementation of connect_signals method."""
         QtCore.QObject.connect(self.ui.pushButton_VCXO,
                                QtCore.SIGNAL("clicked()"),
-                               self.openVCXO)
+                               self.open_VCXO)
 
     @alert_problems
-    def openVCXO(self):
-        #from VCXODialog import VCXODialog
+    def open_VCXO(self):
+        """Open VCXO dialog."""
+        # from VCXODialog import VCXODialog
         from llrfgui.widgets.vcxodialog import VCXODialog
         vcxo = VCXODialog(self._device_name)
-        #vcxo = VCXODialog(self._device_name_diag)
+        # vcxo = VCXODialog(self._device_name_diag)
         vcxo.exec_()
         vcxo = None
 
-   # @alert_problems
-   # def _set_comboboxes(self):
-   #     pass
-
-   # @alert_problems
-   # def _connect_all_attributes(self):
-   #     for attribute in self._attributes:
-   #         self.connect_attribute(attribute[0], attribute[1])
-
-   #     for attribute in self._attributes_readback:
-   #         self.connect_attribute(attribute[0], attribute[1])
-
-   #     for combobox in self._comboboxes:
-   #         self.connect_combobox(combobox[0], combobox[1])
-
-   # @alert_problems
-   # def connect_attribute(self, widget, attribute):
-   #     attribute = self._device_name + '/' + attribute
-   #     widget.setModel(attribute)
-
-   # @alert_problems
-   # def connect_combobox(self, widget, attribute):
-   #     attribute = self._device_name + '/' + attribute
-   #     widget.setModelName(attribute)
-
-    # @alert_problems
-    # def _create_attributes_lists(self):
-    #     self._attributes = []
-    #
-    #     self._attributes_readback = [
-    #         (self.ui.tauValueLabel_Power, "VCXOPoweredA"),
-    #         (self.ui.tauValueLabel_Ref, "VCXORefA"),
-    #         (self.ui.tauValueLabel_Locked, "VCXOLockedA"),
-    #     ]
-    #
-    #     self._comboboxes = []
 
 def main():
     import sys
@@ -125,4 +74,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-

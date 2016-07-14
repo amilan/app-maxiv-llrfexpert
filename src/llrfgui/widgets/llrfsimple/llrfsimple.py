@@ -19,78 +19,30 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-"""
-LlrfSimple is a widget used for the LLRF Expert GUI.
-"""
+"""LlrfSimple is a widget used for the LLRF Expert GUI."""
 
-__all__ = ['LlrfSimple']
-
-__author__ = "amilan"
-
-__docformat__ = 'restructuredtext'
-
-from taurus.external.qt import Qt
+# from taurus.external.qt import Qt
 from taurus.qt.qtgui.util.ui import UILoadable
 
-from llrfgui.utils.commons import *
-from llrfgui.utils.decorators import alert_problems
+# from llrfgui.utils.commons import *
+# from llrfgui.utils.decorators import alert_problems
 from llrfgui.widgets.basellrfwidget import BaseLLRFWidget
+
+__all__ = ['LlrfSimple']
+__author__ = "amilan"
+__docformat__ = 'restructuredtext'
 
 
 @UILoadable(with_ui='ui')
 class LlrfSimple(BaseLLRFWidget):
+    """General widget for the simplified version of the GUI."""
 
     def __init__(self, parent=None):
+        """Class initialization."""
         config_file = self._get_config_file_name(__file__)
         BaseLLRFWidget.__init__(self, config_file, parent)
         self.loadUi()
-  #
-  #   @alert_problems
-  #   def setModel(self, model):
-  #       self._device_name = model[0]
-  #       self._device_diag_name = model[1]
-  #       self._set_comboboxes()
-  #       self._create_attributes_lists()
-  #       self._connect_all_attributes()
-  #
-  # #  @alert_problems
-  # #  def _set_comboboxes(self):
-  # #      pass
-  #
-  # #  @alert_problems
-  # #  def _connect_all_attributes(self):
-  # #      for attribute in self._attributes:
-  # #          self.connect_attribute(attribute[0], attribute[1])
-  #
-  # #      for attribute in self._attributes_readback:
-  # #          self.connect_attribute(attribute[0], attribute[1])
-  #
-  # #      for combobox in self._comboboxes:
-  # #          self.connect_combobox(combobox[0], combobox[1])
-  #
-  #   @alert_problems
-  #   def connect_attribute(self, widget, attribute):
-  #       #attribute = self._device_name + '/' + attribute
-  #       widget.setModel(attribute)
-  #
-  #   @alert_problems
-  #   def connect_combobox(self, widget, attribute):
-  #       # attribute = self._device_name + '/' + attribute
-  #       widget.setModelName(attribute)
-  #
-  #   @alert_problems
-  #   def _create_attributes_lists(self):
-  #       self._attributes = [
-  #       ]
-  #
-  #       self._attributes_readback = [
-  #           (self.ui.tauValueLabel_Source, self._device_name + "/FPGAClockSourceA"),
-  #           (self.ui.tauValueLabel_Locked_2, self._device_name + "/FPGALockedA"),
-  #           (self.ui.tauValueLabel_Source_3, self._device_diag_name + "/FPGAClockSourceA"),
-  #           (self.ui.tauValueLabel_Locked_4, self._device_diag_name + "/FPGALockedA"),
-  #       ]
-  #
-  #       self._comboboxes = []
+
 
 def main():
     import sys

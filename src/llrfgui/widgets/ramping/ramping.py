@@ -19,15 +19,7 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-"""
-Ramping is a widget used for the LLRF Expert GUI.
-"""
-
-__all__ = ['Ramping']
-
-__author__ = "amilan"
-
-__docformat__ = 'restructuredtext'
+"""Ramping is a widget used for the LLRF Expert GUI."""
 
 import PyTango
 
@@ -37,68 +29,81 @@ from taurus.qt.qtgui.util.ui import UILoadable
 from llrfgui.utils.decorators import alert_problems
 from llrfgui.widgets.basellrfwidget import BaseLLRFWidget
 
+__all__ = ['Ramping']
+__author__ = "amilan"
+__docformat__ = 'restructuredtext'
+
 
 @UILoadable(with_ui='ui')
 class Ramping(BaseLLRFWidget):
+    """Widget to control the ramping of the LLRF."""
 
     def __init__(self, parent=None):
+        """Class initialization."""
         config_file = self._get_config_file_name(__file__)
         BaseLLRFWidget.__init__(self, config_file, parent)
         self.loadUi()
 
     @alert_problems
     def connect_with_devices(self):
-        """This method creates the tango device proxys. """
+        """Create the tango device proxys."""
         self._device_proxy = PyTango.DeviceProxy(self._device_name)
 
     @alert_problems
     def connect_signals(self):
+        """Implementation of the connect_signals method."""
         QtCore.QObject.connect(self.ui.pushButton_rampingA,
                                QtCore.SIGNAL("clicked()"),
-                               self.resetRampingUpA)
+                               self.reset_ramping_up_A)
         QtCore.QObject.connect(self.ui.pushButton_rampingA_2,
                                QtCore.SIGNAL("clicked()"),
-                               self.resetRampingDownA)
+                               self.reset_ramping_down_A)
         QtCore.QObject.connect(self.ui.pushButton_writeSlopesA,
                                QtCore.SIGNAL("clicked()"),
-                               self.writeSlopesA)
+                               self.write_slopes_A)
 
         QtCore.QObject.connect(self.ui.pushButton_rampingB,
                                QtCore.SIGNAL("clicked()"),
-                               self.resetRampingUpB)
+                               self.reset_ramping_up_B)
         QtCore.QObject.connect(self.ui.pushButton_rampingB_3,
                                QtCore.SIGNAL("clicked()"),
-                               self.resetRampingDownB)
+                               self.reset_ramping_down_B)
         QtCore.QObject.connect(self.ui.pushButton_writeSlopesB,
                                QtCore.SIGNAL("clicked()"),
-                               self.writeSlopesB)
+                               self.write_slopes_B)
 
     @alert_problems
-    def resetRampingUpA(self):
+    def reset_ramping_up_A(self):
+        """Ramping up reset for cavity A."""
         self._device_proxy['RampUpA'] = True
         self._device_proxy['RampUpA'] = False
-        
+
     @alert_problems
-    def resetRampingDownA(self):
+    def reset_ramping_down_A(self):
+        """Ramping down reset for cavity B."""
         self._device_proxy['RampDownA'] = True
         self._device_proxy['RampDownA'] = False
 
     @alert_problems
-    def writeSlopesA(self):
+    def write_slopes_A(self):
+        """Write slopes for cavity A."""
         self._device_proxy.WriteSlopesA()
 
     @alert_problems
-    def resetRampingUpB(self):
+    def reset_ramping_up_B(self):
+        """Ramping up reset for cavity B."""
         self._device_proxy['RampUpB'] = True
         self._device_proxy['RampUpB'] = False
 
     @alert_problems
-    def resetRampingDownB(self):
+    def reset_ramping_down_B(self):
+        """"Ramping down reset for caviyt B."""
         self._device_proxy['RampDownB'] = True
         self._device_proxy['RampDownB'] = False
 
     @alert_problems
-    def writeSlopesB(self):
+    def write_slopes_B(self):
+        """Write slopes for cavity B."""
         self._device_proxy.WriteSlopesB()
 
 
@@ -116,4 +121,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-

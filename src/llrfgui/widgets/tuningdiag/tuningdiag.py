@@ -19,67 +19,26 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-"""
-TuningDiag is a widget used for the LLRF Expert GUI.
-"""
-
-__all__ = ['TuningDiag']
-
-__author__ = "amilan"
-
-__docformat__ = 'restructuredtext'
+"""TuningDiag is a widget used for the LLRF Expert GUI."""
 
 from taurus.qt.qtgui.util.ui import UILoadable
 
 from llrfgui.widgets.basellrfwidget import BaseLLRFWidget
 
+__all__ = ['TuningDiag']
+__author__ = "amilan"
+__docformat__ = 'restructuredtext'
+
 
 @UILoadable(with_ui='ui')
 class TuningDiag(BaseLLRFWidget):
+    """Widget to display tuning values for diagnostics."""
 
     def __init__(self, parent=None):
+        """Class initialization."""
         config_file = self._get_config_file_name(__file__)
         BaseLLRFWidget.__init__(self, config_file, parent)
         self.loadUi()
-
-    # @alert_problems
-    # def setModel(self, model):
-    #     """
-    #     :param model: tuple where the first element is the device name
-    #                     and the second the plunger name
-    #
-    #     """
-    #     self._device_name = model[0]
-    #     self._plunger = model[1]
-    #     self._set_comboboxes()
-    #     self._create_attributes_lists()
-    #     self._connect_all_attributes()
-
-   # @alert_problems
-   # def _set_comboboxes(self):
-   #     pass
-
-   # @alert_problems
-   # def _connect_all_attributes(self):
-   #     for attribute in self._attributes:
-   #         self.connect_attribute(attribute[0], attribute[1])
-
-   #     for attribute in self._attributes_readback:
-   #         self.connect_attribute(attribute[0], attribute[1])
-
-   #     for combobox in self._comboboxes:
-   #         self.connect_combobox(combobox[0], combobox[1])
-
-   # @alert_problems
-   # def connect_attribute(self, widget, attribute):
-   #     attribute = self._device_name + '/' + attribute
-   #     widget.setModel(attribute)
-
-   # @alert_problems
-   # def connect_combobox(self, widget, attribute):
-   #     attribute = self._device_name + '/' + attribute
-   #     widget.setModelName(attribute)
-
 
 
 def main():

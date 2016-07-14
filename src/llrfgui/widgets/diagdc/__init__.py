@@ -19,14 +19,10 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-"""
-Diagdc is a widget used for the LLRF Expert GUI.
-"""
-
-__all__ = ['Diagdc']
-
-__author__ = "amilan"
-
-__docformat__ = 'restructuredtext'
+"""Diagdc is a widget used for the LLRF Expert GUI."""
 
 from diagdc import Diagdc
+
+__all__ = ['Diagdc']
+__author__ = "amilan"
+__docformat__ = 'restructuredtext'

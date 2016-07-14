@@ -19,13 +19,7 @@
 #     along with this program; if not, see <http://www.gnu.org/licenses/>.
 ###########################################################################
 
-"""
-    Here we define the panels to be created in the main gui. 
-"""
-
-__author__ = 'antmil'
-
-__docformat__ = 'restructuredtext'
+"""Here we define the panels to be created in the main gui."""
 
 from taurus.qt.qtgui.taurusgui.utils import PanelDescription
 from dialog import get_model
@@ -36,16 +30,21 @@ ORGANIZATION = 'MAXIV'
 LOGO = 'images/maxivlogo.png'
 CONSOLE = False
 
+__author__ = 'antmil'
+__docformat__ = 'restructuredtext'
+
+
 def get_models_dict(loops_device, diags_device):
     """
-        In this function we create a dictionary with the relationship
-        between widgets and models to be applied.
+    Return the models dictionary.
 
-        :param str loops_device: String with the model for the loops device.
-        :param str diags_device: String with the model for the diags device.
-        :return: Dictionary with the info about the model \
-                                  to be set in each widget.
-        :rtype: dict
+    In this function we create a dictionary with the relationship
+    between widgets and models to be applied.
+
+    :param str loops_device: String with the model for the loops device.
+    :param str diags_device: String with the model for the diags device.
+    :return: Dictionary with the info about the model to be set in each widget.
+    :rtype: dict
     """
     models_dict = {
             'AutoStartUp': loops_device,
@@ -74,19 +73,19 @@ def get_models_dict(loops_device, diags_device):
         }
     return models_dict
 
+
 def create_panels():
     """Create panels and set application name."""
     for widget in models_dict:
         name = '{0}'.format(widget)
         globals()[name] = PanelDescription(
             name,
-            classname = name,
-            modulename = 'llrfgui.widgets.' + name.lower(),
-            model = models_dict[name]
+            classname=name,
+            modulename='llrfgui.widgets.' + name.lower(),
+            model=models_dict[name]
         )
 # :todo: fix this and set it in a __main__ or add all
 #       this functions in another library, and don't include it in the doc.
 loops, diags = get_model()
 models_dict = get_models_dict(loops, diags)
 create_panels()
-

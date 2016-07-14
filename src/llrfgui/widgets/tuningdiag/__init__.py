@@ -19,14 +19,10 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-"""
-TuningDiag is a widget used for the LLRF Expert GUI.
-"""
-
-__all__ = ['TuningDiag']
-
-__author__ = "amilan"
-
-__docformat__ = 'restructuredtext'
+"""TuningDiag is a widget used for the LLRF Expert GUI."""
 
 from tuningdiag import TuningDiag
+
+__all__ = ['TuningDiag']
+__author__ = "amilan"
+__docformat__ = 'restructuredtext'

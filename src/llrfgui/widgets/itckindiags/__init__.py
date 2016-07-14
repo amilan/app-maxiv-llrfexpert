@@ -19,14 +19,10 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-"""
-ItckInDiags is a widget used for the LLRF Expert GUI.
-"""
-
-__all__ = ['ItckInDiags']
-
-__author__ = "amilan"
-
-__docformat__ = 'restructuredtext'
+"""ItckInDiags is a widget used for the LLRF Expert GUI."""
 
 from itckindiags import ItckInDiags
+
+__all__ = ['ItckInDiags']
+__author__ = "amilan"
+__docformat__ = 'restructuredtext'

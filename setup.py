@@ -19,12 +19,11 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-
 from setuptools import setup, find_packages
 
 
 def main():
-
+    """Main method collecting all the parameters to setup."""
     name = "taurusgui-llrfexpert"
 
     version = "2.2.4"
@@ -54,19 +53,15 @@ def main():
 
     scripts = ['scripts/ctllrfgui',
                'scripts/ctllrfexpertgui'
-    ]
+               ]
 
-    provides = [
-        'llrfgui'
-    ]
+    provides = ['llrfgui']
 
-    requires = [
-        'taurus'
-    ]
+    requires = ['taurus']
 
     data_files = [('/usr/share/applications', ['maxiv-r3-llrfexpert.desktop']),
                   ('/usr/share/applications', ['maxiv-r3-llrfgui.desktop'])
-    ]
+                  ]
 
     setup(
         name=name,

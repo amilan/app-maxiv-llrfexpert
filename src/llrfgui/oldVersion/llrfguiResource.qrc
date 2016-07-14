@@ -1,8 +1,0 @@
-<RCC>
-  <qresource prefix="start">
-    <file>images/start2.png</file>
-  </qresource>
-  <qresource prefix="stop">
-    <file>images/stop.png</file>
-  </qresource>
-</RCC>

@@ -19,15 +19,10 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-"""
-This module contains the AutoStartUp widget
-"""
-
-__all__ = ['FIM']
-
-__author__ = "amilan"
-
-__docformat__ = 'restructuredtext'
+"""This module contains the AutoStartUp widget."""
 
 from fim import FIM
 
+__all__ = ['FIM']
+__author__ = "amilan"
+__docformat__ = 'restructuredtext'
