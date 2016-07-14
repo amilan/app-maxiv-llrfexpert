@@ -23,7 +23,7 @@
 
 # Standard library imports
 import os
-# import sys
+import sys
 import importlib
 
 # 3rd party imports
@@ -252,7 +252,7 @@ def run(period=PERIOD):
 
 
 if __name__ == '__main__':
-    import sys
+    # import sys
 
     EXPERT_MODE = '--expert'
     TEST_MODE = '-rtest'

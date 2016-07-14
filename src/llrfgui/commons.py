@@ -87,7 +87,7 @@ sections_dict = {
         'llrf': 'R3-A101711CAB03/RF/LLRF-01',
         'llrfdiags': 'R3-A101711CAB03/RF/LLRFDIAGS-01',
         'rftransmitter1': 'r3-a101711/rf/txa-01',
-        'rftransmitter2':'r3-a101711/rf/txa-51'
+        'rftransmitter2': 'r3-a101711/rf/txa-51'
     },
     'RF-ROOM-2': {
         'loops': 'R3-A101911CAB03/RF/NUTAQ-01',
@@ -95,7 +95,7 @@ sections_dict = {
         'llrf': 'R3-A101911CAB03/RF/LLRF-01',
         'llrfdiags': 'R3-A101911CAB03/RF/LLRFDIAGS-01',
         'rftransmitter1': 'r3-a101911/rf/txa-01',
-        'rftransmitter2':'r3-a101911/rf/txa-51'
+        'rftransmitter2': 'r3-a101911/rf/txa-51'
     },
     'RF-ROOM-3': {
         'loops': 'R3-A100111CAB03/RF/NUTAQ-01',
@@ -103,13 +103,15 @@ sections_dict = {
         'llrf': 'R3-A100111CAB03/RF/LLRF-01',
         'llrfdiags': 'R3-A100111CAB03/RF/LLRFDIAGS-01',
         'rftransmitter1': 'r3-a100111/rf/txa-01',
-        'rftransmitter2':'r3-a100111/rf/txa-51'
+        'rftransmitter2': 'r3-a100111/rf/txa-51'
     },
     'RF-LAB': {
         'loops': 'rflab/llrf/nutaq_loops',
         'diags': 'rflab/llrf/nutaq_diags',
         'llrf': 'rflab/llrf/loops-01',
-        'llrfdiags': 'rflab/llrf/diags-01'
+        'llrfdiags': 'rflab/llrf/diags-01',
+        'rftransmitter1': '',
+        'rftransmitter2': ''
     },
 }
 

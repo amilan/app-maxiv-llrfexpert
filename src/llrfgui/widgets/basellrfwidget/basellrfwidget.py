@@ -42,7 +42,7 @@ class BaseLLRFWidget(Qt.QWidget):
     It provides the basic interface.
     """
 
-    # from llrfgui.utils.commons import *
+    from llrfgui.utils.commons import *
 
     def __init__(self, config_file, parent=None):
         """Class initialization."""
