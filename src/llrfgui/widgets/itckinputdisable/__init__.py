@@ -19,14 +19,10 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-"""
-ItckInputDisable is a widget used for the LLRF Expert GUI.
-"""
-
-__all__ = ['ItckInputDisable']
-
-__author__ = "amilan"
-
-__docformat__ = 'restructuredtext'
+"""ItckInputDisable is a widget used for the LLRF Expert GUI."""
 
 from itckinputdisable import ItckInputDisable
+
+__all__ = ['ItckInputDisable']
+__author__ = "amilan"
+__docformat__ = 'restructuredtext'

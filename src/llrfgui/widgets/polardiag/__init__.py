@@ -19,14 +19,10 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-"""
-PolarDiag is a widget used for the LLRF Expert GUI.
-"""
-
-__all__ = ['PolarDiag']
-
-__author__ = "amilan"
-
-__docformat__ = 'restructuredtext'
+"""PolarDiag is a widget used for the LLRF Expert GUI."""
 
 from polardiag import PolarDiag
+
+__all__ = ['PolarDiag']
+__author__ = "amilan"
+__docformat__ = 'restructuredtext'

@@ -23,8 +23,6 @@
 
 from main import run
 
-__author__ = 'antmil'
-
-__docformat__ = 'restructuredtext'
-
 __all__ = ['run']
+__author__ = 'antmil'
+__docformat__ = 'restructuredtext'

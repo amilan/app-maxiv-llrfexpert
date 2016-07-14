@@ -19,15 +19,7 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-"""
-Vcxodialog is a widget used for the LLRF Expert GUI.
-"""
-
-__all__ = ['VCXODialog']
-
-__author__ = "amilan"
-
-__docformat__ = 'restructuredtext'
+"""Vcxodialog is a widget used for the LLRF Expert GUI."""
 
 import PyTango
 
@@ -36,34 +28,38 @@ from taurus.qt.qtgui.util.ui import UILoadable
 
 from llrfgui.utils.decorators import alert_problems
 
-#from ui_vcxoDialog import Ui_VCXODialog
+# from ui_vcxoDialog import Ui_VCXODialog
+
+__all__ = ['VCXODialog']
+__author__ = "amilan"
+__docformat__ = 'restructuredtext'
+
 
 @UILoadable(with_ui='ui')
 class VCXODialog(QtGui.QDialog):
+    """Dialog to setup the VCXO."""
+
     def __init__(self, param=None, parent=None):
-        """Initialize the VCXODialog 
-        """
-        
+        """Class initialization."""
         QtGui.QDialog.__init__(self, parent)
         self.loadUi()
-        
-        #self.ui = Ui_VCXODialog()
-        #self.ui.setupUi(self)
-        
+
+        # self.ui = Ui_VCXODialog()
+        # self.ui.setupUi(self)
+
         self.device = param
         self.dp = PyTango.DeviceProxy(self.device)
-        
-        self.connectAttributes()
-        
-        self.fillComboBoxes()
-        
-        QtCore.QObject.connect(self.ui.pushButton, QtCore.SIGNAL("clicked()"), self.sendWord)
-    
+
+        self.connect_attributes()
+        self.fill_combo_boxes()
+
+        QtCore.QObject.connect(self.ui.pushButton, QtCore.SIGNAL("clicked()"),
+                               self.send_word
+                               )
+
     @alert_problems
-    def connectAttributes(self):
-        """Method to connect all the attributes
-        """
-        
+    def connect_attributes(self):
+        """Method to connect all the attributes."""
         self.ui.taurusValueLineEdit.setModel(self.device + "/MDividerA")
         self.ui.taurusValueLineEdit_3.setModel(self.device + "/NDividerA")
         self.ui.taurusValueLineEdit_4.setModel(self.device + "/MuxSelA")
@@ -73,7 +69,7 @@ class VCXODialog(QtGui.QDialog):
         self.ui.taurusValueComboBox_4.setModelName(self.device + "/Mux3DividerA")
         self.ui.taurusValueComboBox_5.setModelName(self.device + "/Mux4DividerA")
         self.ui.taurusValueComboBox_6.setModelName(self.device + "/CpdirA")
-        
+
         self.ui.taurusLabel.setModel(self.device + "/MDividerA")
         self.ui.taurusLabel_3.setModel(self.device + "/NDividerA")
         self.ui.taurusLabel_4.setModel(self.device + "/MuxSelA")
@@ -83,20 +79,21 @@ class VCXODialog(QtGui.QDialog):
         self.ui.taurusLabel_8.setModel(self.device + "/Mux3DividerA")
         self.ui.taurusLabel_9.setModel(self.device + "/Mux4DividerA")
         self.ui.taurusLabel_2.setModel(self.device + "/CpdirA")
-        
+
     @alert_problems
-    def sendWord(self):
-        """Method to send the word to VCXO
-            It must write an 1 in the corresponding attribute,
-            and after this, write a 0.
+    def send_word(self):
+        """
+        Method to send the word to VCXO.
+
+        It must write an 1 in the corresponding attribute,
+        and after this, write a 0.
         """
         self.dp['SendWordA'] = True
         self.dp['SendWordA'] = False
-    
+
     @alert_problems
-    def fillComboBoxes(self):
-        """Method to fill the comboBoxes
-        """
+    def fill_combo_boxes(self):
+        """Method to fill the comboBoxes."""
         options = [
             ['1', 0],
             ['2', 1],
@@ -115,4 +112,3 @@ class VCXODialog(QtGui.QDialog):
         self.ui.taurusValueComboBox_4.addValueNames(options)
         self.ui.taurusValueComboBox_5.addValueNames(options)
         self.ui.taurusValueComboBox_6.addValueNames(booleanOptions)
- 

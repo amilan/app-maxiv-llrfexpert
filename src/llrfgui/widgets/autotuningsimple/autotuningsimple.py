@@ -19,28 +19,31 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-"""
-AutoTuningSimple is a widget used for the LLRF Expert GUI.
-"""
-
-__all__ = ['AutoTuningSimple']
-
-__author__ = "amilan"
-
-__docformat__ = 'restructuredtext'
+"""AutoTuningSimple is a widget used for the LLRF Expert GUI."""
 
 from taurus.qt.qtgui.util.ui import UILoadable
 
 from llrfgui.widgets.basellrfwidget import BaseLLRFWidget
 
+__all__ = ['AutoTuningSimple']
+__author__ = "amilan"
+__docformat__ = 'restructuredtext'
+
 
 @UILoadable(with_ui='ui')
 class AutoTuningSimple(BaseLLRFWidget):
+    """
+    Widget to control the AutoTuning.
+
+    Used for the simplified version of the GUI (a.k.a. User GUI).
+    """
 
     def __init__(self, parent=None):
+        """Class initialization."""
         config_file = self._get_config_file_name(__file__)
         BaseLLRFWidget.__init__(self, config_file, parent)
         self.loadUi()
+
 
 def main():
     import sys

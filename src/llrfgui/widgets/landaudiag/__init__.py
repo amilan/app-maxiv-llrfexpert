@@ -19,14 +19,10 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-"""
-LandauDiag is a widget used for the LLRF Expert GUI.
-"""
-
-__all__ = ['LandauDiag']
-
-__author__ = "amilan"
-
-__docformat__ = 'restructuredtext'
+"""LandauDiag is a widget used for the LLRF Expert GUI."""
 
 from landaudiag import LandauDiag
+
+__all__ = ['LandauDiag']
+__author__ = "amilan"
+__docformat__ = 'restructuredtext'

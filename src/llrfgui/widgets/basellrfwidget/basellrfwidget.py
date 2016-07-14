@@ -20,52 +20,50 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-"""
-Base class widget to be inherit by all the llrf widgets.
-"""
-
-__all__ = ['BaseLLRFWidget']
-
-__author__ = "amilan"
-
-__docformat__ = 'restructuredtext'
-
+"""Base class widget to be inherit by all the llrf widgets."""
 
 from yaml import load
 
 from taurus.external.qt import Qt
-from taurus.qt.qtgui.util.ui import UILoadable
+# from taurus.qt.qtgui.util.ui import UILoadable
 
 from llrfgui.utils.decorators import alert_problems
 
+__all__ = ['BaseLLRFWidget']
+__author__ = "amilan"
+__docformat__ = 'restructuredtext'
 
-#@UILoadable(with_ui='ui')
+
+# @UILoadable(with_ui='ui')
 class BaseLLRFWidget(Qt.QWidget):
     """
     Base class to be used by any other LLRF widget.
+
     It provides the basic interface.
     """
 
-    from llrfgui.utils.commons import *
+    # from llrfgui.utils.commons import *
 
     def __init__(self, config_file, parent=None):
+        """Class initialization."""
         Qt.QWidget.__init__(self, parent)
         self.config_file = config_file
-        #self.loadUi()
+        # self.loadUi()
         self._device_name = None
         self._device_diag = None
 
     @alert_problems
     def setModel(self, model, section=None):
         """
-            Set the model of the widget. This method could be overwritten
-            if needed due to a different model (i.e. widgets with a list of
-            devices as model)
+        Set the model of the widget.
 
-            :param str model: Model to be set.
-            :param str section: Section to be controlled.
+        This method could be overwritten
+        if needed due to a different model (i.e. widgets with a list of
+        devices as model)
+
+        :param str model: Model to be set.
+        :param str section: Section to be controlled.
         """
-
         if type(model) == str:
             self._device_name = model
         elif type(model) == list:
@@ -83,24 +81,26 @@ class BaseLLRFWidget(Qt.QWidget):
 
     @alert_problems
     def connect_with_devices(self):
-        """This method creates the tango device proxys.
-            To be overwritten if needed.
+        """
+        Creation of the tango device proxys.
+
+        To be overwritten if needed.
         """
         pass
-        #self._device_proxy = PyTango.DeviceProxy(self._device_name)
+        # self._device_proxy = PyTango.DeviceProxy(self._device_name)
 
     @alert_problems
     def connect_signals(self):
         """
-            Method to connect QT signals with methods. By default is
-            void, and it should be implemented by the widget itself.
+        Method to connect QT signals with methods.
+
+        By default isvoid, and it should be implemented by the widget itself.
         """
         pass
 
     @alert_problems
     def _set_comboboxes(self):
-        """Method to set possible values in a combobox.
-        """
+        """Method to set possible values in a combobox."""
         for combobox in self._comboboxes:
             combobox_name = combobox[0]
             combobox_value = combobox[2]
@@ -112,16 +112,23 @@ class BaseLLRFWidget(Qt.QWidget):
     @alert_problems
     def _connect_all_attributes(self):
         """
-            Private method in charge of connect a list of tango attributes with
-            their correspondent widget.
-        """
+        Private method in charge of connect all attributes.
 
+        This method is connecting a list of tango attributes with
+        their correspondent widget.
+        """
         if self._device_diag is not None:
             for attribute in self._attributes:
-                self.connect_attribute(attribute[0], attribute[1], attribute[2])
+                self.connect_attribute(attribute[0],
+                                       attribute[1],
+                                       attribute[2]
+                                       )
 
             for attribute in self._attributes_readback:
-                self.connect_attribute(attribute[0], attribute[1], attribute[2])
+                self.connect_attribute(attribute[0],
+                                       attribute[1],
+                                       attribute[2]
+                                       )
 
             for combobox in self._comboboxes:
                 self.connect_combobox(combobox[0], combobox[1], combobox[3])
@@ -138,39 +145,40 @@ class BaseLLRFWidget(Qt.QWidget):
 
     @alert_problems
     def connect_attribute(self, widget, attribute, use_diag_device=False):
-        """
-            Method to connect a single tango attribute with a widget.
-        """
-
-        if self.is_extra_attribute(attribute):
-            extended_attribute = self.get_extended_attribute(attribute)
-        else:
-            if use_diag_device:
-                extended_attribute = self._device_diag + '/' + attribute
+        """Method to connect a single tango attribute with a widget."""
+        try:
+            if self._is_extra_attribute(attribute):
+                extended_attribute = self._get_extended_attribute(attribute)
             else:
-                extended_attribute = self._device_name + '/' + attribute
+                if use_diag_device:
+                    extended_attribute = self._device_diag + '/' + attribute
+                else:
+                    extended_attribute = self._device_name + '/' + attribute
 
-        widget = getattr(self.ui, widget)
-        widget.setModel(extended_attribute)
+            widget = getattr(self.ui, widget)
+            widget.setModel(extended_attribute)
+        except Exception:
+            print "There was an exception while connecting attributes"
 
     @alert_problems
-    def is_extra_attribute(self, attribute):
+    def _is_extra_attribute(self, attribute):
         return 'extra//' in attribute
 
     @alert_problems
-    def get_extended_attribute(self, attribute):
+    def _get_extended_attribute(self, attribute):
         from llrfgui.commons import extra_attributes_dict
 
         attr_key = attribute.split('//')[1]
 
-        extended_attribute = extra_attributes_dict[self._section][attr_key]
-        return extended_attribute
+        try:
+            extended_attribute = extra_attributes_dict[self._section][attr_key]
+            return extended_attribute
+        except KeyError:
+            print "No attribute found in extra_attributes_dict"
 
     @alert_problems
     def connect_combobox(self, widget, attribute, use_diag_device=False):
-        """
-            Method to connect a single combobox with its tango attribute
-        """
+        """Method to connect a single combobox with its tango attribute."""
         if use_diag_device:
             attribute = self._device_diag + '/' + attribute
         else:
@@ -182,32 +190,35 @@ class BaseLLRFWidget(Qt.QWidget):
     @alert_problems
     def _create_attributes_lists(self):
         """
-            Create empty lists for the tango attributes that will be connected
-            to the internal widgets.
+        Creation of attributes list.
+
+        Create empty lists for the tango attributes that will be connected
+        to the internal widgets.
         """
         self._get_attributes_from_yaml()
 
     @alert_problems
     def _get_attributes_from_yaml(self):
-        """ Method to get the attributes and its associated widget \
-        from a yaml config file
+        r"""
+        Get the attributes and its associated widget from a yaml config file.
+
         :param yaml_file: YAML file to read
         :return:
         """
         with open(self.config_file, 'r') as fd:
             data = load(fd)
 
-        if not data['attributes'][0] == None:
+        if not data['attributes'][0] is None:
             self._attributes = data['attributes']
         else:
             self._attributes = []
 
-        if not data['readback'][0] == None:
+        if not data['readback'][0] is None:
             self._attributes_readback = data['readback']
         else:
             self._attributes_readback = []
 
-        if not data['comboboxes'][0] == None:
+        if not data['comboboxes'][0] is None:
             self._comboboxes = data['comboboxes']
         else:
             self._comboboxes = []
@@ -216,12 +227,13 @@ class BaseLLRFWidget(Qt.QWidget):
         import os
         return os.path.abspath(file).rsplit('/', 1)[0]+'/config.yaml'
 
+
 def main():
     import sys
     from taurus.qt.qtgui.application import TaurusApplication
 
     app = TaurusApplication()
-    model = ''
+    # model = ''
     panel = BaseLLRFWidget()
     panel.show()
 

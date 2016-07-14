@@ -19,14 +19,10 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-"""
-LlrfSimple is a widget used for the LLRF Expert GUI.
-"""
-
-__all__ = ['LlrfSimple']
-
-__author__ = "amilan"
-
-__docformat__ = 'restructuredtext'
+"""LlrfSimple is a widget used for the LLRF Expert GUI."""
 
 from llrfsimple import LlrfSimple
+
+__all__ = ['LlrfSimple']
+__author__ = "amilan"
+__docformat__ = 'restructuredtext'

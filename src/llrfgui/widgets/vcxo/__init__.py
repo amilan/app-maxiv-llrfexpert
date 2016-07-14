@@ -19,14 +19,10 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-"""
-Vcxo is a widget used for the LLRF Expert GUI.
-"""
-
-__all__ = ['Vcxo']
-
-__author__ = "amilan"
-
-__docformat__ = 'restructuredtext'
+"""Vcxo is a widget used for the LLRF Expert GUI."""
 
 from vcxo import Vcxo
+
+__all__ = ['Vcxo']
+__author__ = "amilan"
+__docformat__ = 'restructuredtext'

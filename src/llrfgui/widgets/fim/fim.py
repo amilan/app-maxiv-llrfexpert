@@ -19,29 +19,27 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-"""
-Fim is a widget used for the LLRF Expert GUI.
-"""
-
-__all__ = ['FIM']
-
-__author__ = "amilan"
-
-__docformat__ = 'restructuredtext'
-
+"""Fim is a widget used for the LLRF Expert GUI."""
 
 from taurus.qt.qtgui.util.ui import UILoadable
 
 from llrfgui.widgets.basellrfwidget import BaseLLRFWidget
 
+__all__ = ['FIM']
+__author__ = "amilan"
+__docformat__ = 'restructuredtext'
+
 
 @UILoadable(with_ui='ui')
 class FIM(BaseLLRFWidget):
+    """Widget to control the FIM module."""
 
     def __init__(self, parent=None):
+        """Class initialization."""
         config_file = self._get_config_file_name(__file__)
         BaseLLRFWidget.__init__(self, config_file, parent)
         self.loadUi()
+
 
 def main():
     import sys

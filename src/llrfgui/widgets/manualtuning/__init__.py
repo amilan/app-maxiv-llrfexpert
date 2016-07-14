@@ -19,14 +19,10 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-"""
-ManualTuning is a widget used for the LLRF Expert GUI.
-"""
-
-__all__ = ['ManualTuning']
-
-__author__ = "amilan"
-
-__docformat__ = 'restructuredtext'
+"""ManualTuning is a widget used for the LLRF Expert GUI."""
 
 from manualtuning import ManualTuning
+
+__all__ = ['ManualTuning']
+__author__ = "amilan"
+__docformat__ = 'restructuredtext'

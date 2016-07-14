@@ -19,14 +19,10 @@
 #     along with this program.  If not, see [http://www.gnu.org/licenses/].
 ###############################################################################
 
-"""
-Ramping is a widget used for the LLRF Expert GUI.
-"""
-
-__all__ = ['Ramping']
-
-__author__ = "amilan"
-
-__docformat__ = 'restructuredtext'
+"""Ramping is a widget used for the LLRF Expert GUI."""
 
 from ramping import Ramping
+
+__all__ = ['Ramping']
+__author__ = "amilan"
+__docformat__ = 'restructuredtext'
