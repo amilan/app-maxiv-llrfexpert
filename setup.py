@@ -59,8 +59,8 @@ def main():
 
     requires = ['taurus']
 
-    data_files = [('/usr/share/applications', ['maxiv-r3-llrfexpert.desktop']),
-                  ('/usr/share/applications', ['maxiv-r3-llrfgui.desktop'])
+    data_files = [('/usr/share/applications', ['maxiv-llrfexpert.desktop']),
+                  ('/usr/share/applications', ['maxiv-llrfgui.desktop'])
                   ]
 
     setup(
