@@ -200,7 +200,7 @@ def run(period=PERIOD):
     parser.add_option('-r', '--rf_room', type=str,
                       help="""RF Room to be controlled.
                               \nAvailable options:
-                              \n  RF-ROOM-1,RF-ROOM-2,RF-ROOM-3, RF-LAB
+                              \n  RF-ROOM-1,RF-ROOM-2,RF-ROOM-3, R1, RF-LAB
                            """)
 
     parser, options, args = argparse.init_taurus_args(parser=parser)
