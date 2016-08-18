@@ -47,6 +47,12 @@ RF3_POTENTIOMETER_A = 'R3-320S2/RF/RF-01/Potentiometer01',
 RF3_POTENTIOMETER_B = 'R3-301S2/RF/RF-01/Potentiometer01',
 RF3_LANDAU = 'R3-315S2/RF/RF-03/Potentiometer01'
 
+RF1_POTENTIOMETER_A = 'R1-D1105S/RF/RF-01/Potentiometer03',
+RF1_POTENTIOMETER_B = 'R1-D1105S/RF/RF-01/Potentiometer03',
+RF1_LANDAU = 'R1-D1105S/RF/RF-01/Potentiometer03'
+
+# F_R1_D1105S_RF_RF301_POT01_R, 3
+# F_R1_D1105S_RF_RF302_POT01_R, 3
 
 LANDAU_A_POTENTIOMETER = 'R3-313S2/RF/RF-03/Potentiometer01'
 LANDAU_B_POTENTIOMETER = 'R3-314S2/RF/RF-03/Potentiometer01'
@@ -105,6 +111,14 @@ sections_dict = {
         'rftransmitter1': 'r3-a100111/rf/txa-01',
         'rftransmitter2': 'r3-a100111/rf/txa-51'
     },
+    'R1': {
+        'loops': 'R1-D100101CAB03/RF/Nutaq-01',
+        'diags': 'R1-D100101CAB03/RF/NutaqDiags-01',
+        'llrf': 'R1-D100101CAB03/RF/LLRF-01',
+        'llrfdiags': 'R1-D100101CAB03/RF/LLRFDIAGS-01',
+        'rftransmitter1': 'R1-D100101-RF-TXA-01',
+        'rftransmitter2': 'R1-D100101-RF-TXA-02'
+    },
     'RF-LAB': {
         'loops': 'rflab/llrf/nutaq_loops',
         'diags': 'rflab/llrf/nutaq_diags',
@@ -136,6 +150,10 @@ extra_attributes_dict = {'RF-ROOM-1': {'POT_A': RF1_POTENTIOMETER_A,
                                        'POT_B': RF3_POTENTIOMETER_B,
                                        'LANDAU': RF3_LANDAU,
                                        },
+                         'R1': {'POT_A': RF1_POTENTIOMETER_A,
+                                'POT_B': RF1_POTENTIOMETER_B,
+                                'LANDAU': RF1_LANDAU,
+                                },
                          'RF-LAB': {'POT_A': '',
                                     'POT_B': '',
                                     'LANDAU': '',

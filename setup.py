@@ -26,7 +26,7 @@ def main():
     """Main method collecting all the parameters to setup."""
     name = "taurusgui-llrfexpert"
 
-    version = "2.2.4"
+    version = "2.2.5"
 
     description = "Taurus GUI for Low Level RF expert users."
 
