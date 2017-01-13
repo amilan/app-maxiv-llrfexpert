@@ -48,6 +48,11 @@ __author__ = 'antmil'
 __docformat__ = 'restructuredtext'
 
 
+class LlrfTaurusGUI(TaurusGui):
+    _splashLogo = os.path.join(os.path.dirname(__file__),
+                               'images/maxivlogo.png')
+
+
 def configure_pythonpath():
     """
     Extend the pythonpath adding the llrfgui path.
@@ -81,7 +86,7 @@ def create_application(name, parser):
     """
     app = TaurusApplication(app_name=name, cmd_line_parser=parser)
     app.setOrganizationName(ORGANIZATION)
-    gui = TaurusGui()
+    gui = LlrfTaurusGUI()
     return app, gui
 
 
@@ -109,7 +114,7 @@ def set_polling_period(period):
 #     create_panels(gui, section, loops, diags)
 
 
-def create_panels(splashscreen, gui, section, loops_device, diags_device,
+def create_panels(gui, section, loops_device, diags_device,
                   is_expert, transmitter1, transmitter2,
                   llrf_device=None, llrfdiags_device=None):
     """Create panels and set application name."""
@@ -157,7 +162,8 @@ def create_panels(splashscreen, gui, section, loops_device, diags_device,
     for name in models_dict.keys():
         msg = 'PROCESSING ' + name
         # print 'PROCESSING', name
-        splashscreen.showMessage(msg)
+        # splashscreen.showMessage(msg)
+        gui.splashScreen().showMessage(msg)
         if name.startswith("RFtransmitter"):
             widget_instance = get_class_object("rftransmittergui", "LlRfTransmitterWidget")
         else:
@@ -223,17 +229,20 @@ def run(period=PERIOD):
     app_name = create_app_name(section, options.expert)
     app, gui = create_application(app_name, parser=parser)
 
-    splashLogo = os.path.join(os.path.dirname(__file__),
-                              'images/maxivlogo.png')
-    splashscreen = Qt.QSplashScreen(Qt.QPixmap(splashLogo))
-    splashscreen.show()
+    # splashLogo = os.path.join(os.path.dirname(__file__),
+    #                          'images/maxivlogo.png')
+    # splashscreen = Qt.QSplashScreen(Qt.QPixmap(splashLogo))
+    # splashscreen.show()
+    # splashscreen = gui.splashScreen
+    # splashscreen.show()
     app.processEvents()
 
     hide_toolbars(gui)
 
-    splashscreen.showMessage('Creating panels')
+    # splashscreen.showMessage('Creating panels')
+    gui.splashScreen().showMessage('Creating panels')
     create_panels(
-        splashscreen=splashscreen,
+        # splashscreen=splashscreen,
         gui=gui,
         section=section,
         loops_device=loops,
@@ -243,11 +252,12 @@ def run(period=PERIOD):
         transmitter2=rftrans2,
         llrf_device=llrf,
         llrfdiags_device=llrfdiags)
-    splashscreen.showMessage('Loading settings')
+    # splashscreen.showMessage('Loading settings')
+    gui.splashScreen().showMessage('Loading settings')
     load_settings(gui, options.expert)
 
     gui.show()
-    splashscreen.finish(gui)
+    # splashscreen.finish(gui)
     sys.exit(app.exec_())
 
 

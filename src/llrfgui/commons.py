@@ -134,7 +134,9 @@ sections_dict_tests = {
         'loops': 'ws/rf/pynutaq_1',
         'diags': 'ws/rf/pynutaqdiags_1',
         'llrf': 'ws/rf/llrf-1',
-        'llrfdiags': 'ws/rf/llrfdiags-3'
+        'llrfdiags': 'ws/rf/llrfdiags-3',
+        'rftransmitter1': '',
+        'rftransmitter2': ''
     }
 }
 
