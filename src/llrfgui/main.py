@@ -150,7 +150,9 @@ def create_panels(gui, section, loops_device, diags_device,
     models_dict_user = {
         'AutoTuningSimple': loops_device,
         'ItckOutDiagSimple': diags_device,
+        'ItckInDiags': diags_device,
         'ManualTuningSimple': loops_device,
+        'TuningDiag': loops_device,
         'LlrfSimple': [llrf_device, llrfdiags_device]
     }
 
