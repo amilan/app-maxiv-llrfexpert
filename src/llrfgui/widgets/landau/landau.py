@@ -54,13 +54,23 @@ class Landau(BaseLLRFWidget):
         """Implementation of connect_signals method."""
         QtCore.QObject.connect(self.ui.pushButton_rTU_3,
                                QtCore.SIGNAL("clicked()"),
-                               self.landau_reset)
+                               self.landau_reset_a)
+
+        QtCore.QObject.connect(self.ui.pushButton_rTU_4,
+                               QtCore.SIGNAL("clicked()"),
+                               self.landau_reset_b)
 
     @alert_problems
-    def landau_reset(self):
+    def landau_reset_a(self):
         """Tuning reset for the Landau cavities."""
         self._device_proxy['LandautuningresetA'] = True
         self._device_proxy['LandautuningresetA'] = False
+
+    @alert_problems
+    def landau_reset_b(self):
+        """Tuning reset for the Landau cavities."""
+        self._device_proxy['LandautuningresetB'] = True
+        self._device_proxy['LandautuningresetB'] = False
 
 
 def main():
