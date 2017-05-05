@@ -1,125 +1,342 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Base widget &mdash; LLRF expert GUI 1.0.0 documentation</title>
-    
-    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '1.0.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="LLRF expert GUI 1.0.0 documentation" href="../index.html" />
-    <link rel="up" title="LLRF expert GUI widgets" href="widgets.html" />
-    <link rel="prev" title="LLRF expert GUI widgets" href="widgets.html" />
-   
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
   
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Base widget &mdash; LLRF expert GUI 1.0.0 documentation</title>
+  
 
-  </head>
-  <body role="document">
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
-        <li class="right" >
-          <a href="widgets.html" title="LLRF expert GUI widgets"
-             accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">LLRF expert GUI 1.0.0 documentation</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="widgets.html" accesskey="U">LLRF expert GUI widgets</a> &raquo;</li> 
-      </ul>
-    </div>  
+  
+  
+  
+  
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="LLRF expert GUI 1.0.0 documentation" href="../index.html"/>
+        <link rel="up" title="LLRF expert GUI widgets" href="widgets.html"/>
+        <link rel="prev" title="LLRF expert GUI widgets" href="widgets.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> LLRF expert GUI
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../llrfgui/llrfgui.html">llrfgui</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../utils/utils.html">utils</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="widgets.html">widgets</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="widgets.html#module-llrfgui.widgets">llrfgui.widgets</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="widgets.html#content-inside-this-module">Content inside this module</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="">BaseLLRFWidget</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">LLRF expert GUI</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="widgets.html">LLRF expert GUI widgets</a> &raquo;</li>
+        
+      <li>Base widget</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/widgets/base.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="module-llrfgui.widgets.basellrfwidget">
 <span id="base-widget"></span><h1>Base widget<a class="headerlink" href="#module-llrfgui.widgets.basellrfwidget" title="Permalink to this headline">¶</a></h1>
 <p>Base module to be used by all the llrf widgets.</p>
 <dl class="class">
 <dt id="llrfgui.widgets.basellrfwidget.BaseLLRFWidget">
-<em class="property">class </em><code class="descclassname">llrfgui.widgets.basellrfwidget.</code><code class="descname">BaseLLRFWidget</code><span class="sig-paren">(</span><em>parent=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/llrfgui/widgets/basellrfwidget/basellrfwidget.html#BaseLLRFWidget"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#llrfgui.widgets.basellrfwidget.BaseLLRFWidget" title="Permalink to this definition">¶</a></dt>
-<dd><p>Base class to be used by any other LLRF widget.
-It provides the basic interface.</p>
+<em class="property">class </em><tt class="descclassname">llrfgui.widgets.basellrfwidget.</tt><tt class="descname">BaseLLRFWidget</tt><big>(</big><em>config_file</em>, <em>parent=None</em><big>)</big><a class="headerlink" href="#llrfgui.widgets.basellrfwidget.BaseLLRFWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class to be used by any other LLRF widget.</p>
+<p>It provides the basic interface.</p>
+<dl class="attribute">
+<dt id="llrfgui.widgets.basellrfwidget.BaseLLRFWidget.CB">
+<tt class="descname">CB</tt><em class="property"> = [['OFF', 0], ['ON', 1]]</em><a class="headerlink" href="#llrfgui.widgets.basellrfwidget.BaseLLRFWidget.CB" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="llrfgui.widgets.basellrfwidget.BaseLLRFWidget.CC">
+<tt class="descname">CC</tt><em class="property"> = [['50 Hz [0]', 0], ['100 Hz [1]', 1], ['200 Hz [2]', 2], ['400 Hz [3]', 3], ['600 Hz [4]', 4], ['800 Hz [5]', 5], ['1 kHz [6]', 6], ['2 KHz [7]', 7]]</em><a class="headerlink" href="#llrfgui.widgets.basellrfwidget.BaseLLRFWidget.CC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="llrfgui.widgets.basellrfwidget.BaseLLRFWidget.CCMDSTART">
+<tt class="descname">CCMDSTART</tt><em class="property"> = [['Not RF [0]', 0], ['RF Detected [1]', 1], ['Tuning Cavity [2]', 2], ['Closing Loops [3]', 3], ['Increasing Power [4]', 4], ['Ready DC Power [5]', 5], ['Ready Ramping [6]', 6], ['Loops Saturated [7]', 7]]</em><a class="headerlink" href="#llrfgui.widgets.basellrfwidget.BaseLLRFWidget.CCMDSTART" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="llrfgui.widgets.basellrfwidget.BaseLLRFWidget.CCS">
+<tt class="descname">CCS</tt><em class="property"> = [['onboard', 'onboard'], ['external_front', 'external_front'], ['onboard_divided', 'onboard_divided'], ['reserved', 'reserved'], ['fpdp_receive', 'fpdp_receive'], ['rapid_channel', 'rapid_channel'], ['dif_receive', 'dif_receive'], ['reserved_error', 'reserved_error']]</em><a class="headerlink" href="#llrfgui.widgets.basellrfwidget.BaseLLRFWidget.CCS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="llrfgui.widgets.basellrfwidget.BaseLLRFWidget.CEN">
+<tt class="descname">CEN</tt><em class="property"> = [['Enable', 'Enable'], ['Disable', 'Disable']]</em><a class="headerlink" href="#llrfgui.widgets.basellrfwidget.BaseLLRFWidget.CEN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="llrfgui.widgets.basellrfwidget.BaseLLRFWidget.CFDL">
+<tt class="descname">CFDL</tt><em class="property"> = [['All signals', 1], ['IQCav', 2], ['I&amp;QContr', 3], ['I&amp;QCont1', 4], ['I&amp;QCont2', 5], ['I&amp;QError', 6], ['I&amp;QErrorAccum', 7], ['I&amp;QFwCav', 8], ['TuningDephase&amp;CavPhase', 9], ['I&amp;QRef', 10], ['AmpFw&amp;PhFw', 11], ['I&amp;QFwTet1', 12], ['I&amp;QFwTet2', 13], ['I&amp;QCavFilt', 14], ['I&amp;QMO', 15], ['Amp&amp;PhCav', 16]]</em><a class="headerlink" href="#llrfgui.widgets.basellrfwidget.BaseLLRFWidget.CFDL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="llrfgui.widgets.basellrfwidget.BaseLLRFWidget.CFDLDIAG">
+<tt class="descname">CFDLDIAG</tt><em class="property"> = [['All signals', 1], ['RvTet1', 2], ['RvTet2', 3], ['FwCircIn', 4], ['RvCircIr', 5], ['FwLoad', 6], ['FwHybLoad', 7], ['RvCav', 8], ['MO_landau', 9]]</em><a class="headerlink" href="#llrfgui.widgets.basellrfwidget.BaseLLRFWidget.CFDLDIAG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="llrfgui.widgets.basellrfwidget.BaseLLRFWidget.CFS">
+<tt class="descname">CFS</tt><em class="property"> = [['0', 0], ['1', 1], ['2', 2], ['3', 3]]</em><a class="headerlink" href="#llrfgui.widgets.basellrfwidget.BaseLLRFWidget.CFS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="llrfgui.widgets.basellrfwidget.BaseLLRFWidget.CMOVINGAVERAGE">
+<tt class="descname">CMOVINGAVERAGE</tt><em class="property"> = [['1 [0]', 0], ['2 [1]', 1], ['4 [2]', 2], ['8 [3]', 3], ['16 [4]', 4], ['32 [5]', 5], ['64 [6]', 6], ['128 [7]', 7]]</em><a class="headerlink" href="#llrfgui.widgets.basellrfwidget.BaseLLRFWidget.CMOVINGAVERAGE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="llrfgui.widgets.basellrfwidget.BaseLLRFWidget.CP">
+<tt class="descname">CP</tt><em class="property"> = [['[0,360]', 0], ['[-90,270]', 1], ['[-180,180]', 2], ['[-270,90]', 3]]</em><a class="headerlink" href="#llrfgui.widgets.basellrfwidget.BaseLLRFWidget.CP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="llrfgui.widgets.basellrfwidget.BaseLLRFWidget.CPIR">
+<tt class="descname">CPIR</tt><em class="property"> = [['0,1', 0], ['0.2', 1], ['0.5', 2], ['1', 3], ['2', 4], ['5', 5], ['10', 6], ['Inmediatly apply', 7]]</em><a class="headerlink" href="#llrfgui.widgets.basellrfwidget.BaseLLRFWidget.CPIR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="llrfgui.widgets.basellrfwidget.BaseLLRFWidget.CQ">
+<tt class="descname">CQ</tt><em class="property"> = [['1st Quadrant [0]', 0], ['2nd Quadrant [1]', 1], ['3rd Quadrant [2]', 2], ['4th Quadrant [3]', 3]]</em><a class="headerlink" href="#llrfgui.widgets.basellrfwidget.BaseLLRFWidget.CQ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="llrfgui.widgets.basellrfwidget.BaseLLRFWidget.CSLOWIQINPUT">
+<tt class="descname">CSLOWIQINPUT</tt><em class="property"> = [['CavVolt [0]', 0], ['FwCav [1]', 1], ['FwTet1 [2]', 2], ['FwTet2 [3]', 3], ['FwCircIn [4]', 4]]</em><a class="headerlink" href="#llrfgui.widgets.basellrfwidget.BaseLLRFWidget.CSLOWIQINPUT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="llrfgui.widgets.basellrfwidget.BaseLLRFWidget.CV">
+<tt class="descname">CV</tt><em class="property"> = [['0.01 mV/s [0]', 0], ['0.03 mV/s [1]', 1], ['0.1 mV/s [2]', 2], ['0.33 mV/s [3]', 3], ['1 mV/s [4]', 4], ['2 mV/s [5]', 5], ['4 mV/s [6]', 6], ['Immediatly apply [7]', 7]]</em><a class="headerlink" href="#llrfgui.widgets.basellrfwidget.BaseLLRFWidget.CV" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="method">
 <dt id="llrfgui.widgets.basellrfwidget.BaseLLRFWidget._connect_all_attributes">
-<code class="descname">_connect_all_attributes</code><span class="sig-paren">(</span><em>*args</em>, <em>**kws</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/llrfgui/widgets/basellrfwidget/basellrfwidget.html#BaseLLRFWidget._connect_all_attributes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#llrfgui.widgets.basellrfwidget.BaseLLRFWidget._connect_all_attributes" title="Permalink to this definition">¶</a></dt>
-<dd><p>Private method in charge of connect a list of tango attributes with
+<tt class="descname">_connect_all_attributes</tt><big>(</big><em>*args</em>, <em>**kws</em><big>)</big><a class="headerlink" href="#llrfgui.widgets.basellrfwidget.BaseLLRFWidget._connect_all_attributes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Private method in charge of connect all attributes.</p>
+<p>This method is connecting a list of tango attributes with
 their correspondent widget.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="llrfgui.widgets.basellrfwidget.BaseLLRFWidget._create_attributes_lists">
-<code class="descname">_create_attributes_lists</code><span class="sig-paren">(</span><em>*args</em>, <em>**kws</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/llrfgui/widgets/basellrfwidget/basellrfwidget.html#BaseLLRFWidget._create_attributes_lists"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#llrfgui.widgets.basellrfwidget.BaseLLRFWidget._create_attributes_lists" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create empty lists for the tango attributes that will be connected
+<tt class="descname">_create_attributes_lists</tt><big>(</big><em>*args</em>, <em>**kws</em><big>)</big><a class="headerlink" href="#llrfgui.widgets.basellrfwidget.BaseLLRFWidget._create_attributes_lists" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creation of attributes list.</p>
+<p>Create empty lists for the tango attributes that will be connected
 to the internal widgets.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="llrfgui.widgets.basellrfwidget.BaseLLRFWidget._get_attributes_from_yaml">
+<tt class="descname">_get_attributes_from_yaml</tt><big>(</big><em>*args</em>, <em>**kws</em><big>)</big><a class="headerlink" href="#llrfgui.widgets.basellrfwidget.BaseLLRFWidget._get_attributes_from_yaml" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the attributes and its associated widget from a yaml config file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>yaml_file</strong> &#8211; YAML file to read</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="llrfgui.widgets.basellrfwidget.BaseLLRFWidget._get_config_file_name">
+<tt class="descname">_get_config_file_name</tt><big>(</big><em>file</em><big>)</big><a class="headerlink" href="#llrfgui.widgets.basellrfwidget.BaseLLRFWidget._get_config_file_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="llrfgui.widgets.basellrfwidget.BaseLLRFWidget._get_extended_attribute">
+<tt class="descname">_get_extended_attribute</tt><big>(</big><em>*args</em>, <em>**kws</em><big>)</big><a class="headerlink" href="#llrfgui.widgets.basellrfwidget.BaseLLRFWidget._get_extended_attribute" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="llrfgui.widgets.basellrfwidget.BaseLLRFWidget._is_extra_attribute">
+<tt class="descname">_is_extra_attribute</tt><big>(</big><em>*args</em>, <em>**kws</em><big>)</big><a class="headerlink" href="#llrfgui.widgets.basellrfwidget.BaseLLRFWidget._is_extra_attribute" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
 <dt id="llrfgui.widgets.basellrfwidget.BaseLLRFWidget._set_comboboxes">
-<code class="descname">_set_comboboxes</code><span class="sig-paren">(</span><em>*args</em>, <em>**kws</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/llrfgui/widgets/basellrfwidget/basellrfwidget.html#BaseLLRFWidget._set_comboboxes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#llrfgui.widgets.basellrfwidget.BaseLLRFWidget._set_comboboxes" title="Permalink to this definition">¶</a></dt>
-<dd><p>Method to set comboboxes models. By default is
-void, and it should be implemented by the widget itself.</p>
+<tt class="descname">_set_comboboxes</tt><big>(</big><em>*args</em>, <em>**kws</em><big>)</big><a class="headerlink" href="#llrfgui.widgets.basellrfwidget.BaseLLRFWidget._set_comboboxes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to set possible values in a combobox.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="llrfgui.widgets.basellrfwidget.BaseLLRFWidget.connect_attribute">
-<code class="descname">connect_attribute</code><span class="sig-paren">(</span><em>*args</em>, <em>**kws</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/llrfgui/widgets/basellrfwidget/basellrfwidget.html#BaseLLRFWidget.connect_attribute"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#llrfgui.widgets.basellrfwidget.BaseLLRFWidget.connect_attribute" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">connect_attribute</tt><big>(</big><em>*args</em>, <em>**kws</em><big>)</big><a class="headerlink" href="#llrfgui.widgets.basellrfwidget.BaseLLRFWidget.connect_attribute" title="Permalink to this definition">¶</a></dt>
 <dd><p>Method to connect a single tango attribute with a widget.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="llrfgui.widgets.basellrfwidget.BaseLLRFWidget.connect_combobox">
-<code class="descname">connect_combobox</code><span class="sig-paren">(</span><em>*args</em>, <em>**kws</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/llrfgui/widgets/basellrfwidget/basellrfwidget.html#BaseLLRFWidget.connect_combobox"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#llrfgui.widgets.basellrfwidget.BaseLLRFWidget.connect_combobox" title="Permalink to this definition">¶</a></dt>
-<dd><p>Method to connect a single combobox with its tango attribute</p>
+<tt class="descname">connect_combobox</tt><big>(</big><em>*args</em>, <em>**kws</em><big>)</big><a class="headerlink" href="#llrfgui.widgets.basellrfwidget.BaseLLRFWidget.connect_combobox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to connect a single combobox with its tango attribute.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="llrfgui.widgets.basellrfwidget.BaseLLRFWidget.connect_signals">
-<code class="descname">connect_signals</code><span class="sig-paren">(</span><em>*args</em>, <em>**kws</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/llrfgui/widgets/basellrfwidget/basellrfwidget.html#BaseLLRFWidget.connect_signals"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#llrfgui.widgets.basellrfwidget.BaseLLRFWidget.connect_signals" title="Permalink to this definition">¶</a></dt>
-<dd><p>Method to connect QT signals with methods. By default is
-void, and it should be implemented by the widget itself.</p>
+<tt class="descname">connect_signals</tt><big>(</big><em>*args</em>, <em>**kws</em><big>)</big><a class="headerlink" href="#llrfgui.widgets.basellrfwidget.BaseLLRFWidget.connect_signals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to connect QT signals with methods.</p>
+<p>By default isvoid, and it should be implemented by the widget itself.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="llrfgui.widgets.basellrfwidget.BaseLLRFWidget.connect_with_devices">
-<code class="descname">connect_with_devices</code><span class="sig-paren">(</span><em>*args</em>, <em>**kws</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/llrfgui/widgets/basellrfwidget/basellrfwidget.html#BaseLLRFWidget.connect_with_devices"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#llrfgui.widgets.basellrfwidget.BaseLLRFWidget.connect_with_devices" title="Permalink to this definition">¶</a></dt>
-<dd><p>This method creates the tango device proxys. 
-To be overwritten if needed.</p>
+<tt class="descname">connect_with_devices</tt><big>(</big><em>*args</em>, <em>**kws</em><big>)</big><a class="headerlink" href="#llrfgui.widgets.basellrfwidget.BaseLLRFWidget.connect_with_devices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creation of the tango device proxys.</p>
+<p>To be overwritten if needed.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="llrfgui.widgets.basellrfwidget.BaseLLRFWidget.setModel">
-<code class="descname">setModel</code><span class="sig-paren">(</span><em>*args</em>, <em>**kws</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/llrfgui/widgets/basellrfwidget/basellrfwidget.html#BaseLLRFWidget.setModel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#llrfgui.widgets.basellrfwidget.BaseLLRFWidget.setModel" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the model of the widget. This method could be overwritten
+<tt class="descname">setModel</tt><big>(</big><em>*args</em>, <em>**kws</em><big>)</big><a class="headerlink" href="#llrfgui.widgets.basellrfwidget.BaseLLRFWidget.setModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the model of the widget.</p>
+<p>This method could be overwritten
 if needed due to a different model (i.e. widgets with a list of
 devices as model)</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>model</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; Model to be set.</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>model</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; Model to be set.</li>
+<li><strong>section</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; Section to be controlled.</li>
+</ul>
+</td>
 </tr>
 </tbody>
 </table>
@@ -130,52 +347,73 @@ devices as model)</p>
 </div>
 
 
+           </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="widgets.html"
-                        title="previous chapter">LLRF expert GUI widgets</a></p>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="../_sources/widgets/base.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="widgets.html" class="btn btn-neutral" title="LLRF expert GUI widgets" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Antonio Milan Otero.
+
     </p>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
         </div>
       </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &copy;2015, Antonio Milan Otero.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.4</a>
-      
-      |
-      <a href="../_sources/widgets/base.txt"
-          rel="nofollow">Page source</a></li>
-    </div>
 
-    
+    </section>
 
-    
-  </body>
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: ''
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
 </html>

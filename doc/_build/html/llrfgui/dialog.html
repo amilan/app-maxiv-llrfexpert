@@ -1,125 +1,279 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>LLRF expert GUI section chooser dialog &mdash; LLRF expert GUI 1.0.0 documentation</title>
-    
-    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '1.0.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="LLRF expert GUI 1.0.0 documentation" href="../index.html" />
-    <link rel="up" title="LLRF expert GUI" href="llrfgui.html" />
-    <link rel="prev" title="LLRF expert GUI commons" href="commons.html" />
-   
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
   
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>LLRF expert GUI section chooser dialog &mdash; LLRF expert GUI 1.0.0 documentation</title>
+  
 
-  </head>
-  <body role="document">
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
-        <li class="right" >
-          <a href="commons.html" title="LLRF expert GUI commons"
-             accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">LLRF expert GUI 1.0.0 documentation</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="llrfgui.html" accesskey="U">LLRF expert GUI</a> &raquo;</li> 
-      </ul>
-    </div>  
+  
+  
+  
+  
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="LLRF expert GUI 1.0.0 documentation" href="../index.html"/>
+        <link rel="up" title="LLRF expert GUI" href="llrfgui.html"/>
+        <link rel="next" title="LLRF expert GUI - utils" href="../utils/utils.html"/>
+        <link rel="prev" title="LLRF expert GUI commons" href="commons.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> LLRF expert GUI
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="llrfgui.html">llrfgui</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="llrfgui.html#module-llrfgui">llrfgui</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="llrfgui.html#content-inside-this-module">Content inside this module</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="main.html">Main GUI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="panels.html">Panels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="commons.html">Commons</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Section chooser dialog</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../utils/utils.html">utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../widgets/widgets.html">widgets</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">LLRF expert GUI</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="llrfgui.html">LLRF expert GUI</a> &raquo;</li>
+        
+      <li>LLRF expert GUI section chooser dialog</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/llrfgui/dialog.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="module-llrfgui.dialog">
 <span id="llrf-expert-gui-section-chooser-dialog"></span><h1>LLRF expert GUI section chooser dialog<a class="headerlink" href="#module-llrfgui.dialog" title="Permalink to this headline">¶</a></h1>
 <p>Contain dialogs for server selection.</p>
 <dl class="function">
 <dt id="llrfgui.dialog.choose_server">
-<code class="descclassname">llrfgui.dialog.</code><code class="descname">choose_server</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/llrfgui/dialog.html#choose_server"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#llrfgui.dialog.choose_server" title="Permalink to this definition">¶</a></dt>
-<dd><p>Prompt a selection dialog from a given list of servers.
+<tt class="descclassname">llrfgui.dialog.</tt><tt class="descname">choose_server</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="reference internal" href="../_modules/llrfgui/dialog.html#choose_server"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#llrfgui.dialog.choose_server" title="Permalink to this definition">¶</a></dt>
+<dd><p>Server selection dialog.</p>
+<p>Prompt a selection dialog from a given list of servers.
 The selected server is returned.
 If the user cancel the dialog, the program stops.</p>
 </dd></dl>
 
 <dl class="function">
+<dt id="llrfgui.dialog.get_model">
+<tt class="descclassname">llrfgui.dialog.</tt><tt class="descname">get_model</tt><big>(</big><em>is_expert</em>, <em>section=None</em><big>)</big><a class="reference internal" href="../_modules/llrfgui/dialog.html#get_model"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#llrfgui.dialog.get_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the models choosen from a dialog.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list of models to be applied in the GUI.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">tuple</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
 <dt id="llrfgui.dialog.in_different_process">
-<code class="descclassname">llrfgui.dialog.</code><code class="descname">in_different_process</code><span class="sig-paren">(</span><em>func</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/llrfgui/dialog.html#in_different_process"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#llrfgui.dialog.in_different_process" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">llrfgui.dialog.</tt><tt class="descname">in_different_process</tt><big>(</big><em>func</em><big>)</big><a class="reference internal" href="../_modules/llrfgui/dialog.html#in_different_process"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#llrfgui.dialog.in_different_process" title="Permalink to this definition">¶</a></dt>
 <dd><p>Decorator to run the function in a different process.</p>
 </dd></dl>
 
 </div>
 
 
+           </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="commons.html"
-                        title="previous chapter">LLRF expert GUI commons</a></p>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="../_sources/llrfgui/dialog.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../utils/utils.html" class="btn btn-neutral float-right" title="LLRF expert GUI - utils" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="commons.html" class="btn btn-neutral" title="LLRF expert GUI commons" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Antonio Milan Otero.
+
     </p>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
         </div>
       </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &copy;2015, Antonio Milan Otero.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.4</a>
-      
-      |
-      <a href="../_sources/llrfgui/dialog.txt"
-          rel="nofollow">Page source</a></li>
-    </div>
 
-    
+    </section>
 
-    
-  </body>
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: ''
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
 </html>
