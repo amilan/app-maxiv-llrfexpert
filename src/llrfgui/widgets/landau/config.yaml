@@ -39,14 +39,14 @@ attributes:
 
 readback:
 # Cavity A
-- [taurusBoolLed_37, Diag_PlungerMovingManualTuningA]
-- [taurusBoolLed_38, Diag_PlungerMovingUpManualTuningA]
+- [TaurusLed_37, Diag_PlungerMovingManualTuningA]
+- [TaurusLed_38, Diag_PlungerMovingUpManualTuningA]
 - [tauValueLabel_numberPulses_4, NumStepsA]
 - [tauValueLabel_moveUp_3, MovelandauupA]
 - [tauValueLabel_movePlg1_3, MovelandauplgA]
 
-- [taurusBoolLed_39, Diag_PlungerMovingAutomaticTuningA]
-- [taurusBoolLed_40, Diag_PlungerMovingUpAutomaticTuningA]
+- [TaurusLed_39, Diag_PlungerMovingAutomaticTuningA]
+- [TaurusLed_40, Diag_PlungerMovingUpAutomaticTuningA]
 - [tauValueLabel_tuningOffset_3, LandauphaseoffsetA]
 - [tauValueLabel_marginUp_3, LandaumarginupA]
 - [tauValueLabel_marginLow_3, LandauMarginLowA]
@@ -58,14 +58,14 @@ readback:
 - [tauValueLabel_tuningPosEn_5, LandauCavEnableA]
 
 # Cavity B
-- [taurusBoolLed_41, Diag_PlungerMovingManualTuningB]
-- [taurusBoolLed_42, Diag_PlungerMovingUpManualTuningB]
+- [TaurusLed_41, Diag_PlungerMovingManualTuningB]
+- [TaurusLed_42, Diag_PlungerMovingUpManualTuningB]
 - [tauValueLabel_numberPulses_5, NumStepsB]
 - [tauValueLabel_moveUp_4, MovelandauupB]
 - [tauValueLabel_movePlg1_4, MovelandauplgB]
 
-- [taurusBoolLed_44, Diag_PlungerMovingAutomaticTuningB]
-- [taurusBoolLed_43, Diag_PlungerMovingUpAutomaticTuningB]
+- [TaurusLed_44, Diag_PlungerMovingAutomaticTuningB]
+- [TaurusLed_43, Diag_PlungerMovingUpAutomaticTuningB]
 - [tauValueLabel_tuningOffset_4, LandauphaseoffsetB]
 - [tauValueLabel_marginUp_4, LandaumarginupB]
 - [tauValueLabel_marginLow_4, LandauMarginLowB]

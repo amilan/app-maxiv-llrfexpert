@@ -25,7 +25,7 @@ import PyTango
 
 from taurus.external.qt import Qt, QtCore, QtGui
 from taurus.qt.qtgui.util.ui import UILoadable
-from taurus.qt.qtgui.display import TaurusStateLed
+from taurus.qt.qtgui.display import TaurusLed
 
 # from llrfgui.utils.commons import *
 from llrfgui.utils.decorators import alert_problems
@@ -86,7 +86,7 @@ class Start(BaseLLRFWidget):
         # font.setPointSize(8)
         # self.label_state2.setFont(font)
 
-        self.ui.lyrtechStatus1 = TaurusStateLed()
+        self.ui.lyrtechStatus1 = TaurusLed()
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed,
                                        QtGui.QSizePolicy.Fixed
                                        )
@@ -96,7 +96,7 @@ class Start(BaseLLRFWidget):
                         self.ui.lyrtechStatus1.sizePolicy().hasHeightForWidth()
                         )
 
-        self.ui.lyrtechStatus2 = TaurusStateLed()
+        self.ui.lyrtechStatus2 = TaurusLed()
         sizePolicy2 = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed,
                                         QtGui.QSizePolicy.Fixed
                                         )

@@ -107,7 +107,7 @@
              </widget>
             </item>
             <item row="6" column="1">
-             <widget class="TaurusBoolLed" name="taurusBoolLed_37">
+             <widget class="TaurusLed" name="TaurusLed_37">
               <property name="alignment">
                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
               </property>
@@ -120,7 +120,7 @@
              </widget>
             </item>
             <item row="7" column="1">
-             <widget class="TaurusBoolLed" name="taurusBoolLed_38">
+             <widget class="TaurusLed" name="TaurusLed_38">
               <property name="alignment">
                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
               </property>
@@ -961,7 +961,7 @@
              </widget>
             </item>
             <item row="6" column="0">
-             <widget class="TaurusBoolLed" name="taurusBoolLed_41">
+             <widget class="TaurusLed" name="TaurusLed_41">
               <property name="alignment">
                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
               </property>
@@ -974,7 +974,7 @@
              </widget>
             </item>
             <item row="7" column="0">
-             <widget class="TaurusBoolLed" name="taurusBoolLed_42">
+             <widget class="TaurusLed" name="TaurusLed_42">
               <property name="alignment">
                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
               </property>
@@ -1414,7 +1414,7 @@
              </widget>
             </item>
             <item row="9" column="1">
-             <widget class="TaurusBoolLed" name="taurusBoolLed_39">
+             <widget class="TaurusLed" name="TaurusLed_39">
               <property name="alignment">
                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
               </property>
@@ -1971,7 +1971,7 @@
              </widget>
             </item>
             <item row="10" column="1">
-             <widget class="TaurusBoolLed" name="taurusBoolLed_40">
+             <widget class="TaurusLed" name="TaurusLed_40">
               <property name="alignment">
                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
               </property>
@@ -2614,7 +2614,7 @@
              </widget>
             </item>
             <item row="10" column="0">
-             <widget class="TaurusBoolLed" name="taurusBoolLed_43">
+             <widget class="TaurusLed" name="TaurusLed_43">
               <property name="alignment">
                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
               </property>
@@ -2690,7 +2690,7 @@
              </widget>
             </item>
             <item row="9" column="0">
-             <widget class="TaurusBoolLed" name="taurusBoolLed_44">
+             <widget class="TaurusLed" name="TaurusLed_44">
               <property name="alignment">
                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
               </property>
@@ -2953,7 +2953,7 @@
    <header>taurus.qt.qtgui.input</header>
   </customwidget>
   <customwidget>
-   <class>TaurusBoolLed</class>
+   <class>TaurusLed</class>
    <extends>QLabel</extends>
    <header>taurus.qt.qtgui.display</header>
   </customwidget>

@@ -231,7 +231,7 @@
           </widget>
          </item>
          <item row="4" column="1">
-          <widget class="TaurusBoolLed" name="taurusBoolLed_48">
+          <widget class="TaurusLed" name="TaurusLed_48">
            <property name="minimumSize">
             <size>
              <width>59</width>
@@ -247,7 +247,7 @@
           </widget>
          </item>
          <item row="0" column="1">
-          <widget class="TaurusBoolLed" name="taurusBoolLed_21">
+          <widget class="TaurusLed" name="TaurusLed_21">
            <property name="minimumSize">
             <size>
              <width>59</width>
@@ -263,7 +263,7 @@
           </widget>
          </item>
          <item row="2" column="1">
-          <widget class="TaurusBoolLed" name="taurusBoolLed_45">
+          <widget class="TaurusLed" name="TaurusLed_45">
            <property name="minimumSize">
             <size>
              <width>59</width>
@@ -312,7 +312,7 @@
           </widget>
          </item>
          <item row="3" column="1">
-          <widget class="TaurusBoolLed" name="taurusBoolLed_47">
+          <widget class="TaurusLed" name="TaurusLed_47">
            <property name="minimumSize">
             <size>
              <width>59</width>
@@ -328,7 +328,7 @@
           </widget>
          </item>
          <item row="1" column="1">
-          <widget class="TaurusBoolLed" name="taurusBoolLed_22">
+          <widget class="TaurusLed" name="TaurusLed_22">
            <property name="minimumSize">
             <size>
              <width>59</width>
@@ -384,7 +384,7 @@
           <number>0</number>
          </property>
          <item row="4" column="0">
-          <widget class="TaurusBoolLed" name="taurusBoolLed_54">
+          <widget class="TaurusLed" name="TaurusLed_54">
            <property name="minimumSize">
             <size>
              <width>59</width>
@@ -400,7 +400,7 @@
           </widget>
          </item>
          <item row="1" column="0">
-          <widget class="TaurusBoolLed" name="taurusBoolLed_50">
+          <widget class="TaurusLed" name="TaurusLed_50">
            <property name="minimumSize">
             <size>
              <width>59</width>
@@ -416,7 +416,7 @@
           </widget>
          </item>
          <item row="2" column="0">
-          <widget class="TaurusBoolLed" name="taurusBoolLed_51">
+          <widget class="TaurusLed" name="TaurusLed_51">
            <property name="minimumSize">
             <size>
              <width>59</width>
@@ -432,7 +432,7 @@
           </widget>
          </item>
          <item row="3" column="0">
-          <widget class="TaurusBoolLed" name="taurusBoolLed_53">
+          <widget class="TaurusLed" name="TaurusLed_53">
            <property name="minimumSize">
             <size>
              <width>59</width>
@@ -448,7 +448,7 @@
           </widget>
          </item>
          <item row="0" column="0">
-          <widget class="TaurusBoolLed" name="taurusBoolLed_49">
+          <widget class="TaurusLed" name="TaurusLed_49">
            <property name="minimumSize">
             <size>
              <width>59</width>
@@ -561,7 +561,7 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>TaurusBoolLed</class>
+   <class>TaurusLed</class>
    <extends>QLabel</extends>
    <header>taurus.qt.qtgui.display</header>
   </customwidget>

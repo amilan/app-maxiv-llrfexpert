@@ -30,7 +30,7 @@ import importlib
 from taurus.qt.qtgui.taurusgui import TaurusGui
 from taurus.qt.qtgui.application import TaurusApplication
 
-from taurus.qt import Qt
+from taurus.external.qt import Qt
 
 # Local imports
 from dialog import get_model

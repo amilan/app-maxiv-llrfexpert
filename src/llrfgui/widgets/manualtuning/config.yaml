@@ -28,15 +28,15 @@ attributes:
 
 readback:
 # Cavity A
-- [taurusBoolLed_27, Diag_ManualTuningOnA]
-- [taurusBoolLed_28, Diag_ManualTuningFreqUpA]
+- [TaurusLed_27, Diag_ManualTuningOnA]
+- [TaurusLed_28, Diag_ManualTuningFreqUpA]
 - [tauValueLabel_numberPulses_2, NumStepsA]
 - [tauValueLabel_moveUp, MoveUpA]
 - [tauValueLabel_movePlg1, MoveA]
 - [tauValueLabel_freqPulses, PulsesFrequencyA]
 # Cavity B
-- [taurusBoolLed_32, Diag_ManualTuningOnB]
-- [taurusBoolLed_31, Diag_ManualTuningFreqUpB]
+- [TaurusLed_32, Diag_ManualTuningOnB]
+- [TaurusLed_31, Diag_ManualTuningFreqUpB]
 - [tauValueLabel_numberPulses_4, NumStepsB]
 - [tauValueLabel_moveUp_3, MoveUpB]
 - [tauValueLabel_movePlg1_3, MoveB]

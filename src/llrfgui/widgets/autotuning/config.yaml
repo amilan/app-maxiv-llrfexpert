@@ -36,8 +36,8 @@ attributes:
 
 readback:
 # Cavity A
-- [taurusBoolLed_31, _Diag_MovingPlungerAutoA]
-- [taurusBoolLed_32, Diag_FreqUpA]
+- [TaurusLed_31, _Diag_MovingPlungerAutoA]
+- [TaurusLed_32, Diag_FreqUpA]
 - [tauValueLabel_tuningEn, TuningEnableA]
 - [tauValueLabel_tuningPosEn, TuningPosEnA]
 - [tauValueLabel_tuningFreq, PulsesFrequencyA]
@@ -49,8 +49,8 @@ readback:
 - [tauValueLabel_tuningDelayA, TuningdelayA]
 - [tauValueLabel_tuningTrgEnA, TuningtriggerenableA]
 # Cavity B
-- [taurusBoolLed_34, _Diag_MovingPlungerAutoB]
-- [taurusBoolLed_33, Diag_FreqUpB]
+- [TaurusLed_34, _Diag_MovingPlungerAutoB]
+- [TaurusLed_33, Diag_FreqUpB]
 - [tauValueLabel_tuningEn_2, TuningEnableB]
 - [tauValueLabel_tuningPosEn_2, TuningPosEnB]
 - [tauValueLabel_tuningFreq_2, PulsesFrequencyB]

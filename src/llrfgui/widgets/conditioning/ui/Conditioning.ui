@@ -140,7 +140,7 @@
           </widget>
          </item>
          <item row="5" column="2">
-          <widget class="TaurusBoolLed" name="taurusBoolLed_23">
+          <widget class="TaurusLed" name="TaurusLed_23">
            <property name="ledColor" stdset="0">
             <string>RED</string>
            </property>
@@ -150,7 +150,7 @@
           </widget>
          </item>
          <item row="6" column="2">
-          <widget class="TaurusBoolLed" name="taurusBoolLed_24">
+          <widget class="TaurusLed" name="TaurusLed_24">
            <property name="ledColor" stdset="0">
             <string>RED</string>
            </property>
@@ -821,7 +821,7 @@
           </widget>
          </item>
          <item row="6" column="1">
-          <widget class="TaurusBoolLed" name="taurusBoolLed_26">
+          <widget class="TaurusLed" name="TaurusLed_26">
            <property name="ledColor" stdset="0">
             <string>RED</string>
            </property>
@@ -831,7 +831,7 @@
           </widget>
          </item>
          <item row="5" column="1">
-          <widget class="TaurusBoolLed" name="taurusBoolLed_25">
+          <widget class="TaurusLed" name="TaurusLed_25">
            <property name="ledColor" stdset="0">
             <string>RED</string>
            </property>
@@ -1244,7 +1244,7 @@
    <header>taurus.qt.qtgui.input</header>
   </customwidget>
   <customwidget>
-   <class>TaurusBoolLed</class>
+   <class>TaurusLed</class>
    <extends>QLabel</extends>
    <header>taurus.qt.qtgui.display</header>
   </customwidget>

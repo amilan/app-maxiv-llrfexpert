@@ -25,18 +25,18 @@ attributes:
 
 readback:
 # Cavity A
-- [taurusBoolLed_21, Diag_DacsDisableCommandA]
-- [taurusBoolLed_22, Diag_PinSwitchA]
-- [taurusBoolLed_45, Diag_FdlTriggerToLoopsdiagboardA]
-- [taurusBoolLed_47, Diag_OutputToPlcA]
-- [taurusBoolLed_48, Diag_OutputToMpsA]
+- [TaurusLed_21, Diag_DacsDisableCommandA]
+- [TaurusLed_22, Diag_PinSwitchA]
+- [TaurusLed_45, Diag_FdlTriggerToLoopsdiagboardA]
+- [TaurusLed_47, Diag_OutputToPlcA]
+- [TaurusLed_48, Diag_OutputToMpsA]
 
 # Cavity B
-- [taurusBoolLed_49, Diag_DacsDisableCommandB]
-- [taurusBoolLed_50, Diag_PinSwitchB]
-- [taurusBoolLed_51, Diag_FdlTriggerToLoopsdiagboardB]
-- [taurusBoolLed_53, Diag_OutputToPlcB]
-- [taurusBoolLed_54, Diag_OutputToMpsB]
+- [TaurusLed_49, Diag_DacsDisableCommandB]
+- [TaurusLed_50, Diag_PinSwitchB]
+- [TaurusLed_51, Diag_FdlTriggerToLoopsdiagboardB]
+- [TaurusLed_53, Diag_OutputToPlcB]
+- [TaurusLed_54, Diag_OutputToMpsB]
 
 comboboxes:
 -
