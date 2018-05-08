@@ -120,10 +120,10 @@ sections_dict = {
         'rftransmitter2': 'R1-D100101-RF-TXA-02'
     },
     'RF-LAB': {
-        'loops': 'rflab/llrf/nutaq_loops',
-        'diags': 'rflab/llrf/nutaq_diags',
-        'llrf': 'rflab/llrf/loops-01',
-        'llrfdiags': 'rflab/llrf/diags-01',
+        'loops': 's-a101311cab03/rf/nutaq-01',
+        'diags': 's-a101311cab03/rf/nutaqdiags-01',
+        'llrf': 's-a101311cab03/rf/llrf-01',
+        'llrfdiags': 's-a101311cab03/rf/llrfdiags-01',
         'rftransmitter1': '',
         'rftransmitter2': ''
     },
